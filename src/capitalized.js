@@ -2,7 +2,7 @@
 // NOTE: this will return true for start case ("I Am Capitalized")
 // or uppercase ("I AM UPPERCASE")
 
-import {not} from "./helpers";
+import {not} from "./_interfaces";
 import isitString from "./string";
 import isitEqual from "./equal";
 

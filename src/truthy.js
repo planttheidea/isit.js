@@ -2,7 +2,7 @@
 // NOTE: matches the language, so valid values are objects, functions,
 // arrays, strings with length, and integers greater than 0
 
-import {not} from "./helpers";
+import {not} from "./_interfaces";
 import isitExisty from "./existy";
 import isitNaN from "./nan.js";
 

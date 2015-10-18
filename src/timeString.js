@@ -1,6 +1,6 @@
 // is obj a valid time string?
 
-import {timeString} from "./regexps";
+import {timeString} from "./_regexps";
 
 export default function isitTimeString(obj) {
     return timeString.test(obj);

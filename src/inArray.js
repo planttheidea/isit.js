@@ -1,6 +1,6 @@
 // is arr an array, and does obj exist in it?
 
-import {not} from "./helpers";
+import {not} from "./_interfaces";
 import isitArray from "./array";
 
 export default function isitInArray(obj, arr) {

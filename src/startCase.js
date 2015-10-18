@@ -1,6 +1,6 @@
 // is obj a string and is camelCase?
 
-import {not} from "./helpers";
+import {not} from "./_interfaces";
 import isitString from "./string";
 
 export default function isitStartCase(obj) {

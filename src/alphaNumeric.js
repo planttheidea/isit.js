@@ -1,6 +1,6 @@
 // is obj alphanumeric?
 
-import {alphaNumeric} from "./regexps";
+import {alphaNumeric} from "./_regexps";
 
 export default function isitAlphaNumeric(obj) {
     return alphaNumeric.test(obj);

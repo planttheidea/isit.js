@@ -1,8 +1,8 @@
 // is the browser used Internet Explorer?
 // NOTE: if version is passed, will validate if IE and equal to that version
 
-import {not} from "./helpers";
-import {navigatorInfo} from "./utils";
+import {not} from "./_interfaces";
+import navigatorInfo from "./_navigator";
 import isitBrowser from "./browser";
 
 export default function isitIe(version) {

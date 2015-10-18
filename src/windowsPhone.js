@@ -1,6 +1,6 @@
 // is the device used a mobile phone running on Windows?
 
-import {navigatorInfo} from "./utils";
+import navigatorInfo from "./_navigator";
 import isitBrowser from "./browser";
 import isitWindows from "./windows";
 

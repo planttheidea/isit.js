@@ -1,24 +1,9 @@
 // helper functions, used for interfaces
 
-import {arraySlice} from "./utils";
-import isitArray from "./array";
-
-function getParams(args) {
-    let params = arraySlice.call(args),
-        len = params.length;
-
-    if (len === 1 && isitArray(params[0])) {
-        return {
-            length:params[0].length,
-            parameters:params[0]
-        };
-    }
-
-    return {
-        length:len,
-        parameters:params
-    };
-}
+import {
+    arraySlice,
+    getParams
+} from "./_utils";
 
 export var all = function(func) {
     return function() {

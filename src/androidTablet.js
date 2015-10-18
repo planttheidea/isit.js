@@ -1,6 +1,6 @@
 // is the device used an android tablet?
 
-import {navigatorInfo} from "./utils";
+import navigatorInfo from "./_navigator";
 import isitBrowser from "./browser";
 import isitAndroid from "./browser";
 

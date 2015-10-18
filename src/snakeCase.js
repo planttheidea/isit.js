@@ -1,7 +1,7 @@
 // is obj a string and is camelCase?
 
-import {not} from "./helpers";
-import {toCamelCase} from "./utils";
+import {not} from "./_interfaces";
+import {toCamelCase} from "./_utils";
 import isitString from "./string";
 
 export default function isitSnakeCase(obj) {

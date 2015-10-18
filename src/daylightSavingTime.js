@@ -1,4 +1,4 @@
-
+// is obj a date and does it's timezone use daylight saving time?
 
 import isitDate from "./date";
 

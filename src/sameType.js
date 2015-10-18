@@ -1,7 +1,7 @@
 // is obj1 and obj2 the same type?
 
-import {all} from "./helpers";
-import {toString} from "./utils";
+import {all} from "./_interfaces";
+import {toString} from "./_utils";
 import isitNaN from "./nan.js";
 
 export default function isitSameType(obj1, obj2) {

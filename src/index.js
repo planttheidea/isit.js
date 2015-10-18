@@ -4,13 +4,13 @@
 // Originally forked from: isit.js
 // Author: Aras Atasaygin
 
-import {hasOwnProperty} from "././utils";
+import {hasOwnProperty} from "./_utils";
 
 import {
     all,
     any,
     not
-} from "././helpers";
+} from "./_interfaces";
 
 const defaultApi = [
     "all",

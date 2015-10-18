@@ -1,6 +1,6 @@
 // is obj a date value and does it match the day string?
 
-import {days} from "./dateNames";
+import {days} from "./_dateNames";
 import isitDate from "./date";
 import isitString from "./string";
 

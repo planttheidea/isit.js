@@ -1,6 +1,6 @@
 // is the device used a blackberry phone?
 
-import {navigatorInfo} from "./utils";
+import navigatorInfo from "./_navigator";
 import isitBrowser from "./browser";
 
 export default function isitBlackberry() {

@@ -4,7 +4,7 @@
 import {
     all,
     not
-} from "./helpers";
+} from "./_interfaces";
 import isitDate from "./date";
 
 export default function isitInDateRange(obj, startObj, endObj) {

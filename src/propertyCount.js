@@ -3,7 +3,7 @@
 import {
     hasOwnProperty,
     not
-} from "./helpers";
+} from "./_interfaces";
 import isitNumber from "./number";
 import isitObject from "./object";
 

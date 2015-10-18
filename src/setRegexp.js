@@ -1,7 +1,7 @@
 // function to either override existing regex tests or create new ones
 
-import {hasOwnProperty} from "./utils";
-import regexps from "./regexps";
+import {hasOwnProperty} from "./_utils";
+import regexps from "./_regexps";
 
 export default function setRegexp(regexp, regexpName) {
     for (let r in regexps) {

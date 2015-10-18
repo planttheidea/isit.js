@@ -1,7 +1,7 @@
 // is obj a set of function arguments?
 
-import {not} from "./helpers";
-import {toString} from "./utils";
+import {not} from "./_interfaces";
+import {toString} from "./_utils";
 import isitNull from "./null";
 
 export default function isitArguments(obj) {

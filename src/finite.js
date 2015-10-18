@@ -1,6 +1,6 @@
 // is obj a finite value?
 
-import {not} from "./helpers";
+import {not} from "./_interfaces";
 import isitNaN from "./nan.js";
 
 export default function isitFinite(obj) {

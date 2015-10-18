@@ -1,6 +1,6 @@
 // is obj a date, and does it match monthString?
 
-import {months} from "./dateNames";
+import {months} from "./_dateNames";
 import isitDate from "./date";
 import isitString from "./string";
 

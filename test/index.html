@@ -181,6 +181,11 @@
             console.log(isit.startCase("-some-camel-string") === false);
             console.log(isit.not.startCase("Some Camel String") === false);
             console.groupEnd();
+
+            console.group("email");
+            console.log(isit.email("test@test.com") === true);
+            console.log(isit.email("foobar") === false);
+            console.groupEnd();
         </script>
     </body>
 </html>

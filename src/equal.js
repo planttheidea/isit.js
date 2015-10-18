@@ -5,8 +5,8 @@
 import {
     all,
     not
-} from "./helpers";
-import {epsilon} from "./utils";
+} from "./_interfaces";
+import epsilon from "./_epsilon";
 import isitArray from "./array";
 import isitBoolean from "./boolean";
 import isitDecimal from "./decimal";

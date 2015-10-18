@@ -1,6 +1,6 @@
 // is obj a date and a weekday?
 
-import {not} from "./helpers";
+import {not} from "./_interfaces";
 import isitDate from "./date";
 
 export default function isitWeekday(obj) {

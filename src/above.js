@@ -1,6 +1,6 @@
 // is number obj greater than the number min?
 
-import {all} from "./helpers";
+import {all} from "./_interfaces";
 import isitNumber from "./number";
 
 export default function isitAbove(obj, min) {

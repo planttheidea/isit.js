@@ -1,7 +1,7 @@
 // is obj a number?
 
-import {not} from "./helpers";
-import {toString} from "./utils";
+import {not} from "./_interfaces";
+import {toString} from "./_utils";
 import isitNaN from "./nan.js"; // it doesn't like just "nan"
 
 export default function isitNumber(obj) {

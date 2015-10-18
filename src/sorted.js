@@ -1,6 +1,6 @@
 // is arr an array that is sorted either ascending or descending?
 
-import {not} from "./helpers";
+import {not} from "./_interfaces";
 import isitArray from "./array";
 
 function isArraySortedAsc(arr) {
