@@ -31,19 +31,6 @@ import isitBoolean from "isitjs/lib/boolean";
 // or
 var isitArray = require("isitjs/lib/array");
 
-### Table of Contents
-* [Browser support](#browser-support)
-* [Basic usage](#basic-usage)
-* [Extending default styles] (#extending-default-styles)
-* [Component-specific styles](#component-specific-styles)
-* [Combine styles](#combine-styles)
-* [Dynamic styles](#dynamic-styles)
-* [Responsive styles](#responsive-styles)
-* [Creating stylesheets](#creating-stylesheets)
-* [Prefixes](#prefixes)
-* [TODOS](#todos)
-```
-
 Type checks
 ===========
 
