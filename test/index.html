@@ -9,7 +9,7 @@
 
     <body>
 
-        <script src="http://localhost:3001/is.js"></script>
+        <script src="http://localhost:3001/isit.js"></script>
 
         <script>
             console.log(is);
@@ -108,6 +108,20 @@
             console.group("node");
             console.log(is.node() === true);
             console.log(is.not.node() === false);
+            console.groupEnd();
+
+            console.group("ip");
+            console.log(is.ip("192.168.1.100") === true);
+            console.log(is.not.ip("H") === false);
+            console.log(is.ip("H") === false);
+            console.log(is.not.ip("192.168.1.100") === true);
+            console.groupEnd();
+
+            console.group("url");
+            console.log(is.url("google.com") === true);
+            console.log(is.not.url("//google.com") === false);
+            console.log(is.url("google.com?id=111") === false);
+            console.log(is.not.url("google.com ") === true);
             console.groupEnd();
         </script>
     </body>

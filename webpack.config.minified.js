@@ -33,7 +33,7 @@ module.exports = merge(defaultConfig, {
     debug:false,
 
     output:merge(defaultConfig.output, {
-        filename:"is.min.js"
+        filename:"isit.min.js"
     }),
 
     plugins:productionPlugins

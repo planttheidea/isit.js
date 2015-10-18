@@ -56,8 +56,8 @@ module.exports = {
     },
 
     output: {
-        filename:"is.js",
-        library:"is",
+        filename:"isit.js",
+        library:"isit",
         libraryTarget:"umd",
         path:path.resolve(__dirname, "dist"),
         publicPath: "//localhost:3001/"
