@@ -1023,6 +1023,32 @@ isit.all.ipv6(['2001:DB8:0:0:1::1', '1.2.3']);
 => false
 ```
 
+isit.isoDateString(value:any)
+------------------------
+####Checks if the given value matches valid ISO strings (full ISO compliance).
+interfaces: not, all, any
+
+```javascript
+isit.isoDateString('2010-01-15');
+=> true
+
+isit.isoDateString('1/15/2010');
+=> false
+
+isit.not.isoDateString('1/15/2010');
+=> true
+
+isit.all.isoDateString('2010-01T12:34', '1/15/2010');
+=> false
+
+isit.any.isoDateString('2007-04-05T24:00', '1/15/2010');
+=> true
+
+// 'all' and 'any' interfaces can also take array parameter
+isit.all.isoDateString(['2010-222', '2010-W21-2']);
+=> true
+```
+
 String checks
 =============
 
@@ -1343,7 +1369,7 @@ Arithmetic checks
 
 isit.equal(value:any, value:any)
 ------------------------------
-####Checks if the given values are equal.
+####Checks if the given values are equal. For objects and arrays, deep equality checks occur.
 interfaces: not
 
 ```javascript
@@ -1356,7 +1382,17 @@ isit.equal('yeap', 'yeap');
 isit.equal(true, true);
 => true
 
+isit.equal({foo:"bar"}, {foo:"bar"});
+=> true
+
+isit.equal(["foo", "bar"], ["foo", "bar"]);
+=> true
+
 isit.not.equal('yeap', 'nope');
+=> true
+
+// for arrays, order matters for equality
+isit.not.equal(["foo", "bar"], ["bar", "foo"]);
 => true
 ```
 
@@ -1668,6 +1704,32 @@ isit.any.domNode(obj, {nope: 'nope'});
 
 // 'all' and 'any' interfaces can also take array parameter
 isit.all.domNode([obj, {nope: 'nope'}]);
+=> false
+```
+
+isit.jquery(value:object)
+-----------------------------
+####Checks if the given object is a jQuery object or jQuery itself.
+interfaces: not, all, any
+
+```javascript
+isit.jquery($("#test-div"));
+=> true
+
+isit.jquery({});
+=> false
+
+isit.not.jquery({});
+=> true
+
+isit.all.jquery($, $("#test-div"));
+=> true
+
+isit.any.jquery($, {nope: 'nope'});
+=> true
+
+// 'all' and 'any' interfaces can also take array parameter
+isit.all.jquery([$, {nope: 'nope'}]);
 => false
 ```
 

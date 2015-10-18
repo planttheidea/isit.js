@@ -132,6 +132,7 @@ import isitHexColor from "./hexColor";
 import isitIp from "./ip";
 import isitIpv4 from "./ipv4";
 import isitIpv6 from "./ipv6";
+import isitIsoDateString from "./isoDateString";
 import isitNanpPhone from "./nanpPhone";
 import isitSocialSecurityNumber from "./socialSecurityNumber";
 import isitTimeString from "./timeString";
@@ -152,6 +153,7 @@ isit.hexColor = isitHexColor;
 isit.ip = isitIp;
 isit.ipv4 = isitIpv4;
 isit.ipv6 = isitIpv6;
+isit.isoDateString = isitIsoDateString;
 isit.nanpPhone = isitNanpPhone;
 isit.setRegexp = setRegexp.bind(isit);
 isit.socialSecurityNumber = isitSocialSecurityNumber;
@@ -203,11 +205,13 @@ isit.startWith.api = ["not"];
 /* -------------------------------------------------------------------------- */
 
 import isitDomNode from "./domNode";
+import isitJquery from "./jquery";
 import isitPropertyCount from "./propertyCount";
 import isitPropertyDefined from "./propertyDefined";
 import isitWindowObject from "./windowObject";
 
 isit.domNode = isitDomNode;
+isit.jquery = isitJquery;
 isit.propertyCount = isitPropertyCount;
 isit.propertyDefined = isitPropertyDefined;
 isit.windowObject = isitWindowObject;

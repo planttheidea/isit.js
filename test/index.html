@@ -8,11 +8,15 @@
     </head>
 
     <body>
+        <div id="test">test</div>
 
         <script src="http://localhost:3001/isit.js"></script>
+        <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 
         <script>
             console.log(isit);
+
+            var $div = $("#test");
 
             console.group("above");
             console.log(isit.above(0, 2) === false);
@@ -197,6 +201,18 @@
             console.log(isit.html("<div>test</div>") === true);
             console.log(isit.html("<div/>") === true);
             console.log(isit.html("div") === false);
+            console.groupEnd();
+
+            console.group("jquery");
+            console.log(isit.jquery($) === true);
+            console.log(isit.jquery($div) === true);
+            console.log(isit.jquery({}) === false);
+            console.groupEnd();
+
+            console.group("isoDateString");
+            console.log(isit.isoDateString("2010-01-15") === true);
+            console.log(isit.isoDateString("2007-04-05T24:00") === true);
+            console.log(isit.isoDateString("1/15/2010") === false);
             console.groupEnd();
         </script>
     </body>
