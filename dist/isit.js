@@ -960,13 +960,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
+	exports["default"] = isitArray;
 	
 	var _utils = __webpack_require__(1);
 	
-	exports["default"] = Array.isArray || function isitArray(obj) {
+	function isitArray(obj) {
 	    return _utils.toString.call(obj) === "[object Array]";
-	};
+	}
 	
+	;
 	module.exports = exports["default"];
 
 /***/ },
@@ -3049,6 +3051,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
+	exports["default"] = isitFinite;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
@@ -3058,11 +3061,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _nan2 = _interopRequireDefault(_nan);
 	
-	exports["default"] = isFinite || function isitFinite(obj) {
+	function isitFinite(obj) {
 	    return obj !== Infinity && obj !== -Infinity && (0, _helpers.not)((0, _nan2["default"])(obj));
-	};
+	}
 	
-	;
+	;;
 	module.exports = exports["default"];
 
 /***/ },
