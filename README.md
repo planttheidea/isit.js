@@ -6,6 +6,9 @@ isit.js
 ####This is a general-purpose check library.
 - No dependencies
 - AMD, Node & browser ready
+ 
+**Note**
+The origin of this project was the wonderful work done by arasatasaygin at [is.js](https://github.com/arasatasaygin/is.js). I noticed there has hasn't been work on it in months, and the issues are growing, so I originally just did a fork of the work. From there I rearchitected the collection to be a modular setup that is more ES2015-driven. I have also made minor tweaks and bugfixes based on the backlog in is.js, but mainly I hope to grow it from here. Ideally these modules will be available independently, much in the way lodash provides their modules on npm.
 
 ####Usage:
 
