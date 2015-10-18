@@ -1,7 +1,7 @@
 
 
-import _isString from "string";
+import isitString from "string";
 
-export default function _isPalindrome(obj) {
-    return _isString(obj) && obj === obj.split("").reverse().join("");
+export default function isitPalindrome(obj) {
+    return isitString(obj) && obj === obj.split("").reverse().join("");
 }

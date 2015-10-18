@@ -1,8 +1,8 @@
 
 
 import {not} from "helpers";
-import _isTruthy from "truthy";
+import isitTruthy from "truthy";
 
-export default function _isFalsy(obj) {
-    return not(_isTruthy(obj));
+export default function isitFalsy(obj) {
+    return not(isitTruthy(obj));
 };

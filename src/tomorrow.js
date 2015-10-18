@@ -1,9 +1,9 @@
 
 
-import _isDate from "date";
+import isitDate from "date";
 
-export default function _isTomorrow(obj) {
-    if (!_isDate(obj)) {
+export default function isitTomorrow(obj) {
+    if (!isitDate(obj)) {
         return false;
     }
 

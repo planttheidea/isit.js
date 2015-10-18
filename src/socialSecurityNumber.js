@@ -2,6 +2,6 @@
 
 import {socialSecurityNumber} from "regexps";
 
-export default function _isSocialSecurityNumber(obj) {
+export default function isitSocialSecurityNumber(obj) {
     return socialSecurityNumber.test(obj);
 }

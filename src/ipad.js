@@ -1,8 +1,8 @@
 
 
 import {navigatorInfo} from "utils";
-import _isBrowser from "browser";
+import isitBrowser from "browser";
 
-export default function _isIpad() {
-    return _isBrowser() && /ipad/i.test(navigatorInfo.userAgent);
+export default function isitIpad() {
+    return isitBrowser() && /ipad/i.test(navigatorInfo.userAgent);
 }

@@ -1,8 +1,8 @@
 
 
 import {navigatorInfo} from "utils";
-import _isBrowser from "browser";
+import isitBrowser from "browser";
 
-export default function _isBlackberry() {
-    return _isBrowser() && /blackberry/i.test(navigatorInfo.userAgent) || /BB10/i.test(navigatorInfo.userAgent);
+export default function isitBlackberry() {
+    return isitBrowser() && /blackberry/i.test(navigatorInfo.userAgent) || /BB10/i.test(navigatorInfo.userAgent);
 }

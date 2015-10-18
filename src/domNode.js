@@ -1,7 +1,7 @@
 
 
-import _isObject from "object";
+import isitObject from "object";
 
-export default function _isDomNode(obj) {
-    return _isObject(obj) && obj.nodeType > 0;
+export default function isitDomNode(obj) {
+    return isitObject(obj) && obj.nodeType > 0;
 }

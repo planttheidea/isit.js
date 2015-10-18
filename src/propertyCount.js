@@ -2,11 +2,11 @@
 
 import {hasOwnProperty} from "helpers";
 
-import _isNumber from "number";
-import _isObject from "object";
+import isitNumber from "number";
+import isitObject from "object";
 
-export default function _isPropertyCount(obj, count) {
-    if (!_isObject(obj) || !_isNumber(count)) {
+export default function isitPropertyCount(obj, count) {
+    if (!isitObject(obj) || !isitNumber(count)) {
         return false;
     }
 

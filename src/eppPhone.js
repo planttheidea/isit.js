@@ -2,6 +2,6 @@
 
 import {eppPhone} from "regexps";
 
-export default function _isEppPhone(obj) {
+export default function isitEppPhone(obj) {
     return eppPhone.test(obj);
 }

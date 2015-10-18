@@ -1,8 +1,8 @@
 
 
 import {navigatorInfo} from "utils";
-import _isBrowser from "browser";
+import isitBrowser from "browser";
 
-export default function _isIpod() {
-    return _isBrowser() && /ipod/i.test(navigatorInfo.userAgent);
+export default function isitIpod() {
+    return isitBrowser() && /ipod/i.test(navigatorInfo.userAgent);
 }

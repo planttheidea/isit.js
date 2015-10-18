@@ -1,8 +1,8 @@
 
 
 import {navigatorInfo} from "utils";
-import _isBrowser from "browser";
+import isitBrowser from "browser";
 
-export default function _isIphone() {
-    return _isBrowser() && /iphone/i.test(navigatorInfo.userAgent);
+export default function isitIphone() {
+    return isitBrowser() && /iphone/i.test(navigatorInfo.userAgent);
 }

@@ -1,8 +1,8 @@
 
 
 import {navigatorInfo} from "utils";
-import _isBrowser from "browser";
+import isitBrowser from "browser";
 
-export default function _isLinux() {
-    return _isBrowser() && /linux|x11/i.test(navigatorInfo.appVersion);
+export default function isitLinux() {
+    return isitBrowser() && /linux|x11/i.test(navigatorInfo.appVersion);
 }

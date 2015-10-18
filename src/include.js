@@ -1,8 +1,8 @@
 
 
-import _isArray from "array";
-import _isString from "string";
+import isitArray from "array";
+import isitString from "string";
 
-export default function _isInclude(obj, substr) {
-    return (_isArray(obj) || _isString(obj)) && obj.indexOf(substr) !== -1;
+export default function isitInclude(obj, substr) {
+    return (isitArray(obj) || isitString(obj)) && obj.indexOf(substr) !== -1;
 }

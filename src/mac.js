@@ -1,8 +1,8 @@
 
 
 import {navigatorInfo} from "utils";
-import _isBrowser from "browser";
+import isitBrowser from "browser";
 
-export default function _isMac() {
-    return _isBrowser() && /mac/i.test(navigatorInfo.appVersion);
+export default function isitMac() {
+    return isitBrowser() && /mac/i.test(navigatorInfo.appVersion);
 }

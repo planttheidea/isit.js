@@ -1,8 +1,8 @@
 
 
 import {all} from "helpers";
-import _isNumber from "number";
+import isitNumber from "number";
 
-export default function _isUnder(obj, max) {
-    return all(_isNumber(obj, max)) && obj < max;
+export default function isitUnder(obj, max) {
+    return all(isitNumber(obj, max)) && obj < max;
 }

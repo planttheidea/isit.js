@@ -1,5 +1,5 @@
 
 
-export default function _isNaN(obj) {
+export default function isitNaN(obj) {
     return obj !== obj;
 }

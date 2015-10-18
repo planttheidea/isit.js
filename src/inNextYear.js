@@ -1,7 +1,7 @@
 
 
-import _isInDateRange from "inDateRange";
+import isitInDateRange from "inDateRange";
 
-export default function _isInNextYear(obj) {
-    return _isInDateRange(obj, new Date(), new Date((new Date()).setDate((new Date()).getFullYear() + 1)));
+export default function isitInNextYear(obj) {
+    return isitInDateRange(obj, new Date(), new Date((new Date()).setDate((new Date()).getFullYear() + 1)));
 }

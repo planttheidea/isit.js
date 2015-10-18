@@ -1,7 +1,7 @@
 
 
-import _isString from "string";
+import isitString from "string";
 
-export default function _isStartWith(obj, startStr) {
-    return _isString(obj) && obj.indexOf(startStr) === 0;
+export default function isitStartWith(obj, startStr) {
+    return isitString(obj) && obj.indexOf(startStr) === 0;
 }

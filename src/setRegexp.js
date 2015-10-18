@@ -6,7 +6,7 @@ import regexps from "regexps";
 export default function setRegexp(regexp, regexpName) {
     for (let r in regexps) {
         if (hasOwnProperty.call(regexps, r) && (regexpName === r)) {
-            this["_is" + regexpName.charAt(0).toUpperCase() + regexpName.slice(1)] = regexp;
+            this["isit" + regexpName.charAt(0).toUpperCase() + regexpName.slice(1)] = regexp;
         }
     }
 }

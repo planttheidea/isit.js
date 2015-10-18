@@ -2,6 +2,6 @@
 
 import {timeString} from "regexps";
 
-export default function _isTimeString(obj) {
+export default function isitTimeString(obj) {
     return timeString.test(obj);
 }

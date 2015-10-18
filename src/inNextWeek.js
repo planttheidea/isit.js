@@ -1,7 +1,7 @@
 
 
-import _isInDateRange from "inDateRange";
+import isitInDateRange from "inDateRange";
 
-export default function _isInNextWeek(obj) {
-    return _isInDateRange(obj, new Date(), new Date((new Date()).setDate((new Date()).getDate() + 7)));
+export default function isitInNextWeek(obj) {
+    return isitInDateRange(obj, new Date(), new Date((new Date()).setDate((new Date()).getDate() + 7)));
 }

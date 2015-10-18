@@ -2,6 +2,6 @@
 
 import {url} from "regexps";
 
-export default function _isUrl(obj) {
+export default function isitUrl(obj) {
     return url.test(obj);
 }

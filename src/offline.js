@@ -1,7 +1,7 @@
 
 
-import _isOnline from "online";
+import isitOnline from "online";
 
-export default function _isOffline() {
-    return !_isOnline();
+export default function isitOffline() {
+    return !isitOnline();
 }

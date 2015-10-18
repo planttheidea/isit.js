@@ -1,8 +1,8 @@
 
 
-import _isDate from "date";
-import _isNumber from "number";
+import isitDate from "date";
+import isitNumber from "number";
 
-export default function _isQuarterOfYear(obj, quarterNumber) {
-    return _isDate(obj) && _isNumber(quarterNumber) && quarterNumber === Math.floor((obj.getMonth() + 3) / 3);
+export default function isitQuarterOfYear(obj, quarterNumber) {
+    return isitDate(obj) && isitNumber(quarterNumber) && quarterNumber === Math.floor((obj.getMonth() + 3) / 3);
 }

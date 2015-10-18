@@ -2,6 +2,6 @@
 
 import {nanpPhone} from "regexps";
 
-export default function _isNanpPhone(obj) {
+export default function isitNanpPhone(obj) {
     return nanpPhone.test(obj);
 }

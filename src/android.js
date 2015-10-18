@@ -1,8 +1,8 @@
 
 
 import {navigatorInfo} from "utils";
-import _isBrowser from "browser";
+import isitBrowser from "browser";
 
-export default function _isAndroid() {
-    return _isBrowser() && /android/i.test(navigatorInfo.userAgent);
+export default function isitAndroid() {
+    return isitBrowser() && /android/i.test(navigatorInfo.userAgent);
 }

@@ -1,8 +1,8 @@
 
 
 import {navigatorInfo} from "utils";
-import _isBrowser from "browser";
+import isitBrowser from "browser";
 
-export default function _isTrident() {
-    return _isBrowser() && /trident/i.test(navigatorInfo.userAgent);
+export default function isitTrident() {
+    return isitBrowser() && /trident/i.test(navigatorInfo.userAgent);
 }

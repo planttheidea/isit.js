@@ -1,7 +1,7 @@
 
 
-import _isDate from "date";
+import isitDate from "date";
 
-export default function _isPast(obj) {
-    return _isDate(obj) && obj.getTime() < (new Date()).getTime();
+export default function isitPast(obj) {
+    return isitDate(obj) && obj.getTime() < (new Date()).getTime();
 }

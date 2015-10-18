@@ -1,9 +1,9 @@
 
 
-import _isIpad from "ipad";
-import _isIphone from "iphone";
-import _isIpod from "ipod";
+import isitIpad from "ipad";
+import isitIphone from "iphone";
+import isitIpod from "ipod";
 
-export default function _isIos() {
-    return _isIpad() || _isIphone() || _isIpod();
+export default function isitIos() {
+    return isitIpad() || isitIphone() || isitIpod();
 }

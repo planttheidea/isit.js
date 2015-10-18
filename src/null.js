@@ -1,5 +1,5 @@
 
 
-export default function _isNull(obj) {
+export default function isitNull(obj) {
     return obj === null;
 }

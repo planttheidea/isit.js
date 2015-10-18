@@ -1,5 +1,5 @@
 
 
-export default function _isSymbol(obj) {
+export default function isitSymbol(obj) {
     return typeof obj === "symbol";
 }

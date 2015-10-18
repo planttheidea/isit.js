@@ -1,8 +1,8 @@
 
 
-import _isObject from "object";
-import _isString from "string";
+import isitObject from "object";
+import isitString from "string";
 
-export default function _isPropertyDefined(obj, prop) {
-    return _isObject(obj) && _isString(prop) && prop in obj;
+export default function isitPropertyDefined(obj, prop) {
+    return isitObject(obj) && isitString(prop) && prop in obj;
 }

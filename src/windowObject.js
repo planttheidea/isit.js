@@ -1,5 +1,5 @@
 
 
-export default function _isWindowObject(obj) {
+export default function isitWindowObject(obj) {
     return typeof obj === "object" && "setInterval" in obj;
 }

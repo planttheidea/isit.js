@@ -1,9 +1,9 @@
 
 
-import _isBrowser from "browser";
+import isitBrowser from "browser";
 
-export default function _isRetina() {
-    if (_isBrowser() && window.matchMedia) {
+export default function isitRetina() {
+    if (isitBrowser() && window.matchMedia) {
         let mq = window.matchMedia("only screen and (min--moz-device-pixel-ratio: 1.3), only screen and " +
             "(-o-min-device-pixel-ratio: 2.6/2), only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen " +
             "and (min-device-pixel-ratio: 1.3), only screen and (min-resolution: 1.3dppx)");

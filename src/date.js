@@ -2,6 +2,6 @@
 
 import {toString} from "./utils";
 
-export default function _isDate(obj) {
+export default function isitDate(obj) {
     return toString.call(obj) === "[object Date]";
 }

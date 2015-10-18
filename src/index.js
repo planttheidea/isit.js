@@ -29,41 +29,41 @@ let isit = {
 // Type checks
 /* -------------------------------------------------------------------------- */
 
-import _isArguments from "arguments";
-import _isArray from "array";
-import _isBoolean from "boolean";
-import _isChar from "char";
-import _isDate from "date";
-import _isError from "error";
-import _isFunction from "function";
-import _isJSON from "json";
-import _isNaN from "nan.js"; // it doesn't like just "nan"
-import _isNull from "null";
-import _isNumber from "number";
-import _isObject from "object";
-import _isRegExp from "regexp";
-import _isSameType from "sameType";
-import _isString from "string";
-import _isSymbol from "symbol";
-import _isUndefined from "undefined";
+import isitArguments from "arguments";
+import isitArray from "array";
+import isitBoolean from "boolean";
+import isitChar from "char";
+import isitDate from "date";
+import isitError from "error";
+import isitFunction from "function";
+import isitJSON from "json";
+import isitNaN from "nan.js"; // it doesn't like just "nan"
+import isitNull from "null";
+import isitNumber from "number";
+import isitObject from "object";
+import isitRegExp from "regexp";
+import isitSameType from "sameType";
+import isitString from "string";
+import isitSymbol from "symbol";
+import isitUndefined from "undefined";
 
-isit.arguments = _isArguments;
-isit.array = _isArray;
-isit.boolean = _isBoolean;
-isit.char = _isChar;
-isit.date = _isDate;
-isit.error = _isError;
-isit.function = _isFunction;
-isit.json = _isJSON;
-isit.nan = _isNaN;
-isit.null = _isNull;
-isit.number = _isNumber;
-isit.object = _isObject;
-isit.regexp = _isRegExp;
-isit.sameType = _isSameType;
-isit.string = _isString;
-isit.symbol = _isSymbol;
-isit.undefined = _isUndefined;
+isit.arguments = isitArguments;
+isit.array = isitArray;
+isit.boolean = isitBoolean;
+isit.char = isitChar;
+isit.date = isitDate;
+isit.error = isitError;
+isit.function = isitFunction;
+isit.json = isitJSON;
+isit.nan = isitNaN;
+isit.null = isitNull;
+isit.number = isitNumber;
+isit.object = isitObject;
+isit.regexp = isitRegExp;
+isit.sameType = isitSameType;
+isit.string = isitString;
+isit.symbol = isitSymbol;
+isit.undefined = isitUndefined;
 
 // api restrictions
 isit.sameType.api = ["not"];
@@ -71,46 +71,46 @@ isit.sameType.api = ["not"];
 // Presence checks
 /* -------------------------------------------------------------------------- */
 
-import _isEmpty from "empty";
-import _isExisty from "existy";
-import _isFalsy from "falsy";
-import _isSpace from "space";
-import _isTruthy from "truthy";
+import isitEmpty from "empty";
+import isitExisty from "existy";
+import isitFalsy from "falsy";
+import isitSpace from "space";
+import isitTruthy from "truthy";
 
-isit.empty = _isEmpty;
-isit.existy = _isExisty;
-isit.falsy = _isFalsy;
-isit.space = _isSpace;
-isit.truthy = _isTruthy;
+isit.empty = isitEmpty;
+isit.existy = isitExisty;
+isit.falsy = isitFalsy;
+isit.space = isitSpace;
+isit.truthy = isitTruthy;
 
 // Arithmetic checks
 /* -------------------------------------------------------------------------- */
 
-import _isAbove from "above";
-import _isDecimal from "decimal";
-import _isEqual from "equal";
-import _isEven from "even";
-import _isFinite from "finite";
-import _isInfinite from "infinite";
-import _isInteger from "integer";
-import _isNegative from "negative";
-import _isOdd from "odd";
-import _isPositive from "positive";
-import _isUnder from "under";
-import _isWithin from "within";
+import isitAbove from "above";
+import isitDecimal from "decimal";
+import isitEqual from "equal";
+import isitEven from "even";
+import isitFinite from "finite";
+import isitInfinite from "infinite";
+import isitInteger from "integer";
+import isitNegative from "negative";
+import isitOdd from "odd";
+import isitPositive from "positive";
+import isitUnder from "under";
+import isitWithin from "within";
 
-isit.above = _isAbove;
-isit.decimal = _isDecimal;
-isit.equal = _isEqual;
-isit.even = _isEven;
-isit.finite = _isFinite;
-isit.infinite = _isInfinite;
-isit.integer = _isInteger;
-isit.negative = _isNegative;
-isit.odd = _isOdd;
-isit.positive = _isPositive;
-isit.under = _isUnder;
-isit.within = _isWithin;
+isit.above = isitAbove;
+isit.decimal = isitDecimal;
+isit.equal = isitEqual;
+isit.even = isitEven;
+isit.finite = isitFinite;
+isit.infinite = isitInfinite;
+isit.integer = isitInteger;
+isit.negative = isitNegative;
+isit.odd = isitOdd;
+isit.positive = isitPositive;
+isit.under = isitUnder;
+isit.within = isitWithin;
 
 // api restrictions
 isit.above.api = ["not"];
@@ -121,64 +121,64 @@ isit.within.api = ["not"];
 // Regexp checks
 /* -------------------------------------------------------------------------- */
 
-import _isAffirmative from "affirmative";
-import _isAlphaNumeric from "alphaNumeric";
-import _isCaPostalCode from "caPostalCode";
-import _isCreditCard from "creditCard";
-import _isDateString from "dateString";
-import _isEmail from "email";
-import _isEppPhone from "eppPhone";
-import _isHexadecimal from "hexadecimal";
-import _isHexColor from "hexColor";
-import _isIp from "ip";
-import _isIpv4 from "ipv4";
-import _isIpv6 from "ipv6";
-import _isNanpPhone from "nanpPhone";
-import _isSocialSecurityNumber from "socialSecurityNumber";
-import _isTimeString from "timeString";
-import _isUkPostalCode from "ukPostalCode";
-import _isUrl from "url.js"; // it doesn't like just "url"
-import _isUsZipCode from "usZipCode";
+import isitAffirmative from "affirmative";
+import isitAlphaNumeric from "alphaNumeric";
+import isitCaPostalCode from "caPostalCode";
+import isitCreditCard from "creditCard";
+import isitDateString from "dateString";
+import isitEmail from "email";
+import isitEppPhone from "eppPhone";
+import isitHexadecimal from "hexadecimal";
+import isitHexColor from "hexColor";
+import isitIp from "ip";
+import isitIpv4 from "ipv4";
+import isitIpv6 from "ipv6";
+import isitNanpPhone from "nanpPhone";
+import isitSocialSecurityNumber from "socialSecurityNumber";
+import isitTimeString from "timeString";
+import isitUkPostalCode from "ukPostalCode";
+import isitUrl from "url.js"; // it doesn't like just "url"
+import isitUsZipCode from "usZipCode";
 import setRegexp from "setRegexp";
 
-isit.affirmative = _isAffirmative;
-isit.alphaNumeric = _isAlphaNumeric;
-isit.caPostalCode = _isCaPostalCode;
-isit.creditCard = _isCreditCard;
-isit.dateString = _isDateString;
-isit.email = _isEmail;
-isit.eppPhone = _isEppPhone;
-isit.hexadecimal = _isHexadecimal;
-isit.hexColor = _isHexColor;
-isit.ip = _isIp;
-isit.ipv4 = _isIpv4;
-isit.ipv6 = _isIpv6;
-isit.nanpPhone = _isNanpPhone;
+isit.affirmative = isitAffirmative;
+isit.alphaNumeric = isitAlphaNumeric;
+isit.caPostalCode = isitCaPostalCode;
+isit.creditCard = isitCreditCard;
+isit.dateString = isitDateString;
+isit.email = isitEmail;
+isit.eppPhone = isitEppPhone;
+isit.hexadecimal = isitHexadecimal;
+isit.hexColor = isitHexColor;
+isit.ip = isitIp;
+isit.ipv4 = isitIpv4;
+isit.ipv6 = isitIpv6;
+isit.nanpPhone = isitNanpPhone;
 isit.setRegexp = setRegexp.bind(isit);
-isit.socialSecurityNumber = _isSocialSecurityNumber;
-isit.timeString = _isTimeString;
-isit.ukPostalCode = _isUkPostalCode;
-isit.url = _isUrl;
-isit.usZipCode = _isUsZipCode;
+isit.socialSecurityNumber = isitSocialSecurityNumber;
+isit.timeString = isitTimeString;
+isit.ukPostalCode = isitUkPostalCode;
+isit.url = isitUrl;
+isit.usZipCode = isitUsZipCode;
 
 // String checks
 /* -------------------------------------------------------------------------- */
 
-import _isCapitalized from "capitalized";
-import _isEndWith from "endWith";
-import _isInclude from "include";
-import _isLowerCase from "lowercase";
-import _isPalindrome from "palindrome";
-import _isStartWith from "startWith";
-import _isUppercase from "uppercase";
+import isitCapitalized from "capitalized";
+import isitEndWith from "endWith";
+import isitInclude from "include";
+import isitLowerCase from "lowercase";
+import isitPalindrome from "palindrome";
+import isitStartWith from "startWith";
+import isitUppercase from "uppercase";
 
-isit.capitalized = _isCapitalized;
-isit.endWith = _isEndWith;
-isit.include = _isInclude;
-isit.lowercase = _isLowerCase;
-isit.palindrome = _isPalindrome;
-isit.startWith = _isStartWith;
-isit.uppercase = _isUppercase;
+isit.capitalized = isitCapitalized;
+isit.endWith = isitEndWith;
+isit.include = isitInclude;
+isit.lowercase = isitLowerCase;
+isit.palindrome = isitPalindrome;
+isit.startWith = isitStartWith;
+isit.uppercase = isitUppercase;
 
 // api restrictions
 isit.endWith.api = ["not"];
@@ -191,15 +191,15 @@ isit.startWith.api = ["not"];
 // Object checks
 /* -------------------------------------------------------------------------- */
 
-import _isDomNode from "domNode";
-import _isPropertyCount from "propertyCount";
-import _isPropertyDefined from "propertyDefined";
-import _isWindowObject from "windowObject";
+import isitDomNode from "domNode";
+import isitPropertyCount from "propertyCount";
+import isitPropertyDefined from "propertyDefined";
+import isitWindowObject from "windowObject";
 
-isit.domNode = _isDomNode;
-isit.propertyCount = _isPropertyCount;
-isit.propertyDefined = _isPropertyDefined;
-isit.windowObject = _isWindowObject;
+isit.domNode = isitDomNode;
+isit.propertyCount = isitPropertyCount;
+isit.propertyDefined = isitPropertyDefined;
+isit.windowObject = isitWindowObject;
 
 // api restrictions
 isit.propertyCount.api = ["not"];
@@ -208,11 +208,11 @@ isit.propertyDefined.api = ["not"];
 // Array checks
 /* -------------------------------------------------------------------------- */
 
-import _isInArray from "inArray";
-import _isSorted from "sorted";
+import isitInArray from "inArray";
+import isitSorted from "sorted";
 
-isit.inArray = _isInArray;
-isit.sorted = _isSorted;
+isit.inArray = isitInArray;
+isit.sorted = isitSorted;
 
 // api restrictions
 isit.inArray.api = ["not"];
@@ -220,47 +220,47 @@ isit.inArray.api = ["not"];
 // Date checks
 /* -------------------------------------------------------------------------- */
 
-import _isDay from "day";
-import _isDaylightSavingTime from "daylightSavingTime";
-import _isFuture from "future";
-import _isInDateRange from "inDateRange";
-import _isInLastMonth from "inLastMonth";
-import _isInLastWeek from "inLastWeek";
-import _isInLastYear from "inLastYear";
-import _isLeapYear from "leapYear";
-import _isMonth from "month";
-import _isInNextMonth from "inNextMonth";
-import _isInNextWeek from "inNextWeek";
-import _isInNextYear from "inNextYear";
-import _isPast from "past";
-import _isQuarterOfYear from "quarterOfYear";
-import _isToday from "today";
-import _isTomorrow from "tomorrow";
-import _isWeekday from "weekday";
-import _isWeekend from "weekend";
-import _isYear from "year";
-import _isYesterday from "yesterday";
+import isitDay from "day";
+import isitDaylightSavingTime from "daylightSavingTime";
+import isitFuture from "future";
+import isitInDateRange from "inDateRange";
+import isitInLastMonth from "inLastMonth";
+import isitInLastWeek from "inLastWeek";
+import isitInLastYear from "inLastYear";
+import isitLeapYear from "leapYear";
+import isitMonth from "month";
+import isitInNextMonth from "inNextMonth";
+import isitInNextWeek from "inNextWeek";
+import isitInNextYear from "inNextYear";
+import isitPast from "past";
+import isitQuarterOfYear from "quarterOfYear";
+import isitToday from "today";
+import isitTomorrow from "tomorrow";
+import isitWeekday from "weekday";
+import isitWeekend from "weekend";
+import isitYear from "year";
+import isitYesterday from "yesterday";
 
-isit.day = _isDay;
-isit.daylightSavingTime = _isDaylightSavingTime;
-isit.future = _isFuture;
-isit.inDateRange = _isInDateRange;
-isit.inLastMonth = _isInLastMonth;
-isit.inLastWeek = _isInLastWeek;
-isit.inLastYear = _isInLastYear;
-isit.leaYear = _isLeapYear;
-isit.month = _isMonth;
-isit.inNextMonth = _isInNextMonth;
-isit.inNextWeek = _isInNextWeek;
-isit.inNextYear = _isInNextYear;
-isit.past = _isPast;
-isit.quarterOfYear = _isQuarterOfYear;
-isit.today = _isToday;
-isit.tomorrow = _isTomorrow;
-isit.weekday = _isWeekday;
-isit.weekend = _isWeekend;
-isit.year = _isYear;
-isit.yesterday = _isYesterday;
+isit.day = isitDay;
+isit.daylightSavingTime = isitDaylightSavingTime;
+isit.future = isitFuture;
+isit.inDateRange = isitInDateRange;
+isit.inLastMonth = isitInLastMonth;
+isit.inLastWeek = isitInLastWeek;
+isit.inLastYear = isitInLastYear;
+isit.leaYear = isitLeapYear;
+isit.month = isitMonth;
+isit.inNextMonth = isitInNextMonth;
+isit.inNextWeek = isitInNextWeek;
+isit.inNextYear = isitInNextYear;
+isit.past = isitPast;
+isit.quarterOfYear = isitQuarterOfYear;
+isit.today = isitToday;
+isit.tomorrow = isitTomorrow;
+isit.weekday = isitWeekday;
+isit.weekend = isitWeekend;
+isit.year = isitYear;
+isit.yesterday = isitYesterday;
 
 // api restrictions
 isit.day.api = ["not"];
@@ -272,71 +272,71 @@ isit.year.api = ["not"];
 // Environment checks
 /* -------------------------------------------------------------------------- */
 
-import _isAndroid from "android";
-import _isAndroidPhone from "androidPhone";
-import _isAndroidTablet from "androidTablet";
-import _isBlackberry from "blackberry";
-import _isBlink from "blink";
-import _isBrowser from "browser";
-import _isChrome from "chrome";
-import _isDesktop from "desktop";
-import _isIe from "ie";
-import _isFirefox from "firefox";
-import _isGecko from "gecko";
-import _isIos from "ios";
-import _isIpad from "ipad";
-import _isIphone from "iphone";
-import _isIpod from "ipod";
-import _isLinux from "linux";
-import _isMac from "mac";
-import _isMobile from "mobile";
-import _isNode from "node";
-import _isOffline from "offline";
-import _isOnline from "online";
-import _isOpera from "opera";
-import _isPresto from "presto";
-import _isRetina from "retina";
-import _isSafari from "safari";
-import _isTablet from "tablet";
-import _isTouchDevice from "touchDevice";
-import _isTrident from "trident";
-import _isWebkit from "webkit";
-import _isWindows from "windows";
-import _isWindowsPhone from "windowsPhone";
-import _isWindowsTablet from "windowsTablet";
+import isitAndroid from "android";
+import isitAndroidPhone from "androidPhone";
+import isitAndroidTablet from "androidTablet";
+import isitBlackberry from "blackberry";
+import isitBlink from "blink";
+import isitBrowser from "browser";
+import isitChrome from "chrome";
+import isitDesktop from "desktop";
+import isitIe from "ie";
+import isitFirefox from "firefox";
+import isitGecko from "gecko";
+import isitIos from "ios";
+import isitIpad from "ipad";
+import isitIphone from "iphone";
+import isitIpod from "ipod";
+import isitLinux from "linux";
+import isitMac from "mac";
+import isitMobile from "mobile";
+import isitNode from "node";
+import isitOffline from "offline";
+import isitOnline from "online";
+import isitOpera from "opera";
+import isitPresto from "presto";
+import isitRetina from "retina";
+import isitSafari from "safari";
+import isitTablet from "tablet";
+import isitTouchDevice from "touchDevice";
+import isitTrident from "trident";
+import isitWebkit from "webkit";
+import isitWindows from "windows";
+import isitWindowsPhone from "windowsPhone";
+import isitWindowsTablet from "windowsTablet";
 
-isit.android = _isAndroid;
-isit.androidPhone = _isAndroidPhone;
-isit.androidTablet = _isAndroidTablet;
-isit.blackberry = _isBlackberry;
-isit.blink = _isBlink;
-isit.browser = _isBrowser;
-isit.chrome = _isChrome;
-isit.desktop = _isDesktop;
-isit.firefox = _isFirefox;
-isit.gecko = _isGecko;
-isit.ie = _isIe;
-isit.ios = _isIos;
-isit.ipad = _isIpad;
-isit.iphone = _isIphone;
-isit.ipod = _isIpod;
-isit.linux = _isLinux;
-isit.mac = _isMac;
-isit.mobile = _isMobile;
-isit.node = _isNode;
-isit.offline = _isOffline;
-isit.online = _isOnline;
-isit.opera = _isOpera;
-isit.presto = _isPresto;
-isit.retina = _isRetina;
-isit.safari = _isSafari;
-isit.tablet = _isTablet;
-isit.touchDevice = _isTouchDevice;
-isit.trident = _isTrident;
-isit.webkit = _isWebkit;
-isit.windows = _isWindows;
-isit.windowsPhone = _isWindowsPhone;
-isit.windowsTablet = _isWindowsTablet;
+isit.android = isitAndroid;
+isit.androidPhone = isitAndroidPhone;
+isit.androidTablet = isitAndroidTablet;
+isit.blackberry = isitBlackberry;
+isit.blink = isitBlink;
+isit.browser = isitBrowser;
+isit.chrome = isitChrome;
+isit.desktop = isitDesktop;
+isit.firefox = isitFirefox;
+isit.gecko = isitGecko;
+isit.ie = isitIe;
+isit.ios = isitIos;
+isit.ipad = isitIpad;
+isit.iphone = isitIphone;
+isit.ipod = isitIpod;
+isit.linux = isitLinux;
+isit.mac = isitMac;
+isit.mobile = isitMobile;
+isit.node = isitNode;
+isit.offline = isitOffline;
+isit.online = isitOnline;
+isit.opera = isitOpera;
+isit.presto = isitPresto;
+isit.retina = isitRetina;
+isit.safari = isitSafari;
+isit.tablet = isitTablet;
+isit.touchDevice = isitTouchDevice;
+isit.trident = isitTrident;
+isit.webkit = isitWebkit;
+isit.windows = isitWindows;
+isit.windowsPhone = isitWindowsPhone;
+isit.windowsTablet = isitWindowsTablet;
 
 // api restrictions
 isit.android.api = ["not"];
@@ -374,7 +374,7 @@ isit.windowsTablet.api = ["not"];
 
 function setInterfaces(options) {
     for (var option in options) {
-        if (hasOwnProperty.call(options, option) && _isFunction(options[option])) {
+        if (hasOwnProperty.call(options, option) && isitFunction(options[option])) {
             let interfaces = options[option].api || defaultApi,
                 i = 0,
                 len = interfaces.length;

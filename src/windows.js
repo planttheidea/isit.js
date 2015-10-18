@@ -1,8 +1,8 @@
 
 
 import {navigatorInfo} from "utils";
-import _isBrowser from "browser";
+import isitBrowser from "browser";
 
-export default function _isWindows() {
-    return _isBrowser() && /win/i.test(navigatorInfo.appVersion);
+export default function isitWindows() {
+    return isitBrowser() && /win/i.test(navigatorInfo.appVersion);
 }

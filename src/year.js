@@ -1,8 +1,8 @@
 
 
-import _isDate from "date";
-import _isNumber from "number";
+import isitDate from "date";
+import isitNumber from "number";
 
-export default function _isYear(obj, year) {
-    return _isDate(obj) && _isNumber(year) && year === obj.getFullYear();
+export default function isitYear(obj, year) {
+    return isitDate(obj) && isitNumber(year) && year === obj.getFullYear();
 }

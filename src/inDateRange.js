@@ -1,9 +1,9 @@
 
 
-import _isDate from "date";
+import isitDate from "date";
 
-export default function _isInDateRange(obj, startObj, endObj) {
-    if (!_isDate(obj) || !_isDate(startObj) || !_isDate(endObj)) {
+export default function isitInDateRange(obj, startObj, endObj) {
+    if (!isitDate(obj) || !isitDate(startObj) || !isitDate(endObj)) {
         return false;
     }
 

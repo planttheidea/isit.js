@@ -1,9 +1,9 @@
 
 
-import _isDate from "date";
+import isitDate from "date";
 
-export default function _isDaylightSavingTime(obj) {
-    if (!_isDate(obj)) {
+export default function isitDaylightSavingTime(obj) {
+    if (!isitDate(obj)) {
         return false;
     }
 

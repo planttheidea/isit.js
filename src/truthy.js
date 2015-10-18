@@ -1,9 +1,9 @@
 
 
 import {not} from "helpers";
-import _isExisty from "existy";
-import _isNaN from "nan";
+import isitExisty from "existy";
+import isitNaN from "nan";
 
-export default function _isTruthy(obj) {
-    return _isExisty(obj) && obj !== false && not(_isNaN(obj)) && obj !== "" && obj !== 0;
+export default function isitTruthy(obj) {
+    return isitExisty(obj) && obj !== false && not(isitNaN(obj)) && obj !== "" && obj !== 0;
 };

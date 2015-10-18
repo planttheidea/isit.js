@@ -1,7 +1,7 @@
 
 
-import _isDate from "date";
+import isitDate from "date";
 
-export default function _isToday(obj) {
-    return _isDate(obj) && obj.toDateString() === (new Date()).toDateString();
+export default function isitToday(obj) {
+    return isitDate(obj) && obj.toDateString() === (new Date()).toDateString();
 }

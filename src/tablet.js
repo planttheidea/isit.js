@@ -1,10 +1,10 @@
 
 
-import _isAndroidTablet from "androidTablet";
-import _isBrowser from "browser";
-import _isIpad from "ipad";
-import _isWindowsTablet from "windowsTablet";
+import isitAndroidTablet from "androidTablet";
+import isitBrowser from "browser";
+import isitIpad from "ipad";
+import isitWindowsTablet from "windowsTablet";
 
-export default function _isTablet() {
-    return _isBrowser() && (_isIpad() || _isAndroidTablet() || _isWindowsTablet());
+export default function isitTablet() {
+    return isitBrowser() && (isitIpad() || isitAndroidTablet() || isitWindowsTablet());
 }

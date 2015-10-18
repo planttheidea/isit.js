@@ -4,11 +4,11 @@ import {
     all,
     not
 } from "helpers";
-import _isString from "string";
-import _isTruthy from "truthy";
+import isitString from "string";
+import isitTruthy from "truthy";
 
-export default function _isCapitalized(obj) {
-    if (not(_isString(obj))) {
+export default function isitCapitalized(obj) {
+    if (not(isitString(obj))) {
         return false;
     }
 
@@ -19,5 +19,5 @@ export default function _isCapitalized(obj) {
         capitalized[i] = words[i][0] === words[i][0].toUpperCase();
     }
 
-    return all(_isTruthy.apply(null, capitalized));
+    return all(isitTruthy.apply(null, capitalized));
 }

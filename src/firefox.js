@@ -1,8 +1,8 @@
 
 
 import {navigatorInfo} from "utils";
-import _isBrowser from "browser";
+import isitBrowser from "browser";
 
-export default function _isFirefox() {
-    return _isBrowser() && /firefox/i.test(navigatorInfo.userAgent);
+export default function isitFirefox() {
+    return isitBrowser() && /firefox/i.test(navigatorInfo.userAgent);
 }

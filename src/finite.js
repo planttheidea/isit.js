@@ -1,8 +1,8 @@
 
 
 import {not} from "helpers";
-import _isNaN from "nan";
+import isitNaN from "nan";
 
-export default isFinite || function _isFinite(obj) {
-    return obj !== Infinity && obj !== -Infinity && not(_isNaN(obj));
+export default isFinite || function isitFinite(obj) {
+    return obj !== Infinity && obj !== -Infinity && not(isitNaN(obj));
 };;

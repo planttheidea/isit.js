@@ -2,6 +2,6 @@
 
 import {ip} from "regexps";
 
-export default function _isIp(obj) {
+export default function isitIp(obj) {
     return ip.test(obj);
 }

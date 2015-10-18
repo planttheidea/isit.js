@@ -2,6 +2,6 @@
 
 import {hexColor} from "regexps";
 
-export default function _isHexColor(obj) {
+export default function isitHexColor(obj) {
     return hexColor.test(obj);
 }

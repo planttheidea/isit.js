@@ -2,6 +2,6 @@
 
 import {whitespace} from "regexps";
 
-export default function _isWhitespace(obj) {
+export default function isitWhitespace(obj) {
     return whitespace.test(obj);
 }

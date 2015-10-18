@@ -1,11 +1,11 @@
 
 
-import _isBrowser from "browser";
+import isitBrowser from "browser";
 
 export var arraySlice = Array.prototype.slice;
 
 export var navigatorInfo = (function() {
-    if (!_isBrowser()) {
+    if (!isitBrowser()) {
         return {};
     }
 

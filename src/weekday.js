@@ -1,9 +1,9 @@
 
 
-import _isDate from "date";
+import isitDate from "date";
 
-export default function _isWeekday(obj) {
-    if (!_isDate(obj)) {
+export default function isitWeekday(obj) {
+    if (!isitDate(obj)) {
         return false;
     }
 

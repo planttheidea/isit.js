@@ -1,7 +1,7 @@
 
 
-import _isString from "string";
+import isitString from "string";
 
-export default function _isEndWith(obj, endStr) {
-    return _isString(obj) && obj.indexOf(endStr) === obj.length - endStr.length;
+export default function isitEndWith(obj, endStr) {
+    return isitString(obj) && obj.indexOf(endStr) === obj.length - endStr.length;
 }

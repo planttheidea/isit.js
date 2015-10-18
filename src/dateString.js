@@ -2,6 +2,6 @@
 
 import {dateString} from "regexps";
 
-export default function _isDateString(obj) {
+export default function isitDateString(obj) {
     return dateString.test(obj);
 }

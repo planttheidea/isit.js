@@ -1,7 +1,7 @@
 
 
-import _isString from "string";
+import isitString from "string";
 
-export default function _isChar(obj) {
-    return _isString(obj) && obj.length === 1;
+export default function isitChar(obj) {
+    return isitString(obj) && obj.length === 1;
 }

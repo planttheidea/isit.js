@@ -2,6 +2,6 @@
 
 import {toString} from "./utils";
 
-export default function _isError(obj) {
+export default function isitError(obj) {
     return toString.call(obj) === "[object Error]";
 }

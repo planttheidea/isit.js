@@ -1,10 +1,10 @@
 
 
-import _isDate from "date";
+import isitDate from "date";
 
-export default function _isYesterday(obj) {
+export default function isitYesterday(obj) {
     let now = new Date(),
         yesterdayString = new Date(now.setDate(now.getDate() - 1).toDateString());
 
-    return _isDate(obj) && obj.toDateString() === yesterdayString;
+    return isitDate(obj) && obj.toDateString() === yesterdayString;
 }

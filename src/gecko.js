@@ -1,8 +1,8 @@
 
 
 import {navigatorInfo} from "utils";
-import _isBrowser from "browser";
+import isitBrowser from "browser";
 
-export default function _isGecko() {
-    return _isBrowser() && /gecko/i.test(navigatorInfo.userAgent);
+export default function isitGecko() {
+    return isitBrowser() && /gecko/i.test(navigatorInfo.userAgent);
 }

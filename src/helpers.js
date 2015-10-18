@@ -1,13 +1,13 @@
 
 
 import {arraySlice} from "utils";
-import _isArray from "array";
+import isitArray from "array";
 
 function getParams(args) {
     let params = arraySlice.call(args),
         len = params.length;
 
-    if (len === 1 && _isArray(params[0])) {
+    if (len === 1 && isitArray(params[0])) {
         return {
             length:params[0].length,
             parameters:params[0]

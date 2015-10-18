@@ -1,8 +1,8 @@
 
 
 import {navigatorInfo} from "utils";
-import _isBrowser from "browser";
+import isitBrowser from "browser";
 
-export default function _isWebkit() {
-    return _isBrowser() && /applewebkit/i.test(navigatorInfo.userAgent);
+export default function isitWebkit() {
+    return isitBrowser() && /applewebkit/i.test(navigatorInfo.userAgent);
 }

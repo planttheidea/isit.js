@@ -1,9 +1,9 @@
 
 
 import {navigatorInfo} from "utils";
-import _isBrowser from "browser";
-import _isAndroid from "browser";
+import isitBrowser from "browser";
+import isitAndroid from "browser";
 
-export default function _isAndroidPhone() {
-    return _isBrowser() && _isAndroid() && /mobile/i.test(navigatorInfo.userAgent);
+export default function isitAndroidPhone() {
+    return isitBrowser() && isitAndroid() && /mobile/i.test(navigatorInfo.userAgent);
 }

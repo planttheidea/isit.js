@@ -1,5 +1,5 @@
 
 
-export default function _isUndefined(obj) {
+export default function isitUndefined(obj) {
     return obj === void 0;
 }

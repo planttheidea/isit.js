@@ -1,9 +1,9 @@
 
 
 import {months} from "dateNames";
-import _isDate from "date";
-import _isString from "string";
+import isitDate from "date";
+import isitString from "string";
 
-export default function _isMonth(obj, monthString) {
-    return _isDate(obj) && _isString(monthString) && monthString.toLowerCase() === months[obj.getMonth()];
+export default function isitMonth(obj, monthString) {
+    return isitDate(obj) && isitString(monthString) && monthString.toLowerCase() === months[obj.getMonth()];
 }

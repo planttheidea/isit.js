@@ -1,10 +1,10 @@
 
 
 import {not} from "helpers";
-import _isArray from "array";
+import isitArray from "array";
 
-export default function _isInArray(obj, arr) {
-    if (not(_isArray(arr))) {
+export default function isitInArray(obj, arr) {
+    if (not(isitArray(arr))) {
         return false;
     }
 

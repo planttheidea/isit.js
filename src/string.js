@@ -2,6 +2,6 @@
 
 import {toString} from "utils";
 
-export default function _isString(obj) {
+export default function isitString(obj) {
     return toString.call(obj) === "[object String]";
 }

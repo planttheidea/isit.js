@@ -1,7 +1,7 @@
 
 
-import _isNumber from "number";
+import isitNumber from "number";
 
-export default function _isInteger(obj) {
-    return _isNumber(obj) && obj % 1 === 0;
+export default function isitInteger(obj) {
+    return isitNumber(obj) && obj % 1 === 0;
 }

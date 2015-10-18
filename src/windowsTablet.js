@@ -2,10 +2,10 @@
 
 import {not} from "helpers";
 import {navigatorInfo} from "utils";
-import _isBrowser from "browser";
-import _isWindows from "windows";
-import _isWindowsPhone from "windowsPhone";
+import isitBrowser from "browser";
+import isitWindows from "windows";
+import isitWindowsPhone from "windowsPhone";
 
-export default function _isWindowsTablet() {
-    return _isBrowser() && _isWindows() && not(_isWindowsPhone()) && /touch/i.test(navigatorInfo.userAgent);
+export default function isitWindowsTablet() {
+    return isitBrowser() && isitWindows() && not(isitWindowsPhone()) && /touch/i.test(navigatorInfo.userAgent);
 }

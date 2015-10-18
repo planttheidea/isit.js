@@ -1,8 +1,8 @@
 
 
 import {navigatorInfo} from "utils";
-import _isBrowser from "browser";
+import isitBrowser from "browser";
 
-export default function _isBlink() {
-    return _isBrowser() && /chrome/i.test(navigatorInfo.userAgent);
+export default function isitBlink() {
+    return isitBrowser() && /chrome/i.test(navigatorInfo.userAgent);
 }

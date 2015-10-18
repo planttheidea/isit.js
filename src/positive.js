@@ -1,7 +1,7 @@
 
 
-import _isNumber from "number";
+import isitNumber from "number";
 
-export default function _isPositive(obj) {
-    return _isNumber(obj) && obj > 0;
+export default function isitPositive(obj) {
+    return isitNumber(obj) && obj > 0;
 }

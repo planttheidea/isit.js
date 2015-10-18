@@ -1,7 +1,7 @@
 
 
-import _isString from "string";
+import isitString from "string";
 
-export default function _isLowercase(obj) {
-    return _isString(obj) && obj === obj.toLowerCase();
+export default function isitLowercase(obj) {
+    return isitString(obj) && obj === obj.toLowerCase();
 }

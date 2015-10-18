@@ -1,7 +1,7 @@
 
 
-import _isFinite from "finite";
+import isitFinite from "finite";
 
 export default function isInfinite(obj) {
-    return !_isFinite(obj);
+    return !isitFinite(obj);
 }

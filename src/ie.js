@@ -1,10 +1,10 @@
 
 
 import {navigatorInfo} from "utils";
-import _isBrowser from "browser";
+import isitBrowser from "browser";
 
-export default function _isIe(version) {
-    if (!_isBrowser()) {
+export default function isitIe(version) {
+    if (!isitBrowser()) {
         return false;
     }
 

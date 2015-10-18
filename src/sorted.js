@@ -1,7 +1,7 @@
 
 
 import {not} from "helpers";
-import _isArray from "array";
+import isitArray from "array";
 
 function isArraySortedAsc(arr) {
     for (let i = 0, len = arr.length; i < len; i++) {
@@ -27,8 +27,8 @@ function isArraySortedDesc(arr) {
     return true;
 }
 
-export default function _isSorted(arr) {
-    if (not(_isArray(arr))) {
+export default function isitSorted(arr) {
+    if (not(isitArray(arr))) {
         return false;
     }
 

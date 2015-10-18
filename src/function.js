@@ -2,6 +2,6 @@
 
 import {toString} from "./utils";
 
-export default function _isFunction(obj) {
+export default function isitFunction(obj) {
     return toString.call(obj) === "[object Function]" || typeof obj === "function";
 }
