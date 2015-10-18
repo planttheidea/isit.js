@@ -123,6 +123,26 @@
             console.log(isit.url("google.com?id=111") === false);
             console.log(isit.not.url("google.com ") === true);
             console.groupEnd();
+
+            console.group("capitalized");
+            console.log(isit.capitalized("I Am Capitalized") === true);
+            console.log(isit.not.capitalized("i am all lowercase") === true);
+            console.log(isit.capitalized("I AM ALL UPPERCASE") === true);
+            console.log(isit.not.capitalized(2) === true);
+            console.groupEnd();
+
+            console.group("equal");
+            console.log(isit.equal(2, 2) === true);
+            console.log(isit.equal("2", 2) === false);
+            console.log(isit.equal({}, {}) === true);
+            console.log(isit.equal({test:"me", foo:"bar"}, {test:"me", foo:"bar"}) === true);
+            console.log(isit.equal({test:"me"}, {foo:"bar"}) === false);
+            console.log(isit.equal([], []) === true);
+            console.log(isit.equal([2, 4, 5], [2, 4, 5]) === true);
+            console.log(isit.equal([2, 4], [5]) === false);
+            console.log(isit.equal({test:["foo", "bar"], me:"blah"}, {test:["foo", "bar"], me:"blah"}) === true);
+            console.log(isit.equal({test:["foo", "bar"], me:"blah"}, {test:["bar", "foo"], me:"blah"}) === false);
+            console.groupEnd();
         </script>
     </body>
 </html>

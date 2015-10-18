@@ -1,9 +1,13 @@
 
 
+import {
+    all,
+    not
+} from "helpers";
 import isitDate from "date";
 
 export default function isitInDateRange(obj, startObj, endObj) {
-    if (!isitDate(obj) || !isitDate(startObj) || !isitDate(endObj)) {
+    if (all(not(isitDate))(obj, startObj, endObj)) {
         return false;
     }
 

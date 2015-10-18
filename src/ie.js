@@ -1,10 +1,11 @@
 
 
+import {not} from "helpers";
 import {navigatorInfo} from "utils";
 import isitBrowser from "browser";
 
 export default function isitIe(version) {
-    if (!isitBrowser()) {
+    if (not(isitBrowser)()) {
         return false;
     }
 

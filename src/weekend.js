@@ -1,9 +1,10 @@
 
 
+import {not} from "helpers";
 import isitDate from "date";
 
 export default function isitWeekday(obj) {
-    if (!isitDate(obj)) {
+    if (not(isitDate)(obj)) {
         return false;
     }
 

@@ -1,14 +1,11 @@
 
 
-import {
-    all,
-    not
-} from "helpers";
+import {not} from "helpers";
 import isitString from "string";
-import isitTruthy from "truthy";
+import isitEqual from "equal";
 
 export default function isitCapitalized(obj) {
-    if (not(isitString(obj))) {
+    if (not(isitString)(obj)) {
         return false;
     }
 
@@ -16,8 +13,10 @@ export default function isitCapitalized(obj) {
         capitalized = [];
 
     for (let i = 0, len = words.length; i < len; i++) {
-        capitalized[i] = words[i][0] === words[i][0].toUpperCase();
+        if (words[i].charAt(0) === words[i].charAt(0).toUpperCase()) {
+            capitalized[capitalized.length] = words[i];
+        }
     }
 
-    return all(isitTruthy.apply(null, capitalized));
+    return isitEqual(words, capitalized);
 }

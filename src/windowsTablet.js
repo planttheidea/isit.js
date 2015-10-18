@@ -7,5 +7,5 @@ import isitWindows from "windows";
 import isitWindowsPhone from "windowsPhone";
 
 export default function isitWindowsTablet() {
-    return isitBrowser() && isitWindows() && not(isitWindowsPhone()) && /touch/i.test(navigatorInfo.userAgent);
+    return isitBrowser() && isitWindows() && not(isitWindowsPhone)() && /touch/i.test(navigatorInfo.userAgent);
 }

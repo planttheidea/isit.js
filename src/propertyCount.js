@@ -1,12 +1,14 @@
 
 
-import {hasOwnProperty} from "helpers";
-
+import {
+    hasOwnProperty,
+    not
+} from "helpers";
 import isitNumber from "number";
 import isitObject from "object";
 
 export default function isitPropertyCount(obj, count) {
-    if (!isitObject(obj) || !isitNumber(count)) {
+    if (not(isitObject)(obj) || not(isitNumber)(count)) {
         return false;
     }
 

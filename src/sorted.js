@@ -28,7 +28,7 @@ function isArraySortedDesc(arr) {
 }
 
 export default function isitSorted(arr) {
-    if (not(isitArray(arr))) {
+    if (not(isitArray)(arr)) {
         return false;
     }
 
