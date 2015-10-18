@@ -412,6 +412,32 @@ isit.not.sameType(42, 7);
 => false
 ```
 
+isit.typedArray(value:any)
+---------------------------------
+####Checks if the given value is a typed array.
+interfaces: not, all, any
+
+```javascript
+isit.typedArray(new Float32Array());
+=> true
+
+isit.typedArray([]);
+=> false
+
+isit.not.typedArray(new Uint16Array());
+=> false
+
+isit.all.typedArray(undefined, new Int8Array());
+=> false
+
+isit.any.typedArray(undefined, new Int8Array());
+=> true
+
+// 'all' and 'any' interfaces can also take array parameter
+isit.all.typedArray([new Float64Array(), undefined]);
+=> false
+```
+
 Presence checks
 ===============
 

@@ -43,6 +43,7 @@ import isitRegExp from "./regexp";
 import isitSameType from "./sameType";
 import isitString from "./string";
 import isitSymbol from "./symbol";
+import isitTypedArray from "./typedArray";
 import isitUndefined from "./undefined";
 
 isit.arguments = isitArguments;
@@ -61,6 +62,7 @@ isit.regexp = isitRegExp;
 isit.sameType = isitSameType;
 isit.string = isitString;
 isit.symbol = isitSymbol;
+isit.typedArray = isitTypedArray;
 isit.undefined = isitUndefined;
 
 // api restrictions
