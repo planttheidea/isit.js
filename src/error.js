@@ -1,4 +1,4 @@
-
+// is obj an error value?
 
 import {toString} from "./utils";
 

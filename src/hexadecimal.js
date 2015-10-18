@@ -1,4 +1,4 @@
-
+// is obj a hexadecimal value?
 
 import {hexadecimal} from "regexps";
 

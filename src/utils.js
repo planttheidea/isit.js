@@ -1,4 +1,4 @@
-
+// utility functions, used all over the place
 
 import isitBrowser from "browser";
 

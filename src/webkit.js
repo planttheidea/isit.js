@@ -1,4 +1,4 @@
-
+// does the browser used render via WebKit?
 
 import {navigatorInfo} from "utils";
 import isitBrowser from "browser";

@@ -1,4 +1,4 @@
-
+// helper functions, used for interfaces
 
 import {arraySlice} from "utils";
 import isitArray from "array";

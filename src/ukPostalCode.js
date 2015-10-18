@@ -1,4 +1,4 @@
-
+// is obj a valid UK Postal Code?
 
 import {ukPostalCode} from "regexps";
 

@@ -1,4 +1,4 @@
-
+// is obj in the past compared to now?
 
 import isitDate from "date";
 

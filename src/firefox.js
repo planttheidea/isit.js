@@ -1,4 +1,4 @@
-
+// is the browser used firefox?
 
 import {navigatorInfo} from "utils";
 import isitBrowser from "browser";

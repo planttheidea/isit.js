@@ -1,4 +1,4 @@
-
+// is obj a string, and does it end with endStr?
 
 import isitString from "string";
 

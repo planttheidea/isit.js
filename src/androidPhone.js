@@ -1,4 +1,4 @@
-
+// is the device used an android phone?
 
 import {navigatorInfo} from "utils";
 import isitBrowser from "browser";

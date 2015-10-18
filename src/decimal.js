@@ -1,4 +1,4 @@
-
+// is obj a decimal value?
 
 import isitNumber from "number";
 

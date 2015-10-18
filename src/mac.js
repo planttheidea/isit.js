@@ -1,4 +1,4 @@
-
+// is the device used a Mac?
 
 import {navigatorInfo} from "utils";
 import isitBrowser from "browser";

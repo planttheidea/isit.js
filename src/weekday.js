@@ -1,4 +1,4 @@
-
+// is obj a date and a weekday?
 
 import {not} from "helpers";
 import isitDate from "date";

@@ -1,4 +1,4 @@
-
+// is obj a RegExp value?
 
 import {toString} from "utils";
 

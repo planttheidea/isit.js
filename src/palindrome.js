@@ -1,4 +1,4 @@
-
+// is obj a string and a palindrome?
 
 import isitString from "string";
 

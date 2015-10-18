@@ -1,4 +1,4 @@
-
+// is obj a function?
 
 import {toString} from "./utils";
 

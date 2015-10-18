@@ -1,4 +1,4 @@
-
+// is obj a valid IPv6 address?
 
 import {ipv6} from "regexps";
 

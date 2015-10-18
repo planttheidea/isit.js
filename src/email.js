@@ -1,4 +1,4 @@
-
+// is obj a valid email address?
 
 import {email} from "regexps";
 

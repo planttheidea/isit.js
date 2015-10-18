@@ -1,4 +1,4 @@
-
+// is the device used a tablet running on Windows?
 
 import {not} from "helpers";
 import {navigatorInfo} from "utils";

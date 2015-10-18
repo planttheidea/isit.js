@@ -57,8 +57,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	// isit.js
 	// Author: Tony Quetano
 	
-	// Forked from: isit.js
-	// Original Author: Aras Atasaygin
+	// Originally forked from: isit.js
+	// Author: Aras Atasaygin
 	
 	"use strict";
 	
@@ -809,6 +809,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 1 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// utility functions, used all over the place
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -854,6 +856,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 2 */
 /***/ function(module, exports) {
 
+	// is the environment a browser?
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -871,6 +875,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 3 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// helper functions, used for interfaces
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -955,6 +961,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 4 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// is obj an array value?
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -975,6 +983,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 5 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// is obj a set of function arguments?
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -1002,6 +1012,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 6 */
 /***/ function(module, exports) {
 
+	// is obj a null value?
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -1019,6 +1031,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 7 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// is obj a boolean value?
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -1038,6 +1052,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 8 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// is obj a char value?
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -1061,6 +1077,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 9 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// is obj a string value?
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -1080,6 +1098,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 10 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// is obj a date value?
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -1099,6 +1119,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 11 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// is obj an error value?
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -1118,6 +1140,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 12 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// is obj a function?
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -1137,6 +1161,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 13 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// is obj a JSON value?
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -1156,6 +1182,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 14 */
 /***/ function(module, exports) {
 
+	// is obj NaN (Not A Number)?
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -1173,6 +1201,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 15 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// is obj a number?
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -1202,6 +1232,9 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 16 */
 /***/ function(module, exports) {
 
+	// is obj an object value?
+	// NOTE: will return true for functions as well
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -1221,6 +1254,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 17 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// is obj a RegExp value?
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -1240,6 +1275,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 18 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// is obj1 and obj2 the same type?
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -1271,6 +1308,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 19 */
 /***/ function(module, exports) {
 
+	// is obj a symbol value?
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -1288,6 +1327,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 20 */
 /***/ function(module, exports) {
 
+	// is obj an undefined value?
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -1305,6 +1346,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 21 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// is obj an empty object / array, or not have a value?
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -1322,9 +1365,17 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _arguments2 = _interopRequireDefault(_arguments);
 	
+	var _null = __webpack_require__(6);
+	
+	var _null2 = _interopRequireDefault(_null);
+	
 	var _object = __webpack_require__(16);
 	
 	var _object2 = _interopRequireDefault(_object);
+	
+	var _undefined = __webpack_require__(20);
+	
+	var _undefined2 = _interopRequireDefault(_undefined);
 	
 	function isitEmpty(obj) {
 	    if ((0, _object2["default"])(obj)) {
@@ -1333,7 +1384,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        return num === 0 || num === 1 && (0, _array2["default"])(obj) || num === 2 && (0, _arguments2["default"])(obj);
 	    }
 	
-	    return obj === "";
+	    return obj === "" || (0, _null2["default"])(obj) || (0, _undefined2["default"])(obj);
 	}
 	
 	module.exports = exports["default"];
@@ -1342,6 +1393,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 22 */
 /***/ function(module, exports) {
 
+	// is obj not null and not undefined?
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -1359,6 +1412,9 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 23 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// is obj a falsy value?
+	// NOTE: matches language, returns true for undefined, null, 0, and ""
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -1385,6 +1441,10 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 24 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// is obj a truthy value?
+	// NOTE: matches the language, so valid values are objects, functions,
+	// arrays, strings with length, and integers greater than 0
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -1415,6 +1475,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 25 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// is obj only whitespace?
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -1434,7 +1496,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 26 */
 /***/ function(module, exports) {
 
-	
+	// regex values to test a variety of values
 	
 	// Steven Levithan, Jan Goyvaerts: Regular Expressions Cookbook
 	// Scott Gonzalez: Email address validation
@@ -1476,6 +1538,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 27 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// is number obj greater than the number min?
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -1501,6 +1565,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 28 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// is obj a decimal value?
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -1524,6 +1590,9 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 29 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// is obj1 and obj2 equal?
+	// NOTE: for arrays and objects, will check deeply via recursive calls
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -1652,6 +1721,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 30 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// is obj a number and is it even?
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -1675,6 +1746,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 31 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// is obj a finite value?
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -1701,6 +1774,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 32 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// is obj not a finite value?
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -1710,12 +1785,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
+	var _helpers = __webpack_require__(3);
+	
 	var _finite = __webpack_require__(31);
 	
 	var _finite2 = _interopRequireDefault(_finite);
 	
 	function isInfinite(obj) {
-	    return !(0, _finite2["default"])(obj);
+	    return (0, _helpers.not)(_finite2["default"])(obj);
 	}
 	
 	module.exports = exports["default"];
@@ -1724,6 +1801,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 33 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// is obj an integer value?
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -1747,6 +1826,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 34 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// is obj a negative number?
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -1770,6 +1851,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 35 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// is obj an odd number?
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -1793,6 +1876,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 36 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// is obj a positive number?
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -1816,6 +1901,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 37 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// are obj and max numbers, and is obj less than max?
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -1841,6 +1928,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 38 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// are obj, min, and max all numbers and is obj greater than min and less than max?
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -1885,6 +1974,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 40 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// is obj alphanumeric?
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -1904,6 +1995,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 41 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// is obj a valid Canada Postal Code?
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -1923,6 +2016,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 42 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// is obj a valid credit card number?
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -1942,6 +2037,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 43 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// is obj a valid date string?
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -1961,6 +2058,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 44 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// is obj a valid email address?
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -1999,6 +2098,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 46 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// is obj a hexadecimal value?
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -2018,6 +2119,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 47 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// is obj a valid hex color?
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -2037,6 +2140,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 48 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// is obj a valid IP address?
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -2056,6 +2161,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 49 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// is obj a valid IPv4 address?
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -2075,6 +2182,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 50 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// is obj a valid IPv6 address?
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -2113,6 +2222,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 52 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// is obj a valid social security number?
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -2132,6 +2243,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 53 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// is obj a valid time string?
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -2151,6 +2264,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 54 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// is obj a valid UK Postal Code?
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -2170,6 +2285,9 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 55 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// is obj a valid URL?
+	// NOTE: this is a little wonky, I can't seem to find a solid regex to encompass all possible values
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -2189,6 +2307,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 56 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// is obj a valid US Zip Code?
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -2208,6 +2328,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 57 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// function to either override existing regex tests or create new ones
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -2237,6 +2359,10 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 58 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// is obj a string of capitalized words?
+	// NOTE: this will return true for start case ("I Am Capitalized")
+	// or uppercase ("I AM UPPERCASE")
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -2279,6 +2405,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 59 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// is obj a string, and does it end with endStr?
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -2302,6 +2430,9 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 60 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// is obj either an array or a string, and does substr exist in it?
+	// NOTE: this can be used as an alias for .inArray()
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -2329,6 +2460,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 61 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// is obj a string and all lowercase?
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -2352,6 +2485,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 62 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// is obj a string and a palindrome?
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -2375,6 +2510,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 63 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// is obj a string and does it start with startStr?
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -2398,6 +2535,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 64 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// is obj a string and is it all uppercase?
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -2421,6 +2560,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 65 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// is obj a DOM node value?
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -2444,6 +2585,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 66 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// is obj an object value, and do the number of properties in that object match count
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -2490,6 +2633,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 67 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// is obj an object and does prop exist as a key in it?
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -2517,6 +2662,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 68 */
 /***/ function(module, exports) {
 
+	// is obj the window object?
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -2534,6 +2681,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 69 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// is arr an array, and does obj exist in it?
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -2550,20 +2699,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _array2 = _interopRequireDefault(_array);
 	
 	function isitInArray(obj, arr) {
-	    if ((0, _helpers.not)((0, _array2["default"])(arr))) {
+	    if ((0, _helpers.not)(_array2["default"])(arr)) {
 	        return false;
 	    }
 	
-	    var i = 0,
-	        len = arr.length;
-	
-	    for (; i < len; i++) {
-	        if (arr[i] === obj) {
-	            return true;
-	        }
-	    }
-	
-	    return false;
+	    return arr.indexOf(obj) !== -1;
 	}
 	
 	module.exports = exports["default"];
@@ -2572,6 +2712,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 70 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// is arr an array that is sorted either ascending or descending?
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -2625,6 +2767,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 71 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// is obj a date value and does it match the day string?
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -2654,6 +2798,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 72 */
 /***/ function(module, exports) {
 
+	// days and months used for various date comparisons
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -2705,6 +2851,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 74 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// is obj in the future compared to now?
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -2728,6 +2876,9 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 75 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// are obj, startObj, and endObj all date values, and does obj exist in the range created by
+	// startObj and endObj?
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -2759,6 +2910,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 76 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// is obj in the last month compared to now?
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -2782,6 +2935,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 77 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// is obj in the last week compared to now?
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -2805,6 +2960,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 78 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// is obj in the last year compared to now?
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -2828,6 +2985,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 79 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// is obj a number and a valid leap year?
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -2851,6 +3010,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 80 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// is obj a date, and does it match monthString?
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -2880,6 +3041,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 81 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// is obj in the next month compared to now?
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -2903,6 +3066,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 82 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// is obj in the next week compared to now?
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -2926,6 +3091,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 83 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// is obj in the next year compared to now?
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -2949,6 +3116,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 84 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// is obj in the past compared to now?
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -2972,6 +3141,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 85 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// is obj a date and is it in quarter quarterNumber?
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -2999,6 +3170,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 86 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// is obj a date and is it the same as today?
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -3022,6 +3195,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 87 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// is obj a date and is it tomorrow?
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -3031,12 +3206,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
+	var _helpers = __webpack_require__(3);
+	
 	var _date = __webpack_require__(10);
 	
 	var _date2 = _interopRequireDefault(_date);
 	
 	function isitTomorrow(obj) {
-	    if (!(0, _date2["default"])(obj)) {
+	    if ((0, _helpers.not)(_date2["default"])(obj)) {
 	        return false;
 	    }
 	
@@ -3052,6 +3229,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 88 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// is obj a date and a weekday?
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -3083,6 +3262,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 89 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// is obj a date and a weekend day?
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -3114,6 +3295,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 90 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// is obj a date and year a number, and is obj in year year?
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -3141,6 +3324,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 91 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// is obj a date and is it yesterday?
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -3167,6 +3352,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 92 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// does the device used run on android?
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -3192,6 +3379,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 93 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// is the device used an android phone?
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -3219,6 +3408,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 94 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// is the device used an android tablet?
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -3246,6 +3437,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 95 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// is the device used a blackberry phone?
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -3271,6 +3464,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 96 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// does the browser used render via blink?
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -3296,6 +3491,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 97 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// is the browser used chrome?
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -3321,6 +3518,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 98 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// is the device used a desktop / laptop computer?
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -3352,6 +3551,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 99 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// is the device used a mobile phone?
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -3395,6 +3596,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 100 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// is the device used an iPhone?
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -3420,6 +3623,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 101 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// is the device used an iPod?
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -3445,6 +3650,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 102 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// is the device used a mobile phone running on Windows?
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -3474,6 +3681,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 103 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// is the device used running on Windows?
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -3499,6 +3708,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 104 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// is the device used a tablet?
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -3534,6 +3745,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 105 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// is the device used an iPad?
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -3559,6 +3772,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 106 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// is the device used a tablet running on Windows?
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -3594,6 +3809,9 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 107 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// is the browser used Internet Explorer?
+	// NOTE: if version is passed, will validate if IE and equal to that version
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -3634,6 +3852,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 108 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// is the browser used firefox?
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -3659,6 +3879,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 109 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// does the browser used render via gecko?
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -3684,6 +3906,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 110 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// is the device used running on iOS?
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -3715,6 +3939,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 111 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// is the device used running on Linux?
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -3740,6 +3966,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 112 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// is the device used a Mac?
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -3765,6 +3993,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 113 */
 /***/ function(module, exports) {
 
+	// is the environment not a browser (meaning its likely server-side, or NodeJS)?
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -3828,6 +4058,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 116 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// is the browser used Opera?
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -3853,6 +4085,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 117 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// does the browser used render via Presto?
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -3878,6 +4112,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 118 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// does the device used have a retina screen?
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -3905,6 +4141,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 119 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// is the browser used Safari?
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -3930,6 +4168,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 120 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// is the device used a touch device?
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -3955,6 +4195,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 121 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// does the browser used render via Trident?
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -3980,6 +4222,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 122 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// does the browser used render via WebKit?
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {

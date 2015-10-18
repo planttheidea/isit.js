@@ -1,4 +1,4 @@
-
+// is obj a valid time string?
 
 import {timeString} from "regexps";
 

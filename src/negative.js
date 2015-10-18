@@ -1,4 +1,4 @@
-
+// is obj a negative number?
 
 import isitNumber from "number";
 

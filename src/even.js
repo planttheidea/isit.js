@@ -1,4 +1,4 @@
-
+// is obj a number and is it even?
 
 import isitNumber from "number";
 

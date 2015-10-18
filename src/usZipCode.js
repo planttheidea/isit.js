@@ -1,4 +1,4 @@
-
+// is obj a valid US Zip Code?
 
 import {usZipCode} from "regexps";
 

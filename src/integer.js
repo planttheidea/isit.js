@@ -1,4 +1,4 @@
-
+// is obj an integer value?
 
 import isitNumber from "number";
 

@@ -1,4 +1,4 @@
-
+// is the device used a mobile phone running on Windows?
 
 import {navigatorInfo} from "utils";
 import isitBrowser from "browser";

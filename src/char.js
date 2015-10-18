@@ -1,4 +1,4 @@
-
+// is obj a char value?
 
 import isitString from "string";
 

@@ -1,4 +1,4 @@
-
+// is obj an object value, and do the number of properties in that object match count
 
 import {
     hasOwnProperty,

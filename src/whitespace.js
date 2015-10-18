@@ -1,4 +1,4 @@
-
+// is obj only whitespace?
 
 import {whitespace} from "regexps";
 

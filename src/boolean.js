@@ -1,4 +1,4 @@
-
+// is obj a boolean value?
 
 import {toString} from "./utils";
 

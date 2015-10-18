@@ -1,4 +1,4 @@
-
+// is obj a valid IP address?
 
 import {ip} from "regexps";
 

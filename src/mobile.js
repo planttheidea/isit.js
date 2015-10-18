@@ -1,4 +1,4 @@
-
+// is the device used a mobile phone?
 
 import isitAndroidPhone from "androidPhone";
 import isitBlackberry from "blackberry";

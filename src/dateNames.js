@@ -1,4 +1,4 @@
-
+// days and months used for various date comparisons
 
 export var days = [
     "sunday",

@@ -1,4 +1,4 @@
-
+// is obj1 and obj2 the same type?
 
 import {all} from "helpers";
 import {toString} from "utils";

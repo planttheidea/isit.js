@@ -1,4 +1,4 @@
-
+// does the device used have a retina screen?
 
 import isitBrowser from "browser";
 

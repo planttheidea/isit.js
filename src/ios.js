@@ -1,4 +1,4 @@
-
+// is the device used running on iOS?
 
 import isitIpad from "ipad";
 import isitIphone from "iphone";

@@ -1,4 +1,5 @@
-
+// is obj1 and obj2 equal?
+// NOTE: for arrays and objects, will check deeply via recursive calls
 
 import {
     all,

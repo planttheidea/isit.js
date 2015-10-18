@@ -1,4 +1,4 @@
-
+// is the device used a tablet?
 
 import isitAndroidTablet from "androidTablet";
 import isitBrowser from "browser";

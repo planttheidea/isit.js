@@ -1,4 +1,4 @@
-
+// is obj a finite value?
 
 import {not} from "helpers";
 import isitNaN from "nan.js";

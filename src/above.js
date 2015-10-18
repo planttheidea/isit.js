@@ -1,4 +1,4 @@
-
+// is number obj greater than the number min?
 
 import {all} from "helpers";
 import isitNumber from "number";

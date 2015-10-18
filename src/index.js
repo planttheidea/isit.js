@@ -1,9 +1,8 @@
 // isit.js
 // Author: Tony Quetano
 
-// Forked from: isit.js
-// Original Author: Aras Atasaygin
-
+// Originally forked from: isit.js
+// Author: Aras Atasaygin
 
 import {hasOwnProperty} from "./utils";
 

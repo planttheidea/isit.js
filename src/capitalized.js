@@ -1,4 +1,6 @@
-
+// is obj a string of capitalized words?
+// NOTE: this will return true for start case ("I Am Capitalized")
+// or uppercase ("I AM UPPERCASE")
 
 import {not} from "helpers";
 import isitString from "string";

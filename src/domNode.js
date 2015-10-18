@@ -1,4 +1,4 @@
-
+// is obj a DOM node value?
 
 import isitObject from "object";
 

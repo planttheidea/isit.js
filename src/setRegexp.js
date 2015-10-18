@@ -1,4 +1,4 @@
-
+// function to either override existing regex tests or create new ones
 
 import {hasOwnProperty} from "utils";
 import regexps from "regexps";

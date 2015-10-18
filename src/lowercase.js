@@ -1,4 +1,4 @@
-
+// is obj a string and all lowercase?
 
 import isitString from "string";
 

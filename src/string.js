@@ -1,4 +1,4 @@
-
+// is obj a string value?
 
 import {toString} from "utils";
 

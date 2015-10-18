@@ -1,4 +1,4 @@
-
+// is obj a number and a valid leap year?
 
 import isitNumber from "number";
 

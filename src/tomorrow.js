@@ -1,9 +1,10 @@
+// is obj a date and is it tomorrow?
 
-
+import {not} from "helpers";
 import isitDate from "date";
 
 export default function isitTomorrow(obj) {
-    if (!isitDate(obj)) {
+    if (not(isitDate)(obj)) {
         return false;
     }
 

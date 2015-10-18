@@ -1,4 +1,4 @@
-
+// is obj a set of function arguments?
 
 import {not} from "helpers";
 import {toString} from "utils";

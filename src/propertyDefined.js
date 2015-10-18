@@ -1,4 +1,4 @@
-
+// is obj an object and does prop exist as a key in it?
 
 import isitObject from "object";
 import isitString from "string";

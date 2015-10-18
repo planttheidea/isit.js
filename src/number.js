@@ -1,4 +1,4 @@
-
+// is obj a number?
 
 import {not} from "helpers";
 import {toString} from "utils";

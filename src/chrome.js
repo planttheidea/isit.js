@@ -1,4 +1,4 @@
-
+// is the browser used chrome?
 
 import {navigatorInfo} from "utils";
 import isitBrowser from "browser";

@@ -1,4 +1,4 @@
-
+// is obj a valid Canada Postal Code?
 
 import {caPostalCode} from "regexps";
 

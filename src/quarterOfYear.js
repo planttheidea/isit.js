@@ -1,4 +1,4 @@
-
+// is obj a date and is it in quarter quarterNumber?
 
 import isitDate from "date";
 import isitNumber from "number";

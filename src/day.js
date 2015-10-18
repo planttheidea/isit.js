@@ -1,4 +1,4 @@
-
+// is obj a date value and does it match the day string?
 
 import {days} from "dateNames";
 import isitDate from "date";

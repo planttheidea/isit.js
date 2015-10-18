@@ -1,4 +1,4 @@
-
+// is obj an odd number?
 
 import isitNumber from "number";
 

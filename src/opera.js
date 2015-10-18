@@ -1,4 +1,4 @@
-
+// is the browser used Opera?
 
 import {navigatorInfo} from "utils";
 import isitBrowser from "browser";

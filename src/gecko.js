@@ -1,4 +1,4 @@
-
+// does the browser used render via gecko?
 
 import {navigatorInfo} from "utils";
 import isitBrowser from "browser";

@@ -1,4 +1,4 @@
-
+// is obj a date and year a number, and is obj in year year?
 
 import isitDate from "date";
 import isitNumber from "number";

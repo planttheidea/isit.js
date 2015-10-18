@@ -1,4 +1,5 @@
-
+// are obj, startObj, and endObj all date values, and does obj exist in the range created by
+// startObj and endObj?
 
 import {
     all,

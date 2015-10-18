@@ -1,4 +1,4 @@
-
+// does the browser used render via Trident?
 
 import {navigatorInfo} from "utils";
 import isitBrowser from "browser";

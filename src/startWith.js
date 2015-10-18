@@ -1,4 +1,4 @@
-
+// is obj a string and does it start with startStr?
 
 import isitString from "string";
 

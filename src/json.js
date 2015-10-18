@@ -1,4 +1,4 @@
-
+// is obj a JSON value?
 
 import {toString} from "./utils";
 

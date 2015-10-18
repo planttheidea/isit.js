@@ -1,4 +1,4 @@
-
+// is obj a date and is it yesterday?
 
 import isitDate from "date";
 

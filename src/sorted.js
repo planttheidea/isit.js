@@ -1,4 +1,4 @@
-
+// is arr an array that is sorted either ascending or descending?
 
 import {not} from "helpers";
 import isitArray from "array";

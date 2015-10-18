@@ -1,4 +1,4 @@
-
+// is the device used a touch device?
 
 import isitBrowser from "browser";
 

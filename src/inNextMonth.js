@@ -1,4 +1,4 @@
-
+// is obj in the next month compared to now?
 
 import isitInDateRange from "inDateRange";
 

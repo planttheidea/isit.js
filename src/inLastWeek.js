@@ -1,4 +1,4 @@
-
+// is obj in the last week compared to now?
 
 import isitInDateRange from "inDateRange";
 

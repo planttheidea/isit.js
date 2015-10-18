@@ -1,4 +1,4 @@
-
+// is obj a valid hex color?
 
 import {hexColor} from "regexps";
 

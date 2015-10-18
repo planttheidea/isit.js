@@ -1,4 +1,4 @@
-
+// is obj a date, and does it match monthString?
 
 import {months} from "dateNames";
 import isitDate from "date";

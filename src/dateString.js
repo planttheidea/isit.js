@@ -1,4 +1,4 @@
-
+// is obj a valid date string?
 
 import {dateString} from "regexps";
 
