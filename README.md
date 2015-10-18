@@ -15,20 +15,20 @@ The origin of this project was the wonderful work done by arasatasaygin at [is.j
 
 Node.js:
 ```
-npm install isit
+npm install isitjs
 ```
 
 ####Usage:
 ```
 // ES2015
-import isit from "isit";
+import isit from "isitjs";
 
 // CommonJS
-var isit = require("isit");
+var isit = require("isitjs");
 
 // if you just want specific modules
 
-var isitArray = require("isit/array");
+var isitArray = require("isitjs/array");
 ```
 
 Type checks
