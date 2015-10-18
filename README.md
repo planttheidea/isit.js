@@ -30,6 +30,7 @@ var isit = require("isitjs");
 import isitBoolean from "isitjs/lib/boolean";
 // or
 var isitArray = require("isitjs/lib/array");
+```
 
 Type checks
 ===========
