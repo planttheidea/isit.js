@@ -4,8 +4,8 @@ var express = require("express"),
     app = express(),
     server;
 
-app.get("/is.js", function(request, response) {
-    response.sendFile(path.resolve("test/is.js"));
+app.get("/*.js", function(request, response) {
+    response.sendFile(path.resolve("lib", request.url.slice(1)));
 });
 
 app.get("/", function(request, response) {
