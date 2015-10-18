@@ -216,6 +216,11 @@
             console.log(isit.isoDateString("2007-04-05T24:00") === true);
             console.log(isit.isoDateString("1/15/2010") === false);
             console.groupEnd();
+
+            console.group("domNodeList");
+            console.log(isit.domNodeList(document.querySelectorAll("#test")) === true);
+            console.log(isit.not.domNodeList(document.querySelectorAll("#test")) === false);
+            console.groupEnd();
         </script>
     </body>
 </html>

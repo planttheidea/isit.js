@@ -204,12 +204,14 @@ isit.startWith.api = ["not"];
 /* -------------------------------------------------------------------------- */
 
 import isitDomNode from "./domNode";
+import isitDOMNodeList from "./domNodeList";
 import isitJquery from "./jquery";
 import isitPropertyCount from "./propertyCount";
 import isitPropertyDefined from "./propertyDefined";
 import isitWindowObject from "./windowObject";
 
 isit.domNode = isitDomNode;
+isit.domNodeList = isitDOMNodeList;
 isit.jquery = isitJquery;
 isit.propertyCount = isitPropertyCount;
 isit.propertyDefined = isitPropertyDefined;

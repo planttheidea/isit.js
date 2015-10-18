@@ -2,6 +2,6 @@
 
 import isitObject from "./object";
 
-export default function isitDomNode(obj) {
+export default function isitDOMNode(obj) {
     return isitObject(obj) && obj.nodeType > 0;
 }
