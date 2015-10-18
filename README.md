@@ -27,9 +27,9 @@ import isit from "isitjs";
 var isit = require("isitjs");
 
 // if you just want specific modules
-import isitBoolean from "isitjs/boolean";
+import isitBoolean from "isitjs/lib/boolean";
 // or
-var isitArray = require("isitjs/array");
+var isitArray = require("isitjs/lib/array");
 ```
 
 Type checks
