@@ -1,6 +1,7 @@
 {
+  "author": "planttheidea",
   "bugs": {
-    "url": "https://github.com/planttheidea/is.js/issues"
+    "url": "https://github.com/planttheidea/isit.js/issues"
   },
   "description": "micro check library",
   "devDependencies": {
@@ -16,13 +17,19 @@
     "webpack": "^1.12.2",
     "webpack-dev-server": "^1.12.0"
   },
-  "homepage": "https://github.com/planttheidea/is.js",
+  "homepage": "https://github.com/planttheidea/isit.js",
+  "keywords":[
+    "check",
+    "is",
+    "test",
+    "validate"
+  ],
   "license": "MIT",
-  "main": "is.js",
-  "name": "is_js",
+  "main": "isit.js",
+  "name": "isitjs",
   "repository": {
     "type": "git",
-    "url": "https://github.com/planttheidea/is.js.git"
+    "url": "https://github.com/planttheidea/isit.js.git"
   },
   "scripts": {
     "compile": "babel -d lib/ src/",
