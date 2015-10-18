@@ -522,29 +522,29 @@ isit.all.falsy([false, true, undefined]);
 => false
 ```
 
-isit.space(value:string)
+isit.whitespace(value:string)
 ----------------------
-####Checks if the given value is space.
+####Checks if the given value is whitespace.
 interfaces: not, all, any
 
 ```javascript
-isit.space(' ');
+isit.whitespace(' ');
 => true
 
-isit.space('foo');
+isit.whitespace('foo');
 => false
 
-isit.not.space(true);
+isit.not.whitespace(true);
 => true
 
-isit.all.space(' ', 'foo');
+isit.all.whitespace(' ', 'foo');
 => false
 
-isit.any.space(' ', true);
+isit.any.whitespace(' ', true);
 => true
 
 // 'all' and 'any' interfaces can also take array parameter
-isit.all.space([' ', 'foo', undefined]);
+isit.all.whitespace([' ', 'foo', undefined]);
 => false
 ```
 

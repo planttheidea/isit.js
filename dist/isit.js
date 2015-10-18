@@ -160,69 +160,69 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _falsy2 = _interopRequireDefault(_falsy);
 	
-	var _space = __webpack_require__(31);
-	
-	var _space2 = _interopRequireDefault(_space);
-	
 	var _truthy = __webpack_require__(30);
 	
 	var _truthy2 = _interopRequireDefault(_truthy);
 	
+	var _whitespace = __webpack_require__(31);
+	
+	var _whitespace2 = _interopRequireDefault(_whitespace);
+	
 	// Arithmetic checks
 	/* -------------------------------------------------------------------------- */
 	
-	var _above = __webpack_require__(32);
+	var _above = __webpack_require__(33);
 	
 	var _above2 = _interopRequireDefault(_above);
 	
-	var _decimal = __webpack_require__(33);
+	var _decimal = __webpack_require__(34);
 	
 	var _decimal2 = _interopRequireDefault(_decimal);
 	
-	var _equal = __webpack_require__(34);
+	var _equal = __webpack_require__(35);
 	
 	var _equal2 = _interopRequireDefault(_equal);
 	
-	var _even = __webpack_require__(35);
+	var _even = __webpack_require__(36);
 	
 	var _even2 = _interopRequireDefault(_even);
 	
-	var _finite = __webpack_require__(36);
+	var _finite = __webpack_require__(37);
 	
 	var _finite2 = _interopRequireDefault(_finite);
 	
-	var _infinite = __webpack_require__(37);
+	var _infinite = __webpack_require__(38);
 	
 	var _infinite2 = _interopRequireDefault(_infinite);
 	
-	var _integer = __webpack_require__(38);
+	var _integer = __webpack_require__(39);
 	
 	var _integer2 = _interopRequireDefault(_integer);
 	
-	var _negative = __webpack_require__(39);
+	var _negative = __webpack_require__(40);
 	
 	var _negative2 = _interopRequireDefault(_negative);
 	
-	var _odd = __webpack_require__(40);
+	var _odd = __webpack_require__(41);
 	
 	var _odd2 = _interopRequireDefault(_odd);
 	
-	var _positive = __webpack_require__(41);
+	var _positive = __webpack_require__(42);
 	
 	var _positive2 = _interopRequireDefault(_positive);
 	
-	var _under = __webpack_require__(42);
+	var _under = __webpack_require__(43);
 	
 	var _under2 = _interopRequireDefault(_under);
 	
-	var _within = __webpack_require__(43);
+	var _within = __webpack_require__(44);
 	
 	var _within2 = _interopRequireDefault(_within);
 	
 	// Regexp checks
 	/* -------------------------------------------------------------------------- */
 	
-	var _affirmative = __webpack_require__(44);
+	var _affirmative = __webpack_require__(45);
 	
 	var _affirmative2 = _interopRequireDefault(_affirmative);
 	
@@ -611,8 +611,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	isit.empty = _empty2["default"];
 	isit.existy = _existy2["default"];
 	isit.falsy = _falsy2["default"];
-	isit.space = _space2["default"];
 	isit.truthy = _truthy2["default"];
+	isit.whitespace = _whitespace2["default"];
 	
 	isit.above = _above2["default"];
 	isit.decimal = _decimal2["default"];
@@ -2789,28 +2789,60 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports["default"] = isitSpace;
+	exports["default"] = isitWhitespace;
 	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+	var _regexps = __webpack_require__(32);
 	
-	var _char = __webpack_require__(8);
-	
-	var _char2 = _interopRequireDefault(_char);
-	
-	function isitSpace(obj) {
-	    if ((0, _char2["default"])(obj)) {
-	        var charCode = obj.charCodeAt(0);
-	
-	        return charCode > 0 && charCode < 14 || charCode === 32;
-	    }
-	
-	    return false;
+	function isitWhitespace(obj) {
+	    return _regexps.whitespace.test(obj);
 	}
 	
 	module.exports = exports["default"];
 
 /***/ },
 /* 32 */
+/***/ function(module, exports) {
+
+	
+	
+	// Steven Levithan, Jan Goyvaerts: Regular Expressions Cookbook
+	// Scott Gonzalez: Email address validation
+	
+	// eppPhone match extensible provisioning protocol format
+	// nanpPhone match north american number plan format
+	// dateString match m/d/yy and mm/dd/yyyy, allowing any combination of one or two digits for the day and month, and two or four digits for the year
+	// time match hours, minutes, and seconds, 24-hour clock
+	
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports["default"] = {
+	    affirmative: /^(?:1|t(?:rue)?|y(?:es)?|ok(?:ay)?)$/,
+	    alphaNumeric: /^[A-Za-z0-9]+$/,
+	    caPostalCode: /^(?!.*[DFIOQU])[A-VXY][0-9][A-Z]\s?[0-9][A-Z][0-9]$/,
+	    creditCard: /^(?:(4[0-9]{12}(?:[0-9]{3})?)|(5[1-5][0-9]{14})|(6(?:011|5[0-9]{2})[0-9]{12})|(3[47][0-9]{13})|(3(?:0[0-5]|[68][0-9])[0-9]{11})|((?:2131|1800|35[0-9]{3})[0-9]{11}))$/,
+	    dateString: /^(1[0-2]|0?[1-9])\/(3[01]|[12][0-9]|0?[1-9])\/(?:[0-9]{2})?[0-9]{2}$/,
+	    email: /^((([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+(\.([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+)*)|((\x22)((((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(([\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|\x21|[\x23-\x5b]|[\x5d-\x7e]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(\\([\x01-\x09\x0b\x0c\x0d-\x7f]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))))*(((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(\x22)))@((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))$/i,
+	    eppPhone: /^\+[0-9]{1,3}\.[0-9]{4,14}(?:x.+)?$/,
+	    hexadecimal: /^[0-9a-fA-F]+$/,
+	    hexColor: /^#[0-9a-f]{3}(?:[0-9a-f]{3})?$/,
+	    ip: /^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$|^(([a-zA-Z]|[a-zA-Z][a-zA-Z0-9\-]*[a-zA-Z0-9])\.)*([A-Za-z]|[A-Za-z][A-Za-z0-9\-]*[A-Za-z0-9])$|^\s*((([0-9A-Fa-f]{1,4}:){7}([0-9A-Fa-f]{1,4}|:))|(([0-9A-Fa-f]{1,4}:){6}(:[0-9A-Fa-f]{1,4}|((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3})|:))|(([0-9A-Fa-f]{1,4}:){5}(((:[0-9A-Fa-f]{1,4}){1,2})|:((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3})|:))|(([0-9A-Fa-f]{1,4}:){4}(((:[0-9A-Fa-f]{1,4}){1,3})|((:[0-9A-Fa-f]{1,4})?:((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3}))|:))|(([0-9A-Fa-f]{1,4}:){3}(((:[0-9A-Fa-f]{1,4}){1,4})|((:[0-9A-Fa-f]{1,4}){0,2}:((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3}))|:))|(([0-9A-Fa-f]{1,4}:){2}(((:[0-9A-Fa-f]{1,4}){1,5})|((:[0-9A-Fa-f]{1,4}){0,3}:((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3}))|:))|(([0-9A-Fa-f]{1,4}:){1}(((:[0-9A-Fa-f]{1,4}){1,6})|((:[0-9A-Fa-f]{1,4}){0,4}:((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3}))|:))|(:(((:[0-9A-Fa-f]{1,4}){1,7})|((:[0-9A-Fa-f]{1,4}){0,5}:((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3}))|:)))(%.+)?\s*$/,
+	    ipv4: /^(?:(?:\d|[1-9]\d|1\d{2}|2[0-4]\d|25[0-5])\.){3}(?:\d|[1-9]\d|1\d{2}|2[0-4]\d|25[0-5])$/,
+	    ipv6: /^(([a-zA-Z]|[a-zA-Z][a-zA-Z0-9\-]*[a-zA-Z0-9])\.)*([A-Za-z]|[A-Za-z][A-Za-z0-9\-]*[A-Za-z0-9])$|^\s*((([0-9A-Fa-f]{1,4}:){7}([0-9A-Fa-f]{1,4}|:))|(([0-9A-Fa-f]{1,4}:){6}(:[0-9A-Fa-f]{1,4}|((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3})|:))|(([0-9A-Fa-f]{1,4}:){5}(((:[0-9A-Fa-f]{1,4}){1,2})|:((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3})|:))|(([0-9A-Fa-f]{1,4}:){4}(((:[0-9A-Fa-f]{1,4}){1,3})|((:[0-9A-Fa-f]{1,4})?:((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3}))|:))|(([0-9A-Fa-f]{1,4}:){3}(((:[0-9A-Fa-f]{1,4}){1,4})|((:[0-9A-Fa-f]{1,4}){0,2}:((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3}))|:))|(([0-9A-Fa-f]{1,4}:){2}(((:[0-9A-Fa-f]{1,4}){1,5})|((:[0-9A-Fa-f]{1,4}){0,3}:((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3}))|:))|(([0-9A-Fa-f]{1,4}:){1}(((:[0-9A-Fa-f]{1,4}){1,6})|((:[0-9A-Fa-f]{1,4}){0,4}:((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3}))|:))|(:(((:[0-9A-Fa-f]{1,4}){1,7})|((:[0-9A-Fa-f]{1,4}){0,5}:((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3}))|:)))(%.+)?\s*$/,
+	    nanpPhone: /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/,
+	    socialSecurityNumber: /^(?!000|666)[0-8][0-9]{2}-(?!00)[0-9]{2}-(?!0000)[0-9]{4}$/,
+	    timeString: /^(2[0-3]|[01]?[0-9]):([0-5]?[0-9]):([0-5]?[0-9])$/,
+	    ukPostCode: /^[A-Z]{1,2}[0-9RCHNQ][0-9A-Z]?\s?[0-9][ABD-HJLNP-UW-Z]{2}$|^[A-Z]{2}-?[0-9]{4}$/,
+	    url: /^(?:(?:https?|ftp):\/\/)?(?:(?!(?:10|127)(?:\.\d{1,3}){3})(?!(?:169\.254|192\.168)(?:\.\d{1,3}){2})(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)(?:\.(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,})))(?::\d{2,5})?(?:\/\S*)?$/i,
+	    usZipCode: /^[0-9]{5}(?:-[0-9]{4})?$/,
+	    whitespace: /^\s+$/
+	};
+	module.exports = exports["default"];
+
+/***/ },
+/* 33 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -2835,7 +2867,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 33 */
+/* 34 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -2858,7 +2890,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 34 */
+/* 35 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -2986,7 +3018,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 35 */
+/* 36 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -3009,7 +3041,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 36 */
+/* 37 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -3034,7 +3066,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 37 */
+/* 38 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -3046,7 +3078,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
-	var _finite = __webpack_require__(36);
+	var _finite = __webpack_require__(37);
 	
 	var _finite2 = _interopRequireDefault(_finite);
 	
@@ -3057,7 +3089,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 38 */
+/* 39 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -3080,7 +3112,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 39 */
+/* 40 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -3103,7 +3135,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 40 */
+/* 41 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -3126,7 +3158,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 41 */
+/* 42 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -3149,7 +3181,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 42 */
+/* 43 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -3174,7 +3206,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 43 */
+/* 44 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -3199,7 +3231,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 44 */
+/* 45 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -3209,54 +3241,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	});
 	exports["default"] = isitAffirmative;
 	
-	var _regexps = __webpack_require__(45);
+	var _regexps = __webpack_require__(32);
 	
 	function isitAffirmative(obj) {
 	    return _regexps.affirmative.test(obj);
 	}
 	
-	module.exports = exports["default"];
-
-/***/ },
-/* 45 */
-/***/ function(module, exports) {
-
-	
-	
-	// Steven Levithan, Jan Goyvaerts: Regular Expressions Cookbook
-	// Scott Gonzalez: Email address validation
-	
-	// eppPhone match extensible provisioning protocol format
-	// nanpPhone match north american number plan format
-	// dateString match m/d/yy and mm/dd/yyyy, allowing any combination of one or two digits for the day and month, and two or four digits for the year
-	// time match hours, minutes, and seconds, 24-hour clock
-	
-	"use strict";
-	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	exports["default"] = {
-	    affirmative: /^(?:1|t(?:rue)?|y(?:es)?|ok(?:ay)?)$/,
-	    alphaNumeric: /^[A-Za-z0-9]+$/,
-	    caPostalCode: /^(?!.*[DFIOQU])[A-VXY][0-9][A-Z]\s?[0-9][A-Z][0-9]$/,
-	    creditCard: /^(?:(4[0-9]{12}(?:[0-9]{3})?)|(5[1-5][0-9]{14})|(6(?:011|5[0-9]{2})[0-9]{12})|(3[47][0-9]{13})|(3(?:0[0-5]|[68][0-9])[0-9]{11})|((?:2131|1800|35[0-9]{3})[0-9]{11}))$/,
-	    dateString: /^(1[0-2]|0?[1-9])\/(3[01]|[12][0-9]|0?[1-9])\/(?:[0-9]{2})?[0-9]{2}$/,
-	    email: /^((([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+(\.([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+)*)|((\x22)((((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(([\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|\x21|[\x23-\x5b]|[\x5d-\x7e]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(\\([\x01-\x09\x0b\x0c\x0d-\x7f]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))))*(((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(\x22)))@((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))$/i,
-	    eppPhone: /^\+[0-9]{1,3}\.[0-9]{4,14}(?:x.+)?$/,
-	    hexadecimal: /^[0-9a-fA-F]+$/,
-	    hexColor: /^#[0-9a-f]{3}(?:[0-9a-f]{3})?$/,
-	    ip: /^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$|^(([a-zA-Z]|[a-zA-Z][a-zA-Z0-9\-]*[a-zA-Z0-9])\.)*([A-Za-z]|[A-Za-z][A-Za-z0-9\-]*[A-Za-z0-9])$|^\s*((([0-9A-Fa-f]{1,4}:){7}([0-9A-Fa-f]{1,4}|:))|(([0-9A-Fa-f]{1,4}:){6}(:[0-9A-Fa-f]{1,4}|((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3})|:))|(([0-9A-Fa-f]{1,4}:){5}(((:[0-9A-Fa-f]{1,4}){1,2})|:((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3})|:))|(([0-9A-Fa-f]{1,4}:){4}(((:[0-9A-Fa-f]{1,4}){1,3})|((:[0-9A-Fa-f]{1,4})?:((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3}))|:))|(([0-9A-Fa-f]{1,4}:){3}(((:[0-9A-Fa-f]{1,4}){1,4})|((:[0-9A-Fa-f]{1,4}){0,2}:((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3}))|:))|(([0-9A-Fa-f]{1,4}:){2}(((:[0-9A-Fa-f]{1,4}){1,5})|((:[0-9A-Fa-f]{1,4}){0,3}:((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3}))|:))|(([0-9A-Fa-f]{1,4}:){1}(((:[0-9A-Fa-f]{1,4}){1,6})|((:[0-9A-Fa-f]{1,4}){0,4}:((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3}))|:))|(:(((:[0-9A-Fa-f]{1,4}){1,7})|((:[0-9A-Fa-f]{1,4}){0,5}:((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3}))|:)))(%.+)?\s*$/,
-	    ipv4: /^(?:(?:\d|[1-9]\d|1\d{2}|2[0-4]\d|25[0-5])\.){3}(?:\d|[1-9]\d|1\d{2}|2[0-4]\d|25[0-5])$/,
-	    ipv6: /^(([a-zA-Z]|[a-zA-Z][a-zA-Z0-9\-]*[a-zA-Z0-9])\.)*([A-Za-z]|[A-Za-z][A-Za-z0-9\-]*[A-Za-z0-9])$|^\s*((([0-9A-Fa-f]{1,4}:){7}([0-9A-Fa-f]{1,4}|:))|(([0-9A-Fa-f]{1,4}:){6}(:[0-9A-Fa-f]{1,4}|((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3})|:))|(([0-9A-Fa-f]{1,4}:){5}(((:[0-9A-Fa-f]{1,4}){1,2})|:((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3})|:))|(([0-9A-Fa-f]{1,4}:){4}(((:[0-9A-Fa-f]{1,4}){1,3})|((:[0-9A-Fa-f]{1,4})?:((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3}))|:))|(([0-9A-Fa-f]{1,4}:){3}(((:[0-9A-Fa-f]{1,4}){1,4})|((:[0-9A-Fa-f]{1,4}){0,2}:((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3}))|:))|(([0-9A-Fa-f]{1,4}:){2}(((:[0-9A-Fa-f]{1,4}){1,5})|((:[0-9A-Fa-f]{1,4}){0,3}:((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3}))|:))|(([0-9A-Fa-f]{1,4}:){1}(((:[0-9A-Fa-f]{1,4}){1,6})|((:[0-9A-Fa-f]{1,4}){0,4}:((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3}))|:))|(:(((:[0-9A-Fa-f]{1,4}){1,7})|((:[0-9A-Fa-f]{1,4}){0,5}:((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3}))|:)))(%.+)?\s*$/,
-	    nanpPhone: /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/,
-	    socialSecurityNumber: /^(?!000|666)[0-8][0-9]{2}-(?!00)[0-9]{2}-(?!0000)[0-9]{4}$/,
-	    timeString: /^(2[0-3]|[01]?[0-9]):([0-5]?[0-9]):([0-5]?[0-9])$/,
-	    ukPostCode: /^[A-Z]{1,2}[0-9RCHNQ][0-9A-Z]?\s?[0-9][ABD-HJLNP-UW-Z]{2}$|^[A-Z]{2}-?[0-9]{4}$/,
-	    url: /^(?:(?:https?|ftp):\/\/)?(?:(?!(?:10|127)(?:\.\d{1,3}){3})(?!(?:169\.254|192\.168)(?:\.\d{1,3}){2})(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)(?:\.(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,})))(?::\d{2,5})?(?:\/\S*)?$/i,
-	    usZipCode: /^[0-9]{5}(?:-[0-9]{4})?$/,
-	    whitespace: /^\s+$/
-	};
 	module.exports = exports["default"];
 
 /***/ },
@@ -3270,7 +3260,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	});
 	exports["default"] = isitAlphaNumeric;
 	
-	var _regexps = __webpack_require__(45);
+	var _regexps = __webpack_require__(32);
 	
 	function isitAlphaNumeric(obj) {
 	    return _regexps.alphaNumeric.test(obj);
@@ -3289,7 +3279,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	});
 	exports["default"] = isitCaPostalCode;
 	
-	var _regexps = __webpack_require__(45);
+	var _regexps = __webpack_require__(32);
 	
 	function isitCaPostalCode(obj) {
 	    return _regexps.caPostalCode.test(obj);
@@ -3308,7 +3298,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	});
 	exports["default"] = isitCreditCard;
 	
-	var _regexps = __webpack_require__(45);
+	var _regexps = __webpack_require__(32);
 	
 	function isitCreditCard(obj) {
 	    return _regexps.creditCard.test(obj);
@@ -3327,7 +3317,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	});
 	exports["default"] = isitDateString;
 	
-	var _regexps = __webpack_require__(45);
+	var _regexps = __webpack_require__(32);
 	
 	function isitDateString(obj) {
 	    return _regexps.dateString.test(obj);
@@ -3346,7 +3336,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	});
 	exports["default"] = isitEmail;
 	
-	var _regexps = __webpack_require__(45);
+	var _regexps = __webpack_require__(32);
 	
 	function isitEmail(obj) {
 	    return _regexps.email.test(obj);
@@ -3365,7 +3355,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	});
 	exports["default"] = isitEppPhone;
 	
-	var _regexps = __webpack_require__(45);
+	var _regexps = __webpack_require__(32);
 	
 	function isitEppPhone(obj) {
 	    return _regexps.eppPhone.test(obj);
@@ -3384,7 +3374,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	});
 	exports["default"] = isitHexadecimal;
 	
-	var _regexps = __webpack_require__(45);
+	var _regexps = __webpack_require__(32);
 	
 	function isitHexadecimal(obj) {
 	    return _regexps.hexadecimal.test(obj);
@@ -3403,7 +3393,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	});
 	exports["default"] = isitHexColor;
 	
-	var _regexps = __webpack_require__(45);
+	var _regexps = __webpack_require__(32);
 	
 	function isitHexColor(obj) {
 	    return _regexps.hexColor.test(obj);
@@ -3422,7 +3412,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	});
 	exports["default"] = isitIp;
 	
-	var _regexps = __webpack_require__(45);
+	var _regexps = __webpack_require__(32);
 	
 	function isitIp(obj) {
 	    return _regexps.ip.test(obj);
@@ -3441,7 +3431,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	});
 	exports["default"] = isitIpv4;
 	
-	var _regexps = __webpack_require__(45);
+	var _regexps = __webpack_require__(32);
 	
 	function isitIpv4(obj) {
 	    return _regexps.ipv4.test(obj);
@@ -3460,7 +3450,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	});
 	exports["default"] = isitIpv6;
 	
-	var _regexps = __webpack_require__(45);
+	var _regexps = __webpack_require__(32);
 	
 	function isitIpv6(obj) {
 	    return _regexps.ipv6.test(obj);
@@ -3479,7 +3469,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	});
 	exports["default"] = isitNanpPhone;
 	
-	var _regexps = __webpack_require__(45);
+	var _regexps = __webpack_require__(32);
 	
 	function isitNanpPhone(obj) {
 	    return _regexps.nanpPhone.test(obj);
@@ -3498,7 +3488,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	});
 	exports["default"] = isitSocialSecurityNumber;
 	
-	var _regexps = __webpack_require__(45);
+	var _regexps = __webpack_require__(32);
 	
 	function isitSocialSecurityNumber(obj) {
 	    return _regexps.socialSecurityNumber.test(obj);
@@ -3517,7 +3507,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	});
 	exports["default"] = isitTimeString;
 	
-	var _regexps = __webpack_require__(45);
+	var _regexps = __webpack_require__(32);
 	
 	function isitTimeString(obj) {
 	    return _regexps.timeString.test(obj);
@@ -3536,7 +3526,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	});
 	exports["default"] = isitUkPostalCode;
 	
-	var _regexps = __webpack_require__(45);
+	var _regexps = __webpack_require__(32);
 	
 	function isitUkPostalCode(obj) {
 	    return _regexps.ukPostalCode.test(obj);
@@ -3555,7 +3545,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	});
 	exports["default"] = isitUrl;
 	
-	var _regexps = __webpack_require__(45);
+	var _regexps = __webpack_require__(32);
 	
 	function isitUrl(obj) {
 	    return _regexps.url.test(obj);
@@ -3574,7 +3564,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	});
 	exports["default"] = isitUsZipCode;
 	
-	var _regexps = __webpack_require__(45);
+	var _regexps = __webpack_require__(32);
 	
 	function isitUsZipCode(obj) {
 	    return _regexps.usZipCode.test(obj);
@@ -3597,7 +3587,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _utils = __webpack_require__(1);
 	
-	var _regexps = __webpack_require__(45);
+	var _regexps = __webpack_require__(32);
 	
 	var _regexps2 = _interopRequireDefault(_regexps);
 	

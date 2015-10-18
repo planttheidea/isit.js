@@ -74,14 +74,14 @@ isit.sameType.api = ["not"];
 import isitEmpty from "empty";
 import isitExisty from "existy";
 import isitFalsy from "falsy";
-import isitSpace from "space";
 import isitTruthy from "truthy";
+import isitWhitespace from "whitespace";
 
 isit.empty = isitEmpty;
 isit.existy = isitExisty;
 isit.falsy = isitFalsy;
-isit.space = isitSpace;
 isit.truthy = isitTruthy;
+isit.whitespace = isitWhitespace;
 
 // Arithmetic checks
 /* -------------------------------------------------------------------------- */
