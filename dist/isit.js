@@ -70,262 +70,266 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _utils = __webpack_require__(1);
 	
-	var _helpers = __webpack_require__(2);
+	var _helpers = __webpack_require__(3);
 	
 	// Type checks
 	/* -------------------------------------------------------------------------- */
 	
-	var _isitArguments = __webpack_require__(5);
+	var _arguments = __webpack_require__(5);
 	
-	var _isitArguments2 = _interopRequireDefault(_isitArguments);
+	var _arguments2 = _interopRequireDefault(_arguments);
 	
-	var _isitArray = __webpack_require__(3);
+	var _array = __webpack_require__(4);
 	
-	var _isitArray2 = _interopRequireDefault(_isitArray);
+	var _array2 = _interopRequireDefault(_array);
 	
-	var _isitBoolean = __webpack_require__(7);
+	var _boolean = __webpack_require__(7);
 	
-	var _isitBoolean2 = _interopRequireDefault(_isitBoolean);
+	var _boolean2 = _interopRequireDefault(_boolean);
 	
-	var _isitChar = __webpack_require__(8);
+	var _char = __webpack_require__(8);
 	
-	var _isitChar2 = _interopRequireDefault(_isitChar);
+	var _char2 = _interopRequireDefault(_char);
 	
-	var _isitDate = __webpack_require__(10);
+	var _date = __webpack_require__(10);
 	
-	var _isitDate2 = _interopRequireDefault(_isitDate);
+	var _date2 = _interopRequireDefault(_date);
 	
-	var _isitError = __webpack_require__(11);
+	var _error = __webpack_require__(11);
 	
-	var _isitError2 = _interopRequireDefault(_isitError);
+	var _error2 = _interopRequireDefault(_error);
 	
-	var _isitFunction = __webpack_require__(12);
+	var _function = __webpack_require__(12);
 	
-	var _isitFunction2 = _interopRequireDefault(_isitFunction);
+	var _function2 = _interopRequireDefault(_function);
 	
-	var _isitJson = __webpack_require__(13);
+	var _json = __webpack_require__(13);
 	
-	var _isitJson2 = _interopRequireDefault(_isitJson);
+	var _json2 = _interopRequireDefault(_json);
 	
-	var _isitNan = __webpack_require__(14);
+	var _nanJs = __webpack_require__(14);
 	
-	var _isitNan2 = _interopRequireDefault(_isitNan);
+	var _nanJs2 = _interopRequireDefault(_nanJs);
 	
-	var _isitNull = __webpack_require__(6);
+	// it doesn't like just "nan"
 	
-	var _isitNull2 = _interopRequireDefault(_isitNull);
+	var _null = __webpack_require__(6);
 	
-	var _isitNumber = __webpack_require__(15);
+	var _null2 = _interopRequireDefault(_null);
 	
-	var _isitNumber2 = _interopRequireDefault(_isitNumber);
+	var _number = __webpack_require__(15);
 	
-	var _isitObject = __webpack_require__(16);
+	var _number2 = _interopRequireDefault(_number);
 	
-	var _isitObject2 = _interopRequireDefault(_isitObject);
+	var _object = __webpack_require__(16);
 	
-	var _isitRegexp = __webpack_require__(17);
+	var _object2 = _interopRequireDefault(_object);
 	
-	var _isitRegexp2 = _interopRequireDefault(_isitRegexp);
+	var _regexp = __webpack_require__(17);
 	
-	var _isitSameType = __webpack_require__(18);
+	var _regexp2 = _interopRequireDefault(_regexp);
 	
-	var _isitSameType2 = _interopRequireDefault(_isitSameType);
+	var _sameType = __webpack_require__(18);
 	
-	var _isitString = __webpack_require__(9);
+	var _sameType2 = _interopRequireDefault(_sameType);
 	
-	var _isitString2 = _interopRequireDefault(_isitString);
+	var _string = __webpack_require__(9);
 	
-	var _isitSymbol = __webpack_require__(19);
+	var _string2 = _interopRequireDefault(_string);
 	
-	var _isitSymbol2 = _interopRequireDefault(_isitSymbol);
+	var _symbol = __webpack_require__(25);
 	
-	var _isitUndefined = __webpack_require__(20);
+	var _symbol2 = _interopRequireDefault(_symbol);
 	
-	var _isitUndefined2 = _interopRequireDefault(_isitUndefined);
+	var _undefined = __webpack_require__(26);
+	
+	var _undefined2 = _interopRequireDefault(_undefined);
 	
 	// Presence checks
 	/* -------------------------------------------------------------------------- */
 	
-	var _isitEmpty = __webpack_require__(21);
+	var _empty = __webpack_require__(27);
 	
-	var _isitEmpty2 = _interopRequireDefault(_isitEmpty);
+	var _empty2 = _interopRequireDefault(_empty);
 	
-	var _isitExisty = __webpack_require__(22);
+	var _existy = __webpack_require__(28);
 	
-	var _isitExisty2 = _interopRequireDefault(_isitExisty);
+	var _existy2 = _interopRequireDefault(_existy);
 	
-	var _isitFalsy = __webpack_require__(23);
+	var _falsy = __webpack_require__(29);
 	
-	var _isitFalsy2 = _interopRequireDefault(_isitFalsy);
+	var _falsy2 = _interopRequireDefault(_falsy);
 	
-	var _isitSpace = __webpack_require__(25);
+	var _space = __webpack_require__(31);
 	
-	var _isitSpace2 = _interopRequireDefault(_isitSpace);
+	var _space2 = _interopRequireDefault(_space);
 	
-	var _isitTruthy = __webpack_require__(24);
+	var _truthy = __webpack_require__(30);
 	
-	var _isitTruthy2 = _interopRequireDefault(_isitTruthy);
+	var _truthy2 = _interopRequireDefault(_truthy);
 	
 	// Arithmetic checks
 	/* -------------------------------------------------------------------------- */
 	
-	var _isitAbove = __webpack_require__(26);
+	var _above = __webpack_require__(32);
 	
-	var _isitAbove2 = _interopRequireDefault(_isitAbove);
+	var _above2 = _interopRequireDefault(_above);
 	
-	var _isitDecimal = __webpack_require__(27);
+	var _decimal = __webpack_require__(33);
 	
-	var _isitDecimal2 = _interopRequireDefault(_isitDecimal);
+	var _decimal2 = _interopRequireDefault(_decimal);
 	
-	var _isitEqual = __webpack_require__(28);
+	var _equal = __webpack_require__(34);
 	
-	var _isitEqual2 = _interopRequireDefault(_isitEqual);
+	var _equal2 = _interopRequireDefault(_equal);
 	
-	var _isitEven = __webpack_require__(29);
+	var _even = __webpack_require__(35);
 	
-	var _isitEven2 = _interopRequireDefault(_isitEven);
+	var _even2 = _interopRequireDefault(_even);
 	
-	var _isitFinite = __webpack_require__(30);
+	var _finite = __webpack_require__(36);
 	
-	var _isitFinite2 = _interopRequireDefault(_isitFinite);
+	var _finite2 = _interopRequireDefault(_finite);
 	
-	var _isitInfinite = __webpack_require__(31);
+	var _infinite = __webpack_require__(37);
 	
-	var _isitInfinite2 = _interopRequireDefault(_isitInfinite);
+	var _infinite2 = _interopRequireDefault(_infinite);
 	
-	var _isitInteger = __webpack_require__(32);
+	var _integer = __webpack_require__(38);
 	
-	var _isitInteger2 = _interopRequireDefault(_isitInteger);
+	var _integer2 = _interopRequireDefault(_integer);
 	
-	var _isitNegative = __webpack_require__(33);
+	var _negative = __webpack_require__(39);
 	
-	var _isitNegative2 = _interopRequireDefault(_isitNegative);
+	var _negative2 = _interopRequireDefault(_negative);
 	
-	var _isitOdd = __webpack_require__(34);
+	var _odd = __webpack_require__(40);
 	
-	var _isitOdd2 = _interopRequireDefault(_isitOdd);
+	var _odd2 = _interopRequireDefault(_odd);
 	
-	var _isitPositive = __webpack_require__(35);
+	var _positive = __webpack_require__(41);
 	
-	var _isitPositive2 = _interopRequireDefault(_isitPositive);
+	var _positive2 = _interopRequireDefault(_positive);
 	
-	var _isitUnder = __webpack_require__(36);
+	var _under = __webpack_require__(42);
 	
-	var _isitUnder2 = _interopRequireDefault(_isitUnder);
+	var _under2 = _interopRequireDefault(_under);
 	
-	var _isitWithin = __webpack_require__(37);
+	var _within = __webpack_require__(43);
 	
-	var _isitWithin2 = _interopRequireDefault(_isitWithin);
+	var _within2 = _interopRequireDefault(_within);
 	
 	// Regexp checks
 	/* -------------------------------------------------------------------------- */
 	
-	var _isitAffirmative = __webpack_require__(38);
+	var _affirmative = __webpack_require__(44);
 	
-	var _isitAffirmative2 = _interopRequireDefault(_isitAffirmative);
+	var _affirmative2 = _interopRequireDefault(_affirmative);
 	
-	var _isitAlphaNumeric = __webpack_require__(40);
+	var _alphaNumeric = __webpack_require__(46);
 	
-	var _isitAlphaNumeric2 = _interopRequireDefault(_isitAlphaNumeric);
+	var _alphaNumeric2 = _interopRequireDefault(_alphaNumeric);
 	
-	var _isitCaPostalCode = __webpack_require__(41);
+	var _caPostalCode = __webpack_require__(47);
 	
-	var _isitCaPostalCode2 = _interopRequireDefault(_isitCaPostalCode);
+	var _caPostalCode2 = _interopRequireDefault(_caPostalCode);
 	
-	var _isitCreditCard = __webpack_require__(42);
+	var _creditCard = __webpack_require__(48);
 	
-	var _isitCreditCard2 = _interopRequireDefault(_isitCreditCard);
+	var _creditCard2 = _interopRequireDefault(_creditCard);
 	
-	var _isitDateString = __webpack_require__(43);
+	var _dateString = __webpack_require__(49);
 	
-	var _isitDateString2 = _interopRequireDefault(_isitDateString);
+	var _dateString2 = _interopRequireDefault(_dateString);
 	
-	var _isitEmail = __webpack_require__(44);
+	var _email = __webpack_require__(50);
 	
-	var _isitEmail2 = _interopRequireDefault(_isitEmail);
+	var _email2 = _interopRequireDefault(_email);
 	
-	var _isitEppPhone = __webpack_require__(45);
+	var _eppPhone = __webpack_require__(51);
 	
-	var _isitEppPhone2 = _interopRequireDefault(_isitEppPhone);
+	var _eppPhone2 = _interopRequireDefault(_eppPhone);
 	
-	var _isitHexadecimal = __webpack_require__(46);
+	var _hexadecimal = __webpack_require__(52);
 	
-	var _isitHexadecimal2 = _interopRequireDefault(_isitHexadecimal);
+	var _hexadecimal2 = _interopRequireDefault(_hexadecimal);
 	
-	var _isitHexColor = __webpack_require__(47);
+	var _hexColor = __webpack_require__(53);
 	
-	var _isitHexColor2 = _interopRequireDefault(_isitHexColor);
+	var _hexColor2 = _interopRequireDefault(_hexColor);
 	
-	var _isitIp = __webpack_require__(48);
+	var _ip = __webpack_require__(54);
 	
-	var _isitIp2 = _interopRequireDefault(_isitIp);
+	var _ip2 = _interopRequireDefault(_ip);
 	
-	var _isitIpv4 = __webpack_require__(49);
+	var _ipv4 = __webpack_require__(55);
 	
-	var _isitIpv42 = _interopRequireDefault(_isitIpv4);
+	var _ipv42 = _interopRequireDefault(_ipv4);
 	
-	var _isitIpv6 = __webpack_require__(50);
+	var _ipv6 = __webpack_require__(56);
 	
-	var _isitIpv62 = _interopRequireDefault(_isitIpv6);
+	var _ipv62 = _interopRequireDefault(_ipv6);
 	
-	var _isitNanpPhone = __webpack_require__(51);
+	var _nanpPhone = __webpack_require__(57);
 	
-	var _isitNanpPhone2 = _interopRequireDefault(_isitNanpPhone);
+	var _nanpPhone2 = _interopRequireDefault(_nanpPhone);
 	
-	var _isitSocialSecurityNumber = __webpack_require__(52);
+	var _socialSecurityNumber = __webpack_require__(58);
 	
-	var _isitSocialSecurityNumber2 = _interopRequireDefault(_isitSocialSecurityNumber);
+	var _socialSecurityNumber2 = _interopRequireDefault(_socialSecurityNumber);
 	
-	var _isitTimeString = __webpack_require__(53);
+	var _timeString = __webpack_require__(59);
 	
-	var _isitTimeString2 = _interopRequireDefault(_isitTimeString);
+	var _timeString2 = _interopRequireDefault(_timeString);
 	
-	var _isitUkPostalCode = __webpack_require__(54);
+	var _ukPostalCode = __webpack_require__(60);
 	
-	var _isitUkPostalCode2 = _interopRequireDefault(_isitUkPostalCode);
+	var _ukPostalCode2 = _interopRequireDefault(_ukPostalCode);
 	
-	var _isitUrl = __webpack_require__(55);
+	var _urlJs = __webpack_require__(61);
 	
-	var _isitUrl2 = _interopRequireDefault(_isitUrl);
+	var _urlJs2 = _interopRequireDefault(_urlJs);
 	
-	var _isitUsZipCode = __webpack_require__(56);
+	// it doesn't like just "url"
 	
-	var _isitUsZipCode2 = _interopRequireDefault(_isitUsZipCode);
+	var _usZipCode = __webpack_require__(62);
 	
-	var _isitSetRegexp = __webpack_require__(57);
+	var _usZipCode2 = _interopRequireDefault(_usZipCode);
 	
-	var _isitSetRegexp2 = _interopRequireDefault(_isitSetRegexp);
+	var _setRegexp = __webpack_require__(63);
+	
+	var _setRegexp2 = _interopRequireDefault(_setRegexp);
 	
 	// String checks
 	/* -------------------------------------------------------------------------- */
 	
-	var _isitCapitalized = __webpack_require__(58);
+	var _capitalized = __webpack_require__(64);
 	
-	var _isitCapitalized2 = _interopRequireDefault(_isitCapitalized);
+	var _capitalized2 = _interopRequireDefault(_capitalized);
 	
-	var _isitEndWith = __webpack_require__(59);
+	var _endWith = __webpack_require__(65);
 	
-	var _isitEndWith2 = _interopRequireDefault(_isitEndWith);
+	var _endWith2 = _interopRequireDefault(_endWith);
 	
-	var _isitInclude = __webpack_require__(60);
+	var _include = __webpack_require__(66);
 	
-	var _isitInclude2 = _interopRequireDefault(_isitInclude);
+	var _include2 = _interopRequireDefault(_include);
 	
-	var _isitLowercase = __webpack_require__(61);
+	var _lowercase = __webpack_require__(67);
 	
-	var _isitLowercase2 = _interopRequireDefault(_isitLowercase);
+	var _lowercase2 = _interopRequireDefault(_lowercase);
 	
-	var _isitPalindrome = __webpack_require__(62);
+	var _palindrome = __webpack_require__(68);
 	
-	var _isitPalindrome2 = _interopRequireDefault(_isitPalindrome);
+	var _palindrome2 = _interopRequireDefault(_palindrome);
 	
-	var _isitStartWith = __webpack_require__(63);
+	var _startWith = __webpack_require__(69);
 	
-	var _isitStartWith2 = _interopRequireDefault(_isitStartWith);
+	var _startWith2 = _interopRequireDefault(_startWith);
 	
-	var _isitUppercase = __webpack_require__(64);
+	var _uppercase = __webpack_require__(70);
 	
-	var _isitUppercase2 = _interopRequireDefault(_isitUppercase);
+	var _uppercase2 = _interopRequireDefault(_uppercase);
 	
 	// String checks
 	/* -------------------------------------------------------------------------- */
@@ -333,270 +337,246 @@ return /******/ (function(modules) { // webpackBootstrap
 	// Object checks
 	/* -------------------------------------------------------------------------- */
 	
-	var _isitDomNode = __webpack_require__(65);
+	var _domNode = __webpack_require__(71);
 	
-	var _isitDomNode2 = _interopRequireDefault(_isitDomNode);
+	var _domNode2 = _interopRequireDefault(_domNode);
 	
-	var _isitPropertyCount = __webpack_require__(66);
+	var _propertyCount = __webpack_require__(72);
 	
-	var _isitPropertyCount2 = _interopRequireDefault(_isitPropertyCount);
+	var _propertyCount2 = _interopRequireDefault(_propertyCount);
 	
-	var _isitPropertyDefined = __webpack_require__(67);
+	var _propertyDefined = __webpack_require__(73);
 	
-	var _isitPropertyDefined2 = _interopRequireDefault(_isitPropertyDefined);
+	var _propertyDefined2 = _interopRequireDefault(_propertyDefined);
 	
-	var _isitWindowObject = __webpack_require__(68);
+	var _windowObject = __webpack_require__(74);
 	
-	var _isitWindowObject2 = _interopRequireDefault(_isitWindowObject);
+	var _windowObject2 = _interopRequireDefault(_windowObject);
 	
 	// Array checks
 	/* -------------------------------------------------------------------------- */
 	
-	var _isitInArray = __webpack_require__(69);
+	var _inArray = __webpack_require__(75);
 	
-	var _isitInArray2 = _interopRequireDefault(_isitInArray);
+	var _inArray2 = _interopRequireDefault(_inArray);
 	
-	var _isitSorted = __webpack_require__(70);
+	var _sorted = __webpack_require__(76);
 	
-	var _isitSorted2 = _interopRequireDefault(_isitSorted);
+	var _sorted2 = _interopRequireDefault(_sorted);
 	
 	// Date checks
 	/* -------------------------------------------------------------------------- */
 	
-	var _isitDay = __webpack_require__(71);
+	var _day = __webpack_require__(77);
 	
-	var _isitDay2 = _interopRequireDefault(_isitDay);
+	var _day2 = _interopRequireDefault(_day);
 	
-	var _isitDaylightSavingTime = __webpack_require__(73);
+	var _daylightSavingTime = __webpack_require__(79);
 	
-	var _isitDaylightSavingTime2 = _interopRequireDefault(_isitDaylightSavingTime);
+	var _daylightSavingTime2 = _interopRequireDefault(_daylightSavingTime);
 	
-	var _isitFuture = __webpack_require__(74);
+	var _future = __webpack_require__(80);
 	
-	var _isitFuture2 = _interopRequireDefault(_isitFuture);
+	var _future2 = _interopRequireDefault(_future);
 	
-	var _isitInDateRange = __webpack_require__(75);
+	var _inDateRange = __webpack_require__(81);
 	
-	var _isitInDateRange2 = _interopRequireDefault(_isitInDateRange);
+	var _inDateRange2 = _interopRequireDefault(_inDateRange);
 	
-	var _isitInLastMonth = __webpack_require__(76);
+	var _inLastMonth = __webpack_require__(82);
 	
-	var _isitInLastMonth2 = _interopRequireDefault(_isitInLastMonth);
+	var _inLastMonth2 = _interopRequireDefault(_inLastMonth);
 	
-	var _isitInLastWeek = __webpack_require__(77);
+	var _inLastWeek = __webpack_require__(83);
 	
-	var _isitInLastWeek2 = _interopRequireDefault(_isitInLastWeek);
+	var _inLastWeek2 = _interopRequireDefault(_inLastWeek);
 	
-	var _isitInLastYear = __webpack_require__(78);
+	var _inLastYear = __webpack_require__(84);
 	
-	var _isitInLastYear2 = _interopRequireDefault(_isitInLastYear);
+	var _inLastYear2 = _interopRequireDefault(_inLastYear);
 	
-	var _isitLeapYear = __webpack_require__(79);
+	var _leapYear = __webpack_require__(85);
 	
-	var _isitLeapYear2 = _interopRequireDefault(_isitLeapYear);
+	var _leapYear2 = _interopRequireDefault(_leapYear);
 	
-	var _isitMonth = __webpack_require__(80);
+	var _month = __webpack_require__(86);
 	
-	var _isitMonth2 = _interopRequireDefault(_isitMonth);
+	var _month2 = _interopRequireDefault(_month);
 	
-	var _isitInNextMonth = __webpack_require__(81);
+	var _inNextMonth = __webpack_require__(87);
 	
-	var _isitInNextMonth2 = _interopRequireDefault(_isitInNextMonth);
+	var _inNextMonth2 = _interopRequireDefault(_inNextMonth);
 	
-	var _isitInNextWeek = __webpack_require__(82);
+	var _inNextWeek = __webpack_require__(88);
 	
-	var _isitInNextWeek2 = _interopRequireDefault(_isitInNextWeek);
+	var _inNextWeek2 = _interopRequireDefault(_inNextWeek);
 	
-	var _isitInNextYear = __webpack_require__(83);
+	var _inNextYear = __webpack_require__(89);
 	
-	var _isitInNextYear2 = _interopRequireDefault(_isitInNextYear);
+	var _inNextYear2 = _interopRequireDefault(_inNextYear);
 	
-	var _isitPast = __webpack_require__(84);
+	var _past = __webpack_require__(90);
 	
-	var _isitPast2 = _interopRequireDefault(_isitPast);
+	var _past2 = _interopRequireDefault(_past);
 	
-	var _isitQuarterOfYear = __webpack_require__(85);
+	var _quarterOfYear = __webpack_require__(91);
 	
-	var _isitQuarterOfYear2 = _interopRequireDefault(_isitQuarterOfYear);
+	var _quarterOfYear2 = _interopRequireDefault(_quarterOfYear);
 	
-	var _isitToday = __webpack_require__(86);
+	var _today = __webpack_require__(92);
 	
-	var _isitToday2 = _interopRequireDefault(_isitToday);
+	var _today2 = _interopRequireDefault(_today);
 	
-	var _isitTomorrow = __webpack_require__(87);
+	var _tomorrow = __webpack_require__(93);
 	
-	var _isitTomorrow2 = _interopRequireDefault(_isitTomorrow);
+	var _tomorrow2 = _interopRequireDefault(_tomorrow);
 	
-	var _isitWeekday = __webpack_require__(88);
+	var _weekday = __webpack_require__(94);
 	
-	var _isitWeekday2 = _interopRequireDefault(_isitWeekday);
+	var _weekday2 = _interopRequireDefault(_weekday);
 	
-	var _isitWeekend = __webpack_require__(89);
+	var _weekend = __webpack_require__(95);
 	
-	var _isitWeekend2 = _interopRequireDefault(_isitWeekend);
+	var _weekend2 = _interopRequireDefault(_weekend);
 	
-	var _isitYear = __webpack_require__(90);
+	var _year = __webpack_require__(96);
 	
-	var _isitYear2 = _interopRequireDefault(_isitYear);
+	var _year2 = _interopRequireDefault(_year);
 	
-	var _isitYesterday = __webpack_require__(91);
+	var _yesterday = __webpack_require__(97);
 	
-	var _isitYesterday2 = _interopRequireDefault(_isitYesterday);
+	var _yesterday2 = _interopRequireDefault(_yesterday);
 	
 	// Environment checks
 	/* -------------------------------------------------------------------------- */
 	
-	var _isitAndroid = __webpack_require__(92);
+	var _android = __webpack_require__(98);
 	
-	var _isitAndroid2 = _interopRequireDefault(_isitAndroid);
+	var _android2 = _interopRequireDefault(_android);
 	
-	var _isitAndroidPhone = __webpack_require__(93);
+	var _androidPhone = __webpack_require__(99);
 	
-	var _isitAndroidPhone2 = _interopRequireDefault(_isitAndroidPhone);
+	var _androidPhone2 = _interopRequireDefault(_androidPhone);
 	
-	var _isitAndroidTablet = __webpack_require__(94);
+	var _androidTablet = __webpack_require__(100);
 	
-	var _isitAndroidTablet2 = _interopRequireDefault(_isitAndroidTablet);
+	var _androidTablet2 = _interopRequireDefault(_androidTablet);
 	
-	var _isitBlackberry = __webpack_require__(95);
+	var _blackberry = __webpack_require__(101);
 	
-	var _isitBlackberry2 = _interopRequireDefault(_isitBlackberry);
+	var _blackberry2 = _interopRequireDefault(_blackberry);
 	
-	var _isitBlink = __webpack_require__(96);
+	var _blink = __webpack_require__(102);
 	
-	var _isitBlink2 = _interopRequireDefault(_isitBlink);
+	var _blink2 = _interopRequireDefault(_blink);
 	
-	var _isitBrowser = __webpack_require__(4);
+	var _browser = __webpack_require__(2);
 	
-	var _isitBrowser2 = _interopRequireDefault(_isitBrowser);
+	var _browser2 = _interopRequireDefault(_browser);
 	
-	var _isitChrome = __webpack_require__(97);
+	var _chrome = __webpack_require__(103);
 	
-	var _isitChrome2 = _interopRequireDefault(_isitChrome);
+	var _chrome2 = _interopRequireDefault(_chrome);
 	
-	var _isitDesktop = __webpack_require__(98);
+	var _desktop = __webpack_require__(104);
 	
-	var _isitDesktop2 = _interopRequireDefault(_isitDesktop);
+	var _desktop2 = _interopRequireDefault(_desktop);
 	
-	var _isitIe = __webpack_require__(107);
+	var _ie = __webpack_require__(113);
 	
-	var _isitIe2 = _interopRequireDefault(_isitIe);
+	var _ie2 = _interopRequireDefault(_ie);
 	
-	var _isitFirefox = __webpack_require__(108);
+	var _firefox = __webpack_require__(114);
 	
-	var _isitFirefox2 = _interopRequireDefault(_isitFirefox);
+	var _firefox2 = _interopRequireDefault(_firefox);
 	
-	var _isitGecko = __webpack_require__(109);
+	var _gecko = __webpack_require__(115);
 	
-	var _isitGecko2 = _interopRequireDefault(_isitGecko);
+	var _gecko2 = _interopRequireDefault(_gecko);
 	
-	var _isitIos = __webpack_require__(110);
+	var _ios = __webpack_require__(116);
 	
-	var _isitIos2 = _interopRequireDefault(_isitIos);
+	var _ios2 = _interopRequireDefault(_ios);
 	
-	var _isitIpad = __webpack_require__(105);
+	var _ipad = __webpack_require__(111);
 	
-	var _isitIpad2 = _interopRequireDefault(_isitIpad);
+	var _ipad2 = _interopRequireDefault(_ipad);
 	
-	var _isitIphone = __webpack_require__(100);
+	var _iphone = __webpack_require__(106);
 	
-	var _isitIphone2 = _interopRequireDefault(_isitIphone);
+	var _iphone2 = _interopRequireDefault(_iphone);
 	
-	var _isitIpod = __webpack_require__(101);
+	var _ipod = __webpack_require__(107);
 	
-	var _isitIpod2 = _interopRequireDefault(_isitIpod);
+	var _ipod2 = _interopRequireDefault(_ipod);
 	
-	var _isitLinux = __webpack_require__(111);
+	var _linux = __webpack_require__(117);
 	
-	var _isitLinux2 = _interopRequireDefault(_isitLinux);
+	var _linux2 = _interopRequireDefault(_linux);
 	
-	var _isitMac = __webpack_require__(112);
+	var _mac = __webpack_require__(118);
 	
-	var _isitMac2 = _interopRequireDefault(_isitMac);
+	var _mac2 = _interopRequireDefault(_mac);
 	
-	var _isitMobile = __webpack_require__(99);
+	var _mobile = __webpack_require__(105);
 	
-	var _isitMobile2 = _interopRequireDefault(_isitMobile);
+	var _mobile2 = _interopRequireDefault(_mobile);
 	
-	var _isitNode = __webpack_require__(113);
+	var _node = __webpack_require__(119);
 	
-	var _isitNode2 = _interopRequireDefault(_isitNode);
+	var _node2 = _interopRequireDefault(_node);
 	
-	var _isitOffline = __webpack_require__(114);
+	var _offline = __webpack_require__(120);
 	
-	var _isitOffline2 = _interopRequireDefault(_isitOffline);
+	var _offline2 = _interopRequireDefault(_offline);
 	
-	var _isitOnline = __webpack_require__(115);
+	var _online = __webpack_require__(121);
 	
-	var _isitOnline2 = _interopRequireDefault(_isitOnline);
+	var _online2 = _interopRequireDefault(_online);
 	
-	var _isitOpera = __webpack_require__(116);
+	var _opera = __webpack_require__(122);
 	
-	var _isitOpera2 = _interopRequireDefault(_isitOpera);
+	var _opera2 = _interopRequireDefault(_opera);
 	
-	var _isitPresto = __webpack_require__(117);
+	var _presto = __webpack_require__(123);
 	
-	var _isitPresto2 = _interopRequireDefault(_isitPresto);
+	var _presto2 = _interopRequireDefault(_presto);
 	
-	var _isitRetina = __webpack_require__(118);
+	var _retina = __webpack_require__(124);
 	
-	var _isitRetina2 = _interopRequireDefault(_isitRetina);
+	var _retina2 = _interopRequireDefault(_retina);
 	
-	var _isitSafari = __webpack_require__(119);
+	var _safari = __webpack_require__(125);
 	
-	var _isitSafari2 = _interopRequireDefault(_isitSafari);
+	var _safari2 = _interopRequireDefault(_safari);
 	
-	var _isitTablet = __webpack_require__(104);
+	var _tablet = __webpack_require__(110);
 	
-	var _isitTablet2 = _interopRequireDefault(_isitTablet);
+	var _tablet2 = _interopRequireDefault(_tablet);
 	
-	var _isitTouchDevice = __webpack_require__(120);
+	var _touchDevice = __webpack_require__(126);
 	
-	var _isitTouchDevice2 = _interopRequireDefault(_isitTouchDevice);
+	var _touchDevice2 = _interopRequireDefault(_touchDevice);
 	
-	var _isitTrident = __webpack_require__(121);
+	var _trident = __webpack_require__(127);
 	
-	var _isitTrident2 = _interopRequireDefault(_isitTrident);
+	var _trident2 = _interopRequireDefault(_trident);
 	
-	var _isitWebkit = __webpack_require__(122);
+	var _webkit = __webpack_require__(128);
 	
-	var _isitWebkit2 = _interopRequireDefault(_isitWebkit);
+	var _webkit2 = _interopRequireDefault(_webkit);
 	
-	var _isitWindows = __webpack_require__(103);
+	var _windows = __webpack_require__(109);
 	
-	var _isitWindows2 = _interopRequireDefault(_isitWindows);
+	var _windows2 = _interopRequireDefault(_windows);
 	
-	var _isitWindowsPhone = __webpack_require__(102);
+	var _windowsPhone = __webpack_require__(108);
 	
-	var _isitWindowsPhone2 = _interopRequireDefault(_isitWindowsPhone);
+	var _windowsPhone2 = _interopRequireDefault(_windowsPhone);
 	
-	var _isitWindowsTablet = __webpack_require__(106);
+	var _windowsTablet = __webpack_require__(112);
 	
-	var _isitWindowsTablet2 = _interopRequireDefault(_isitWindowsTablet);
-	
-	function setInterfaces(options) {
-	    for (var option in options) {
-	        if (_utils.hasOwnProperty.call(options, option) && (0, _isitFunction2["default"])(options[option])) {
-	            var interfaces = options[option].api || defaultApi,
-	                i = 0,
-	                len = interfaces.length;
-	
-	            for (; i < len; i++) {
-	                if (interfaces[i] === "all") {
-	                    options.all[option] = (0, _helpers.all)(options[option]);
-	                }
-	
-	                if (interfaces[i] === "any") {
-	                    options.any[option] = (0, _helpers.any)(options[option]);
-	                }
-	
-	                if (interfaces[i] === "not") {
-	                    options.not[option] = (0, _helpers.not)(options[option]);
-	                }
-	            }
-	        }
-	    }
-	}
+	var _windowsTablet2 = _interopRequireDefault(_windowsTablet);
 	
 	var defaultApi = ["all", "any", "not"];
 	
@@ -607,45 +587,45 @@ return /******/ (function(modules) { // webpackBootstrap
 	    version: "1.0.0"
 	};
 	
-	isit.arguments = _isitArguments2["default"];
-	isit.array = _isitArray2["default"];
-	isit.boolean = _isitBoolean2["default"];
-	isit.char = _isitChar2["default"];
-	isit.date = _isitDate2["default"];
-	isit.error = _isitError2["default"];
-	isit["function"] = _isitFunction2["default"];
-	isit.nan = _isitNan2["default"];
-	isit["null"] = _isitNull2["default"];
-	isit.number = _isitNumber2["default"];
-	isit.object = _isitObject2["default"];
-	isit.json = _isitJson2["default"];
-	isit.regexp = _isitRegexp2["default"];
-	isit.sameType = _isitSameType2["default"];
-	isit.string = _isitString2["default"];
-	isit.symbol = _isitSymbol2["default"];
-	isit.undefined = _isitUndefined2["default"];
+	isit.arguments = _arguments2["default"];
+	isit.array = _array2["default"];
+	isit.boolean = _boolean2["default"];
+	isit.char = _char2["default"];
+	isit.date = _date2["default"];
+	isit.error = _error2["default"];
+	isit["function"] = _function2["default"];
+	isit.json = _json2["default"];
+	isit.nan = _nanJs2["default"];
+	isit["null"] = _null2["default"];
+	isit.number = _number2["default"];
+	isit.object = _object2["default"];
+	isit.regexp = _regexp2["default"];
+	isit.sameType = _sameType2["default"];
+	isit.string = _string2["default"];
+	isit.symbol = _symbol2["default"];
+	isit.undefined = _undefined2["default"];
 	
 	// api restrictions
 	isit.sameType.api = ["not"];
 	
-	isit.empty = _isitEmpty2["default"];
-	isit.existy = _isitExisty2["default"];
-	isit.falsy = _isitFalsy2["default"];
-	isit.space = _isitSpace2["default"];
-	isit.truthy = _isitTruthy2["default"];
+	isit.empty = _empty2["default"];
+	isit.existy = _existy2["default"];
+	isit.falsy = _falsy2["default"];
+	isit.space = _space2["default"];
+	isit.truthy = _truthy2["default"];
 	
-	isit.above = _isitAbove2["default"];
-	isit.decimal = _isitDecimal2["default"];
-	isit.equal = _isitEqual2["default"];
-	isit.even = _isitEven2["default"];
-	isit.finite = _isitFinite2["default"];
-	isit.infinite = _isitInfinite2["default"];
-	isit.integer = _isitInteger2["default"];
-	isit.negative = _isitNegative2["default"];
-	isit.odd = _isitOdd2["default"];
-	isit.positive = _isitPositive2["default"];
-	isit.under = _isitUnder2["default"];
-	isit.within = _isitWithin2["default"];
+	isit.above = _above2["default"];
+	isit.decimal = _decimal2["default"];
+	isit.equal = _equal2["default"];
+	isit.even = _even2["default"];
+	isit.finite = _finite2["default"];
+	isit.infinite = _infinite2["default"];
+	isit.integer = _integer2["default"];
+	isit.negative = _negative2["default"];
+	isit.odd = _odd2["default"];
+	isit.positive = _positive2["default"];
+	isit.under = _under2["default"];
+	isit.within = _within2["default"];
 	
 	// api restrictions
 	isit.above.api = ["not"];
@@ -653,74 +633,74 @@ return /******/ (function(modules) { // webpackBootstrap
 	isit.under.api = ["not"];
 	isit.within.api = ["not"];
 	
-	isit.affirmative = _isitAffirmative2["default"];
-	isit.alphaNumeric = _isitAlphaNumeric2["default"];
-	isit.caPostalCode = _isitCaPostalCode2["default"];
-	isit.creditCard = _isitCreditCard2["default"];
-	isit.dateString = _isitDateString2["default"];
-	isit.email = _isitEmail2["default"];
-	isit.eppPhone = _isitEppPhone2["default"];
-	isit.hexadecimal = _isitHexadecimal2["default"];
-	isit.hexColor = _isitHexColor2["default"];
-	isit.ip = _isitIp2["default"];
-	isit.ipv4 = _isitIpv42["default"];
-	isit.ipv6 = _isitIpv62["default"];
-	isit.nanpPhone = _isitNanpPhone2["default"];
-	isit.setRegexp = _isitSetRegexp2["default"].bind(isit);
-	isit.socialSecurityNumber = _isitSocialSecurityNumber2["default"];
-	isit.timeString = _isitTimeString2["default"];
-	isit.ukPostalCode = _isitUkPostalCode2["default"];
-	isit.url = _isitUrl2["default"];
-	isit.usZipCode = _isitUsZipCode2["default"];
+	isit.affirmative = _affirmative2["default"];
+	isit.alphaNumeric = _alphaNumeric2["default"];
+	isit.caPostalCode = _caPostalCode2["default"];
+	isit.creditCard = _creditCard2["default"];
+	isit.dateString = _dateString2["default"];
+	isit.email = _email2["default"];
+	isit.eppPhone = _eppPhone2["default"];
+	isit.hexadecimal = _hexadecimal2["default"];
+	isit.hexColor = _hexColor2["default"];
+	isit.ip = _ip2["default"];
+	isit.ipv4 = _ipv42["default"];
+	isit.ipv6 = _ipv62["default"];
+	isit.nanpPhone = _nanpPhone2["default"];
+	isit.setRegexp = _setRegexp2["default"].bind(isit);
+	isit.socialSecurityNumber = _socialSecurityNumber2["default"];
+	isit.timeString = _timeString2["default"];
+	isit.ukPostalCode = _ukPostalCode2["default"];
+	isit.url = _urlJs2["default"];
+	isit.usZipCode = _usZipCode2["default"];
 	
-	isit.capitalized = _isitCapitalized2["default"];
-	isit.endWith = _isitEndWith2["default"];
-	isit.include = _isitInclude2["default"];
-	isit.lowercase = _isitLowercase2["default"];
-	isit.palindrome = _isitPalindrome2["default"];
-	isit.startWith = _isitStartWith2["default"];
-	isit.uppercase = _isitUppercase2["default"];
+	isit.capitalized = _capitalized2["default"];
+	isit.endWith = _endWith2["default"];
+	isit.include = _include2["default"];
+	isit.lowercase = _lowercase2["default"];
+	isit.palindrome = _palindrome2["default"];
+	isit.startWith = _startWith2["default"];
+	isit.uppercase = _uppercase2["default"];
 	
 	// api restrictions
 	isit.endWith.api = ["not"];
 	isit.include.api = ["not"];
 	isit.startWith.api = ["not"];
 	
-	isit.domNode = _isitDomNode2["default"];
-	isit.propertyCount = _isitPropertyCount2["default"];
-	isit.propertyDefined = _isitPropertyDefined2["default"];
-	isit.windowObject = _isitWindowObject2["default"];
+	isit.domNode = _domNode2["default"];
+	isit.propertyCount = _propertyCount2["default"];
+	isit.propertyDefined = _propertyDefined2["default"];
+	isit.windowObject = _windowObject2["default"];
 	
 	// api restrictions
 	isit.propertyCount.api = ["not"];
 	isit.propertyDefined.api = ["not"];
 	
-	isit.inArray = _isitInArray2["default"];
-	isit.sorted = _isitSorted2["default"];
+	isit.inArray = _inArray2["default"];
+	isit.sorted = _sorted2["default"];
 	
 	// api restrictions
 	isit.inArray.api = ["not"];
 	
-	isit.day = _isitDay2["default"];
-	isit.daylightSavingTime = _isitDaylightSavingTime2["default"];
-	isit.future = _isitFuture2["default"];
-	isit.inDateRange = _isitInDateRange2["default"];
-	isit.inLastMonth = _isitInLastMonth2["default"];
-	isit.inLastWeek = _isitInLastWeek2["default"];
-	isit.inLastYear = _isitInLastYear2["default"];
-	isit.leaYear = _isitLeapYear2["default"];
-	isit.month = _isitMonth2["default"];
-	isit.inNextMonth = _isitInNextMonth2["default"];
-	isit.inNextWeek = _isitInNextWeek2["default"];
-	isit.inNextYear = _isitInNextYear2["default"];
-	isit.past = _isitPast2["default"];
-	isit.quarterOfYear = _isitQuarterOfYear2["default"];
-	isit.today = _isitToday2["default"];
-	isit.tomorrow = _isitTomorrow2["default"];
-	isit.weekday = _isitWeekday2["default"];
-	isit.weekend = _isitWeekend2["default"];
-	isit.year = _isitYear2["default"];
-	isit.yesterday = _isitYesterday2["default"];
+	isit.day = _day2["default"];
+	isit.daylightSavingTime = _daylightSavingTime2["default"];
+	isit.future = _future2["default"];
+	isit.inDateRange = _inDateRange2["default"];
+	isit.inLastMonth = _inLastMonth2["default"];
+	isit.inLastWeek = _inLastWeek2["default"];
+	isit.inLastYear = _inLastYear2["default"];
+	isit.leaYear = _leapYear2["default"];
+	isit.month = _month2["default"];
+	isit.inNextMonth = _inNextMonth2["default"];
+	isit.inNextWeek = _inNextWeek2["default"];
+	isit.inNextYear = _inNextYear2["default"];
+	isit.past = _past2["default"];
+	isit.quarterOfYear = _quarterOfYear2["default"];
+	isit.today = _today2["default"];
+	isit.tomorrow = _tomorrow2["default"];
+	isit.weekday = _weekday2["default"];
+	isit.weekend = _weekend2["default"];
+	isit.year = _year2["default"];
+	isit.yesterday = _yesterday2["default"];
 	
 	// api restrictions
 	isit.day.api = ["not"];
@@ -729,38 +709,38 @@ return /******/ (function(modules) { // webpackBootstrap
 	isit.quarterOfYear.api = ["not"];
 	isit.year.api = ["not"];
 	
-	isit.android = _isitAndroid2["default"];
-	isit.androidPhone = _isitAndroidPhone2["default"];
-	isit.androidTablet = _isitAndroidTablet2["default"];
-	isit.blackberry = _isitBlackberry2["default"];
-	isit.blink = _isitBlink2["default"];
-	isit.browser = _isitBrowser2["default"];
-	isit.chrome = _isitChrome2["default"];
-	isit.desktop = _isitDesktop2["default"];
-	isit.firefox = _isitFirefox2["default"];
-	isit.gecko = _isitGecko2["default"];
-	isit.ie = _isitIe2["default"];
-	isit.ios = _isitIos2["default"];
-	isit.ipad = _isitIpad2["default"];
-	isit.iphone = _isitIphone2["default"];
-	isit.ipod = _isitIpod2["default"];
-	isit.linux = _isitLinux2["default"];
-	isit.mac = _isitMac2["default"];
-	isit.mobile = _isitMobile2["default"];
-	isit.node = _isitNode2["default"];
-	isit.offline = _isitOffline2["default"];
-	isit.online = _isitOnline2["default"];
-	isit.opera = _isitOpera2["default"];
-	isit.presto = _isitPresto2["default"];
-	isit.retina = _isitRetina2["default"];
-	isit.safari = _isitSafari2["default"];
-	isit.tablet = _isitTablet2["default"];
-	isit.touchDevice = _isitTouchDevice2["default"];
-	isit.trident = _isitTrident2["default"];
-	isit.webkit = _isitWebkit2["default"];
-	isit.windows = _isitWindows2["default"];
-	isit.windowsPhone = _isitWindowsPhone2["default"];
-	isit.windowsTablet = _isitWindowsTablet2["default"];
+	isit.android = _android2["default"];
+	isit.androidPhone = _androidPhone2["default"];
+	isit.androidTablet = _androidTablet2["default"];
+	isit.blackberry = _blackberry2["default"];
+	isit.blink = _blink2["default"];
+	isit.browser = _browser2["default"];
+	isit.chrome = _chrome2["default"];
+	isit.desktop = _desktop2["default"];
+	isit.firefox = _firefox2["default"];
+	isit.gecko = _gecko2["default"];
+	isit.ie = _ie2["default"];
+	isit.ios = _ios2["default"];
+	isit.ipad = _ipad2["default"];
+	isit.iphone = _iphone2["default"];
+	isit.ipod = _ipod2["default"];
+	isit.linux = _linux2["default"];
+	isit.mac = _mac2["default"];
+	isit.mobile = _mobile2["default"];
+	isit.node = _node2["default"];
+	isit.offline = _offline2["default"];
+	isit.online = _online2["default"];
+	isit.opera = _opera2["default"];
+	isit.presto = _presto2["default"];
+	isit.retina = _retina2["default"];
+	isit.safari = _safari2["default"];
+	isit.tablet = _tablet2["default"];
+	isit.touchDevice = _touchDevice2["default"];
+	isit.trident = _trident2["default"];
+	isit.webkit = _webkit2["default"];
+	isit.windows = _windows2["default"];
+	isit.windowsPhone = _windowsPhone2["default"];
+	isit.windowsTablet = _windowsTablet2["default"];
 	
 	// api restrictions
 	isit.android.api = ["not"];
@@ -796,6 +776,30 @@ return /******/ (function(modules) { // webpackBootstrap
 	isit.windowsPhone.api = ["not"];
 	isit.windowsTablet.api = ["not"];
 	
+	function setInterfaces(options) {
+	    for (var option in options) {
+	        if (_utils.hasOwnProperty.call(options, option) && (0, _function2["default"])(options[option])) {
+	            var interfaces = options[option].api || defaultApi,
+	                i = 0,
+	                len = interfaces.length;
+	
+	            for (; i < len; i++) {
+	                if (interfaces[i] === "all") {
+	                    options.all[option] = (0, _helpers.all)(options[option]);
+	                }
+	
+	                if (interfaces[i] === "any") {
+	                    options.any[option] = (0, _helpers.any)(options[option]);
+	                }
+	
+	                if (interfaces[i] === "not") {
+	                    options.not[option] = (0, _helpers.not)(options[option]);
+	                }
+	            }
+	        }
+	    }
+	}
+	
 	setInterfaces(isit);
 	
 	exports["default"] = isit;
@@ -813,24 +817,22 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
-	var _helpers = __webpack_require__(2);
+	var _browser = __webpack_require__(2);
 	
-	var _isitBrowser = __webpack_require__(4);
-	
-	var _isitBrowser2 = _interopRequireDefault(_isitBrowser);
+	var _browser2 = _interopRequireDefault(_browser);
 	
 	var arraySlice = Array.prototype.slice;
 	
 	exports.arraySlice = arraySlice;
 	var navigatorInfo = (function () {
-	    if (!(0, _isitBrowser2["default"])()) {
+	    if (!(0, _browser2["default"])()) {
 	        return {};
 	    }
 	
 	    return {
-	        appVersion: 'navigator' in window && 'appVersion' in navigator && navigator.appVersion.toLowerCase() || '',
-	        userAgent: 'navigator' in window && 'userAgent' in navigator && navigator.userAgent.toLowerCase() || '',
-	        vendor: 'navigator' in window && 'vendor' in navigator && navigator.vendor.toLowerCase() || ''
+	        appVersion: "navigator" in window && "appVersion" in navigator && navigator.appVersion.toLowerCase() || "",
+	        userAgent: "navigator" in window && "userAgent" in navigator && navigator.userAgent.toLowerCase() || "",
+	        vendor: "navigator" in window && "vendor" in navigator && navigator.vendor.toLowerCase() || ""
 	    };
 	})();
 	
@@ -850,6 +852,23 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 2 */
+/***/ function(module, exports) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports["default"] = _isBrowser;
+	
+	function _isBrowser() {
+	    return typeof window !== "undefined";
+	}
+	
+	module.exports = exports["default"];
+
+/***/ },
+/* 3 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -862,15 +881,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _utils = __webpack_require__(1);
 	
-	var _isitArray = __webpack_require__(3);
+	var _array = __webpack_require__(4);
 	
-	var _isitArray2 = _interopRequireDefault(_isitArray);
+	var _array2 = _interopRequireDefault(_array);
 	
 	function getParams(args) {
 	    var params = _utils.arraySlice.call(args),
 	        len = params.length;
 	
-	    if (len === 1 && (0, _isitArray2["default"])(params[0])) {
+	    if (len === 1 && (0, _array2["default"])(params[0])) {
 	        return {
 	            length: params[0].length,
 	            parameters: params[0]
@@ -891,7 +910,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        var parameters = _getParams.parameters;
 	
 	        for (var i = 0; i < length; i++) {
-	            if (!func.call(null, parameters[i])) {
+	            if (!func(parameters[i])) {
 	                return false;
 	            }
 	        }
@@ -909,7 +928,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        var parameters = _getParams2.parameters;
 	
 	        for (var i = 0; i < length; i++) {
-	            if (func.call(null, parameters[i])) {
+	            if (func(parameters[i])) {
 	                return true;
 	            }
 	        }
@@ -933,7 +952,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 /***/ },
-/* 3 */
+/* 4 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -944,26 +963,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _utils = __webpack_require__(1);
 	
-	exports["default"] = Array.isArray || function isArray(obj) {
+	exports["default"] = Array.isArray || function _isArray(obj) {
 	    return _utils.toString.call(obj) === "[object Array]";
 	};
-	
-	module.exports = exports["default"];
-
-/***/ },
-/* 4 */
-/***/ function(module, exports) {
-
-	"use strict";
-	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	exports["default"] = isBrowser;
-	
-	function isBrowser() {
-	    return typeof window !== "undefined";
-	}
 	
 	module.exports = exports["default"];
 
@@ -976,20 +978,20 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports["default"] = isArguments;
+	exports["default"] = _isArguments;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
-	var _helpers = __webpack_require__(2);
+	var _helpers = __webpack_require__(3);
 	
 	var _utils = __webpack_require__(1);
 	
-	var _isitNull = __webpack_require__(6);
+	var _null = __webpack_require__(6);
 	
-	var _isitNull2 = _interopRequireDefault(_isitNull);
+	var _null2 = _interopRequireDefault(_null);
 	
-	function isArguments(obj) {
-	    return (0, _helpers.not)((0, _isitNull2["default"])(obj)) && _utils.toString.call(obj) === "[object Arguments]" || typeof obj === "object" && "callee" in obj;
+	function _isArguments(obj) {
+	    return (0, _helpers.not)((0, _null2["default"])(obj)) && _utils.toString.call(obj) === "[object Arguments]" || typeof obj === "object" && "callee" in obj;
 	}
 	
 	module.exports = exports["default"];
@@ -1003,9 +1005,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports["default"] = isNull;
+	exports["default"] = _isNull;
 	
-	function isNull(obj) {
+	function _isNull(obj) {
 	    return obj === null;
 	}
 	
@@ -1020,11 +1022,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports["default"] = isBoolean;
+	exports["default"] = _isBoolean;
 	
 	var _utils = __webpack_require__(1);
 	
-	function isBoolean(obj) {
+	function _isBoolean(obj) {
 	    return obj === true || obj === false || _utils.toString.call(obj) === "[object Boolean]";
 	}
 	
@@ -1039,16 +1041,16 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports["default"] = isChar;
+	exports["default"] = _isChar;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
-	var _isitString = __webpack_require__(9);
+	var _string = __webpack_require__(9);
 	
-	var _isitString2 = _interopRequireDefault(_isitString);
+	var _string2 = _interopRequireDefault(_string);
 	
-	function isChar(obj) {
-	    return (0, _isitString2["default"])(obj) && obj.length === 1;
+	function _isChar(obj) {
+	    return (0, _string2["default"])(obj) && obj.length === 1;
 	}
 	
 	module.exports = exports["default"];
@@ -1062,11 +1064,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports["default"] = isString;
+	exports["default"] = _isString;
 	
 	var _utils = __webpack_require__(1);
 	
-	function isString(obj) {
+	function _isString(obj) {
 	    return _utils.toString.call(obj) === "[object String]";
 	}
 	
@@ -1081,11 +1083,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports["default"] = isDate;
+	exports["default"] = _isDate;
 	
 	var _utils = __webpack_require__(1);
 	
-	function isDate(obj) {
+	function _isDate(obj) {
 	    return _utils.toString.call(obj) === "[object Date]";
 	}
 	
@@ -1100,11 +1102,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports["default"] = isError;
+	exports["default"] = _isError;
 	
 	var _utils = __webpack_require__(1);
 	
-	function isError(obj) {
+	function _isError(obj) {
 	    return _utils.toString.call(obj) === "[object Error]";
 	}
 	
@@ -1119,11 +1121,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports["default"] = isFunction;
+	exports["default"] = _isFunction;
 	
 	var _utils = __webpack_require__(1);
 	
-	function isFunction(obj) {
+	function _isFunction(obj) {
 	    return _utils.toString.call(obj) === "[object Function]" || typeof obj === "function";
 	}
 	
@@ -1138,11 +1140,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports["default"] = isJson;
+	exports["default"] = _isJSON;
 	
 	var _utils = __webpack_require__(1);
 	
-	function isJson(obj) {
+	function _isJSON(obj) {
 	    return _utils.toString.call(obj) === "[object Object]";
 	}
 	
@@ -1157,9 +1159,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports["default"] = isNaN;
+	exports["default"] = _isNaN;
 	
-	function isNaN(obj) {
+	function _isNaN(obj) {
 	    return obj !== obj;
 	}
 	
@@ -1174,20 +1176,22 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports["default"] = isNumber;
+	exports["default"] = _isNumber;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
-	var _helpers = __webpack_require__(2);
+	var _helpers = __webpack_require__(3);
 	
 	var _utils = __webpack_require__(1);
 	
-	var _isitNan = __webpack_require__(14);
+	var _nanJs = __webpack_require__(14);
 	
-	var _isitNan2 = _interopRequireDefault(_isitNan);
+	var _nanJs2 = _interopRequireDefault(_nanJs);
 	
-	function isNumber(obj) {
-	    return (0, _helpers.not)((0, _isitNan2["default"])(obj)) && _utils.toString.call(obj) === "[object Number]";
+	// it doesn't like just "nan"
+	
+	function _isNumber(obj) {
+	    return (0, _helpers.not)((0, _nanJs2["default"])(obj)) && _utils.toString.call(obj) === "[object Number]";
 	}
 	
 	module.exports = exports["default"];
@@ -1201,10 +1205,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports["default"] = isObject;
+	exports["default"] = _isObject;
 	
-	function isObject(obj) {
+	function _isObject(obj) {
 	    var type = typeof obj;
+	
 	    return type === "function" || type === "object";
 	}
 	
@@ -1219,11 +1224,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports["default"] = isRegExp;
+	exports["default"] = _isRegExp;
 	
 	var _utils = __webpack_require__(1);
 	
-	function isRegExp(obj) {
+	function _isRegExp(obj) {
 	    return _utils.toString.call(obj) === "[object RegExp]";
 	}
 	
@@ -1238,19 +1243,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports["default"] = isSameType;
+	exports["default"] = _isSameType;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
 	var _utils = __webpack_require__(1);
 	
-	var _isitNan = __webpack_require__(14);
+	var _nan = __webpack_require__(19);
 	
-	var _isitNan2 = _interopRequireDefault(_isitNan);
+	var _nan2 = _interopRequireDefault(_nan);
 	
-	function isSameType(obj1, obj2) {
-	    if ((0, _isitNan2["default"])(obj1) || (0, _isitNan2["default"])(obj2)) {
-	        return (0, _isitNan2["default"])(obj1) === (0, _isitNan2["default"])(obj2);
+	function _isSameType(obj1, obj2) {
+	    if ((0, _nan2["default"])(obj1) || (0, _nan2["default"])(obj2)) {
+	        return (0, _nan2["default"])(obj1) === (0, _nan2["default"])(obj2);
 	    }
 	
 	    return _utils.toString.call(obj1) === _utils.toString.call(obj2);
@@ -1260,6 +1265,1379 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 19 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(__dirname) {console.log(__webpack_require__(20).relative('.', __dirname));
+	
+	/* WEBPACK VAR INJECTION */}.call(exports, "/"))
+
+/***/ },
+/* 20 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(process) {// Copyright Joyent, Inc. and other Node contributors.
+	//
+	// Permission is hereby granted, free of charge, to any person obtaining a
+	// copy of this software and associated documentation files (the
+	// "Software"), to deal in the Software without restriction, including
+	// without limitation the rights to use, copy, modify, merge, publish,
+	// distribute, sublicense, and/or sell copies of the Software, and to permit
+	// persons to whom the Software is furnished to do so, subject to the
+	// following conditions:
+	//
+	// The above copyright notice and this permission notice shall be included
+	// in all copies or substantial portions of the Software.
+	//
+	// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+	// OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+	// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
+	// NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+	// DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+	// OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
+	// USE OR OTHER DEALINGS IN THE SOFTWARE.
+	
+	'use strict';
+	
+	
+	var isWindows = process.platform === 'win32';
+	var util = __webpack_require__(22);
+	
+	
+	// resolves . and .. elements in a path array with directory names there
+	// must be no slashes or device names (c:\) in the array
+	// (so also no leading and trailing slashes - it does not distinguish
+	// relative and absolute paths)
+	function normalizeArray(parts, allowAboveRoot) {
+	  var res = [];
+	  for (var i = 0; i < parts.length; i++) {
+	    var p = parts[i];
+	
+	    // ignore empty parts
+	    if (!p || p === '.')
+	      continue;
+	
+	    if (p === '..') {
+	      if (res.length && res[res.length - 1] !== '..') {
+	        res.pop();
+	      } else if (allowAboveRoot) {
+	        res.push('..');
+	      }
+	    } else {
+	      res.push(p);
+	    }
+	  }
+	
+	  return res;
+	}
+	
+	// returns an array with empty elements removed from either end of the input
+	// array or the original array if no elements need to be removed
+	function trimArray(arr) {
+	  var lastIndex = arr.length - 1;
+	  var start = 0;
+	  for (; start <= lastIndex; start++) {
+	    if (arr[start])
+	      break;
+	  }
+	
+	  var end = lastIndex;
+	  for (; end >= 0; end--) {
+	    if (arr[end])
+	      break;
+	  }
+	
+	  if (start === 0 && end === lastIndex)
+	    return arr;
+	  if (start > end)
+	    return [];
+	  return arr.slice(start, end + 1);
+	}
+	
+	// Regex to split a windows path into three parts: [*, device, slash,
+	// tail] windows-only
+	var splitDeviceRe =
+	    /^([a-zA-Z]:|[\\\/]{2}[^\\\/]+[\\\/]+[^\\\/]+)?([\\\/])?([\s\S]*?)$/;
+	
+	// Regex to split the tail part of the above into [*, dir, basename, ext]
+	var splitTailRe =
+	    /^([\s\S]*?)((?:\.{1,2}|[^\\\/]+?|)(\.[^.\/\\]*|))(?:[\\\/]*)$/;
+	
+	var win32 = {};
+	
+	// Function to split a filename into [root, dir, basename, ext]
+	function win32SplitPath(filename) {
+	  // Separate device+slash from tail
+	  var result = splitDeviceRe.exec(filename),
+	      device = (result[1] || '') + (result[2] || ''),
+	      tail = result[3] || '';
+	  // Split the tail into dir, basename and extension
+	  var result2 = splitTailRe.exec(tail),
+	      dir = result2[1],
+	      basename = result2[2],
+	      ext = result2[3];
+	  return [device, dir, basename, ext];
+	}
+	
+	function win32StatPath(path) {
+	  var result = splitDeviceRe.exec(path),
+	      device = result[1] || '',
+	      isUnc = !!device && device[1] !== ':';
+	  return {
+	    device: device,
+	    isUnc: isUnc,
+	    isAbsolute: isUnc || !!result[2], // UNC paths are always absolute
+	    tail: result[3]
+	  };
+	}
+	
+	function normalizeUNCRoot(device) {
+	  return '\\\\' + device.replace(/^[\\\/]+/, '').replace(/[\\\/]+/g, '\\');
+	}
+	
+	// path.resolve([from ...], to)
+	win32.resolve = function() {
+	  var resolvedDevice = '',
+	      resolvedTail = '',
+	      resolvedAbsolute = false;
+	
+	  for (var i = arguments.length - 1; i >= -1; i--) {
+	    var path;
+	    if (i >= 0) {
+	      path = arguments[i];
+	    } else if (!resolvedDevice) {
+	      path = process.cwd();
+	    } else {
+	      // Windows has the concept of drive-specific current working
+	      // directories. If we've resolved a drive letter but not yet an
+	      // absolute path, get cwd for that drive. We're sure the device is not
+	      // an unc path at this points, because unc paths are always absolute.
+	      path = process.env['=' + resolvedDevice];
+	      // Verify that a drive-local cwd was found and that it actually points
+	      // to our drive. If not, default to the drive's root.
+	      if (!path || path.substr(0, 3).toLowerCase() !==
+	          resolvedDevice.toLowerCase() + '\\') {
+	        path = resolvedDevice + '\\';
+	      }
+	    }
+	
+	    // Skip empty and invalid entries
+	    if (!util.isString(path)) {
+	      throw new TypeError('Arguments to path.resolve must be strings');
+	    } else if (!path) {
+	      continue;
+	    }
+	
+	    var result = win32StatPath(path),
+	        device = result.device,
+	        isUnc = result.isUnc,
+	        isAbsolute = result.isAbsolute,
+	        tail = result.tail;
+	
+	    if (device &&
+	        resolvedDevice &&
+	        device.toLowerCase() !== resolvedDevice.toLowerCase()) {
+	      // This path points to another device so it is not applicable
+	      continue;
+	    }
+	
+	    if (!resolvedDevice) {
+	      resolvedDevice = device;
+	    }
+	    if (!resolvedAbsolute) {
+	      resolvedTail = tail + '\\' + resolvedTail;
+	      resolvedAbsolute = isAbsolute;
+	    }
+	
+	    if (resolvedDevice && resolvedAbsolute) {
+	      break;
+	    }
+	  }
+	
+	  // Convert slashes to backslashes when `resolvedDevice` points to an UNC
+	  // root. Also squash multiple slashes into a single one where appropriate.
+	  if (isUnc) {
+	    resolvedDevice = normalizeUNCRoot(resolvedDevice);
+	  }
+	
+	  // At this point the path should be resolved to a full absolute path,
+	  // but handle relative paths to be safe (might happen when process.cwd()
+	  // fails)
+	
+	  // Normalize the tail path
+	  resolvedTail = normalizeArray(resolvedTail.split(/[\\\/]+/),
+	                                !resolvedAbsolute).join('\\');
+	
+	  return (resolvedDevice + (resolvedAbsolute ? '\\' : '') + resolvedTail) ||
+	         '.';
+	};
+	
+	
+	win32.normalize = function(path) {
+	  var result = win32StatPath(path),
+	      device = result.device,
+	      isUnc = result.isUnc,
+	      isAbsolute = result.isAbsolute,
+	      tail = result.tail,
+	      trailingSlash = /[\\\/]$/.test(tail);
+	
+	  // Normalize the tail path
+	  tail = normalizeArray(tail.split(/[\\\/]+/), !isAbsolute).join('\\');
+	
+	  if (!tail && !isAbsolute) {
+	    tail = '.';
+	  }
+	  if (tail && trailingSlash) {
+	    tail += '\\';
+	  }
+	
+	  // Convert slashes to backslashes when `device` points to an UNC root.
+	  // Also squash multiple slashes into a single one where appropriate.
+	  if (isUnc) {
+	    device = normalizeUNCRoot(device);
+	  }
+	
+	  return device + (isAbsolute ? '\\' : '') + tail;
+	};
+	
+	
+	win32.isAbsolute = function(path) {
+	  return win32StatPath(path).isAbsolute;
+	};
+	
+	win32.join = function() {
+	  var paths = [];
+	  for (var i = 0; i < arguments.length; i++) {
+	    var arg = arguments[i];
+	    if (!util.isString(arg)) {
+	      throw new TypeError('Arguments to path.join must be strings');
+	    }
+	    if (arg) {
+	      paths.push(arg);
+	    }
+	  }
+	
+	  var joined = paths.join('\\');
+	
+	  // Make sure that the joined path doesn't start with two slashes, because
+	  // normalize() will mistake it for an UNC path then.
+	  //
+	  // This step is skipped when it is very clear that the user actually
+	  // intended to point at an UNC path. This is assumed when the first
+	  // non-empty string arguments starts with exactly two slashes followed by
+	  // at least one more non-slash character.
+	  //
+	  // Note that for normalize() to treat a path as an UNC path it needs to
+	  // have at least 2 components, so we don't filter for that here.
+	  // This means that the user can use join to construct UNC paths from
+	  // a server name and a share name; for example:
+	  //   path.join('//server', 'share') -> '\\\\server\\share\')
+	  if (!/^[\\\/]{2}[^\\\/]/.test(paths[0])) {
+	    joined = joined.replace(/^[\\\/]{2,}/, '\\');
+	  }
+	
+	  return win32.normalize(joined);
+	};
+	
+	
+	// path.relative(from, to)
+	// it will solve the relative path from 'from' to 'to', for instance:
+	// from = 'C:\\orandea\\test\\aaa'
+	// to = 'C:\\orandea\\impl\\bbb'
+	// The output of the function should be: '..\\..\\impl\\bbb'
+	win32.relative = function(from, to) {
+	  from = win32.resolve(from);
+	  to = win32.resolve(to);
+	
+	  // windows is not case sensitive
+	  var lowerFrom = from.toLowerCase();
+	  var lowerTo = to.toLowerCase();
+	
+	  var toParts = trimArray(to.split('\\'));
+	
+	  var lowerFromParts = trimArray(lowerFrom.split('\\'));
+	  var lowerToParts = trimArray(lowerTo.split('\\'));
+	
+	  var length = Math.min(lowerFromParts.length, lowerToParts.length);
+	  var samePartsLength = length;
+	  for (var i = 0; i < length; i++) {
+	    if (lowerFromParts[i] !== lowerToParts[i]) {
+	      samePartsLength = i;
+	      break;
+	    }
+	  }
+	
+	  if (samePartsLength == 0) {
+	    return to;
+	  }
+	
+	  var outputParts = [];
+	  for (var i = samePartsLength; i < lowerFromParts.length; i++) {
+	    outputParts.push('..');
+	  }
+	
+	  outputParts = outputParts.concat(toParts.slice(samePartsLength));
+	
+	  return outputParts.join('\\');
+	};
+	
+	
+	win32._makeLong = function(path) {
+	  // Note: this will *probably* throw somewhere.
+	  if (!util.isString(path))
+	    return path;
+	
+	  if (!path) {
+	    return '';
+	  }
+	
+	  var resolvedPath = win32.resolve(path);
+	
+	  if (/^[a-zA-Z]\:\\/.test(resolvedPath)) {
+	    // path is local filesystem path, which needs to be converted
+	    // to long UNC path.
+	    return '\\\\?\\' + resolvedPath;
+	  } else if (/^\\\\[^?.]/.test(resolvedPath)) {
+	    // path is network UNC path, which needs to be converted
+	    // to long UNC path.
+	    return '\\\\?\\UNC\\' + resolvedPath.substring(2);
+	  }
+	
+	  return path;
+	};
+	
+	
+	win32.dirname = function(path) {
+	  var result = win32SplitPath(path),
+	      root = result[0],
+	      dir = result[1];
+	
+	  if (!root && !dir) {
+	    // No dirname whatsoever
+	    return '.';
+	  }
+	
+	  if (dir) {
+	    // It has a dirname, strip trailing slash
+	    dir = dir.substr(0, dir.length - 1);
+	  }
+	
+	  return root + dir;
+	};
+	
+	
+	win32.basename = function(path, ext) {
+	  var f = win32SplitPath(path)[2];
+	  // TODO: make this comparison case-insensitive on windows?
+	  if (ext && f.substr(-1 * ext.length) === ext) {
+	    f = f.substr(0, f.length - ext.length);
+	  }
+	  return f;
+	};
+	
+	
+	win32.extname = function(path) {
+	  return win32SplitPath(path)[3];
+	};
+	
+	
+	win32.format = function(pathObject) {
+	  if (!util.isObject(pathObject)) {
+	    throw new TypeError(
+	        "Parameter 'pathObject' must be an object, not " + typeof pathObject
+	    );
+	  }
+	
+	  var root = pathObject.root || '';
+	
+	  if (!util.isString(root)) {
+	    throw new TypeError(
+	        "'pathObject.root' must be a string or undefined, not " +
+	        typeof pathObject.root
+	    );
+	  }
+	
+	  var dir = pathObject.dir;
+	  var base = pathObject.base || '';
+	  if (!dir) {
+	    return base;
+	  }
+	  if (dir[dir.length - 1] === win32.sep) {
+	    return dir + base;
+	  }
+	  return dir + win32.sep + base;
+	};
+	
+	
+	win32.parse = function(pathString) {
+	  if (!util.isString(pathString)) {
+	    throw new TypeError(
+	        "Parameter 'pathString' must be a string, not " + typeof pathString
+	    );
+	  }
+	  var allParts = win32SplitPath(pathString);
+	  if (!allParts || allParts.length !== 4) {
+	    throw new TypeError("Invalid path '" + pathString + "'");
+	  }
+	  return {
+	    root: allParts[0],
+	    dir: allParts[0] + allParts[1].slice(0, -1),
+	    base: allParts[2],
+	    ext: allParts[3],
+	    name: allParts[2].slice(0, allParts[2].length - allParts[3].length)
+	  };
+	};
+	
+	
+	win32.sep = '\\';
+	win32.delimiter = ';';
+	
+	
+	// Split a filename into [root, dir, basename, ext], unix version
+	// 'root' is just a slash, or nothing.
+	var splitPathRe =
+	    /^(\/?|)([\s\S]*?)((?:\.{1,2}|[^\/]+?|)(\.[^.\/]*|))(?:[\/]*)$/;
+	var posix = {};
+	
+	
+	function posixSplitPath(filename) {
+	  return splitPathRe.exec(filename).slice(1);
+	}
+	
+	
+	// path.resolve([from ...], to)
+	// posix version
+	posix.resolve = function() {
+	  var resolvedPath = '',
+	      resolvedAbsolute = false;
+	
+	  for (var i = arguments.length - 1; i >= -1 && !resolvedAbsolute; i--) {
+	    var path = (i >= 0) ? arguments[i] : process.cwd();
+	
+	    // Skip empty and invalid entries
+	    if (!util.isString(path)) {
+	      throw new TypeError('Arguments to path.resolve must be strings');
+	    } else if (!path) {
+	      continue;
+	    }
+	
+	    resolvedPath = path + '/' + resolvedPath;
+	    resolvedAbsolute = path[0] === '/';
+	  }
+	
+	  // At this point the path should be resolved to a full absolute path, but
+	  // handle relative paths to be safe (might happen when process.cwd() fails)
+	
+	  // Normalize the path
+	  resolvedPath = normalizeArray(resolvedPath.split('/'),
+	                                !resolvedAbsolute).join('/');
+	
+	  return ((resolvedAbsolute ? '/' : '') + resolvedPath) || '.';
+	};
+	
+	// path.normalize(path)
+	// posix version
+	posix.normalize = function(path) {
+	  var isAbsolute = posix.isAbsolute(path),
+	      trailingSlash = path && path[path.length - 1] === '/';
+	
+	  // Normalize the path
+	  path = normalizeArray(path.split('/'), !isAbsolute).join('/');
+	
+	  if (!path && !isAbsolute) {
+	    path = '.';
+	  }
+	  if (path && trailingSlash) {
+	    path += '/';
+	  }
+	
+	  return (isAbsolute ? '/' : '') + path;
+	};
+	
+	// posix version
+	posix.isAbsolute = function(path) {
+	  return path.charAt(0) === '/';
+	};
+	
+	// posix version
+	posix.join = function() {
+	  var path = '';
+	  for (var i = 0; i < arguments.length; i++) {
+	    var segment = arguments[i];
+	    if (!util.isString(segment)) {
+	      throw new TypeError('Arguments to path.join must be strings');
+	    }
+	    if (segment) {
+	      if (!path) {
+	        path += segment;
+	      } else {
+	        path += '/' + segment;
+	      }
+	    }
+	  }
+	  return posix.normalize(path);
+	};
+	
+	
+	// path.relative(from, to)
+	// posix version
+	posix.relative = function(from, to) {
+	  from = posix.resolve(from).substr(1);
+	  to = posix.resolve(to).substr(1);
+	
+	  var fromParts = trimArray(from.split('/'));
+	  var toParts = trimArray(to.split('/'));
+	
+	  var length = Math.min(fromParts.length, toParts.length);
+	  var samePartsLength = length;
+	  for (var i = 0; i < length; i++) {
+	    if (fromParts[i] !== toParts[i]) {
+	      samePartsLength = i;
+	      break;
+	    }
+	  }
+	
+	  var outputParts = [];
+	  for (var i = samePartsLength; i < fromParts.length; i++) {
+	    outputParts.push('..');
+	  }
+	
+	  outputParts = outputParts.concat(toParts.slice(samePartsLength));
+	
+	  return outputParts.join('/');
+	};
+	
+	
+	posix._makeLong = function(path) {
+	  return path;
+	};
+	
+	
+	posix.dirname = function(path) {
+	  var result = posixSplitPath(path),
+	      root = result[0],
+	      dir = result[1];
+	
+	  if (!root && !dir) {
+	    // No dirname whatsoever
+	    return '.';
+	  }
+	
+	  if (dir) {
+	    // It has a dirname, strip trailing slash
+	    dir = dir.substr(0, dir.length - 1);
+	  }
+	
+	  return root + dir;
+	};
+	
+	
+	posix.basename = function(path, ext) {
+	  var f = posixSplitPath(path)[2];
+	  // TODO: make this comparison case-insensitive on windows?
+	  if (ext && f.substr(-1 * ext.length) === ext) {
+	    f = f.substr(0, f.length - ext.length);
+	  }
+	  return f;
+	};
+	
+	
+	posix.extname = function(path) {
+	  return posixSplitPath(path)[3];
+	};
+	
+	
+	posix.format = function(pathObject) {
+	  if (!util.isObject(pathObject)) {
+	    throw new TypeError(
+	        "Parameter 'pathObject' must be an object, not " + typeof pathObject
+	    );
+	  }
+	
+	  var root = pathObject.root || '';
+	
+	  if (!util.isString(root)) {
+	    throw new TypeError(
+	        "'pathObject.root' must be a string or undefined, not " +
+	        typeof pathObject.root
+	    );
+	  }
+	
+	  var dir = pathObject.dir ? pathObject.dir + posix.sep : '';
+	  var base = pathObject.base || '';
+	  return dir + base;
+	};
+	
+	
+	posix.parse = function(pathString) {
+	  if (!util.isString(pathString)) {
+	    throw new TypeError(
+	        "Parameter 'pathString' must be a string, not " + typeof pathString
+	    );
+	  }
+	  var allParts = posixSplitPath(pathString);
+	  if (!allParts || allParts.length !== 4) {
+	    throw new TypeError("Invalid path '" + pathString + "'");
+	  }
+	  allParts[1] = allParts[1] || '';
+	  allParts[2] = allParts[2] || '';
+	  allParts[3] = allParts[3] || '';
+	
+	  return {
+	    root: allParts[0],
+	    dir: allParts[0] + allParts[1].slice(0, -1),
+	    base: allParts[2],
+	    ext: allParts[3],
+	    name: allParts[2].slice(0, allParts[2].length - allParts[3].length)
+	  };
+	};
+	
+	
+	posix.sep = '/';
+	posix.delimiter = ':';
+	
+	
+	if (isWindows)
+	  module.exports = win32;
+	else /* posix */
+	  module.exports = posix;
+	
+	module.exports.posix = posix;
+	module.exports.win32 = win32;
+	
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(21)))
+
+/***/ },
+/* 21 */
+/***/ function(module, exports) {
+
+	// shim for using process in browser
+	
+	var process = module.exports = {};
+	var queue = [];
+	var draining = false;
+	var currentQueue;
+	var queueIndex = -1;
+	
+	function cleanUpNextTick() {
+	    draining = false;
+	    if (currentQueue.length) {
+	        queue = currentQueue.concat(queue);
+	    } else {
+	        queueIndex = -1;
+	    }
+	    if (queue.length) {
+	        drainQueue();
+	    }
+	}
+	
+	function drainQueue() {
+	    if (draining) {
+	        return;
+	    }
+	    var timeout = setTimeout(cleanUpNextTick);
+	    draining = true;
+	
+	    var len = queue.length;
+	    while(len) {
+	        currentQueue = queue;
+	        queue = [];
+	        while (++queueIndex < len) {
+	            if (currentQueue) {
+	                currentQueue[queueIndex].run();
+	            }
+	        }
+	        queueIndex = -1;
+	        len = queue.length;
+	    }
+	    currentQueue = null;
+	    draining = false;
+	    clearTimeout(timeout);
+	}
+	
+	process.nextTick = function (fun) {
+	    var args = new Array(arguments.length - 1);
+	    if (arguments.length > 1) {
+	        for (var i = 1; i < arguments.length; i++) {
+	            args[i - 1] = arguments[i];
+	        }
+	    }
+	    queue.push(new Item(fun, args));
+	    if (queue.length === 1 && !draining) {
+	        setTimeout(drainQueue, 0);
+	    }
+	};
+	
+	// v8 likes predictible objects
+	function Item(fun, array) {
+	    this.fun = fun;
+	    this.array = array;
+	}
+	Item.prototype.run = function () {
+	    this.fun.apply(null, this.array);
+	};
+	process.title = 'browser';
+	process.browser = true;
+	process.env = {};
+	process.argv = [];
+	process.version = ''; // empty string to avoid regexp issues
+	process.versions = {};
+	
+	function noop() {}
+	
+	process.on = noop;
+	process.addListener = noop;
+	process.once = noop;
+	process.off = noop;
+	process.removeListener = noop;
+	process.removeAllListeners = noop;
+	process.emit = noop;
+	
+	process.binding = function (name) {
+	    throw new Error('process.binding is not supported');
+	};
+	
+	process.cwd = function () { return '/' };
+	process.chdir = function (dir) {
+	    throw new Error('process.chdir is not supported');
+	};
+	process.umask = function() { return 0; };
+
+
+/***/ },
+/* 22 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(global, process) {// Copyright Joyent, Inc. and other Node contributors.
+	//
+	// Permission is hereby granted, free of charge, to any person obtaining a
+	// copy of this software and associated documentation files (the
+	// "Software"), to deal in the Software without restriction, including
+	// without limitation the rights to use, copy, modify, merge, publish,
+	// distribute, sublicense, and/or sell copies of the Software, and to permit
+	// persons to whom the Software is furnished to do so, subject to the
+	// following conditions:
+	//
+	// The above copyright notice and this permission notice shall be included
+	// in all copies or substantial portions of the Software.
+	//
+	// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+	// OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+	// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
+	// NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+	// DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+	// OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
+	// USE OR OTHER DEALINGS IN THE SOFTWARE.
+	
+	var formatRegExp = /%[sdj%]/g;
+	exports.format = function(f) {
+	  if (!isString(f)) {
+	    var objects = [];
+	    for (var i = 0; i < arguments.length; i++) {
+	      objects.push(inspect(arguments[i]));
+	    }
+	    return objects.join(' ');
+	  }
+	
+	  var i = 1;
+	  var args = arguments;
+	  var len = args.length;
+	  var str = String(f).replace(formatRegExp, function(x) {
+	    if (x === '%%') return '%';
+	    if (i >= len) return x;
+	    switch (x) {
+	      case '%s': return String(args[i++]);
+	      case '%d': return Number(args[i++]);
+	      case '%j':
+	        try {
+	          return JSON.stringify(args[i++]);
+	        } catch (_) {
+	          return '[Circular]';
+	        }
+	      default:
+	        return x;
+	    }
+	  });
+	  for (var x = args[i]; i < len; x = args[++i]) {
+	    if (isNull(x) || !isObject(x)) {
+	      str += ' ' + x;
+	    } else {
+	      str += ' ' + inspect(x);
+	    }
+	  }
+	  return str;
+	};
+	
+	
+	// Mark that a method should not be used.
+	// Returns a modified function which warns once by default.
+	// If --no-deprecation is set, then it is a no-op.
+	exports.deprecate = function(fn, msg) {
+	  // Allow for deprecating things in the process of starting up.
+	  if (isUndefined(global.process)) {
+	    return function() {
+	      return exports.deprecate(fn, msg).apply(this, arguments);
+	    };
+	  }
+	
+	  if (process.noDeprecation === true) {
+	    return fn;
+	  }
+	
+	  var warned = false;
+	  function deprecated() {
+	    if (!warned) {
+	      if (process.throwDeprecation) {
+	        throw new Error(msg);
+	      } else if (process.traceDeprecation) {
+	        console.trace(msg);
+	      } else {
+	        console.error(msg);
+	      }
+	      warned = true;
+	    }
+	    return fn.apply(this, arguments);
+	  }
+	
+	  return deprecated;
+	};
+	
+	
+	var debugs = {};
+	var debugEnviron;
+	exports.debuglog = function(set) {
+	  if (isUndefined(debugEnviron))
+	    debugEnviron = process.env.NODE_DEBUG || '';
+	  set = set.toUpperCase();
+	  if (!debugs[set]) {
+	    if (new RegExp('\\b' + set + '\\b', 'i').test(debugEnviron)) {
+	      var pid = process.pid;
+	      debugs[set] = function() {
+	        var msg = exports.format.apply(exports, arguments);
+	        console.error('%s %d: %s', set, pid, msg);
+	      };
+	    } else {
+	      debugs[set] = function() {};
+	    }
+	  }
+	  return debugs[set];
+	};
+	
+	
+	/**
+	 * Echos the value of a value. Trys to print the value out
+	 * in the best way possible given the different types.
+	 *
+	 * @param {Object} obj The object to print out.
+	 * @param {Object} opts Optional options object that alters the output.
+	 */
+	/* legacy: obj, showHidden, depth, colors*/
+	function inspect(obj, opts) {
+	  // default options
+	  var ctx = {
+	    seen: [],
+	    stylize: stylizeNoColor
+	  };
+	  // legacy...
+	  if (arguments.length >= 3) ctx.depth = arguments[2];
+	  if (arguments.length >= 4) ctx.colors = arguments[3];
+	  if (isBoolean(opts)) {
+	    // legacy...
+	    ctx.showHidden = opts;
+	  } else if (opts) {
+	    // got an "options" object
+	    exports._extend(ctx, opts);
+	  }
+	  // set default options
+	  if (isUndefined(ctx.showHidden)) ctx.showHidden = false;
+	  if (isUndefined(ctx.depth)) ctx.depth = 2;
+	  if (isUndefined(ctx.colors)) ctx.colors = false;
+	  if (isUndefined(ctx.customInspect)) ctx.customInspect = true;
+	  if (ctx.colors) ctx.stylize = stylizeWithColor;
+	  return formatValue(ctx, obj, ctx.depth);
+	}
+	exports.inspect = inspect;
+	
+	
+	// http://en.wikipedia.org/wiki/ANSI_escape_code#graphics
+	inspect.colors = {
+	  'bold' : [1, 22],
+	  'italic' : [3, 23],
+	  'underline' : [4, 24],
+	  'inverse' : [7, 27],
+	  'white' : [37, 39],
+	  'grey' : [90, 39],
+	  'black' : [30, 39],
+	  'blue' : [34, 39],
+	  'cyan' : [36, 39],
+	  'green' : [32, 39],
+	  'magenta' : [35, 39],
+	  'red' : [31, 39],
+	  'yellow' : [33, 39]
+	};
+	
+	// Don't use 'blue' not visible on cmd.exe
+	inspect.styles = {
+	  'special': 'cyan',
+	  'number': 'yellow',
+	  'boolean': 'yellow',
+	  'undefined': 'grey',
+	  'null': 'bold',
+	  'string': 'green',
+	  'date': 'magenta',
+	  // "name": intentionally not styling
+	  'regexp': 'red'
+	};
+	
+	
+	function stylizeWithColor(str, styleType) {
+	  var style = inspect.styles[styleType];
+	
+	  if (style) {
+	    return '\u001b[' + inspect.colors[style][0] + 'm' + str +
+	           '\u001b[' + inspect.colors[style][1] + 'm';
+	  } else {
+	    return str;
+	  }
+	}
+	
+	
+	function stylizeNoColor(str, styleType) {
+	  return str;
+	}
+	
+	
+	function arrayToHash(array) {
+	  var hash = {};
+	
+	  array.forEach(function(val, idx) {
+	    hash[val] = true;
+	  });
+	
+	  return hash;
+	}
+	
+	
+	function formatValue(ctx, value, recurseTimes) {
+	  // Provide a hook for user-specified inspect functions.
+	  // Check that value is an object with an inspect function on it
+	  if (ctx.customInspect &&
+	      value &&
+	      isFunction(value.inspect) &&
+	      // Filter out the util module, it's inspect function is special
+	      value.inspect !== exports.inspect &&
+	      // Also filter out any prototype objects using the circular check.
+	      !(value.constructor && value.constructor.prototype === value)) {
+	    var ret = value.inspect(recurseTimes, ctx);
+	    if (!isString(ret)) {
+	      ret = formatValue(ctx, ret, recurseTimes);
+	    }
+	    return ret;
+	  }
+	
+	  // Primitive types cannot have properties
+	  var primitive = formatPrimitive(ctx, value);
+	  if (primitive) {
+	    return primitive;
+	  }
+	
+	  // Look up the keys of the object.
+	  var keys = Object.keys(value);
+	  var visibleKeys = arrayToHash(keys);
+	
+	  if (ctx.showHidden) {
+	    keys = Object.getOwnPropertyNames(value);
+	  }
+	
+	  // IE doesn't make error fields non-enumerable
+	  // http://msdn.microsoft.com/en-us/library/ie/dww52sbt(v=vs.94).aspx
+	  if (isError(value)
+	      && (keys.indexOf('message') >= 0 || keys.indexOf('description') >= 0)) {
+	    return formatError(value);
+	  }
+	
+	  // Some type of object without properties can be shortcutted.
+	  if (keys.length === 0) {
+	    if (isFunction(value)) {
+	      var name = value.name ? ': ' + value.name : '';
+	      return ctx.stylize('[Function' + name + ']', 'special');
+	    }
+	    if (isRegExp(value)) {
+	      return ctx.stylize(RegExp.prototype.toString.call(value), 'regexp');
+	    }
+	    if (isDate(value)) {
+	      return ctx.stylize(Date.prototype.toString.call(value), 'date');
+	    }
+	    if (isError(value)) {
+	      return formatError(value);
+	    }
+	  }
+	
+	  var base = '', array = false, braces = ['{', '}'];
+	
+	  // Make Array say that they are Array
+	  if (isArray(value)) {
+	    array = true;
+	    braces = ['[', ']'];
+	  }
+	
+	  // Make functions say that they are functions
+	  if (isFunction(value)) {
+	    var n = value.name ? ': ' + value.name : '';
+	    base = ' [Function' + n + ']';
+	  }
+	
+	  // Make RegExps say that they are RegExps
+	  if (isRegExp(value)) {
+	    base = ' ' + RegExp.prototype.toString.call(value);
+	  }
+	
+	  // Make dates with properties first say the date
+	  if (isDate(value)) {
+	    base = ' ' + Date.prototype.toUTCString.call(value);
+	  }
+	
+	  // Make error with message first say the error
+	  if (isError(value)) {
+	    base = ' ' + formatError(value);
+	  }
+	
+	  if (keys.length === 0 && (!array || value.length == 0)) {
+	    return braces[0] + base + braces[1];
+	  }
+	
+	  if (recurseTimes < 0) {
+	    if (isRegExp(value)) {
+	      return ctx.stylize(RegExp.prototype.toString.call(value), 'regexp');
+	    } else {
+	      return ctx.stylize('[Object]', 'special');
+	    }
+	  }
+	
+	  ctx.seen.push(value);
+	
+	  var output;
+	  if (array) {
+	    output = formatArray(ctx, value, recurseTimes, visibleKeys, keys);
+	  } else {
+	    output = keys.map(function(key) {
+	      return formatProperty(ctx, value, recurseTimes, visibleKeys, key, array);
+	    });
+	  }
+	
+	  ctx.seen.pop();
+	
+	  return reduceToSingleString(output, base, braces);
+	}
+	
+	
+	function formatPrimitive(ctx, value) {
+	  if (isUndefined(value))
+	    return ctx.stylize('undefined', 'undefined');
+	  if (isString(value)) {
+	    var simple = '\'' + JSON.stringify(value).replace(/^"|"$/g, '')
+	                                             .replace(/'/g, "\\'")
+	                                             .replace(/\\"/g, '"') + '\'';
+	    return ctx.stylize(simple, 'string');
+	  }
+	  if (isNumber(value))
+	    return ctx.stylize('' + value, 'number');
+	  if (isBoolean(value))
+	    return ctx.stylize('' + value, 'boolean');
+	  // For some reason typeof null is "object", so special case here.
+	  if (isNull(value))
+	    return ctx.stylize('null', 'null');
+	}
+	
+	
+	function formatError(value) {
+	  return '[' + Error.prototype.toString.call(value) + ']';
+	}
+	
+	
+	function formatArray(ctx, value, recurseTimes, visibleKeys, keys) {
+	  var output = [];
+	  for (var i = 0, l = value.length; i < l; ++i) {
+	    if (hasOwnProperty(value, String(i))) {
+	      output.push(formatProperty(ctx, value, recurseTimes, visibleKeys,
+	          String(i), true));
+	    } else {
+	      output.push('');
+	    }
+	  }
+	  keys.forEach(function(key) {
+	    if (!key.match(/^\d+$/)) {
+	      output.push(formatProperty(ctx, value, recurseTimes, visibleKeys,
+	          key, true));
+	    }
+	  });
+	  return output;
+	}
+	
+	
+	function formatProperty(ctx, value, recurseTimes, visibleKeys, key, array) {
+	  var name, str, desc;
+	  desc = Object.getOwnPropertyDescriptor(value, key) || { value: value[key] };
+	  if (desc.get) {
+	    if (desc.set) {
+	      str = ctx.stylize('[Getter/Setter]', 'special');
+	    } else {
+	      str = ctx.stylize('[Getter]', 'special');
+	    }
+	  } else {
+	    if (desc.set) {
+	      str = ctx.stylize('[Setter]', 'special');
+	    }
+	  }
+	  if (!hasOwnProperty(visibleKeys, key)) {
+	    name = '[' + key + ']';
+	  }
+	  if (!str) {
+	    if (ctx.seen.indexOf(desc.value) < 0) {
+	      if (isNull(recurseTimes)) {
+	        str = formatValue(ctx, desc.value, null);
+	      } else {
+	        str = formatValue(ctx, desc.value, recurseTimes - 1);
+	      }
+	      if (str.indexOf('\n') > -1) {
+	        if (array) {
+	          str = str.split('\n').map(function(line) {
+	            return '  ' + line;
+	          }).join('\n').substr(2);
+	        } else {
+	          str = '\n' + str.split('\n').map(function(line) {
+	            return '   ' + line;
+	          }).join('\n');
+	        }
+	      }
+	    } else {
+	      str = ctx.stylize('[Circular]', 'special');
+	    }
+	  }
+	  if (isUndefined(name)) {
+	    if (array && key.match(/^\d+$/)) {
+	      return str;
+	    }
+	    name = JSON.stringify('' + key);
+	    if (name.match(/^"([a-zA-Z_][a-zA-Z_0-9]*)"$/)) {
+	      name = name.substr(1, name.length - 2);
+	      name = ctx.stylize(name, 'name');
+	    } else {
+	      name = name.replace(/'/g, "\\'")
+	                 .replace(/\\"/g, '"')
+	                 .replace(/(^"|"$)/g, "'");
+	      name = ctx.stylize(name, 'string');
+	    }
+	  }
+	
+	  return name + ': ' + str;
+	}
+	
+	
+	function reduceToSingleString(output, base, braces) {
+	  var numLinesEst = 0;
+	  var length = output.reduce(function(prev, cur) {
+	    numLinesEst++;
+	    if (cur.indexOf('\n') >= 0) numLinesEst++;
+	    return prev + cur.replace(/\u001b\[\d\d?m/g, '').length + 1;
+	  }, 0);
+	
+	  if (length > 60) {
+	    return braces[0] +
+	           (base === '' ? '' : base + '\n ') +
+	           ' ' +
+	           output.join(',\n  ') +
+	           ' ' +
+	           braces[1];
+	  }
+	
+	  return braces[0] + base + ' ' + output.join(', ') + ' ' + braces[1];
+	}
+	
+	
+	// NOTE: These type checking functions intentionally don't use `instanceof`
+	// because it is fragile and can be easily faked with `Object.create()`.
+	function isArray(ar) {
+	  return Array.isArray(ar);
+	}
+	exports.isArray = isArray;
+	
+	function isBoolean(arg) {
+	  return typeof arg === 'boolean';
+	}
+	exports.isBoolean = isBoolean;
+	
+	function isNull(arg) {
+	  return arg === null;
+	}
+	exports.isNull = isNull;
+	
+	function isNullOrUndefined(arg) {
+	  return arg == null;
+	}
+	exports.isNullOrUndefined = isNullOrUndefined;
+	
+	function isNumber(arg) {
+	  return typeof arg === 'number';
+	}
+	exports.isNumber = isNumber;
+	
+	function isString(arg) {
+	  return typeof arg === 'string';
+	}
+	exports.isString = isString;
+	
+	function isSymbol(arg) {
+	  return typeof arg === 'symbol';
+	}
+	exports.isSymbol = isSymbol;
+	
+	function isUndefined(arg) {
+	  return arg === void 0;
+	}
+	exports.isUndefined = isUndefined;
+	
+	function isRegExp(re) {
+	  return isObject(re) && objectToString(re) === '[object RegExp]';
+	}
+	exports.isRegExp = isRegExp;
+	
+	function isObject(arg) {
+	  return typeof arg === 'object' && arg !== null;
+	}
+	exports.isObject = isObject;
+	
+	function isDate(d) {
+	  return isObject(d) && objectToString(d) === '[object Date]';
+	}
+	exports.isDate = isDate;
+	
+	function isError(e) {
+	  return isObject(e) &&
+	      (objectToString(e) === '[object Error]' || e instanceof Error);
+	}
+	exports.isError = isError;
+	
+	function isFunction(arg) {
+	  return typeof arg === 'function';
+	}
+	exports.isFunction = isFunction;
+	
+	function isPrimitive(arg) {
+	  return arg === null ||
+	         typeof arg === 'boolean' ||
+	         typeof arg === 'number' ||
+	         typeof arg === 'string' ||
+	         typeof arg === 'symbol' ||  // ES6 symbol
+	         typeof arg === 'undefined';
+	}
+	exports.isPrimitive = isPrimitive;
+	
+	exports.isBuffer = __webpack_require__(23);
+	
+	function objectToString(o) {
+	  return Object.prototype.toString.call(o);
+	}
+	
+	
+	function pad(n) {
+	  return n < 10 ? '0' + n.toString(10) : n.toString(10);
+	}
+	
+	
+	var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep',
+	              'Oct', 'Nov', 'Dec'];
+	
+	// 26 Feb 16:19:34
+	function timestamp() {
+	  var d = new Date();
+	  var time = [pad(d.getHours()),
+	              pad(d.getMinutes()),
+	              pad(d.getSeconds())].join(':');
+	  return [d.getDate(), months[d.getMonth()], time].join(' ');
+	}
+	
+	
+	// log is just a thin wrapper to console.log that prepends a timestamp
+	exports.log = function() {
+	  console.log('%s - %s', timestamp(), exports.format.apply(exports, arguments));
+	};
+	
+	
+	/**
+	 * Inherit the prototype methods from one constructor into another.
+	 *
+	 * The Function.prototype.inherits from lang.js rewritten as a standalone
+	 * function (not on Function.prototype). NOTE: If this file is to be loaded
+	 * during bootstrapping this function needs to be rewritten using some native
+	 * functions as prototype setup using normal JavaScript does not work as
+	 * expected during bootstrapping (see mirror.js in r114903).
+	 *
+	 * @param {function} ctor Constructor function which needs to inherit the
+	 *     prototype.
+	 * @param {function} superCtor Constructor function to inherit prototype from.
+	 */
+	exports.inherits = __webpack_require__(24);
+	
+	exports._extend = function(origin, add) {
+	  // Don't do anything if add isn't an object
+	  if (!add || !isObject(add)) return origin;
+	
+	  var keys = Object.keys(add);
+	  var i = keys.length;
+	  while (i--) {
+	    origin[keys[i]] = add[keys[i]];
+	  }
+	  return origin;
+	};
+	
+	function hasOwnProperty(obj, prop) {
+	  return Object.prototype.hasOwnProperty.call(obj, prop);
+	}
+	
+	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }()), __webpack_require__(21)))
+
+/***/ },
+/* 23 */
+/***/ function(module, exports) {
+
+	module.exports = function isBuffer(arg) {
+	  return arg && typeof arg === 'object'
+	    && typeof arg.copy === 'function'
+	    && typeof arg.fill === 'function'
+	    && typeof arg.readUInt8 === 'function';
+	}
+
+/***/ },
+/* 24 */
+/***/ function(module, exports) {
+
+	if (typeof Object.create === 'function') {
+	  // implementation from standard node.js 'util' module
+	  module.exports = function inherits(ctor, superCtor) {
+	    ctor.super_ = superCtor
+	    ctor.prototype = Object.create(superCtor.prototype, {
+	      constructor: {
+	        value: ctor,
+	        enumerable: false,
+	        writable: true,
+	        configurable: true
+	      }
+	    });
+	  };
+	} else {
+	  // old school shim for old browsers
+	  module.exports = function inherits(ctor, superCtor) {
+	    ctor.super_ = superCtor
+	    var TempCtor = function () {}
+	    TempCtor.prototype = superCtor.prototype
+	    ctor.prototype = new TempCtor()
+	    ctor.prototype.constructor = ctor
+	  }
+	}
+
+
+/***/ },
+/* 25 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -1267,191 +2645,27 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports["default"] = isSymbol;
+	exports["default"] = _isSymbol;
 	
-	function isSymbol(obj) {
+	function _isSymbol(obj) {
 	    return typeof obj === "symbol";
 	}
 	
 	module.exports = exports["default"];
 
 /***/ },
-/* 20 */
-/***/ function(module, exports) {
-
-	"use strict";
-	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	exports["default"] = isUndefined;
-	
-	function isUndefined(obj) {
-	    return obj === void 0;
-	}
-	
-	module.exports = exports["default"];
-
-/***/ },
-/* 21 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	exports["default"] = isEmpty;
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-	
-	var _isitArray = __webpack_require__(3);
-	
-	var _isitArray2 = _interopRequireDefault(_isitArray);
-	
-	var _isitArguments = __webpack_require__(5);
-	
-	var _isitArguments2 = _interopRequireDefault(_isitArguments);
-	
-	var _isitObject = __webpack_require__(16);
-	
-	var _isitObject2 = _interopRequireDefault(_isitObject);
-	
-	function isEmpty(obj) {
-	    if ((0, _isitObject2["default"])(obj)) {
-	        var num = Object.getOwnPropertyNames(obj).length;
-	
-	        return num === 0 || num === 1 && (0, _isitArray2["default"])(obj) || num === 2 && (0, _isitArguments2["default"])(obj);
-	    }
-	
-	    return value === "";
-	}
-	
-	module.exports = exports["default"];
-
-/***/ },
-/* 22 */
-/***/ function(module, exports) {
-
-	"use strict";
-	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	exports["default"] = isExisty;
-	
-	function isExisty(obj) {
-	    return obj !== null && obj !== undefined;
-	}
-	
-	module.exports = exports["default"];
-
-/***/ },
-/* 23 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	exports["default"] = isFalsy;
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-	
-	var _helpers = __webpack_require__(2);
-	
-	var _isitTruthy = __webpack_require__(24);
-	
-	var _isitTruthy2 = _interopRequireDefault(_isitTruthy);
-	
-	function isFalsy(obj) {
-	    return (0, _helpers.not)((0, _isitTruthy2["default"])(obj));
-	}
-	
-	;
-	module.exports = exports["default"];
-
-/***/ },
-/* 24 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	exports["default"] = isTruthy;
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-	
-	var _helpers = __webpack_require__(2);
-	
-	var _isitExisty = __webpack_require__(22);
-	
-	var _isitExisty2 = _interopRequireDefault(_isitExisty);
-	
-	var _isitNan = __webpack_require__(14);
-	
-	var _isitNan2 = _interopRequireDefault(_isitNan);
-	
-	function isTruthy(obj) {
-	    return (0, _isitExisty2["default"])(obj) && obj !== false && (0, _helpers.not)((0, _isitNan2["default"])(obj)) && value !== "" && value !== 0;
-	}
-	
-	;
-	module.exports = exports["default"];
-
-/***/ },
-/* 25 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	exports["default"] = isSpace;
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-	
-	var _isitChar = __webpack_require__(8);
-	
-	var _isitChar2 = _interopRequireDefault(_isitChar);
-	
-	function isSpace(obj) {
-	    if ((0, _isitChar2["default"])(obj)) {
-	        var charCode = obj.charCodeAt(0);
-	
-	        return charCode > 0 && charCode < 14 || charCode === 32;
-	    }
-	
-	    return false;
-	}
-	
-	module.exports = exports["default"];
-
-/***/ },
 /* 26 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ function(module, exports) {
 
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports["default"] = isAbove;
+	exports["default"] = _isUndefined;
 	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-	
-	var _helpers = __webpack_require__(2);
-	
-	var _isitNumber = __webpack_require__(15);
-	
-	var _isitNumber2 = _interopRequireDefault(_isitNumber);
-	
-	function isAbove(obj, min) {
-	    return (0, _helpers.all)((0, _isitNumber2["default"])(obj, min)) && obj > min;
+	function _isUndefined(obj) {
+	    return obj === void 0;
 	}
 	
 	module.exports = exports["default"];
@@ -1465,140 +2679,47 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports["default"] = isDecimal;
+	exports["default"] = _isEmpty;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
-	var _isitNumber = __webpack_require__(15);
+	var _array = __webpack_require__(4);
 	
-	var _isitNumber2 = _interopRequireDefault(_isitNumber);
+	var _array2 = _interopRequireDefault(_array);
 	
-	function isDecimal(obj) {
-	    return (0, _isitNumber2["default"])(obj) && obj % 1 !== 0;
+	var _arguments = __webpack_require__(5);
+	
+	var _arguments2 = _interopRequireDefault(_arguments);
+	
+	var _object = __webpack_require__(16);
+	
+	var _object2 = _interopRequireDefault(_object);
+	
+	function _isEmpty(obj) {
+	    if ((0, _object2["default"])(obj)) {
+	        var num = Object.getOwnPropertyNames(obj).length;
+	
+	        return num === 0 || num === 1 && (0, _array2["default"])(obj) || num === 2 && (0, _arguments2["default"])(obj);
+	    }
+	
+	    return obj === "";
 	}
 	
 	module.exports = exports["default"];
 
 /***/ },
 /* 28 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ function(module, exports) {
 
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports["default"] = isEqual;
+	exports["default"] = _isExisty;
 	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-	
-	var _helpers = __webpack_require__(2);
-	
-	var _isitBoolean = __webpack_require__(7);
-	
-	var _isitBoolean2 = _interopRequireDefault(_isitBoolean);
-	
-	var _isitNumber = __webpack_require__(15);
-	
-	var _isitNumber2 = _interopRequireDefault(_isitNumber);
-	
-	var _isitRegexp = __webpack_require__(17);
-	
-	var _isitRegexp2 = _interopRequireDefault(_isitRegexp);
-	
-	var _isitSameType = __webpack_require__(18);
-	
-	var _isitSameType2 = _interopRequireDefault(_isitSameType);
-	
-	var _isitString = __webpack_require__(9);
-	
-	var _isitString2 = _interopRequireDefault(_isitString);
-	
-	function isEqual(_x, _x2) {
-	    var _again = true;
-	
-	    _function: while (_again) {
-	        var obj1 = _x,
-	            obj2 = _x2;
-	        i = len = obj1Keys = obj2Keys = i = len = key = index = undefined;
-	        _again = false;
-	
-	        if ((0, _helpers.not)((0, _isitSameType2["default"])(obj1, obj2))) {
-	            return false;
-	        }
-	
-	        if ((0, _helpers.all)((0, _isitNumber2["default"])(obj1, obj2))) {
-	            return obj1 === obj2 && 1 / obj1 === 1 / obj2;
-	        }
-	
-	        if ((0, _helpers.all)((0, _isitString2["default"])(obj1, obj2)) || (0, _helpers.all)((0, _isitRegexp2["default"])(obj1, obj2))) {
-	            return "" + obj1 === "" + obj2;
-	        }
-	
-	        if ((0, _helpers.all)((0, _isitBoolean2["default"])(obj1, obj2))) {
-	            return obj1 === obj2;
-	        }
-	
-	        if ((0, _helpers.all)(isArray(obj1, obj2))) {
-	            if (obj1.length !== obj2.length) {
-	                return false;
-	            }
-	
-	            for (var i = 0, len = obj1.length; i < len; i++) {
-	                if ((0, _helpers.not)((0, _isitSameType2["default"])(obj1, obj2))) {
-	                    return false;
-	                }
-	
-	                if ((0, _helpers.all)(isArray(obj1[i], obj2[i])) || (0, _helpers.all)(isObject(obj1[i], obj2[i]))) {
-	                    _x = obj1[i];
-	                    _x2 = obj2[i];
-	                    _again = true;
-	                    continue _function;
-	                } else if (obj1[i] !== obj2[i]) {
-	                    return false;
-	                }
-	            }
-	
-	            return true;
-	        }
-	
-	        if ((0, _helpers.all)(isObject(obj1, obj2))) {
-	            var obj1Keys = Object.keys(obj1),
-	                obj2Keys = Object.keys(obj2);
-	
-	            if (!isEqual(obj1Keys, obj2Keys)) {
-	                return false;
-	            }
-	
-	            for (var i = 0, len = obj1Keys.length; i < len; i++) {
-	                var key = obj1Keys[i],
-	                    index = obj2Keys.indexOf(key);
-	
-	                if (index === -1) {
-	                    return false;
-	                }
-	
-	                if ((0, _helpers.all)(isArray(obj1[key], obj2[key])) || (0, _helpers.all)(isObject(obj1[key], obj2[keu]))) {
-	                    _x = obj1[key];
-	                    _x2 = obj2[key];
-	                    _again = true;
-	                    continue _function;
-	                } else if (obj1[key] !== obj2[key]) {
-	                    return false;
-	                }
-	
-	                obj2Keys.splice(index, 1);
-	            }
-	
-	            if (obj2Keys.length !== -1) {
-	                return false;
-	            }
-	
-	            return true;
-	        }
-	
-	        return false;
-	    }
+	function _isExisty(obj) {
+	    return obj !== null && obj !== undefined;
 	}
 	
 	module.exports = exports["default"];
@@ -1612,18 +2733,21 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports["default"] = isEven;
+	exports["default"] = _isFalsy;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
-	var _isitNumber = __webpack_require__(15);
+	var _helpers = __webpack_require__(3);
 	
-	var _isitNumber2 = _interopRequireDefault(_isitNumber);
+	var _truthy = __webpack_require__(30);
 	
-	function isEven(obj) {
-	    return (0, _isitNumber2["default"])(obj) && obj % 2 === 0;
+	var _truthy2 = _interopRequireDefault(_truthy);
+	
+	function _isFalsy(obj) {
+	    return (0, _helpers.not)((0, _truthy2["default"])(obj));
 	}
 	
+	;
 	module.exports = exports["default"];
 
 /***/ },
@@ -1635,19 +2759,25 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
+	exports["default"] = _isTruthy;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
-	var _helpers = __webpack_require__(2);
+	var _helpers = __webpack_require__(3);
 	
-	var _isitNan = __webpack_require__(14);
+	var _existy = __webpack_require__(28);
 	
-	var _isitNan2 = _interopRequireDefault(_isitNan);
+	var _existy2 = _interopRequireDefault(_existy);
 	
-	exports["default"] = isFinite || function isFinite(obj) {
-	    return obj !== Infinity && obj !== -Infinity && (0, _helpers.not)((0, _isitNan2["default"])(obj));
-	};
+	var _nan = __webpack_require__(19);
 	
+	var _nan2 = _interopRequireDefault(_nan);
+	
+	function _isTruthy(obj) {
+	    return (0, _existy2["default"])(obj) && obj !== false && (0, _helpers.not)((0, _nan2["default"])(obj)) && obj !== "" && obj !== 0;
+	}
+	
+	;
 	module.exports = exports["default"];
 
 /***/ },
@@ -1659,18 +2789,22 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports["default"] = isInfinite;
+	exports["default"] = _isSpace;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
-	var _helpers = __webpack_require__(2);
+	var _char = __webpack_require__(8);
 	
-	var _isitFinite = __webpack_require__(30);
+	var _char2 = _interopRequireDefault(_char);
 	
-	var _isitFinite2 = _interopRequireDefault(_isitFinite);
+	function _isSpace(obj) {
+	    if ((0, _char2["default"])(obj)) {
+	        var charCode = obj.charCodeAt(0);
 	
-	function isInfinite(obj) {
-	    return (0, _helpers.not)((0, _isitFinite2["default"])(obj));
+	        return charCode > 0 && charCode < 14 || charCode === 32;
+	    }
+	
+	    return false;
 	}
 	
 	module.exports = exports["default"];
@@ -1684,16 +2818,18 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports["default"] = isInteger;
+	exports["default"] = _isAbove;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
-	var _isitNumber = __webpack_require__(15);
+	var _helpers = __webpack_require__(3);
 	
-	var _isitNumber2 = _interopRequireDefault(_isitNumber);
+	var _number = __webpack_require__(15);
 	
-	function isInteger(obj) {
-	    return (0, _isitNumber2["default"])(obj) && obj % 1 === 0;
+	var _number2 = _interopRequireDefault(_number);
+	
+	function _isAbove(obj, min) {
+	    return (0, _helpers.all)((0, _number2["default"])(obj, min)) && obj > min;
 	}
 	
 	module.exports = exports["default"];
@@ -1707,16 +2843,16 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports["default"] = isNegative;
+	exports["default"] = _isDecimal;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
-	var _isitNumber = __webpack_require__(15);
+	var _number = __webpack_require__(15);
 	
-	var _isitNumber2 = _interopRequireDefault(_isitNumber);
+	var _number2 = _interopRequireDefault(_number);
 	
-	function isNegative(obj) {
-	    return (0, _isitNumber2["default"])(obj) && obj < 0;
+	function _isDecimal(obj) {
+	    return (0, _number2["default"])(obj) && obj % 1 !== 0;
 	}
 	
 	module.exports = exports["default"];
@@ -1730,16 +2866,121 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports["default"] = isOdd;
+	exports["default"] = _isEqual;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
-	var _isitNumber = __webpack_require__(15);
+	var _helpers = __webpack_require__(3);
 	
-	var _isitNumber2 = _interopRequireDefault(_isitNumber);
+	var _array = __webpack_require__(4);
 	
-	function isOdd(obj) {
-	    return (0, _isitNumber2["default"])(obj) && obj % 2 !== 0;
+	var _array2 = _interopRequireDefault(_array);
+	
+	var _boolean = __webpack_require__(7);
+	
+	var _boolean2 = _interopRequireDefault(_boolean);
+	
+	var _number = __webpack_require__(15);
+	
+	var _number2 = _interopRequireDefault(_number);
+	
+	var _object = __webpack_require__(16);
+	
+	var _object2 = _interopRequireDefault(_object);
+	
+	var _regexp = __webpack_require__(17);
+	
+	var _regexp2 = _interopRequireDefault(_regexp);
+	
+	var _sameType = __webpack_require__(18);
+	
+	var _sameType2 = _interopRequireDefault(_sameType);
+	
+	var _string = __webpack_require__(9);
+	
+	var _string2 = _interopRequireDefault(_string);
+	
+	function _isEqual(_x, _x2) {
+	    var _again = true;
+	
+	    _function: while (_again) {
+	        var obj1 = _x,
+	            obj2 = _x2;
+	        i = len = obj1Keys = obj2Keys = i = len = key = index = undefined;
+	        _again = false;
+	
+	        if ((0, _helpers.not)((0, _sameType2["default"])(obj1, obj2))) {
+	            return false;
+	        }
+	
+	        if ((0, _helpers.all)((0, _number2["default"])(obj1, obj2))) {
+	            return obj1 === obj2 && 1 / obj1 === 1 / obj2;
+	        }
+	
+	        if ((0, _helpers.all)((0, _string2["default"])(obj1, obj2)) || (0, _helpers.all)((0, _regexp2["default"])(obj1, obj2))) {
+	            return "" + obj1 === "" + obj2;
+	        }
+	
+	        if ((0, _helpers.all)((0, _boolean2["default"])(obj1, obj2))) {
+	            return obj1 === obj2;
+	        }
+	
+	        if ((0, _helpers.all)((0, _array2["default"])(obj1, obj2))) {
+	            if (obj1.length !== obj2.length) {
+	                return false;
+	            }
+	
+	            for (var i = 0, len = obj1.length; i < len; i++) {
+	                if ((0, _helpers.not)((0, _sameType2["default"])(obj1, obj2))) {
+	                    return false;
+	                }
+	
+	                if ((0, _helpers.all)((0, _array2["default"])(obj1[i], obj2[i])) || (0, _helpers.all)((0, _object2["default"])(obj1[i], obj2[i]))) {
+	                    _x = obj1[i];
+	                    _x2 = obj2[i];
+	                    _again = true;
+	                    continue _function;
+	                } else if (obj1[i] !== obj2[i]) {
+	                    return false;
+	                }
+	            }
+	
+	            return true;
+	        }
+	
+	        if ((0, _helpers.all)((0, _object2["default"])(obj1, obj2))) {
+	            var obj1Keys = Object.keys(obj1),
+	                obj2Keys = Object.keys(obj2);
+	
+	            if (!_isEqual(obj1Keys, obj2Keys)) {
+	                return false;
+	            }
+	
+	            for (var i = 0, len = obj1Keys.length; i < len; i++) {
+	                var key = obj1Keys[i],
+	                    index = obj2Keys.indexOf(key);
+	
+	                if (index === -1) {
+	                    return false;
+	                }
+	
+	                if ((0, _helpers.all)((0, _array2["default"])(obj1[key], obj2[key])) || (0, _helpers.all)((0, _object2["default"])(obj1[key], obj2[key]))) {
+	                    _x = obj1[key];
+	                    _x2 = obj2[key];
+	                    _again = true;
+	                    continue _function;
+	                } else if (obj1[key] !== obj2[key]) {
+	                    return false;
+	                }
+	
+	                obj2Keys.splice(index, 1);
+	            }
+	
+	            return obj2Keys.length === 0;
+	        }
+	
+	        return false;
+	    }
 	}
 	
 	module.exports = exports["default"];
@@ -1753,16 +2994,16 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports["default"] = isPositive;
+	exports["default"] = _isEven;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
-	var _isitNumber = __webpack_require__(15);
+	var _number = __webpack_require__(15);
 	
-	var _isitNumber2 = _interopRequireDefault(_isitNumber);
+	var _number2 = _interopRequireDefault(_number);
 	
-	function isPositive(obj) {
-	    return (0, _isitNumber2["default"])(obj) && obj > 0;
+	function _isEven(obj) {
+	    return (0, _number2["default"])(obj) && obj % 2 === 0;
 	}
 	
 	module.exports = exports["default"];
@@ -1776,20 +3017,20 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports["default"] = isUnder;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
-	var _helpers = __webpack_require__(2);
+	var _helpers = __webpack_require__(3);
 	
-	var _isitNumber = __webpack_require__(15);
+	var _nan = __webpack_require__(19);
 	
-	var _isitNumber2 = _interopRequireDefault(_isitNumber);
+	var _nan2 = _interopRequireDefault(_nan);
 	
-	function isUnder(obj, max) {
-	    return (0, _helpers.all)((0, _isitNumber2["default"])(obj, max)) && obj < max;
-	}
+	exports["default"] = isFinite || function _isFinite(obj) {
+	    return obj !== Infinity && obj !== -Infinity && (0, _helpers.not)((0, _nan2["default"])(obj));
+	};
 	
+	;
 	module.exports = exports["default"];
 
 /***/ },
@@ -1801,18 +3042,16 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports["default"] = isWithin;
+	exports["default"] = isInfinite;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
-	var _helpers = __webpack_require__(2);
+	var _finite = __webpack_require__(36);
 	
-	var _isitNumber = __webpack_require__(15);
+	var _finite2 = _interopRequireDefault(_finite);
 	
-	var _isitNumber2 = _interopRequireDefault(_isitNumber);
-	
-	function isWithin(obj, min, max) {
-	    return (0, _helpers.all)((0, _isitNumber2["default"])(obj, min, max)) && obj > min && obj < max;
+	function isInfinite(obj) {
+	    return !(0, _finite2["default"])(obj);
 	}
 	
 	module.exports = exports["default"];
@@ -1826,18 +3065,160 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports["default"] = isAffirmative;
+	exports["default"] = _isInteger;
 	
-	var _regexps = __webpack_require__(39);
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
-	function isAffirmative(obj) {
-	    return _regexps.affirmative.test(obj);
+	var _number = __webpack_require__(15);
+	
+	var _number2 = _interopRequireDefault(_number);
+	
+	function _isInteger(obj) {
+	    return (0, _number2["default"])(obj) && obj % 1 === 0;
 	}
 	
 	module.exports = exports["default"];
 
 /***/ },
 /* 39 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports["default"] = _isNegative;
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+	
+	var _number = __webpack_require__(15);
+	
+	var _number2 = _interopRequireDefault(_number);
+	
+	function _isNegative(obj) {
+	    return (0, _number2["default"])(obj) && obj < 0;
+	}
+	
+	module.exports = exports["default"];
+
+/***/ },
+/* 40 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports["default"] = _isOdd;
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+	
+	var _number = __webpack_require__(15);
+	
+	var _number2 = _interopRequireDefault(_number);
+	
+	function _isOdd(obj) {
+	    return (0, _number2["default"])(obj) && obj % 2 !== 0;
+	}
+	
+	module.exports = exports["default"];
+
+/***/ },
+/* 41 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports["default"] = _isPositive;
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+	
+	var _number = __webpack_require__(15);
+	
+	var _number2 = _interopRequireDefault(_number);
+	
+	function _isPositive(obj) {
+	    return (0, _number2["default"])(obj) && obj > 0;
+	}
+	
+	module.exports = exports["default"];
+
+/***/ },
+/* 42 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports["default"] = _isUnder;
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+	
+	var _helpers = __webpack_require__(3);
+	
+	var _number = __webpack_require__(15);
+	
+	var _number2 = _interopRequireDefault(_number);
+	
+	function _isUnder(obj, max) {
+	    return (0, _helpers.all)((0, _number2["default"])(obj, max)) && obj < max;
+	}
+	
+	module.exports = exports["default"];
+
+/***/ },
+/* 43 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports["default"] = _isWithin;
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+	
+	var _helpers = __webpack_require__(3);
+	
+	var _number = __webpack_require__(15);
+	
+	var _number2 = _interopRequireDefault(_number);
+	
+	function _isWithin(obj, min, max) {
+	    return (0, _helpers.all)((0, _number2["default"])(obj, min, max)) && obj > min && obj < max;
+	}
+	
+	module.exports = exports["default"];
+
+/***/ },
+/* 44 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports["default"] = _isAffirmative;
+	
+	var _regexps = __webpack_require__(45);
+	
+	function _isAffirmative(obj) {
+	    return _regexps.affirmative.test(obj);
+	}
+	
+	module.exports = exports["default"];
+
+/***/ },
+/* 45 */
 /***/ function(module, exports) {
 
 	
@@ -1879,120 +3260,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 40 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	exports["default"] = isAlphaNumeric;
-	
-	var _regexps = __webpack_require__(39);
-	
-	function isAlphaNumeric(obj) {
-	    return _regexps.alphaNumeric.test(obj);
-	}
-	
-	module.exports = exports["default"];
-
-/***/ },
-/* 41 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	exports["default"] = isCaPostalCode;
-	
-	var _regexps = __webpack_require__(39);
-	
-	function isCaPostalCode(obj) {
-	    return _regexps.caPostalCode.test(obj);
-	}
-	
-	module.exports = exports["default"];
-
-/***/ },
-/* 42 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	exports["default"] = isCreditCard;
-	
-	var _regexps = __webpack_require__(39);
-	
-	function isCreditCard(obj) {
-	    return _regexps.creditCard.test(obj);
-	}
-	
-	module.exports = exports["default"];
-
-/***/ },
-/* 43 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	exports["default"] = isDateString;
-	
-	var _regexps = __webpack_require__(39);
-	
-	function isDateString(obj) {
-	    return _regexps.dateString.test(obj);
-	}
-	
-	module.exports = exports["default"];
-
-/***/ },
-/* 44 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	exports["default"] = isEmail;
-	
-	var _regexps = __webpack_require__(39);
-	
-	function isEmail(obj) {
-	    return _regexps.email.test(obj);
-	}
-	
-	module.exports = exports["default"];
-
-/***/ },
-/* 45 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	exports["default"] = isEppPhone;
-	
-	var _regexps = __webpack_require__(39);
-	
-	function isEppPhone(obj) {
-	    return _regexps.eppPhone.test(obj);
-	}
-	
-	module.exports = exports["default"];
-
-/***/ },
 /* 46 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -2001,12 +3268,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports["default"] = isHexadecimal;
+	exports["default"] = _isAlphaNumeric;
 	
-	var _regexps = __webpack_require__(39);
+	var _regexps = __webpack_require__(45);
 	
-	function isHexadecimal(obj) {
-	    return _regexps.hexadecimal.test(obj);
+	function _isAlphaNumeric(obj) {
+	    return _regexps.alphaNumeric.test(obj);
 	}
 	
 	module.exports = exports["default"];
@@ -2020,12 +3287,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports["default"] = isHexColor;
+	exports["default"] = _isCaPostalCode;
 	
-	var _regexps = __webpack_require__(39);
+	var _regexps = __webpack_require__(45);
 	
-	function isHexColor(obj) {
-	    return _regexps.hexColor.test(obj);
+	function _isCaPostalCode(obj) {
+	    return _regexps.caPostalCode.test(obj);
 	}
 	
 	module.exports = exports["default"];
@@ -2039,12 +3306,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports["default"] = isIp;
+	exports["default"] = _isCreditCard;
 	
-	var _regexps = __webpack_require__(39);
+	var _regexps = __webpack_require__(45);
 	
-	function isIp(obj) {
-	    return _regexps.ip.test(obj);
+	function _isCreditCard(obj) {
+	    return _regexps.creditCard.test(obj);
 	}
 	
 	module.exports = exports["default"];
@@ -2058,12 +3325,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports["default"] = isIpv4;
+	exports["default"] = _isDateString;
 	
-	var _regexps = __webpack_require__(39);
+	var _regexps = __webpack_require__(45);
 	
-	function isIpv4(obj) {
-	    return _regexps.ipv4.test(obj);
+	function _isDateString(obj) {
+	    return _regexps.dateString.test(obj);
 	}
 	
 	module.exports = exports["default"];
@@ -2077,12 +3344,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports["default"] = isIpv6;
+	exports["default"] = _isEmail;
 	
-	var _regexps = __webpack_require__(39);
+	var _regexps = __webpack_require__(45);
 	
-	function isIpv6(obj) {
-	    return _regexps.ipv6.test(obj);
+	function _isEmail(obj) {
+	    return _regexps.email.test(obj);
 	}
 	
 	module.exports = exports["default"];
@@ -2096,12 +3363,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports["default"] = isNanpPhone;
+	exports["default"] = _isEppPhone;
 	
-	var _regexps = __webpack_require__(39);
+	var _regexps = __webpack_require__(45);
 	
-	function isNanpPhone(obj) {
-	    return _regexps.nanpPhone.test(obj);
+	function _isEppPhone(obj) {
+	    return _regexps.eppPhone.test(obj);
 	}
 	
 	module.exports = exports["default"];
@@ -2115,12 +3382,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports["default"] = isSocialSecurityNumber;
+	exports["default"] = _isHexadecimal;
 	
-	var _regexps = __webpack_require__(39);
+	var _regexps = __webpack_require__(45);
 	
-	function isSocialSecurityNumber(obj) {
-	    return _regexps.socialSecurityNumber.test(obj);
+	function _isHexadecimal(obj) {
+	    return _regexps.hexadecimal.test(obj);
 	}
 	
 	module.exports = exports["default"];
@@ -2134,12 +3401,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports["default"] = isTimeString;
+	exports["default"] = _isHexColor;
 	
-	var _regexps = __webpack_require__(39);
+	var _regexps = __webpack_require__(45);
 	
-	function isTimeString(obj) {
-	    return _regexps.timeString.test(obj);
+	function _isHexColor(obj) {
+	    return _regexps.hexColor.test(obj);
 	}
 	
 	module.exports = exports["default"];
@@ -2153,12 +3420,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports["default"] = isUkPostalCode;
+	exports["default"] = _isIp;
 	
-	var _regexps = __webpack_require__(39);
+	var _regexps = __webpack_require__(45);
 	
-	function isUkPostalCode(obj) {
-	    return _regexps.ukPostalCode.test(obj);
+	function _isIp(obj) {
+	    return _regexps.ip.test(obj);
 	}
 	
 	module.exports = exports["default"];
@@ -2172,12 +3439,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports["default"] = isUrl;
+	exports["default"] = _isIpv4;
 	
-	var _regexps = __webpack_require__(39);
+	var _regexps = __webpack_require__(45);
 	
-	function isUrl(obj) {
-	    return _regexps.url.test(obj);
+	function _isIpv4(obj) {
+	    return _regexps.ipv4.test(obj);
 	}
 	
 	module.exports = exports["default"];
@@ -2191,12 +3458,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports["default"] = isUsZipCode;
+	exports["default"] = _isIpv6;
 	
-	var _regexps = __webpack_require__(39);
+	var _regexps = __webpack_require__(45);
 	
-	function isUsZipCode(obj) {
-	    return _regexps.usZipCode.test(obj);
+	function _isIpv6(obj) {
+	    return _regexps.ipv6.test(obj);
 	}
 	
 	module.exports = exports["default"];
@@ -2210,22 +3477,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports["default"] = setRegexp;
+	exports["default"] = _isNanpPhone;
 	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+	var _regexps = __webpack_require__(45);
 	
-	var _utils = __webpack_require__(1);
-	
-	var _regexps = __webpack_require__(39);
-	
-	var _regexps2 = _interopRequireDefault(_regexps);
-	
-	function setRegexp(regexp, regexpName) {
-	    for (var r in _regexps2["default"]) {
-	        if (_utils.hasOwnProperty.call(_regexps2["default"], r) && regexpName === r) {
-	            this[isit + regexpName.charAt(0).toUpperCase() + regexpName.slice(1)] = regexp;
-	        }
-	    }
+	function _isNanpPhone(obj) {
+	    return _regexps.nanpPhone.test(obj);
 	}
 	
 	module.exports = exports["default"];
@@ -2239,33 +3496,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports["default"] = isCapitalized;
+	exports["default"] = _isSocialSecurityNumber;
 	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+	var _regexps = __webpack_require__(45);
 	
-	var _helpers = __webpack_require__(2);
-	
-	var _isitString = __webpack_require__(9);
-	
-	var _isitString2 = _interopRequireDefault(_isitString);
-	
-	var _isitTruthy = __webpack_require__(24);
-	
-	var _isitTruthy2 = _interopRequireDefault(_isitTruthy);
-	
-	function isCapitalized(obj) {
-	    if ((0, _helpers.not)((0, _isitString2["default"])(obj))) {
-	        return false;
-	    }
-	
-	    var words = obj.split(" "),
-	        capitalized = [];
-	
-	    for (var i = 0, len = words.length; i < len; i++) {
-	        capitalized[i] = words[i][0] === words[i][0].toUpperCase();
-	    }
-	
-	    return (0, _helpers.all)(_isitTruthy2["default"].apply(null, capitalized));
+	function _isSocialSecurityNumber(obj) {
+	    return _regexps.socialSecurityNumber.test(obj);
 	}
 	
 	module.exports = exports["default"];
@@ -2279,16 +3515,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports["default"] = isEndWith;
+	exports["default"] = _isTimeString;
 	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+	var _regexps = __webpack_require__(45);
 	
-	var _isitString = __webpack_require__(9);
-	
-	var _isitString2 = _interopRequireDefault(_isitString);
-	
-	function isEndWith(obj, endStr) {
-	    return (0, _isitString2["default"])(obj) && str.indexOf(endStr) === str.length - endStr.length;
+	function _isTimeString(obj) {
+	    return _regexps.timeString.test(obj);
 	}
 	
 	module.exports = exports["default"];
@@ -2302,20 +3534,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports["default"] = isInclude;
+	exports["default"] = _isUkPostalCode;
 	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+	var _regexps = __webpack_require__(45);
 	
-	var _isitArray = __webpack_require__(3);
-	
-	var _isitArray2 = _interopRequireDefault(_isitArray);
-	
-	var _isitString = __webpack_require__(9);
-	
-	var _isitString2 = _interopRequireDefault(_isitString);
-	
-	function isInclude(obj, substr) {
-	    return ((0, _isitArray2["default"])(obj) || (0, _isitString2["default"])(obj)) && obj.indexOf(substr) !== -1;
+	function _isUkPostalCode(obj) {
+	    return _regexps.ukPostalCode.test(obj);
 	}
 	
 	module.exports = exports["default"];
@@ -2329,16 +3553,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports["default"] = isLowercase;
+	exports["default"] = _isUrl;
 	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+	var _regexps = __webpack_require__(45);
 	
-	var _isitString = __webpack_require__(9);
-	
-	var _isitString2 = _interopRequireDefault(_isitString);
-	
-	function isLowercase(obj) {
-	    return (0, _isitString2["default"])(obj) && str === str.toLowerCase();
+	function _isUrl(obj) {
+	    return _regexps.url.test(obj);
 	}
 	
 	module.exports = exports["default"];
@@ -2352,16 +3572,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports["default"] = isPalindrome;
+	exports["default"] = _isUsZipCode;
 	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+	var _regexps = __webpack_require__(45);
 	
-	var _isitString = __webpack_require__(9);
-	
-	var _isitString2 = _interopRequireDefault(_isitString);
-	
-	function isPalindrome(obj) {
-	    return (0, _isitString2["default"])(obj) && str === str.split("").reverse().join("");
+	function _isUsZipCode(obj) {
+	    return _regexps.usZipCode.test(obj);
 	}
 	
 	module.exports = exports["default"];
@@ -2375,16 +3591,22 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports["default"] = isStartWith;
+	exports["default"] = setRegexp;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
-	var _isitString = __webpack_require__(9);
+	var _utils = __webpack_require__(1);
 	
-	var _isitString2 = _interopRequireDefault(_isitString);
+	var _regexps = __webpack_require__(45);
 	
-	function isStartWith(obj, startStr) {
-	    return (0, _isitString2["default"])(obj) && str.indexOf(startStr) === 0;
+	var _regexps2 = _interopRequireDefault(_regexps);
+	
+	function setRegexp(regexp, regexpName) {
+	    for (var r in _regexps2["default"]) {
+	        if (_utils.hasOwnProperty.call(_regexps2["default"], r) && regexpName === r) {
+	            this["_is" + regexpName.charAt(0).toUpperCase() + regexpName.slice(1)] = regexp;
+	        }
+	    }
 	}
 	
 	module.exports = exports["default"];
@@ -2398,16 +3620,33 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports["default"] = isUppercase;
+	exports["default"] = _isCapitalized;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
-	var _isitString = __webpack_require__(9);
+	var _helpers = __webpack_require__(3);
 	
-	var _isitString2 = _interopRequireDefault(_isitString);
+	var _string = __webpack_require__(9);
 	
-	function isUppercase(obj) {
-	    return (0, _isitString2["default"])(obj) && str === str.toUpperCase();
+	var _string2 = _interopRequireDefault(_string);
+	
+	var _truthy = __webpack_require__(30);
+	
+	var _truthy2 = _interopRequireDefault(_truthy);
+	
+	function _isCapitalized(obj) {
+	    if ((0, _helpers.not)((0, _string2["default"])(obj))) {
+	        return false;
+	    }
+	
+	    var words = obj.split(" "),
+	        capitalized = [];
+	
+	    for (var i = 0, len = words.length; i < len; i++) {
+	        capitalized[i] = words[i][0] === words[i][0].toUpperCase();
+	    }
+	
+	    return (0, _helpers.all)(_truthy2["default"].apply(null, capitalized));
 	}
 	
 	module.exports = exports["default"];
@@ -2421,16 +3660,16 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports["default"] = isDomNode;
+	exports["default"] = _isEndWith;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
-	var _isitObject = __webpack_require__(16);
+	var _string = __webpack_require__(9);
 	
-	var _isitObject2 = _interopRequireDefault(_isitObject);
+	var _string2 = _interopRequireDefault(_string);
 	
-	function isDomNode(obj) {
-	    return (0, _isitObject2["default"])(obj) && obj.nodeType > 0;
+	function _isEndWith(obj, endStr) {
+	    return (0, _string2["default"])(obj) && obj.indexOf(endStr) === obj.length - endStr.length;
 	}
 	
 	module.exports = exports["default"];
@@ -2444,22 +3683,164 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports["default"] = isPropertyCount;
+	exports["default"] = _isInclude;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
-	var _helpers = __webpack_require__(2);
+	var _array = __webpack_require__(4);
 	
-	var _isitNumber = __webpack_require__(15);
+	var _array2 = _interopRequireDefault(_array);
 	
-	var _isitNumber2 = _interopRequireDefault(_isitNumber);
+	var _string = __webpack_require__(9);
 	
-	var _isitObject = __webpack_require__(16);
+	var _string2 = _interopRequireDefault(_string);
 	
-	var _isitObject2 = _interopRequireDefault(_isitObject);
+	function _isInclude(obj, substr) {
+	    return ((0, _array2["default"])(obj) || (0, _string2["default"])(obj)) && obj.indexOf(substr) !== -1;
+	}
 	
-	function isPropertyCount(obj, count) {
-	    if (!(0, _isitObject2["default"])(obj) || !(0, _isitNumber2["default"])(count)) {
+	module.exports = exports["default"];
+
+/***/ },
+/* 67 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports["default"] = _isLowercase;
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+	
+	var _string = __webpack_require__(9);
+	
+	var _string2 = _interopRequireDefault(_string);
+	
+	function _isLowercase(obj) {
+	    return (0, _string2["default"])(obj) && obj === obj.toLowerCase();
+	}
+	
+	module.exports = exports["default"];
+
+/***/ },
+/* 68 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports["default"] = _isPalindrome;
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+	
+	var _string = __webpack_require__(9);
+	
+	var _string2 = _interopRequireDefault(_string);
+	
+	function _isPalindrome(obj) {
+	    return (0, _string2["default"])(obj) && obj === obj.split("").reverse().join("");
+	}
+	
+	module.exports = exports["default"];
+
+/***/ },
+/* 69 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports["default"] = _isStartWith;
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+	
+	var _string = __webpack_require__(9);
+	
+	var _string2 = _interopRequireDefault(_string);
+	
+	function _isStartWith(obj, startStr) {
+	    return (0, _string2["default"])(obj) && obj.indexOf(startStr) === 0;
+	}
+	
+	module.exports = exports["default"];
+
+/***/ },
+/* 70 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports["default"] = _isUppercase;
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+	
+	var _string = __webpack_require__(9);
+	
+	var _string2 = _interopRequireDefault(_string);
+	
+	function _isUppercase(obj) {
+	    return (0, _string2["default"])(obj) && obj === obj.toUpperCase();
+	}
+	
+	module.exports = exports["default"];
+
+/***/ },
+/* 71 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports["default"] = _isDomNode;
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+	
+	var _object = __webpack_require__(16);
+	
+	var _object2 = _interopRequireDefault(_object);
+	
+	function _isDomNode(obj) {
+	    return (0, _object2["default"])(obj) && obj.nodeType > 0;
+	}
+	
+	module.exports = exports["default"];
+
+/***/ },
+/* 72 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports["default"] = _isPropertyCount;
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+	
+	var _helpers = __webpack_require__(3);
+	
+	var _number = __webpack_require__(15);
+	
+	var _number2 = _interopRequireDefault(_number);
+	
+	var _object = __webpack_require__(16);
+	
+	var _object2 = _interopRequireDefault(_object);
+	
+	function _isPropertyCount(obj, count) {
+	    if (!(0, _object2["default"])(obj) || !(0, _number2["default"])(count)) {
 	        return false;
 	    }
 	
@@ -2482,7 +3863,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 67 */
+/* 73 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -2490,26 +3871,26 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports["default"] = isPropertyDefined;
+	exports["default"] = _isPropertyDefined;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
-	var _isitObject = __webpack_require__(16);
+	var _object = __webpack_require__(16);
 	
-	var _isitObject2 = _interopRequireDefault(_isitObject);
+	var _object2 = _interopRequireDefault(_object);
 	
-	var _isitString = __webpack_require__(9);
+	var _string = __webpack_require__(9);
 	
-	var _isitString2 = _interopRequireDefault(_isitString);
+	var _string2 = _interopRequireDefault(_string);
 	
-	function isPropertyDefined(obj, prop) {
-	    return (0, _isitObject2["default"])(obj) && (0, _isitString2["default"])(prop) && prop in obj;
+	function _isPropertyDefined(obj, prop) {
+	    return (0, _object2["default"])(obj) && (0, _string2["default"])(prop) && prop in obj;
 	}
 	
 	module.exports = exports["default"];
 
 /***/ },
-/* 68 */
+/* 74 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -2517,16 +3898,16 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports["default"] = isWindowObject;
+	exports["default"] = _isWindowObject;
 	
-	function isWindowObject(obj) {
+	function _isWindowObject(obj) {
 	    return typeof obj === "object" && "setInterval" in obj;
 	}
 	
 	module.exports = exports["default"];
 
 /***/ },
-/* 69 */
+/* 75 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -2534,18 +3915,18 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports["default"] = isInArray;
+	exports["default"] = _isInArray;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
-	var _helpers = __webpack_require__(2);
+	var _helpers = __webpack_require__(3);
 	
-	var _isitArray = __webpack_require__(3);
+	var _array = __webpack_require__(4);
 	
-	var _isitArray2 = _interopRequireDefault(_isitArray);
+	var _array2 = _interopRequireDefault(_array);
 	
-	function isInArray(obj, arr) {
-	    if ((0, _helpers.not)((0, _isitArray2["default"])(arr))) {
+	function _isInArray(obj, arr) {
+	    if ((0, _helpers.not)((0, _array2["default"])(arr))) {
 	        return false;
 	    }
 	
@@ -2564,7 +3945,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 70 */
+/* 76 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -2572,15 +3953,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports["default"] = isSorted;
+	exports["default"] = _isSorted;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
-	var _helpers = __webpack_require__(2);
+	var _helpers = __webpack_require__(3);
 	
-	var _isitArray = __webpack_require__(3);
+	var _array = __webpack_require__(4);
 	
-	var _isitArray2 = _interopRequireDefault(_isitArray);
+	var _array2 = _interopRequireDefault(_array);
 	
 	function isArraySortedAsc(arr) {
 	    for (var i = 0, len = arr.length; i < len; i++) {
@@ -2606,8 +3987,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return true;
 	}
 	
-	function isSorted(arr) {
-	    if ((0, _helpers.not)((0, _isitArray2["default"])(arr))) {
+	function _isSorted(arr) {
+	    if ((0, _helpers.not)((0, _array2["default"])(arr))) {
 	        return false;
 	    }
 	
@@ -2617,7 +3998,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 71 */
+/* 77 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -2625,24 +4006,28 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports["default"] = isDay;
+	exports["default"] = _isDay;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
-	var _isitDate = __webpack_require__(10);
+	var _dateNames = __webpack_require__(78);
 	
-	var _isitDate2 = _interopRequireDefault(_isitDate);
+	var _date = __webpack_require__(10);
 	
-	var _dateNames = __webpack_require__(72);
+	var _date2 = _interopRequireDefault(_date);
 	
-	function isDay(obj, dayString) {
-	    return (0, _isitDate2["default"])(obj) && isString(dayString) && dayString.toLowerCase() === _dateNames.days[obj.getDay()];
+	var _string = __webpack_require__(9);
+	
+	var _string2 = _interopRequireDefault(_string);
+	
+	function _isDay(obj, dayString) {
+	    return (0, _date2["default"])(obj) && (0, _string2["default"])(dayString) && dayString.toLowerCase() === _dateNames.days[obj.getDay()];
 	}
 	
 	module.exports = exports["default"];
 
 /***/ },
-/* 72 */
+/* 78 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -2662,7 +4047,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 /***/ },
-/* 73 */
+/* 79 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -2670,16 +4055,16 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports["default"] = isDaylightSavingTime;
+	exports["default"] = _isDaylightSavingTime;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
-	var _isitDate = __webpack_require__(10);
+	var _date = __webpack_require__(10);
 	
-	var _isitDate2 = _interopRequireDefault(_isitDate);
+	var _date2 = _interopRequireDefault(_date);
 	
-	function isDaylightSavingTime(obj) {
-	    if (!(0, _isitDate2["default"])(obj)) {
+	function _isDaylightSavingTime(obj) {
+	    if (!(0, _date2["default"])(obj)) {
 	        return false;
 	    }
 	
@@ -2693,150 +4078,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 74 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	exports["default"] = isFuture;
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-	
-	var _isitDate = __webpack_require__(10);
-	
-	var _isitDate2 = _interopRequireDefault(_isitDate);
-	
-	function isFuture(obj) {
-	    return (0, _isitDate2["default"])(obj) && obj.getTime() > new Date().getTime();
-	}
-	
-	module.exports = exports["default"];
-
-/***/ },
-/* 75 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	exports["default"] = isInDateRange;
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-	
-	var _isitDate = __webpack_require__(10);
-	
-	var _isitDate2 = _interopRequireDefault(_isitDate);
-	
-	function isInDateRange(obj, startObj, endObj) {
-	    if (!(0, _isitDate2["default"])(obj) || !(0, _isitDate2["default"])(startObj) || !(0, _isitDate2["default"])(endObj)) {
-	        return false;
-	    }
-	
-	    var objTime = obj.getTime();
-	
-	    return objTime > startObj.getTime() && objTime < endObj.getTime();
-	}
-	
-	module.exports = exports["default"];
-
-/***/ },
-/* 76 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	exports["default"] = isInLastMonth;
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-	
-	var _isitInDateRange = __webpack_require__(75);
-	
-	var _isitInDateRange2 = _interopRequireDefault(_isitInDateRange);
-	
-	function isInLastMonth(obj) {
-	    return (0, _isitInDateRange2["default"])(obj, new Date(new Date().setDate(new Date().getMonth() - 1)), new Date());
-	}
-	
-	module.exports = exports["default"];
-
-/***/ },
-/* 77 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	exports["default"] = isInLastWeek;
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-	
-	var _isitInDateRange = __webpack_require__(75);
-	
-	var _isitInDateRange2 = _interopRequireDefault(_isitInDateRange);
-	
-	function isInLastWeek(obj) {
-	    return (0, _isitInDateRange2["default"])(obj, new Date(new Date().setDate(new Date().getDate() - 7)), new Date());
-	}
-	
-	module.exports = exports["default"];
-
-/***/ },
-/* 78 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	exports["default"] = isInLastYear;
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-	
-	var _isitInDateRange = __webpack_require__(75);
-	
-	var _isitInDateRange2 = _interopRequireDefault(_isitInDateRange);
-	
-	function isInLastYear(obj) {
-	    return (0, _isitInDateRange2["default"])(obj, new Date(new Date().setDate(new Date().getFullYear() - 1)), new Date());
-	}
-	
-	module.exports = exports["default"];
-
-/***/ },
-/* 79 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	exports["default"] = isLeapYear;
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-	
-	var _isitNumber = __webpack_require__(15);
-	
-	var _isitNumber2 = _interopRequireDefault(_isitNumber);
-	
-	function isLeapYear(obj) {
-	    return (0, _isitNumber2["default"])(obj) && (obj % 4 === 0 && obj % 100 !== 0 || obj % 400 === 0);
-	}
-	
-	module.exports = exports["default"];
-
-/***/ },
 /* 80 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -2845,18 +4086,16 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports["default"] = isMonth;
+	exports["default"] = _isFuture;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
-	var _isitDate = __webpack_require__(10);
+	var _date = __webpack_require__(10);
 	
-	var _isitDate2 = _interopRequireDefault(_isitDate);
+	var _date2 = _interopRequireDefault(_date);
 	
-	var _dateNames = __webpack_require__(72);
-	
-	function isMonth(obj, monthString) {
-	    return (0, _isitDate2["default"])(obj) && isString(monthString) && monthString.toLowerCase() === _dateNames.months[obj.getMonth()];
+	function _isFuture(obj) {
+	    return (0, _date2["default"])(obj) && obj.getTime() > new Date().getTime();
 	}
 	
 	module.exports = exports["default"];
@@ -2870,16 +4109,22 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports["default"] = isInNextMonth;
+	exports["default"] = _isInDateRange;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
-	var _isitInDateRange = __webpack_require__(75);
+	var _date = __webpack_require__(10);
 	
-	var _isitInDateRange2 = _interopRequireDefault(_isitInDateRange);
+	var _date2 = _interopRequireDefault(_date);
 	
-	function isInNextMonth(obj) {
-	    return (0, _isitInDateRange2["default"])(obj, new Date(), new Date(new Date().setDate(new Date().getMonth() + 1)));
+	function _isInDateRange(obj, startObj, endObj) {
+	    if (!(0, _date2["default"])(obj) || !(0, _date2["default"])(startObj) || !(0, _date2["default"])(endObj)) {
+	        return false;
+	    }
+	
+	    var objTime = obj.getTime();
+	
+	    return objTime > startObj.getTime() && objTime < endObj.getTime();
 	}
 	
 	module.exports = exports["default"];
@@ -2893,16 +4138,16 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports["default"] = isInNextWeek;
+	exports["default"] = _isInLastMonth;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
-	var _isitInDateRange = __webpack_require__(75);
+	var _inDateRange = __webpack_require__(81);
 	
-	var _isitInDateRange2 = _interopRequireDefault(_isitInDateRange);
+	var _inDateRange2 = _interopRequireDefault(_inDateRange);
 	
-	function isInNextWeek(obj) {
-	    return (0, _isitInDateRange2["default"])(obj, new Date(), new Date(new Date().setDate(new Date().getDate() + 7)));
+	function _isInLastMonth(obj) {
+	    return (0, _inDateRange2["default"])(obj, new Date(new Date().setDate(new Date().getMonth() - 1)), new Date());
 	}
 	
 	module.exports = exports["default"];
@@ -2916,16 +4161,16 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports["default"] = isInNextYear;
+	exports["default"] = _isInLastWeek;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
-	var _isitInDateRange = __webpack_require__(75);
+	var _inDateRange = __webpack_require__(81);
 	
-	var _isitInDateRange2 = _interopRequireDefault(_isitInDateRange);
+	var _inDateRange2 = _interopRequireDefault(_inDateRange);
 	
-	function isInNextYear(obj) {
-	    return (0, _isitInDateRange2["default"])(obj, new Date(), new Date(new Date().setDate(new Date().getFullYear() + 1)));
+	function _isInLastWeek(obj) {
+	    return (0, _inDateRange2["default"])(obj, new Date(new Date().setDate(new Date().getDate() - 7)), new Date());
 	}
 	
 	module.exports = exports["default"];
@@ -2939,16 +4184,16 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports["default"] = isPast;
+	exports["default"] = _isInLastYear;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
-	var _isitDate = __webpack_require__(10);
+	var _inDateRange = __webpack_require__(81);
 	
-	var _isitDate2 = _interopRequireDefault(_isitDate);
+	var _inDateRange2 = _interopRequireDefault(_inDateRange);
 	
-	function isPast(obj) {
-	    return (0, _isitDate2["default"])(obj) && obj.getTime() < new Date().getTime();
+	function _isInLastYear(obj) {
+	    return (0, _inDateRange2["default"])(obj, new Date(new Date().setDate(new Date().getFullYear() - 1)), new Date());
 	}
 	
 	module.exports = exports["default"];
@@ -2962,20 +4207,16 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports["default"] = isQuarterOfYear;
+	exports["default"] = _isLeapYear;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
-	var _isitDate = __webpack_require__(10);
+	var _number = __webpack_require__(15);
 	
-	var _isitDate2 = _interopRequireDefault(_isitDate);
+	var _number2 = _interopRequireDefault(_number);
 	
-	var _isitNumber = __webpack_require__(15);
-	
-	var _isitNumber2 = _interopRequireDefault(_isitNumber);
-	
-	function isQuarterOfYear(obj, quarterNumber) {
-	    return (0, _isitDate2["default"])(obj) && (0, _isitNumber2["default"])(quarterNumber) && quarterNumber === Math.floor((obj.getMonth() + 3) / 3);
+	function _isLeapYear(obj) {
+	    return (0, _number2["default"])(obj) && (obj % 4 === 0 && obj % 100 !== 0 || obj % 400 === 0);
 	}
 	
 	module.exports = exports["default"];
@@ -2989,16 +4230,22 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports["default"] = isToday;
+	exports["default"] = _isMonth;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
-	var _isitDate = __webpack_require__(10);
+	var _dateNames = __webpack_require__(78);
 	
-	var _isitDate2 = _interopRequireDefault(_isitDate);
+	var _date = __webpack_require__(10);
 	
-	function isToday(obj) {
-	    return (0, _isitDate2["default"])(obj) && obj.toDateString() === new Date().toDateString();
+	var _date2 = _interopRequireDefault(_date);
+	
+	var _string = __webpack_require__(9);
+	
+	var _string2 = _interopRequireDefault(_string);
+	
+	function _isMonth(obj, monthString) {
+	    return (0, _date2["default"])(obj) && (0, _string2["default"])(monthString) && monthString.toLowerCase() === _dateNames.months[obj.getMonth()];
 	}
 	
 	module.exports = exports["default"];
@@ -3012,19 +4259,16 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports["default"] = isTomorrow;
+	exports["default"] = _isInNextMonth;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
-	var _isitDate = __webpack_require__(10);
+	var _inDateRange = __webpack_require__(81);
 	
-	var _isitDate2 = _interopRequireDefault(_isitDate);
+	var _inDateRange2 = _interopRequireDefault(_inDateRange);
 	
-	function isTomorrow(obj) {
-	    var now = new Date(),
-	        tomorrowString = new Date(now.setDate(now.getDate() + 1).toDateString());
-	
-	    return (0, _isitDate2["default"])(obj) && obj.toDateString() === tomorrowString;
+	function _isInNextMonth(obj) {
+	    return (0, _inDateRange2["default"])(obj, new Date(), new Date(new Date().setDate(new Date().getMonth() + 1)));
 	}
 	
 	module.exports = exports["default"];
@@ -3038,22 +4282,16 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports["default"] = isWeekday;
+	exports["default"] = _isInNextWeek;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
-	var _isitDate = __webpack_require__(10);
+	var _inDateRange = __webpack_require__(81);
 	
-	var _isitDate2 = _interopRequireDefault(_isitDate);
+	var _inDateRange2 = _interopRequireDefault(_inDateRange);
 	
-	function isWeekday(obj) {
-	    if (!(0, _isitDate2["default"])(obj)) {
-	        return false;
-	    }
-	
-	    var day = obj.getDay();
-	
-	    return day !== 6 && day !== 0;
+	function _isInNextWeek(obj) {
+	    return (0, _inDateRange2["default"])(obj, new Date(), new Date(new Date().setDate(new Date().getDate() + 7)));
 	}
 	
 	module.exports = exports["default"];
@@ -3067,22 +4305,16 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports["default"] = isWeekday;
+	exports["default"] = _isInNextYear;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
-	var _isitDate = __webpack_require__(10);
+	var _inDateRange = __webpack_require__(81);
 	
-	var _isitDate2 = _interopRequireDefault(_isitDate);
+	var _inDateRange2 = _interopRequireDefault(_inDateRange);
 	
-	function isWeekday(obj) {
-	    if (!(0, _isitDate2["default"])(obj)) {
-	        return false;
-	    }
-	
-	    var day = obj.getDay();
-	
-	    return day === 6 || day === 0;
+	function _isInNextYear(obj) {
+	    return (0, _inDateRange2["default"])(obj, new Date(), new Date(new Date().setDate(new Date().getFullYear() + 1)));
 	}
 	
 	module.exports = exports["default"];
@@ -3096,20 +4328,16 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports["default"] = isYear;
+	exports["default"] = _isPast;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
-	var _isitDate = __webpack_require__(10);
+	var _date = __webpack_require__(10);
 	
-	var _isitDate2 = _interopRequireDefault(_isitDate);
+	var _date2 = _interopRequireDefault(_date);
 	
-	var _isitNumber = __webpack_require__(15);
-	
-	var _isitNumber2 = _interopRequireDefault(_isitNumber);
-	
-	function isYear(obj, year) {
-	    return (0, _isitDate2["default"])(obj) && (0, _isitNumber2["default"])(year) && year === obj.getFullYear();
+	function _isPast(obj) {
+	    return (0, _date2["default"])(obj) && obj.getTime() < new Date().getTime();
 	}
 	
 	module.exports = exports["default"];
@@ -3123,19 +4351,20 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports["default"] = isYesterday;
+	exports["default"] = _isQuarterOfYear;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
-	var _isitDate = __webpack_require__(10);
+	var _date = __webpack_require__(10);
 	
-	var _isitDate2 = _interopRequireDefault(_isitDate);
+	var _date2 = _interopRequireDefault(_date);
 	
-	function isYesterday(obj) {
-	    var now = new Date(),
-	        yesterdayString = new Date(now.setDate(now.getDate() - 1).toDateString());
+	var _number = __webpack_require__(15);
 	
-	    return (0, _isitDate2["default"])(obj) && obj.toDateString() === yesterdayString;
+	var _number2 = _interopRequireDefault(_number);
+	
+	function _isQuarterOfYear(obj, quarterNumber) {
+	    return (0, _date2["default"])(obj) && (0, _number2["default"])(quarterNumber) && quarterNumber === Math.floor((obj.getMonth() + 3) / 3);
 	}
 	
 	module.exports = exports["default"];
@@ -3149,18 +4378,16 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports["default"] = isAndroid;
+	exports["default"] = _isToday;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
-	var _utils = __webpack_require__(1);
+	var _date = __webpack_require__(10);
 	
-	var _isitBrowser = __webpack_require__(4);
+	var _date2 = _interopRequireDefault(_date);
 	
-	var _isitBrowser2 = _interopRequireDefault(_isitBrowser);
-	
-	function isAndroid() {
-	    return (0, _isitBrowser2["default"])() && /android/i.test(_utils.navigatorInfo.userAgent);
+	function _isToday(obj) {
+	    return (0, _date2["default"])(obj) && obj.toDateString() === new Date().toDateString();
 	}
 	
 	module.exports = exports["default"];
@@ -3174,20 +4401,23 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports["default"] = isAndroidPhone;
+	exports["default"] = _isTomorrow;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
-	var _utils = __webpack_require__(1);
+	var _date = __webpack_require__(10);
 	
-	var _isitBrowser = __webpack_require__(4);
+	var _date2 = _interopRequireDefault(_date);
 	
-	var _isitBrowser2 = _interopRequireDefault(_isitBrowser);
+	function _isTomorrow(obj) {
+	    if (!(0, _date2["default"])(obj)) {
+	        return false;
+	    }
 	
-	var _isitBrowser3 = _interopRequireDefault(_isitBrowser);
+	    var now = new Date(),
+	        tomorrowString = new Date(now.setDate(now.getDate() + 1).toDateString());
 	
-	function isAndroidPhone() {
-	    return (0, _isitBrowser2["default"])() && (0, _isitBrowser3["default"])() && /mobile/i.test(_utils.navigatorInfo.userAgent);
+	    return obj.toDateString() === tomorrowString;
 	}
 	
 	module.exports = exports["default"];
@@ -3201,20 +4431,22 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports["default"] = isAndroidTablet;
+	exports["default"] = _isWeekday;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
-	var _utils = __webpack_require__(1);
+	var _date = __webpack_require__(10);
 	
-	var _isitBrowser = __webpack_require__(4);
+	var _date2 = _interopRequireDefault(_date);
 	
-	var _isitBrowser2 = _interopRequireDefault(_isitBrowser);
+	function _isWeekday(obj) {
+	    if (!(0, _date2["default"])(obj)) {
+	        return false;
+	    }
 	
-	var _isitBrowser3 = _interopRequireDefault(_isitBrowser);
+	    var day = obj.getDay();
 	
-	function isAndroidTablet() {
-	    return (0, _isitBrowser2["default"])() && (0, _isitBrowser3["default"])() && !/mobile/i.test(_utils.navigatorInfo.userAgent);
+	    return day !== 6 && day !== 0;
 	}
 	
 	module.exports = exports["default"];
@@ -3228,18 +4460,22 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports["default"] = isBlackberry;
+	exports["default"] = _isWeekday;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
-	var _utils = __webpack_require__(1);
+	var _date = __webpack_require__(10);
 	
-	var _isitBrowser = __webpack_require__(4);
+	var _date2 = _interopRequireDefault(_date);
 	
-	var _isitBrowser2 = _interopRequireDefault(_isitBrowser);
+	function _isWeekday(obj) {
+	    if (!(0, _date2["default"])(obj)) {
+	        return false;
+	    }
 	
-	function isBlackberry() {
-	    return (0, _isitBrowser2["default"])() && /blackberry/i.test(_utils.navigatorInfo.userAgent) || /BB10/i.test(_utils.navigatorInfo.userAgent);
+	    var day = obj.getDay();
+	
+	    return day === 6 || day === 0;
 	}
 	
 	module.exports = exports["default"];
@@ -3253,18 +4489,20 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports["default"] = isBlink;
+	exports["default"] = _isYear;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
-	var _utils = __webpack_require__(1);
+	var _date = __webpack_require__(10);
 	
-	var _isitBrowser = __webpack_require__(4);
+	var _date2 = _interopRequireDefault(_date);
 	
-	var _isitBrowser2 = _interopRequireDefault(_isitBrowser);
+	var _number = __webpack_require__(15);
 	
-	function isBlink() {
-	    return (0, _isitBrowser2["default"])() && /chrome/i.test(_utils.navigatorInfo.userAgent);
+	var _number2 = _interopRequireDefault(_number);
+	
+	function _isYear(obj, year) {
+	    return (0, _date2["default"])(obj) && (0, _number2["default"])(year) && year === obj.getFullYear();
 	}
 	
 	module.exports = exports["default"];
@@ -3278,18 +4516,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports["default"] = isChrome;
+	exports["default"] = _isYesterday;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
-	var _utils = __webpack_require__(1);
+	var _date = __webpack_require__(10);
 	
-	var _isitBrowser = __webpack_require__(4);
+	var _date2 = _interopRequireDefault(_date);
 	
-	var _isitBrowser2 = _interopRequireDefault(_isitBrowser);
+	function _isYesterday(obj) {
+	    var now = new Date(),
+	        yesterdayString = new Date(now.setDate(now.getDate() - 1).toDateString());
 	
-	function isChrome() {
-	    return (0, _isitBrowser2["default"])() && /chrome|chromium/i.test(_utils.navigatorInfo.userAgent) && /google inc/.test(_utils.navigatorInfo.vendor);
+	    return (0, _date2["default"])(obj) && obj.toDateString() === yesterdayString;
 	}
 	
 	module.exports = exports["default"];
@@ -3303,26 +4542,18 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports["default"] = isDesktop;
+	exports["default"] = _isAndroid;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
 	var _utils = __webpack_require__(1);
 	
-	var _isitBrowser = __webpack_require__(4);
+	var _browser = __webpack_require__(2);
 	
-	var _isitBrowser2 = _interopRequireDefault(_isitBrowser);
+	var _browser2 = _interopRequireDefault(_browser);
 	
-	var _isitMobile = __webpack_require__(99);
-	
-	var _isitMobile2 = _interopRequireDefault(_isitMobile);
-	
-	var _isitTablet = __webpack_require__(104);
-	
-	var _isitTablet2 = _interopRequireDefault(_isitTablet);
-	
-	function isDesktop() {
-	    return (0, _isitBrowser2["default"])() && !(0, _isitMobile2["default"])() && !(0, _isitTablet2["default"])();
+	function _isAndroid() {
+	    return (0, _browser2["default"])() && /android/i.test(_utils.navigatorInfo.userAgent);
 	}
 	
 	module.exports = exports["default"];
@@ -3336,36 +4567,20 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports["default"] = isMobile;
+	exports["default"] = _isAndroidPhone;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
-	var _isitAndroidPhone = __webpack_require__(93);
+	var _utils = __webpack_require__(1);
 	
-	var _isitAndroidPhone2 = _interopRequireDefault(_isitAndroidPhone);
+	var _browser = __webpack_require__(2);
 	
-	var _isitBlackberry = __webpack_require__(95);
+	var _browser2 = _interopRequireDefault(_browser);
 	
-	var _isitBlackberry2 = _interopRequireDefault(_isitBlackberry);
+	var _browser3 = _interopRequireDefault(_browser);
 	
-	var _isitBrowser = __webpack_require__(4);
-	
-	var _isitBrowser2 = _interopRequireDefault(_isitBrowser);
-	
-	var _isitIphone = __webpack_require__(100);
-	
-	var _isitIphone2 = _interopRequireDefault(_isitIphone);
-	
-	var _isitIpod = __webpack_require__(101);
-	
-	var _isitIpod2 = _interopRequireDefault(_isitIpod);
-	
-	var _isitWindowsPhone = __webpack_require__(102);
-	
-	var _isitWindowsPhone2 = _interopRequireDefault(_isitWindowsPhone);
-	
-	function isMobile() {
-	    return (0, _isitBrowser2["default"])() && ((0, _isitIphone2["default"])() || (0, _isitAndroidPhone2["default"])() || (0, _isitIpod2["default"])() || (0, _isitWindowsPhone2["default"])() || (0, _isitBlackberry2["default"])());
+	function _isAndroidPhone() {
+	    return (0, _browser2["default"])() && (0, _browser3["default"])() && /mobile/i.test(_utils.navigatorInfo.userAgent);
 	}
 	
 	module.exports = exports["default"];
@@ -3379,18 +4594,20 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports["default"] = isIphone;
+	exports["default"] = _isAndroidTablet;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
 	var _utils = __webpack_require__(1);
 	
-	var _isitBrowser = __webpack_require__(4);
+	var _browser = __webpack_require__(2);
 	
-	var _isitBrowser2 = _interopRequireDefault(_isitBrowser);
+	var _browser2 = _interopRequireDefault(_browser);
 	
-	function isIphone() {
-	    return (0, _isitBrowser2["default"])() && /iphone/i.test(_utils.navigatorInfo.userAgent);
+	var _browser3 = _interopRequireDefault(_browser);
+	
+	function _isAndroidTablet() {
+	    return (0, _browser2["default"])() && (0, _browser3["default"])() && !/mobile/i.test(_utils.navigatorInfo.userAgent);
 	}
 	
 	module.exports = exports["default"];
@@ -3404,18 +4621,18 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports["default"] = isIpod;
+	exports["default"] = _isBlackberry;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
 	var _utils = __webpack_require__(1);
 	
-	var _isitBrowser = __webpack_require__(4);
+	var _browser = __webpack_require__(2);
 	
-	var _isitBrowser2 = _interopRequireDefault(_isitBrowser);
+	var _browser2 = _interopRequireDefault(_browser);
 	
-	function isIpod() {
-	    return (0, _isitBrowser2["default"])() && /ipod/i.test(_utils.navigatorInfo.userAgent);
+	function _isBlackberry() {
+	    return (0, _browser2["default"])() && /blackberry/i.test(_utils.navigatorInfo.userAgent) || /BB10/i.test(_utils.navigatorInfo.userAgent);
 	}
 	
 	module.exports = exports["default"];
@@ -3429,22 +4646,18 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports["default"] = isWindowsPhone;
+	exports["default"] = _isBlink;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
 	var _utils = __webpack_require__(1);
 	
-	var _isitBrowser = __webpack_require__(4);
+	var _browser = __webpack_require__(2);
 	
-	var _isitBrowser2 = _interopRequireDefault(_isitBrowser);
+	var _browser2 = _interopRequireDefault(_browser);
 	
-	var _isitWindows = __webpack_require__(103);
-	
-	var _isitWindows2 = _interopRequireDefault(_isitWindows);
-	
-	function isWindowsPhone() {
-	    return (0, _isitBrowser2["default"])() && (0, _isitWindows2["default"])() && /phone/i.test(_utils.navigatorInfo.userAgent);
+	function _isBlink() {
+	    return (0, _browser2["default"])() && /chrome/i.test(_utils.navigatorInfo.userAgent);
 	}
 	
 	module.exports = exports["default"];
@@ -3458,18 +4671,18 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports["default"] = isWindows;
+	exports["default"] = _isChrome;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
 	var _utils = __webpack_require__(1);
 	
-	var _isitBrowser = __webpack_require__(4);
+	var _browser = __webpack_require__(2);
 	
-	var _isitBrowser2 = _interopRequireDefault(_isitBrowser);
+	var _browser2 = _interopRequireDefault(_browser);
 	
-	function isWindows() {
-	    return (0, _isitBrowser2["default"])() && /win/i.test(_utils.navigatorInfo.appVersion);
+	function _isChrome() {
+	    return (0, _browser2["default"])() && /chrome|chromium/i.test(_utils.navigatorInfo.userAgent) && /google inc/.test(_utils.navigatorInfo.vendor);
 	}
 	
 	module.exports = exports["default"];
@@ -3483,28 +4696,24 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports["default"] = isTablet;
+	exports["default"] = _isDesktop;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
-	var _isitAndroidTablet = __webpack_require__(94);
+	var _browser = __webpack_require__(2);
 	
-	var _isitAndroidTablet2 = _interopRequireDefault(_isitAndroidTablet);
+	var _browser2 = _interopRequireDefault(_browser);
 	
-	var _isitBrowser = __webpack_require__(4);
+	var _mobile = __webpack_require__(105);
 	
-	var _isitBrowser2 = _interopRequireDefault(_isitBrowser);
+	var _mobile2 = _interopRequireDefault(_mobile);
 	
-	var _isitIpad = __webpack_require__(105);
+	var _tablet = __webpack_require__(110);
 	
-	var _isitIpad2 = _interopRequireDefault(_isitIpad);
+	var _tablet2 = _interopRequireDefault(_tablet);
 	
-	var _isitWindowsTablet = __webpack_require__(106);
-	
-	var _isitWindowsTablet2 = _interopRequireDefault(_isitWindowsTablet);
-	
-	function isTablet() {
-	    return (0, _isitBrowser2["default"])() && ((0, _isitIpad2["default"])() || (0, _isitAndroidTablet2["default"])() || (0, _isitWindowsTablet2["default"])());
+	function _isDesktop() {
+	    return (0, _browser2["default"])() && !(0, _mobile2["default"])() && !(0, _tablet2["default"])();
 	}
 	
 	module.exports = exports["default"];
@@ -3518,18 +4727,36 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports["default"] = isIpad;
+	exports["default"] = _isMobile;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
-	var _utils = __webpack_require__(1);
+	var _androidPhone = __webpack_require__(99);
 	
-	var _isitBrowser = __webpack_require__(4);
+	var _androidPhone2 = _interopRequireDefault(_androidPhone);
 	
-	var _isitBrowser2 = _interopRequireDefault(_isitBrowser);
+	var _blackberry = __webpack_require__(101);
 	
-	function isIpad() {
-	    return (0, _isitBrowser2["default"])() && /ipad/i.test(_utils.navigatorInfo.userAgent);
+	var _blackberry2 = _interopRequireDefault(_blackberry);
+	
+	var _browser = __webpack_require__(2);
+	
+	var _browser2 = _interopRequireDefault(_browser);
+	
+	var _iphone = __webpack_require__(106);
+	
+	var _iphone2 = _interopRequireDefault(_iphone);
+	
+	var _ipod = __webpack_require__(107);
+	
+	var _ipod2 = _interopRequireDefault(_ipod);
+	
+	var _windowsPhone = __webpack_require__(108);
+	
+	var _windowsPhone2 = _interopRequireDefault(_windowsPhone);
+	
+	function _isMobile() {
+	    return (0, _browser2["default"])() && ((0, _iphone2["default"])() || (0, _androidPhone2["default"])() || (0, _ipod2["default"])() || (0, _windowsPhone2["default"])() || (0, _blackberry2["default"])());
 	}
 	
 	module.exports = exports["default"];
@@ -3543,26 +4770,18 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports["default"] = isWindowsTablet;
+	exports["default"] = _isIphone;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
 	var _utils = __webpack_require__(1);
 	
-	var _isitBrowser = __webpack_require__(4);
+	var _browser = __webpack_require__(2);
 	
-	var _isitBrowser2 = _interopRequireDefault(_isitBrowser);
+	var _browser2 = _interopRequireDefault(_browser);
 	
-	var _isitWindows = __webpack_require__(103);
-	
-	var _isitWindows2 = _interopRequireDefault(_isitWindows);
-	
-	var _isitWindowsPhone = __webpack_require__(102);
-	
-	var _isitWindowsPhone2 = _interopRequireDefault(_isitWindowsPhone);
-	
-	function isWindowsTablet() {
-	    return (0, _isitBrowser2["default"])() && (0, _isitWindows2["default"])() && not(isWindowPhone()) && /touch/i.test(_utils.navigatorInfo.userAgent);
+	function _isIphone() {
+	    return (0, _browser2["default"])() && /iphone/i.test(_utils.navigatorInfo.userAgent);
 	}
 	
 	module.exports = exports["default"];
@@ -3576,31 +4795,18 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports["default"] = isIe;
+	exports["default"] = _isIpod;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
 	var _utils = __webpack_require__(1);
 	
-	var _isitBrowser = __webpack_require__(4);
+	var _browser = __webpack_require__(2);
 	
-	var _isitBrowser2 = _interopRequireDefault(_isitBrowser);
+	var _browser2 = _interopRequireDefault(_browser);
 	
-	function isIe(version) {
-	    if (!(0, _isitBrowser2["default"])()) {
-	        return false;
-	    }
-	
-	    if (!version) {
-	        return (/msie/.test(_utils.navigatorInfo.userAgent) || !window.ActiveXObject && "ActiveXObject" in window
-	        );
-	    }
-	
-	    if (version >= 11) {
-	        return !window.ActiveXObject && "ActiveXObject" in window;
-	    }
-	
-	    return new RegExp('msie ' + version).test(_utils.navigatorInfo.userAgent);
+	function _isIpod() {
+	    return (0, _browser2["default"])() && /ipod/i.test(_utils.navigatorInfo.userAgent);
 	}
 	
 	module.exports = exports["default"];
@@ -3614,18 +4820,22 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports["default"] = isFirefox;
+	exports["default"] = _isWindowsPhone;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
 	var _utils = __webpack_require__(1);
 	
-	var _isitBrowser = __webpack_require__(4);
+	var _browser = __webpack_require__(2);
 	
-	var _isitBrowser2 = _interopRequireDefault(_isitBrowser);
+	var _browser2 = _interopRequireDefault(_browser);
 	
-	function isFirefox() {
-	    return (0, _isitBrowser2["default"])() && /firefox/i.test(_utils.navigatorInfo.userAgent);
+	var _windows = __webpack_require__(109);
+	
+	var _windows2 = _interopRequireDefault(_windows);
+	
+	function _isWindowsPhone() {
+	    return (0, _browser2["default"])() && (0, _windows2["default"])() && /phone/i.test(_utils.navigatorInfo.userAgent);
 	}
 	
 	module.exports = exports["default"];
@@ -3639,18 +4849,18 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports["default"] = isGecko;
+	exports["default"] = _isWindows;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
 	var _utils = __webpack_require__(1);
 	
-	var _isitBrowser = __webpack_require__(4);
+	var _browser = __webpack_require__(2);
 	
-	var _isitBrowser2 = _interopRequireDefault(_isitBrowser);
+	var _browser2 = _interopRequireDefault(_browser);
 	
-	function isGecko() {
-	    return (0, _isitBrowser2["default"])() && /gecko/i.test(_utils.navigatorInfo.userAgent);
+	function _isWindows() {
+	    return (0, _browser2["default"])() && /win/i.test(_utils.navigatorInfo.appVersion);
 	}
 	
 	module.exports = exports["default"];
@@ -3664,24 +4874,28 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports["default"] = isIos;
+	exports["default"] = _isTablet;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
-	var _isitIpad = __webpack_require__(105);
+	var _androidTablet = __webpack_require__(100);
 	
-	var _isitIpad2 = _interopRequireDefault(_isitIpad);
+	var _androidTablet2 = _interopRequireDefault(_androidTablet);
 	
-	var _isitIphone = __webpack_require__(100);
+	var _browser = __webpack_require__(2);
 	
-	var _isitIphone2 = _interopRequireDefault(_isitIphone);
+	var _browser2 = _interopRequireDefault(_browser);
 	
-	var _isitIpod = __webpack_require__(101);
+	var _ipad = __webpack_require__(111);
 	
-	var _isitIpod2 = _interopRequireDefault(_isitIpod);
+	var _ipad2 = _interopRequireDefault(_ipad);
 	
-	function isIos() {
-	    return (0, _isitIpad2["default"])() || (0, _isitIphone2["default"])() || (0, _isitIpod2["default"])();
+	var _windowsTablet = __webpack_require__(112);
+	
+	var _windowsTablet2 = _interopRequireDefault(_windowsTablet);
+	
+	function _isTablet() {
+	    return (0, _browser2["default"])() && ((0, _ipad2["default"])() || (0, _androidTablet2["default"])() || (0, _windowsTablet2["default"])());
 	}
 	
 	module.exports = exports["default"];
@@ -3695,18 +4909,18 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports["default"] = isLinux;
+	exports["default"] = _isIpad;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
 	var _utils = __webpack_require__(1);
 	
-	var _isitBrowser = __webpack_require__(4);
+	var _browser = __webpack_require__(2);
 	
-	var _isitBrowser2 = _interopRequireDefault(_isitBrowser);
+	var _browser2 = _interopRequireDefault(_browser);
 	
-	function isLinux() {
-	    return (0, _isitBrowser2["default"])() && /linux|x11/i.test(_utils.navigatorInfo.appVersion);
+	function _isIpad() {
+	    return (0, _browser2["default"])() && /ipad/i.test(_utils.navigatorInfo.userAgent);
 	}
 	
 	module.exports = exports["default"];
@@ -3720,35 +4934,66 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports["default"] = isMac;
+	exports["default"] = _isWindowsTablet;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
+	var _helpers = __webpack_require__(3);
+	
 	var _utils = __webpack_require__(1);
 	
-	var _isitBrowser = __webpack_require__(4);
+	var _browser = __webpack_require__(2);
 	
-	var _isitBrowser2 = _interopRequireDefault(_isitBrowser);
+	var _browser2 = _interopRequireDefault(_browser);
 	
-	function isMac() {
-	    return (0, _isitBrowser2["default"])() && /mac/i.test(_utils.navigatorInfo.appVersion);
+	var _windows = __webpack_require__(109);
+	
+	var _windows2 = _interopRequireDefault(_windows);
+	
+	var _windowsPhone = __webpack_require__(108);
+	
+	var _windowsPhone2 = _interopRequireDefault(_windowsPhone);
+	
+	function _isWindowsTablet() {
+	    return (0, _browser2["default"])() && (0, _windows2["default"])() && (0, _helpers.not)((0, _windowsPhone2["default"])()) && /touch/i.test(_utils.navigatorInfo.userAgent);
 	}
 	
 	module.exports = exports["default"];
 
 /***/ },
 /* 113 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports["default"] = isNode;
+	exports["default"] = _isIe;
 	
-	function isNode() {
-	    return typeof window === "undefined";
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+	
+	var _utils = __webpack_require__(1);
+	
+	var _browser = __webpack_require__(2);
+	
+	var _browser2 = _interopRequireDefault(_browser);
+	
+	function _isIe(version) {
+	    if (!(0, _browser2["default"])()) {
+	        return false;
+	    }
+	
+	    if (!version) {
+	        return (/msie/.test(_utils.navigatorInfo.userAgent) || !window.ActiveXObject && "ActiveXObject" in window
+	        );
+	    }
+	
+	    if (version >= 11) {
+	        return !window.ActiveXObject && "ActiveXObject" in window;
+	    }
+	
+	    return new RegExp("msie " + version).test(_utils.navigatorInfo.userAgent);
 	}
 	
 	module.exports = exports["default"];
@@ -3762,18 +5007,18 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports["default"] = isOffline;
+	exports["default"] = _isFirefox;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
-	var _helpers = __webpack_require__(2);
+	var _utils = __webpack_require__(1);
 	
-	var _isitOnline = __webpack_require__(115);
+	var _browser = __webpack_require__(2);
 	
-	var _isitOnline2 = _interopRequireDefault(_isitOnline);
+	var _browser2 = _interopRequireDefault(_browser);
 	
-	function isOffline() {
-	    return (0, _helpers.not)(_isitOnline2["default"]);
+	function _isFirefox() {
+	    return (0, _browser2["default"])() && /firefox/i.test(_utils.navigatorInfo.userAgent);
 	}
 	
 	module.exports = exports["default"];
@@ -3787,16 +5032,18 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports["default"] = isOnline;
+	exports["default"] = _isGecko;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
-	var _isitBrowser = __webpack_require__(4);
+	var _utils = __webpack_require__(1);
 	
-	var _isitBrowser2 = _interopRequireDefault(_isitBrowser);
+	var _browser = __webpack_require__(2);
 	
-	function isOnline() {
-	    return (0, _isitBrowser2["default"])() && navigator.onLine;
+	var _browser2 = _interopRequireDefault(_browser);
+	
+	function _isGecko() {
+	    return (0, _browser2["default"])() && /gecko/i.test(_utils.navigatorInfo.userAgent);
 	}
 	
 	module.exports = exports["default"];
@@ -3810,18 +5057,24 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports["default"] = isOpera;
+	exports["default"] = _isIos;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
-	var _utils = __webpack_require__(1);
+	var _ipad = __webpack_require__(111);
 	
-	var _isitBrowser = __webpack_require__(4);
+	var _ipad2 = _interopRequireDefault(_ipad);
 	
-	var _isitBrowser2 = _interopRequireDefault(_isitBrowser);
+	var _iphone = __webpack_require__(106);
 	
-	function isOpera() {
-	    return (0, _isitBrowser2["default"])() && /^opera/i.test(_utils.navigatorInfo.userAgent) || /OPR/.test(_utils.navigatorInfo.userAgent);
+	var _iphone2 = _interopRequireDefault(_iphone);
+	
+	var _ipod = __webpack_require__(107);
+	
+	var _ipod2 = _interopRequireDefault(_ipod);
+	
+	function _isIos() {
+	    return (0, _ipad2["default"])() || (0, _iphone2["default"])() || (0, _ipod2["default"])();
 	}
 	
 	module.exports = exports["default"];
@@ -3835,18 +5088,18 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports["default"] = isPresto;
+	exports["default"] = _isLinux;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
 	var _utils = __webpack_require__(1);
 	
-	var _isitBrowser = __webpack_require__(4);
+	var _browser = __webpack_require__(2);
 	
-	var _isitBrowser2 = _interopRequireDefault(_isitBrowser);
+	var _browser2 = _interopRequireDefault(_browser);
 	
-	function isPresto() {
-	    return (0, _isitBrowser2["default"])() && /opera/i.test(_utils.navigatorInfo.userAgent);
+	function _isLinux() {
+	    return (0, _browser2["default"])() && /linux|x11/i.test(_utils.navigatorInfo.appVersion);
 	}
 	
 	module.exports = exports["default"];
@@ -3860,45 +5113,35 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports["default"] = isRetina;
+	exports["default"] = _isMac;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
-	var _isitBrowser = __webpack_require__(4);
+	var _utils = __webpack_require__(1);
 	
-	var _isitBrowser2 = _interopRequireDefault(_isitBrowser);
+	var _browser = __webpack_require__(2);
 	
-	function isRetina() {
-	    if ((0, _isitBrowser2["default"])() && window.matchMedia) {
-	        var mq = window.matchMedia("only screen and (min--moz-device-pixel-ratio: 1.3), only screen and " + "(-o-min-device-pixel-ratio: 2.6/2), only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen " + "and (min-device-pixel-ratio: 1.3), only screen and (min-resolution: 1.3dppx)");
+	var _browser2 = _interopRequireDefault(_browser);
 	
-	        return mq && mq.matches || window.devicePixelRatio > 1;
-	    }
+	function _isMac() {
+	    return (0, _browser2["default"])() && /mac/i.test(_utils.navigatorInfo.appVersion);
 	}
 	
 	module.exports = exports["default"];
 
 /***/ },
 /* 119 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ function(module, exports) {
 
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports["default"] = isSafari;
+	exports["default"] = _isNode;
 	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-	
-	var _utils = __webpack_require__(1);
-	
-	var _isitBrowser = __webpack_require__(4);
-	
-	var _isitBrowser2 = _interopRequireDefault(_isitBrowser);
-	
-	function isSafari() {
-	    return (0, _isitBrowser2["default"])() && /safari/i.test(_utils.navigatorInfo.userAgent) && /apple computer/.test(_utils.navigatorInfo.vendor);
+	function _isNode() {
+	    return typeof window === "undefined";
 	}
 	
 	module.exports = exports["default"];
@@ -3912,16 +5155,16 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports["default"] = isTouchDevice;
+	exports["default"] = _isOffline;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
-	var _isitBrowser = __webpack_require__(4);
+	var _online = __webpack_require__(121);
 	
-	var _isitBrowser2 = _interopRequireDefault(_isitBrowser);
+	var _online2 = _interopRequireDefault(_online);
 	
-	function isTouchDevice() {
-	    return (0, _isitBrowser2["default"])() && "ontouchstart" in window || "DocumentTouch" in window && document instanceof DocumentTouch;
+	function _isOffline() {
+	    return !(0, _online2["default"])();
 	}
 	
 	module.exports = exports["default"];
@@ -3935,18 +5178,16 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports["default"] = isTrident;
+	exports["default"] = _isOnline;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
-	var _utils = __webpack_require__(1);
+	var _browser = __webpack_require__(2);
 	
-	var _isitBrowser = __webpack_require__(4);
+	var _browser2 = _interopRequireDefault(_browser);
 	
-	var _isitBrowser2 = _interopRequireDefault(_isitBrowser);
-	
-	function isTrident() {
-	    return (0, _isitBrowser2["default"])() && /trident/i.test(_utils.navigatorInfo.userAgent);
+	function _isOnline() {
+	    return (0, _browser2["default"])() && navigator.onLine;
 	}
 	
 	module.exports = exports["default"];
@@ -3960,18 +5201,170 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports["default"] = isWebkit;
+	exports["default"] = _isOpera;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
 	var _utils = __webpack_require__(1);
 	
-	var _isitBrowser = __webpack_require__(4);
+	var _browser = __webpack_require__(2);
 	
-	var _isitBrowser2 = _interopRequireDefault(_isitBrowser);
+	var _browser2 = _interopRequireDefault(_browser);
 	
-	function isWebkit() {
-	    return (0, _isitBrowser2["default"])() && /applewebkit/i.test(_utils.navigatorInfo.userAgent);
+	function _isOpera() {
+	    return (0, _browser2["default"])() && /^opera/i.test(_utils.navigatorInfo.userAgent) || /OPR/.test(_utils.navigatorInfo.userAgent);
+	}
+	
+	module.exports = exports["default"];
+
+/***/ },
+/* 123 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports["default"] = _isPresto;
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+	
+	var _utils = __webpack_require__(1);
+	
+	var _browser = __webpack_require__(2);
+	
+	var _browser2 = _interopRequireDefault(_browser);
+	
+	function _isPresto() {
+	    return (0, _browser2["default"])() && /opera/i.test(_utils.navigatorInfo.userAgent);
+	}
+	
+	module.exports = exports["default"];
+
+/***/ },
+/* 124 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports["default"] = _isRetina;
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+	
+	var _browser = __webpack_require__(2);
+	
+	var _browser2 = _interopRequireDefault(_browser);
+	
+	function _isRetina() {
+	    if ((0, _browser2["default"])() && window.matchMedia) {
+	        var mq = window.matchMedia("only screen and (min--moz-device-pixel-ratio: 1.3), only screen and " + "(-o-min-device-pixel-ratio: 2.6/2), only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen " + "and (min-device-pixel-ratio: 1.3), only screen and (min-resolution: 1.3dppx)");
+	
+	        return mq && mq.matches || window.devicePixelRatio > 1;
+	    }
+	}
+	
+	module.exports = exports["default"];
+
+/***/ },
+/* 125 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports["default"] = _isSafari;
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+	
+	var _utils = __webpack_require__(1);
+	
+	var _browser = __webpack_require__(2);
+	
+	var _browser2 = _interopRequireDefault(_browser);
+	
+	function _isSafari() {
+	    return (0, _browser2["default"])() && /safari/i.test(_utils.navigatorInfo.userAgent) && /apple computer/.test(_utils.navigatorInfo.vendor);
+	}
+	
+	module.exports = exports["default"];
+
+/***/ },
+/* 126 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports["default"] = _isTouchDevice;
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+	
+	var _browser = __webpack_require__(2);
+	
+	var _browser2 = _interopRequireDefault(_browser);
+	
+	function _isTouchDevice() {
+	    /* eslint-disable */
+	    return (0, _browser2["default"])() && "ontouchstart" in window || "DocumentTouch" in window && document instanceof DocumentTouch;
+	    /* eslint-enable */
+	}
+	
+	module.exports = exports["default"];
+
+/***/ },
+/* 127 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports["default"] = _isTrident;
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+	
+	var _utils = __webpack_require__(1);
+	
+	var _browser = __webpack_require__(2);
+	
+	var _browser2 = _interopRequireDefault(_browser);
+	
+	function _isTrident() {
+	    return (0, _browser2["default"])() && /trident/i.test(_utils.navigatorInfo.userAgent);
+	}
+	
+	module.exports = exports["default"];
+
+/***/ },
+/* 128 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports["default"] = _isWebkit;
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+	
+	var _utils = __webpack_require__(1);
+	
+	var _browser = __webpack_require__(2);
+	
+	var _browser2 = _interopRequireDefault(_browser);
+	
+	function _isWebkit() {
+	    return (0, _browser2["default"])() && /applewebkit/i.test(_utils.navigatorInfo.userAgent);
 	}
 	
 	module.exports = exports["default"];

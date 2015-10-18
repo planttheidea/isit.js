@@ -3,7 +3,7 @@
 <html>
     <head>
         <title>
-            Test is.js
+            Test isit.js
         </title>
     </head>
 
@@ -12,116 +12,116 @@
         <script src="http://localhost:3001/isit.js"></script>
 
         <script>
-            console.log(is);
+            console.log(isit);
 
             console.group("above");
-            console.log(is.above(0, 2) === false);
-            console.log(is.not.above(0, 2) === true);
-            console.log(is.above(2, 0) === true);
-            console.log(is.not.above(2, 0) === false);
+            console.log(isit.above(0, 2) === false);
+            console.log(isit.not.above(0, 2) === true);
+            console.log(isit.above(2, 0) === true);
+            console.log(isit.not.above(2, 0) === false);
             console.groupEnd();
 
             function testArgs() {
                 console.group("arguments");
-                console.log(is.arguments(arguments) === true);
-                console.log(is.not.arguments(arguments) === false);
-                console.log(is.arguments(Array.prototype.slice.call(arguments)) === false);
-                console.log(is.not.arguments(Array.prototype.slice.call(arguments)) === true);
+                console.log(isit.arguments(arguments) === true);
+                console.log(isit.not.arguments(arguments) === false);
+                console.log(isit.arguments(Array.prototype.slice.call(arguments)) === false);
+                console.log(isit.not.arguments(Array.prototype.slice.call(arguments)) === true);
                 console.groupEnd();
             }
 
             testArgs("o", 2);
 
             console.group("array");
-            console.log(is.array([0, 2]) === true);
-            console.log(is.not.array([0, 2]) === false);
-            console.log(is.array("blah") === false);
-            console.log(is.not.array("blah") === true);
+            console.log(isit.array([0, 2]) === true);
+            console.log(isit.not.array([0, 2]) === false);
+            console.log(isit.array("blah") === false);
+            console.log(isit.not.array("blah") === true);
             console.groupEnd();
 
             console.group("boolean");
-            console.log(is.boolean(true) === true);
-            console.log(is.not.boolean(true) === false);
-            console.log(is.boolean("true") === false);
-            console.log(is.not.boolean("true") === true);
+            console.log(isit.boolean(true) === true);
+            console.log(isit.not.boolean(true) === false);
+            console.log(isit.boolean("true") === false);
+            console.log(isit.not.boolean("true") === true);
             console.groupEnd();
 
             console.group("browser");
-            console.log(is.browser() === true);
-            console.log(is.not.browser() === false);
+            console.log(isit.browser() === true);
+            console.log(isit.not.browser() === false);
             console.groupEnd();
 
             console.group("char");
-            console.log(is.char("A") === true);
-            console.log(is.not.char("A") === false);
-            console.log(is.char(2) === false);
-            console.log(is.not.char(2) === true);
+            console.log(isit.char("A") === true);
+            console.log(isit.not.char("A") === false);
+            console.log(isit.char(2) === false);
+            console.log(isit.not.char(2) === true);
             console.groupEnd();
 
             console.group("chrome");
-            console.log(is.chrome() === true);
-            console.log(is.not.chrome() === false);
+            console.log(isit.chrome() === true);
+            console.log(isit.not.chrome() === false);
             console.groupEnd();
 
             console.group("date");
-            console.log(is.date(new Date()) === true);
-            console.log(is.not.date(new Date()) === false);
-            console.log(is.date(2) === false);
-            console.log(is.not.date(2) === true);
+            console.log(isit.date(new Date()) === true);
+            console.log(isit.not.date(new Date()) === false);
+            console.log(isit.date(2) === false);
+            console.log(isit.not.date(2) === true);
             console.groupEnd();
 
             console.group("decimal");
-            console.log(is.decimal(0.2) === true);
-            console.log(is.not.decimal(0.2) === false);
-            console.log(is.decimal(2) === false);
-            console.log(is.not.decimal(2) === true);
+            console.log(isit.decimal(0.2) === true);
+            console.log(isit.not.decimal(0.2) === false);
+            console.log(isit.decimal(2) === false);
+            console.log(isit.not.decimal(2) === true);
             console.groupEnd();
 
             console.group("domNode");
-            console.log(is.domNode(document.createElement("div")) === true);
-            console.log(is.not.domNode(document.createElement("div")) === false);
-            console.log(is.domNode(2) === false);
-            console.log(is.not.domNode(2) === true);
+            console.log(isit.domNode(document.createElement("div")) === true);
+            console.log(isit.not.domNode(document.createElement("div")) === false);
+            console.log(isit.domNode(2) === false);
+            console.log(isit.not.domNode(2) === true);
             console.groupEnd();
 
             console.group("error");
-            console.log(is.error(new Error()) === true);
-            console.log(is.not.error(new Error()) === false);
-            console.log(is.error(2) === false);
-            console.log(is.not.error(2) === true);
+            console.log(isit.error(new Error()) === true);
+            console.log(isit.not.error(new Error()) === false);
+            console.log(isit.error(2) === false);
+            console.log(isit.not.error(2) === true);
             console.groupEnd();
 
             console.group("even");
-            console.log(is.even(2) === true);
-            console.log(is.not.even(2) === false);
-            console.log(is.even(1) === false);
-            console.log(is.not.even(1) === true);
+            console.log(isit.even(2) === true);
+            console.log(isit.not.even(2) === false);
+            console.log(isit.even(1) === false);
+            console.log(isit.not.even(1) === true);
             console.groupEnd();
 
             console.group("existy");
-            console.log(is.existy(2) === true);
-            console.log(is.not.existy(2) === false);
-            console.log(is.existy() === false);
-            console.log(is.not.existy() === true);
+            console.log(isit.existy(2) === true);
+            console.log(isit.not.existy(2) === false);
+            console.log(isit.existy() === false);
+            console.log(isit.not.existy() === true);
             console.groupEnd();
 
             console.group("node");
-            console.log(is.node() === true);
-            console.log(is.not.node() === false);
+            console.log(isit.node() === true);
+            console.log(isit.not.node() === false);
             console.groupEnd();
 
             console.group("ip");
-            console.log(is.ip("192.168.1.100") === true);
-            console.log(is.not.ip("H") === false);
-            console.log(is.ip("H") === false);
-            console.log(is.not.ip("192.168.1.100") === true);
+            console.log(isit.ip("192.168.1.100") === true);
+            console.log(isit.not.ip("H") === false);
+            console.log(isit.ip("H") === false);
+            console.log(isit.not.ip("192.168.1.100") === true);
             console.groupEnd();
 
             console.group("url");
-            console.log(is.url("google.com") === true);
-            console.log(is.not.url("//google.com") === false);
-            console.log(is.url("google.com?id=111") === false);
-            console.log(is.not.url("google.com ") === true);
+            console.log(isit.url("google.com") === true);
+            console.log(isit.not.url("//google.com") === false);
+            console.log(isit.url("google.com?id=111") === false);
+            console.log(isit.not.url("google.com ") === true);
             console.groupEnd();
         </script>
     </body>

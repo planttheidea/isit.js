@@ -1,16 +1,13 @@
 
 
-import {
-    arraySlice
-} from "utils";
-
-import isArray from "isit.array";
+import {arraySlice} from "utils";
+import _isArray from "array";
 
 function getParams(args) {
     let params = arraySlice.call(args),
         len = params.length;
 
-    if (len === 1 && isArray(params[0])) {
+    if (len === 1 && _isArray(params[0])) {
         return {
             length:params[0].length,
             parameters:params[0]
@@ -31,7 +28,7 @@ export var all = function(func) {
             } = getParams(arguments);
 
         for (let i = 0; i < length; i++) {
-            if (!func.call(null, parameters[i])) {
+            if (!func(parameters[i])) {
                 return false;
             }
         }
@@ -48,7 +45,7 @@ export var any = function(func) {
             } = getParams(arguments);
 
         for (let i = 0; i < length; i++) {
-            if (func.call(null, parameters[i])) {
+            if (func(parameters[i])) {
                 return true;
             }
         }

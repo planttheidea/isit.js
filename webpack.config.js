@@ -19,19 +19,11 @@ module.exports = {
     },
 
     eslint:{
-        ecmaFeatures:{
-            jsx:true,
-            modules:true
-        },
+        configFile:"./.eslintrc",
         emitError:true,
-        emitWarning:false,
-        env:{
-            browser:true,
-            node:true,
-            es6:true
-        },
-        formatter:require("eslint-friendly-formatter"),
-        parser:"babel-eslint"
+        failOnError:true,
+        failOnWarning:false,
+        formatter:require("eslint-friendly-formatter")
     },
 
     module: {

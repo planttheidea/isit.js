@@ -7,10 +7,11 @@ var webpack = require("webpack"),
             compress:{
                 booleans:true,
                 conditionals:true,
+                dead_code:true,
                 drop_console:true,
                 drop_debugger:true,
                 join_vars:true,
-                sequences:true,
+                unused:true,
                 warnings:false
             },
             sourceMap:false
