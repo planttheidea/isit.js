@@ -21,8 +21,7 @@ const defaultApi = [
 let isit = {
     all:{},
     any:{},
-    not:{},
-    version: "1.0.0"
+    not:{}
 };
 
 // Type checks

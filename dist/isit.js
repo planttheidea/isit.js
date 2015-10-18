@@ -615,8 +615,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var isit = {
 	    all: {},
 	    any: {},
-	    not: {},
-	    version: "1.0.0"
+	    not: {}
 	};
 	
 	isit.arguments = _arguments2["default"];

@@ -34,9 +34,10 @@
   },
   "scripts": {
     "compile": "babel -d lib/ src/",
-    "dist": "npm run compile && webpack --progress --colors && webpack --progress --colors --config=webpack.config.minified.js",
+    "dist": "npm run compile && npm run isit",
+    "isit": "webpack --progress --colors && webpack --progress --colors --config=webpack.config.minified.js",
     "prepublish": "npm run compile",
     "test": "webpack-dev-server --progress --colors"
   },
-  "version": "1.1.5"
+  "version": "1.1.6"
 }
