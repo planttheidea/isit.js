@@ -1145,9 +1145,6 @@ isit.capitalized('nope');
 isit.not.capitalized('nope not capitalized');
 => true
 
-isit.not.capitalized('nope Capitalized');
-=> true
-
 isit.all.capitalized('Yeap', 'All', 'Capitalized');
 => true
 
@@ -1174,9 +1171,6 @@ isit.palindrome('nope');
 isit.not.palindrome('nope not palindrome');
 => true
 
-isit.not.palindrome('tt');
-=> false
-
 isit.all.palindrome('testset', 'tt');
 => true
 
@@ -1201,9 +1195,6 @@ isit.camelCase('Foo Bar');
 => false
 
 isit.not.camelCase('nope not camel case');
-=> true
-
-isit.not.camelCase('nopeCamelCase');
 => true
 
 isit.all.camelCase('fooBar', 'tastyCakes', 'iThinkYouGetIt');
@@ -1232,9 +1223,6 @@ isit.kebabCase('Foo Bar');
 isit.not.kebabCase('nope not kebab case');
 => true
 
-isit.not.kebabCase('-nope-kebab-case');
-=> true
-
 isit.all.kebabCase('-foo-bar', '-tasty-cakes', '-i-think-you-get-it');
 => true
 
@@ -1259,9 +1247,6 @@ isit.snakeCase('Foo Bar');
 => false
 
 isit.not.snakeCase('nope not snake case');
-=> true
-
-isit.not.snakeCase('nope_snake_case');
 => true
 
 isit.all.snakeCase('foo_bar', 'tasty_cakes', 'i_think_yoU_get_it');
@@ -1290,9 +1275,6 @@ isit.startCase('fooBar');
 isit.not.startCase('-nope-not-start-case');
 => true
 
-isit.not.startCase('Nope Start Case');
-=> true
-
 isit.all.startCase('Foo Bar', 'Tasty Cakes', 'I Think You Get It');
 => true
 
@@ -1301,6 +1283,58 @@ isit.any.startCase('Yeap', 'some', '-foo-bar');
 
 // 'all' and 'any' interfaces can also take array parameter
 isit.all.startCase(['Nope', '-foo-bar']);
+=> false
+```
+
+isit.doubleByte(value:string)
+---------------------------------------------
+####Checks if the given string contains two-byte (or non-Latin) characters.
+interfaces: not, all, any
+
+```javascript
+isit.doubleByte('は123');
+=> true
+
+isit.doubleByte('foo');
+=> false
+
+isit.not.doubleByte('foo');
+=> true
+
+isit.all.doubleByte('は123', 'はtest');
+=> true
+
+isit.any.doubleByte('は123', 'some', '');
+=> true
+
+// 'all' and 'any' interfaces can also take array parameter
+isit.all.doubleByte(['Nope', 'は123']);
+=> false
+```
+
+isit.html(value:string)
+---------------------------------------------
+####Checks if the given string contains HTML tags.
+interfaces: not, all, any
+
+```javascript
+isit.html('<div></div>');
+=> true
+
+isit.html('div');
+=> false
+
+isit.not.html('foo');
+=> true
+
+isit.all.html('input type="text">', '<br/>');
+=> true
+
+isit.any.html('<img src="happyKittens.jpg">', 'foo', '');
+=> true
+
+// 'all' and 'any' interfaces can also take array parameter
+isit.all.html(['Nope', '<div/>']);
 => false
 ```
 

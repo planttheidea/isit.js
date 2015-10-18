@@ -186,6 +186,18 @@
             console.log(isit.email("test@test.com") === true);
             console.log(isit.email("foobar") === false);
             console.groupEnd();
+
+            console.group("doubleByte");
+            console.log(isit.doubleByte("は123") === true);
+            console.log(isit.doubleByte("foo") === false);
+            console.groupEnd();
+
+            console.group("html");
+            console.log(isit.html("<div></div>") === true);
+            console.log(isit.html("<div>test</div>") === true);
+            console.log(isit.html("<div/>") === true);
+            console.log(isit.html("div") === false);
+            console.groupEnd();
         </script>
     </body>
 </html>

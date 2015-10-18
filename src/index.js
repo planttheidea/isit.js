@@ -165,7 +165,9 @@ isit.usZipCode = isitUsZipCode;
 
 import isitCamelCase from "./camelCase";
 import isitCapitalized from "./capitalized";
+import isitDoubleByte from "./doubleByte";
 import isitEndWith from "./endWith";
+import isitHtml from "./html";
 import isitInclude from "./include";
 import isitKebabCase from "./kebabCase";
 import isitLowerCase from "./lowercase";
@@ -177,7 +179,9 @@ import isitUppercase from "./uppercase";
 
 isit.camelCase = isitCamelCase;
 isit.capitalized = isitCapitalized;
+isit.doubleByte = isitDoubleByte;
 isit.endWith = isitEndWith;
+isit.html = isitHtml;
 isit.include = isitInclude;
 isit.kebabCase = isitKebabCase;
 isit.lowercase = isitLowerCase;
