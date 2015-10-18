@@ -1,6 +1,6 @@
 // is obj a date and is it yesterday?
 
-import isitDate from "date";
+import isitDate from "./date";
 
 export default function isitYesterday(obj) {
     let now = new Date(),

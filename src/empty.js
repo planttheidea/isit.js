@@ -1,10 +1,10 @@
 // is obj an empty object / array, or not have a value?
 
-import isitArray from "array";
-import isitArguments from "arguments";
-import isitNull from "null";
-import isitObject from "object";
-import isitUndefined from "undefined";
+import isitArray from "./array";
+import isitArguments from "./arguments";
+import isitNull from "./null";
+import isitObject from "./object";
+import isitUndefined from "./undefined";
 
 export default function isitEmpty(obj) {
     if (isitObject(obj)) {

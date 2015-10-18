@@ -1,7 +1,7 @@
 // is obj a date and a weekend day?
 
-import {not} from "helpers";
-import isitDate from "date";
+import {not} from "./helpers";
+import isitDate from "./date";
 
 export default function isitWeekday(obj) {
     if (not(isitDate)(obj)) {

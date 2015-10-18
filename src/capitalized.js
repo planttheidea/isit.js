@@ -2,9 +2,9 @@
 // NOTE: this will return true for start case ("I Am Capitalized")
 // or uppercase ("I AM UPPERCASE")
 
-import {not} from "helpers";
-import isitString from "string";
-import isitEqual from "equal";
+import {not} from "./helpers";
+import isitString from "./string";
+import isitEqual from "./equal";
 
 export default function isitCapitalized(obj) {
     if (not(isitString)(obj)) {

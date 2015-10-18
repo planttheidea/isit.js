@@ -1,7 +1,7 @@
 // is arr an array that is sorted either ascending or descending?
 
-import {not} from "helpers";
-import isitArray from "array";
+import {not} from "./helpers";
+import isitArray from "./array";
 
 function isArraySortedAsc(arr) {
     for (let i = 0, len = arr.length; i < len; i++) {

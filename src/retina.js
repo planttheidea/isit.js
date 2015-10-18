@@ -1,6 +1,6 @@
 // does the device used have a retina screen?
 
-import isitBrowser from "browser";
+import isitBrowser from "./browser";
 
 export default function isitRetina() {
     if (isitBrowser() && window.matchMedia) {

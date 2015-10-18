@@ -3,9 +3,9 @@
 import {
     hasOwnProperty,
     not
-} from "helpers";
-import isitNumber from "number";
-import isitObject from "object";
+} from "./helpers";
+import isitNumber from "./number";
+import isitObject from "./object";
 
 export default function isitPropertyCount(obj, count) {
     if (not(isitObject)(obj) || not(isitNumber)(count)) {

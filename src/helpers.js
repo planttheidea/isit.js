@@ -1,7 +1,7 @@
 // helper functions, used for interfaces
 
-import {arraySlice} from "utils";
-import isitArray from "array";
+import {arraySlice} from "./utils";
+import isitArray from "./array";
 
 function getParams(args) {
     let params = arraySlice.call(args),

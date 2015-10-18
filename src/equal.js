@@ -4,15 +4,15 @@
 import {
     all,
     not
-} from "helpers";
+} from "./helpers";
 
-import isitArray from "array";
-import isitBoolean from "boolean";
-import isitNumber from "number";
-import isitObject from "object";
-import isitRegExp from "regexp";
-import isitSameType from "sameType";
-import isitString from "string";
+import isitArray from "./array";
+import isitBoolean from "./boolean";
+import isitNumber from "./number";
+import isitObject from "./object";
+import isitRegExp from "./regexp";
+import isitSameType from "./sameType";
+import isitString from "./string";
 
 export default function isitEqual(obj1, obj2) {
     if (not(isitSameType)(obj1, obj2)) {

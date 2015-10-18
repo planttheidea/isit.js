@@ -1,9 +1,9 @@
 // is the device used a tablet?
 
-import isitAndroidTablet from "androidTablet";
-import isitBrowser from "browser";
-import isitIpad from "ipad";
-import isitWindowsTablet from "windowsTablet";
+import isitAndroidTablet from "./androidTablet";
+import isitBrowser from "./browser";
+import isitIpad from "./ipad";
+import isitWindowsTablet from "./windowsTablet";
 
 export default function isitTablet() {
     return isitBrowser() && (isitIpad() || isitAndroidTablet() || isitWindowsTablet());

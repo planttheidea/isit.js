@@ -1,6 +1,6 @@
 // utility functions, used all over the place
 
-import isitBrowser from "browser";
+import isitBrowser from "./browser";
 
 export var arraySlice = Array.prototype.slice;
 

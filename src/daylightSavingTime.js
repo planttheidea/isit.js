@@ -1,6 +1,6 @@
 
 
-import isitDate from "date";
+import isitDate from "./date";
 
 export default function isitDaylightSavingTime(obj) {
     if (!isitDate(obj)) {
