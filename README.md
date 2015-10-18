@@ -1391,8 +1391,7 @@ isit.equal(["foo", "bar"], ["foo", "bar"]);
 isit.not.equal('yeap', 'nope');
 => true
 
-// for arrays, order matters for equality
-isit.not.equal(["foo", "bar"], ["bar", "foo"]);
+isit.not.equal(["foo", "bar"], ["bar", "foo"]); // for arrays, order matters for equality
 => true
 ```
 
@@ -1763,17 +1762,17 @@ isit.sorted([1, 2, 3]);
 isit.sorted([1, 2, 4, 3]);
 => false
 
-isit.not.sorted([5, 4, 3]);
+isit.not.sorted([5, 3, 4]);
 => true
 
-isit.all.sorted([1, 2], [3, 4]);
+isit.all.sorted([1, 2, 3], [4, 3, 2]); // sort checks either ascending or descending
 => true
 
-isit.any.sorted([1, 2], [5, 4]);
+isit.any.sorted([1, 2], [5, 4, 7]);
 => true
 
 // 'all' and 'any' interfaces can also take array parameter
-isit.all.sorted([[1, 2], [5, 4]]);
+isit.all.sorted([[1, 2], [5, 4, 7]]);
 => false
 ```
 
