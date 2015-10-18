@@ -1903,12 +1903,12 @@ isit.touchDevice();
 => true if current device supports touch
 
 isit.not.touchDevice();
-=> true if current device doesn't support touch
+=> true if current device does not support touch
 ```
 
 isit.blink()
 ------------
-####Checks if browser's rendering engine is Blink.
+####Checks if browser rendering engine is Blink.
 interface: not
 
 ```javascript
@@ -1916,12 +1916,12 @@ isit.blink();
 => true if browser render with  Blink
 
 isit.not.blink();
-=> true if browser doesn't render with Blink
+=> true if browser does not render with Blink
 ```
 
 isit.gecko()
 ------------
-####Checks if browser's rendering engine is Gecko.
+####Checks if browser rendering engine is Gecko.
 interface: not
 
 ```javascript
@@ -1929,12 +1929,12 @@ isit.gecko();
 => true if browser render with  Gecko
 
 isit.not.gecko();
-=> true if browser doesn't render with Gecko
+=> true if browser does not render with Gecko
 ```
 
 isit.presto()
 ------------
-####Checks if browser's rendering engine is Presto.
+####Checks if browser rendering engine is Presto.
 interface: not
 
 ```javascript
@@ -1942,12 +1942,12 @@ isit.presto();
 => true if browser render with Presto
 
 isit.not.presto();
-=> true if browser doesn't render with Presto
+=> true if browser does not render with Presto
 ```
 
 isit.trident()
 ------------
-####Checks if browser's rendering engine is Trident.
+####Checks if browser rendering engine is Trident.
 interface: not
 
 ```javascript
@@ -1955,12 +1955,12 @@ isit.trident();
 => true if browser render with Trident
 
 isit.not.trident();
-=> true if browser doesn't render with Trident
+=> true if browser does not render with Trident
 ```
 
 isit.webkit()
 ------------
-####Checks if browser's rendering engine is WebKit.
+####Checks if browser rendering engine is WebKit.
 interface: not
 
 ```javascript
@@ -1968,7 +1968,7 @@ isit.webkit();
 => true if browser render with WebKit
 
 isit.not.webkit();
-=> true if browser doesn't render with WebKit
+=> true if browser does not render with WebKit
 ```
 
 Time checks
