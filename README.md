@@ -21,14 +21,14 @@ npm install isitjs
 ####Usage:
 ```
 // ES2015
-import isit from "isit.js";
+import isit from "isitjs";
 
 // CommonJS
-var isit = require("isit.js");
+var isit = require("isitjs");
 
 // if you just want specific modules
 
-var isitArray = require("isit.js/array");
+var isitArray = require("isitjs/array");
 ```
 
 Type checks
