@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>
+            Test is.js
+        </title>
+    </head>
+
+    <body>
+
+        <script src="http://localhost:3001/is.js"></script>
+
+        <script>
+            console.log(is);
+
+            console.group("above");
+            console.log(is.above(0, 2) === false);
+            console.log(is.not.above(0, 2) === true);
+            console.log(is.above(2, 0) === true);
+            console.log(is.not.above(2, 0) === false);
+            console.groupEnd();
+
+            function testArgs() {
+                console.group("arguments");
+                console.log(is.arguments(arguments) === true);
+                console.log(is.not.arguments(arguments) === false);
+                console.log(is.arguments(Array.prototype.slice.call(arguments)) === false);
+                console.log(is.not.arguments(Array.prototype.slice.call(arguments)) === true);
+                console.groupEnd();
+            }
+
+            testArgs("o", 2);
+
+            console.group("array");
+            console.log(is.array([0, 2]) === true);
+            console.log(is.not.array([0, 2]) === false);
+            console.log(is.array("blah") === false);
+            console.log(is.not.array("blah") === true);
+            console.groupEnd();
+
+            console.group("boolean");
+            console.log(is.boolean(true) === true);
+            console.log(is.not.boolean(true) === false);
+            console.log(is.boolean("true") === false);
+            console.log(is.not.boolean("true") === true);
+            console.groupEnd();
+
+            console.group("browser");
+            console.log(is.browser() === true);
+            console.log(is.not.browser() === false);
+            console.groupEnd();
+
+            console.group("char");
+            console.log(is.char("A") === true);
+            console.log(is.not.char("A") === false);
+            console.log(is.char(2) === false);
+            console.log(is.not.char(2) === true);
+            console.groupEnd();
+
+            console.group("chrome");
+            console.log(is.chrome() === true);
+            console.log(is.not.chrome() === false);
+            console.groupEnd();
+
+            console.group("date");
+            console.log(is.date(new Date()) === true);
+            console.log(is.not.date(new Date()) === false);
+            console.log(is.date(2) === false);
+            console.log(is.not.date(2) === true);
+            console.groupEnd();
+
+            console.group("decimal");
+            console.log(is.decimal(0.2) === true);
+            console.log(is.not.decimal(0.2) === false);
+            console.log(is.decimal(2) === false);
+            console.log(is.not.decimal(2) === true);
+            console.groupEnd();
+
+            console.group("domNode");
+            console.log(is.domNode(document.createElement("div")) === true);
+            console.log(is.not.domNode(document.createElement("div")) === false);
+            console.log(is.domNode(2) === false);
+            console.log(is.not.domNode(2) === true);
+            console.groupEnd();
+
+            console.group("error");
+            console.log(is.error(new Error()) === true);
+            console.log(is.not.error(new Error()) === false);
+            console.log(is.error(2) === false);
+            console.log(is.not.error(2) === true);
+            console.groupEnd();
+
+            console.group("even");
+            console.log(is.even(2) === true);
+            console.log(is.not.even(2) === false);
+            console.log(is.even(1) === false);
+            console.log(is.not.even(1) === true);
+            console.groupEnd();
+
+            console.group("existy");
+            console.log(is.existy(2) === true);
+            console.log(is.not.existy(2) === false);
+            console.log(is.existy() === false);
+            console.log(is.not.existy() === true);
+            console.groupEnd();
+
+            console.group("node");
+            console.log(is.node() === true);
+            console.log(is.not.node() === false);
+            console.groupEnd();
+        </script>
+    </body>
+</html>

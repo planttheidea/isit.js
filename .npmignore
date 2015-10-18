@@ -1,0 +1,5 @@
+src/
+dist/
+.gitignore
+webpack.config.js
+webpack.config.minified.js
