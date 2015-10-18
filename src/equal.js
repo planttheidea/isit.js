@@ -1,13 +1,15 @@
 // is obj1 and obj2 equal?
 // NOTE: for arrays and objects, will check deeply via recursive calls
+// for decimals, will compare with Number.EPSILON rather than pure equality
 
 import {
     all,
     not
 } from "./helpers";
-
+import {epsilon} from "./utils";
 import isitArray from "./array";
 import isitBoolean from "./boolean";
+import isitDecimal from "./decimal";
 import isitNumber from "./number";
 import isitObject from "./object";
 import isitRegExp from "./regexp";
@@ -17,6 +19,10 @@ import isitString from "./string";
 export default function isitEqual(obj1, obj2) {
     if (not(isitSameType)(obj1, obj2)) {
         return false;
+    }
+
+    if (all(isitDecimal)(obj1, obj2)) {
+        return Math.abs(obj1 - obj2) < epsilon;
     }
 
     if (all(isitNumber)(obj1, obj2)) {

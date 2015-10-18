@@ -91,6 +91,16 @@
             console.log(isit.not.error(2) === true);
             console.groupEnd();
 
+            console.group("equal");
+            console.log(isit.equal(1, 1) === true);
+            console.log(isit.equal(1, "1") === false);
+            console.log(isit.equal({foo:"bar"}, {foo:"bar"}) === true);
+            console.log(isit.equal({foo:"bar"}, {bar:"foo"}) === false);
+            console.log(isit.equal(["foo", "bar"], ["foo", "bar"]) === true);
+            console.log(isit.equal(["foo", "bar"], ["bar", "foo"]) === false);
+            console.log(isit.equal(0.1 + 0.2, 0.3) === true);
+            console.groupEnd();
+
             console.group("even");
             console.log(isit.even(2) === true);
             console.log(isit.not.even(2) === false);
@@ -106,21 +116,21 @@
             console.groupEnd();
 
             console.group("node");
-            console.log(isit.node() === true);
-            console.log(isit.not.node() === false);
+            console.log(isit.node() === false);
+            console.log(isit.not.node() === true);
             console.groupEnd();
 
             console.group("ip");
             console.log(isit.ip("192.168.1.100") === true);
             console.log(isit.not.ip("H") === false);
             console.log(isit.ip("H") === false);
-            console.log(isit.not.ip("192.168.1.100") === true);
+            console.log(isit.not.ip("192.168.1.100") === false);
             console.groupEnd();
 
             console.group("url");
             console.log(isit.url("google.com") === true);
             console.log(isit.not.url("//google.com") === false);
-            console.log(isit.url("google.com?id=111") === false);
+            console.log(isit.url("google.com?id=111") === true);
             console.log(isit.not.url("google.com ") === true);
             console.groupEnd();
 
@@ -142,6 +152,34 @@
             console.log(isit.equal([2, 4], [5]) === false);
             console.log(isit.equal({test:["foo", "bar"], me:"blah"}, {test:["foo", "bar"], me:"blah"}) === true);
             console.log(isit.equal({test:["foo", "bar"], me:"blah"}, {test:["bar", "foo"], me:"blah"}) === false);
+            console.groupEnd();
+
+            console.group("camelCase");
+            console.log(isit.camelCase("someCamelString") === true);
+            console.log(isit.not.camelCase("Some Camel String") === true);
+            console.log(isit.camelCase("-some-camel-string") === false);
+            console.log(isit.not.camelCase("someCamelString") === false);
+            console.groupEnd();
+
+            console.group("kebabCase");
+            console.log(isit.kebabCase("-some-camel-string") === true);
+            console.log(isit.not.kebabCase("Some Camel String") === true);
+            console.log(isit.kebabCase("someCamelString") === false);
+            console.log(isit.not.kebabCase("-some-camel-string") === false);
+            console.groupEnd();
+
+            console.group("snakeCase");
+            console.log(isit.snakeCase("_some_camel_string") === true);
+            console.log(isit.not.snakeCase("Some Camel String") === true);
+            console.log(isit.snakeCase("someCamelString") === false);
+            console.log(isit.not.snakeCase("_some_camel_string") === false);
+            console.groupEnd();
+
+            console.group("startCase");
+            console.log(isit.startCase("Some Camel String") === true);
+            console.log(isit.not.startCase("someCamelString") === true);
+            console.log(isit.startCase("-some-camel-string") === false);
+            console.log(isit.not.startCase("Some Camel String") === false);
             console.groupEnd();
         </script>
     </body>

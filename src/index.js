@@ -163,19 +163,27 @@ isit.usZipCode = isitUsZipCode;
 // String checks
 /* -------------------------------------------------------------------------- */
 
+import isitCamelCase from "./camelCase";
 import isitCapitalized from "./capitalized";
 import isitEndWith from "./endWith";
 import isitInclude from "./include";
+import isitKebabCase from "./kebabCase";
 import isitLowerCase from "./lowercase";
 import isitPalindrome from "./palindrome";
+import isitSnakeCase from "./snakeCase";
+import isitStartCase from "./startCase";
 import isitStartWith from "./startWith";
 import isitUppercase from "./uppercase";
 
+isit.camelCase = isitCamelCase;
 isit.capitalized = isitCapitalized;
 isit.endWith = isitEndWith;
 isit.include = isitInclude;
+isit.kebabCase = isitKebabCase;
 isit.lowercase = isitLowerCase;
 isit.palindrome = isitPalindrome;
+isit.snakeCase = isitSnakeCase;
+isit.startCase = isitStartCase;
 isit.startWith = isitStartWith;
 isit.uppercase = isitUppercase;
 

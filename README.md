@@ -1130,7 +1130,7 @@ isit.endWith('yeap that one', 'one');
 => true
 ```
 
-isit.capitalized(value:string, value:substring)
+isit.capitalized(value:string)
 ---------------------------------------------
 ####Checks if the given string is capitalized.
 interfaces: not, all, any
@@ -1185,6 +1185,122 @@ isit.any.palindrome('Yeap', 'some', 'testset');
 
 // 'all' and 'any' interfaces can also take array parameter
 isit.all.palindrome(['Nope', 'testset']);
+=> false
+```
+
+isit.camelCase(value:string)
+---------------------------------------------
+####Checks if the given string is camelCase.
+interfaces: not, all, any
+
+```javascript
+isit.camelCase('fooBar');
+=> true
+
+isit.camelCase('Foo Bar');
+=> false
+
+isit.not.camelCase('nope not camel case');
+=> true
+
+isit.not.camelCase('nopeCamelCase');
+=> true
+
+isit.all.camelCase('fooBar', 'tastyCakes', 'iThinkYouGetIt');
+=> true
+
+isit.any.camelCase('Yeap', 'some', 'fooBar');
+=> true
+
+// 'all' and 'any' interfaces can also take array parameter
+isit.all.camelCase(['Nope', 'fooBar']);
+=> false
+```
+
+isit.kebabCase(value:string)
+---------------------------------------------
+####Checks if the given string is -kebab-case.
+interfaces: not, all, any
+
+```javascript
+isit.kebabCase('-foo-bar');
+=> true
+
+isit.kebabCase('Foo Bar');
+=> false
+
+isit.not.kebabCase('nope not kebab case');
+=> true
+
+isit.not.kebabCase('-nope-kebab-case');
+=> true
+
+isit.all.kebabCase('-foo-bar', '-tasty-cakes', '-i-think-you-get-it');
+=> true
+
+isit.any.kebabCase('Yeap', 'some', '-foo-bar');
+=> true
+
+// 'all' and 'any' interfaces can also take array parameter
+isit.all.kebabCase(['Nope', '-foo-bar']);
+=> false
+```
+
+isit.snakeCase(value:string)
+---------------------------------------------
+####Checks if the given string is snake_case.
+interfaces: not, all, any
+
+```javascript
+isit.snakeCase('foo_bar');
+=> true
+
+isit.snakeCase('Foo Bar');
+=> false
+
+isit.not.snakeCase('nope not snake case');
+=> true
+
+isit.not.snakeCase('nope_snake_case');
+=> true
+
+isit.all.snakeCase('foo_bar', 'tasty_cakes', 'i_think_yoU_get_it');
+=> true
+
+isit.any.snakeCase('Yeap', 'some', 'foo_bar');
+=> true
+
+// 'all' and 'any' interfaces can also take array parameter
+isit.all.snakeCase(['Nope', 'foo_bar']);
+=> false
+```
+
+isit.startCase(value:string)
+---------------------------------------------
+####Checks if the given string is Start Case.
+interfaces: not, all, any
+
+```javascript
+isit.startCase('Foo Bar');
+=> true
+
+isit.startCase('fooBar');
+=> false
+
+isit.not.startCase('-nope-not-start-case');
+=> true
+
+isit.not.startCase('Nope Start Case');
+=> true
+
+isit.all.startCase('Foo Bar', 'Tasty Cakes', 'I Think You Get It');
+=> true
+
+isit.any.startCase('Yeap', 'some', '-foo-bar');
+=> true
+
+// 'all' and 'any' interfaces can also take array parameter
+isit.all.startCase(['Nope', '-foo-bar']);
 => false
 ```
 

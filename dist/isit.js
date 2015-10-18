@@ -303,31 +303,47 @@ return /******/ (function(modules) { // webpackBootstrap
 	// String checks
 	/* -------------------------------------------------------------------------- */
 	
-	var _capitalized = __webpack_require__(58);
+	var _camelCase = __webpack_require__(58);
+	
+	var _camelCase2 = _interopRequireDefault(_camelCase);
+	
+	var _capitalized = __webpack_require__(59);
 	
 	var _capitalized2 = _interopRequireDefault(_capitalized);
 	
-	var _endWith = __webpack_require__(59);
+	var _endWith = __webpack_require__(60);
 	
 	var _endWith2 = _interopRequireDefault(_endWith);
 	
-	var _include = __webpack_require__(60);
+	var _include = __webpack_require__(61);
 	
 	var _include2 = _interopRequireDefault(_include);
 	
-	var _lowercase = __webpack_require__(61);
+	var _kebabCase = __webpack_require__(62);
+	
+	var _kebabCase2 = _interopRequireDefault(_kebabCase);
+	
+	var _lowercase = __webpack_require__(63);
 	
 	var _lowercase2 = _interopRequireDefault(_lowercase);
 	
-	var _palindrome = __webpack_require__(62);
+	var _palindrome = __webpack_require__(64);
 	
 	var _palindrome2 = _interopRequireDefault(_palindrome);
 	
-	var _startWith = __webpack_require__(63);
+	var _snakeCase = __webpack_require__(65);
+	
+	var _snakeCase2 = _interopRequireDefault(_snakeCase);
+	
+	var _startCase = __webpack_require__(66);
+	
+	var _startCase2 = _interopRequireDefault(_startCase);
+	
+	var _startWith = __webpack_require__(67);
 	
 	var _startWith2 = _interopRequireDefault(_startWith);
 	
-	var _uppercase = __webpack_require__(64);
+	var _uppercase = __webpack_require__(68);
 	
 	var _uppercase2 = _interopRequireDefault(_uppercase);
 	
@@ -337,136 +353,136 @@ return /******/ (function(modules) { // webpackBootstrap
 	// Object checks
 	/* -------------------------------------------------------------------------- */
 	
-	var _domNode = __webpack_require__(65);
+	var _domNode = __webpack_require__(69);
 	
 	var _domNode2 = _interopRequireDefault(_domNode);
 	
-	var _propertyCount = __webpack_require__(66);
+	var _propertyCount = __webpack_require__(70);
 	
 	var _propertyCount2 = _interopRequireDefault(_propertyCount);
 	
-	var _propertyDefined = __webpack_require__(67);
+	var _propertyDefined = __webpack_require__(71);
 	
 	var _propertyDefined2 = _interopRequireDefault(_propertyDefined);
 	
-	var _windowObject = __webpack_require__(68);
+	var _windowObject = __webpack_require__(72);
 	
 	var _windowObject2 = _interopRequireDefault(_windowObject);
 	
 	// Array checks
 	/* -------------------------------------------------------------------------- */
 	
-	var _inArray = __webpack_require__(69);
+	var _inArray = __webpack_require__(73);
 	
 	var _inArray2 = _interopRequireDefault(_inArray);
 	
-	var _sorted = __webpack_require__(70);
+	var _sorted = __webpack_require__(74);
 	
 	var _sorted2 = _interopRequireDefault(_sorted);
 	
 	// Date checks
 	/* -------------------------------------------------------------------------- */
 	
-	var _day = __webpack_require__(71);
+	var _day = __webpack_require__(75);
 	
 	var _day2 = _interopRequireDefault(_day);
 	
-	var _daylightSavingTime = __webpack_require__(73);
+	var _daylightSavingTime = __webpack_require__(77);
 	
 	var _daylightSavingTime2 = _interopRequireDefault(_daylightSavingTime);
 	
-	var _future = __webpack_require__(74);
+	var _future = __webpack_require__(78);
 	
 	var _future2 = _interopRequireDefault(_future);
 	
-	var _inDateRange = __webpack_require__(75);
+	var _inDateRange = __webpack_require__(79);
 	
 	var _inDateRange2 = _interopRequireDefault(_inDateRange);
 	
-	var _inLastMonth = __webpack_require__(76);
+	var _inLastMonth = __webpack_require__(80);
 	
 	var _inLastMonth2 = _interopRequireDefault(_inLastMonth);
 	
-	var _inLastWeek = __webpack_require__(77);
+	var _inLastWeek = __webpack_require__(81);
 	
 	var _inLastWeek2 = _interopRequireDefault(_inLastWeek);
 	
-	var _inLastYear = __webpack_require__(78);
+	var _inLastYear = __webpack_require__(82);
 	
 	var _inLastYear2 = _interopRequireDefault(_inLastYear);
 	
-	var _leapYear = __webpack_require__(79);
+	var _leapYear = __webpack_require__(83);
 	
 	var _leapYear2 = _interopRequireDefault(_leapYear);
 	
-	var _month = __webpack_require__(80);
+	var _month = __webpack_require__(84);
 	
 	var _month2 = _interopRequireDefault(_month);
 	
-	var _inNextMonth = __webpack_require__(81);
+	var _inNextMonth = __webpack_require__(85);
 	
 	var _inNextMonth2 = _interopRequireDefault(_inNextMonth);
 	
-	var _inNextWeek = __webpack_require__(82);
+	var _inNextWeek = __webpack_require__(86);
 	
 	var _inNextWeek2 = _interopRequireDefault(_inNextWeek);
 	
-	var _inNextYear = __webpack_require__(83);
+	var _inNextYear = __webpack_require__(87);
 	
 	var _inNextYear2 = _interopRequireDefault(_inNextYear);
 	
-	var _past = __webpack_require__(84);
+	var _past = __webpack_require__(88);
 	
 	var _past2 = _interopRequireDefault(_past);
 	
-	var _quarterOfYear = __webpack_require__(85);
+	var _quarterOfYear = __webpack_require__(89);
 	
 	var _quarterOfYear2 = _interopRequireDefault(_quarterOfYear);
 	
-	var _today = __webpack_require__(86);
+	var _today = __webpack_require__(90);
 	
 	var _today2 = _interopRequireDefault(_today);
 	
-	var _tomorrow = __webpack_require__(87);
+	var _tomorrow = __webpack_require__(91);
 	
 	var _tomorrow2 = _interopRequireDefault(_tomorrow);
 	
-	var _weekday = __webpack_require__(88);
+	var _weekday = __webpack_require__(92);
 	
 	var _weekday2 = _interopRequireDefault(_weekday);
 	
-	var _weekend = __webpack_require__(89);
+	var _weekend = __webpack_require__(93);
 	
 	var _weekend2 = _interopRequireDefault(_weekend);
 	
-	var _year = __webpack_require__(90);
+	var _year = __webpack_require__(94);
 	
 	var _year2 = _interopRequireDefault(_year);
 	
-	var _yesterday = __webpack_require__(91);
+	var _yesterday = __webpack_require__(95);
 	
 	var _yesterday2 = _interopRequireDefault(_yesterday);
 	
 	// Environment checks
 	/* -------------------------------------------------------------------------- */
 	
-	var _android = __webpack_require__(92);
+	var _android = __webpack_require__(96);
 	
 	var _android2 = _interopRequireDefault(_android);
 	
-	var _androidPhone = __webpack_require__(93);
+	var _androidPhone = __webpack_require__(97);
 	
 	var _androidPhone2 = _interopRequireDefault(_androidPhone);
 	
-	var _androidTablet = __webpack_require__(94);
+	var _androidTablet = __webpack_require__(98);
 	
 	var _androidTablet2 = _interopRequireDefault(_androidTablet);
 	
-	var _blackberry = __webpack_require__(95);
+	var _blackberry = __webpack_require__(99);
 	
 	var _blackberry2 = _interopRequireDefault(_blackberry);
 	
-	var _blink = __webpack_require__(96);
+	var _blink = __webpack_require__(100);
 	
 	var _blink2 = _interopRequireDefault(_blink);
 	
@@ -474,107 +490,107 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _browser2 = _interopRequireDefault(_browser);
 	
-	var _chrome = __webpack_require__(97);
+	var _chrome = __webpack_require__(101);
 	
 	var _chrome2 = _interopRequireDefault(_chrome);
 	
-	var _desktop = __webpack_require__(98);
+	var _desktop = __webpack_require__(102);
 	
 	var _desktop2 = _interopRequireDefault(_desktop);
 	
-	var _ie = __webpack_require__(107);
+	var _ie = __webpack_require__(111);
 	
 	var _ie2 = _interopRequireDefault(_ie);
 	
-	var _firefox = __webpack_require__(108);
+	var _firefox = __webpack_require__(112);
 	
 	var _firefox2 = _interopRequireDefault(_firefox);
 	
-	var _gecko = __webpack_require__(109);
+	var _gecko = __webpack_require__(113);
 	
 	var _gecko2 = _interopRequireDefault(_gecko);
 	
-	var _ios = __webpack_require__(110);
+	var _ios = __webpack_require__(114);
 	
 	var _ios2 = _interopRequireDefault(_ios);
 	
-	var _ipad = __webpack_require__(105);
+	var _ipad = __webpack_require__(109);
 	
 	var _ipad2 = _interopRequireDefault(_ipad);
 	
-	var _iphone = __webpack_require__(100);
+	var _iphone = __webpack_require__(104);
 	
 	var _iphone2 = _interopRequireDefault(_iphone);
 	
-	var _ipod = __webpack_require__(101);
+	var _ipod = __webpack_require__(105);
 	
 	var _ipod2 = _interopRequireDefault(_ipod);
 	
-	var _linux = __webpack_require__(111);
+	var _linux = __webpack_require__(115);
 	
 	var _linux2 = _interopRequireDefault(_linux);
 	
-	var _mac = __webpack_require__(112);
+	var _mac = __webpack_require__(116);
 	
 	var _mac2 = _interopRequireDefault(_mac);
 	
-	var _mobile = __webpack_require__(99);
+	var _mobile = __webpack_require__(103);
 	
 	var _mobile2 = _interopRequireDefault(_mobile);
 	
-	var _node = __webpack_require__(113);
+	var _node = __webpack_require__(117);
 	
 	var _node2 = _interopRequireDefault(_node);
 	
-	var _offline = __webpack_require__(114);
+	var _offline = __webpack_require__(118);
 	
 	var _offline2 = _interopRequireDefault(_offline);
 	
-	var _online = __webpack_require__(115);
+	var _online = __webpack_require__(119);
 	
 	var _online2 = _interopRequireDefault(_online);
 	
-	var _opera = __webpack_require__(116);
+	var _opera = __webpack_require__(120);
 	
 	var _opera2 = _interopRequireDefault(_opera);
 	
-	var _presto = __webpack_require__(117);
+	var _presto = __webpack_require__(121);
 	
 	var _presto2 = _interopRequireDefault(_presto);
 	
-	var _retina = __webpack_require__(118);
+	var _retina = __webpack_require__(122);
 	
 	var _retina2 = _interopRequireDefault(_retina);
 	
-	var _safari = __webpack_require__(119);
+	var _safari = __webpack_require__(123);
 	
 	var _safari2 = _interopRequireDefault(_safari);
 	
-	var _tablet = __webpack_require__(104);
+	var _tablet = __webpack_require__(108);
 	
 	var _tablet2 = _interopRequireDefault(_tablet);
 	
-	var _touchDevice = __webpack_require__(120);
+	var _touchDevice = __webpack_require__(124);
 	
 	var _touchDevice2 = _interopRequireDefault(_touchDevice);
 	
-	var _trident = __webpack_require__(121);
+	var _trident = __webpack_require__(125);
 	
 	var _trident2 = _interopRequireDefault(_trident);
 	
-	var _webkit = __webpack_require__(122);
+	var _webkit = __webpack_require__(126);
 	
 	var _webkit2 = _interopRequireDefault(_webkit);
 	
-	var _windows = __webpack_require__(103);
+	var _windows = __webpack_require__(107);
 	
 	var _windows2 = _interopRequireDefault(_windows);
 	
-	var _windowsPhone = __webpack_require__(102);
+	var _windowsPhone = __webpack_require__(106);
 	
 	var _windowsPhone2 = _interopRequireDefault(_windowsPhone);
 	
-	var _windowsTablet = __webpack_require__(106);
+	var _windowsTablet = __webpack_require__(110);
 	
 	var _windowsTablet2 = _interopRequireDefault(_windowsTablet);
 	
@@ -653,11 +669,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	isit.url = _urlJs2["default"];
 	isit.usZipCode = _usZipCode2["default"];
 	
+	isit.camelCase = _camelCase2["default"];
 	isit.capitalized = _capitalized2["default"];
 	isit.endWith = _endWith2["default"];
 	isit.include = _include2["default"];
+	isit.kebabCase = _kebabCase2["default"];
 	isit.lowercase = _lowercase2["default"];
 	isit.palindrome = _palindrome2["default"];
+	isit.snakeCase = _snakeCase2["default"];
+	isit.startCase = _startCase2["default"];
 	isit.startWith = _startWith2["default"];
 	isit.uppercase = _uppercase2["default"];
 	
@@ -826,6 +846,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	var arraySlice = Array.prototype.slice;
 	
 	exports.arraySlice = arraySlice;
+	var epsilon = "EPSILON" in Number ? Number.EPSILON : 2.220446049250313e-16;
+	
+	exports.epsilon = epsilon;
+	var hasOwnProperty = Object.prototype.hasOwnProperty;
+	
+	exports.hasOwnProperty = hasOwnProperty;
 	var navigatorInfo = (function () {
 	    if (!(0, _browser2["default"])()) {
 	        return {};
@@ -839,16 +865,22 @@ return /******/ (function(modules) { // webpackBootstrap
 	})();
 	
 	exports.navigatorInfo = navigatorInfo;
-	var hasOwnProperty = Object.prototype.hasOwnProperty;
+	var toCamelCase = function toCamelCase(str) {
+	    return str.replace(/(?:^\w|[A-Z]|\b\w)/g, function (letter, index) {
+	        return index === 0 ? letter.toLowerCase() : letter.toUpperCase();
+	    }).replace(/\s+/g, "");
+	};
 	
-	exports.hasOwnProperty = hasOwnProperty;
+	exports.toCamelCase = toCamelCase;
 	var toString = Object.prototype.toString;
 	
 	exports.toString = toString;
 	exports["default"] = {
 	    arraySlice: arraySlice,
+	    epsilon: epsilon,
 	    hasOwnProperty: hasOwnProperty,
 	    navigatorInfo: navigatorInfo,
+	    toCamelCase: toCamelCase,
 	    toString: toString
 	};
 
@@ -1592,6 +1624,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	// is obj1 and obj2 equal?
 	// NOTE: for arrays and objects, will check deeply via recursive calls
+	// for decimals, will compare with Number.EPSILON rather than pure equality
 	
 	"use strict";
 	
@@ -1604,6 +1637,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _helpers = __webpack_require__(3);
 	
+	var _utils = __webpack_require__(1);
+	
 	var _array = __webpack_require__(4);
 	
 	var _array2 = _interopRequireDefault(_array);
@@ -1611,6 +1646,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _boolean = __webpack_require__(7);
 	
 	var _boolean2 = _interopRequireDefault(_boolean);
+	
+	var _decimal = __webpack_require__(28);
+	
+	var _decimal2 = _interopRequireDefault(_decimal);
 	
 	var _number = __webpack_require__(15);
 	
@@ -1643,6 +1682,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	        if ((0, _helpers.not)(_sameType2["default"])(obj1, obj2)) {
 	            return false;
+	        }
+	
+	        if ((0, _helpers.all)(_decimal2["default"])(obj1, obj2)) {
+	            return Math.abs(obj1 - obj2) < _utils.epsilon;
 	        }
 	
 	        if ((0, _helpers.all)(_number2["default"])(obj1, obj2)) {
@@ -2359,6 +2402,39 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 58 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// is obj a string and is camelCase?
+	
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports["default"] = isitCamelCase;
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+	
+	var _helpers = __webpack_require__(3);
+	
+	var _utils = __webpack_require__(1);
+	
+	var _string = __webpack_require__(9);
+	
+	var _string2 = _interopRequireDefault(_string);
+	
+	function isitCamelCase(obj) {
+	    if ((0, _helpers.not)(_string2["default"])(obj)) {
+	        return false;
+	    }
+	
+	    return obj === (0, _utils.toCamelCase)(obj);
+	}
+	
+	module.exports = exports["default"];
+
+/***/ },
+/* 59 */
+/***/ function(module, exports, __webpack_require__) {
+
 	// is obj a string of capitalized words?
 	// NOTE: this will return true for start case ("I Am Capitalized")
 	// or uppercase ("I AM UPPERCASE")
@@ -2402,7 +2478,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 59 */
+/* 60 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// is obj a string, and does it end with endStr?
@@ -2427,7 +2503,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 60 */
+/* 61 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// is obj either an array or a string, and does substr exist in it?
@@ -2457,7 +2533,42 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 61 */
+/* 62 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// is obj a string and is camelCase?
+	
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports["default"] = isitKebabCase;
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+	
+	var _helpers = __webpack_require__(3);
+	
+	var _utils = __webpack_require__(1);
+	
+	var _string = __webpack_require__(9);
+	
+	var _string2 = _interopRequireDefault(_string);
+	
+	function isitKebabCase(obj) {
+	    if ((0, _helpers.not)(_string2["default"])(obj)) {
+	        return false;
+	    }
+	
+	    return obj === (0, _utils.toCamelCase)(obj).replace(/([A-Z])/g, function ($1) {
+	        return "-" + $1.toLowerCase();
+	    }).replace(/--/g, "-");
+	}
+	
+	module.exports = exports["default"];
+
+/***/ },
+/* 63 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// is obj a string and all lowercase?
@@ -2482,7 +2593,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 62 */
+/* 64 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// is obj a string and a palindrome?
@@ -2507,7 +2618,75 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 63 */
+/* 65 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// is obj a string and is camelCase?
+	
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports["default"] = isitSnakeCase;
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+	
+	var _helpers = __webpack_require__(3);
+	
+	var _utils = __webpack_require__(1);
+	
+	var _string = __webpack_require__(9);
+	
+	var _string2 = _interopRequireDefault(_string);
+	
+	function isitSnakeCase(obj) {
+	    if ((0, _helpers.not)(_string2["default"])(obj)) {
+	        return false;
+	    }
+	
+	    return obj === (0, _utils.toCamelCase)(obj).replace(/([A-Z])/g, function ($1) {
+	        return "_" + $1.toLowerCase();
+	    });
+	}
+	
+	module.exports = exports["default"];
+
+/***/ },
+/* 66 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// is obj a string and is camelCase?
+	
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports["default"] = isitStartCase;
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+	
+	var _helpers = __webpack_require__(3);
+	
+	var _string = __webpack_require__(9);
+	
+	var _string2 = _interopRequireDefault(_string);
+	
+	function isitStartCase(obj) {
+	    if ((0, _helpers.not)(_string2["default"])(obj)) {
+	        return false;
+	    }
+	
+	    return obj === obj.replace(/\w\S*/g, function (txt) {
+	        return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+	    });
+	}
+	
+	module.exports = exports["default"];
+
+/***/ },
+/* 67 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// is obj a string and does it start with startStr?
@@ -2532,7 +2711,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 64 */
+/* 68 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// is obj a string and is it all uppercase?
@@ -2557,7 +2736,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 65 */
+/* 69 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// is obj a DOM node value?
@@ -2582,7 +2761,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 66 */
+/* 70 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// is obj an object value, and do the number of properties in that object match count
@@ -2630,7 +2809,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 67 */
+/* 71 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// is obj an object and does prop exist as a key in it?
@@ -2659,7 +2838,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 68 */
+/* 72 */
 /***/ function(module, exports) {
 
 	// is obj the window object?
@@ -2678,7 +2857,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 69 */
+/* 73 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// is arr an array, and does obj exist in it?
@@ -2709,7 +2888,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 70 */
+/* 74 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// is arr an array that is sorted either ascending or descending?
@@ -2764,7 +2943,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 71 */
+/* 75 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// is obj a date value and does it match the day string?
@@ -2778,7 +2957,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
-	var _dateNames = __webpack_require__(72);
+	var _dateNames = __webpack_require__(76);
 	
 	var _date = __webpack_require__(10);
 	
@@ -2795,7 +2974,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 72 */
+/* 76 */
 /***/ function(module, exports) {
 
 	// days and months used for various date comparisons
@@ -2817,7 +2996,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 /***/ },
-/* 73 */
+/* 77 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -2848,7 +3027,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 74 */
+/* 78 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// is obj in the future compared to now?
@@ -2873,7 +3052,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 75 */
+/* 79 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// are obj, startObj, and endObj all date values, and does obj exist in the range created by
@@ -2907,7 +3086,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 76 */
+/* 80 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// is obj in the last month compared to now?
@@ -2921,7 +3100,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
-	var _inDateRange = __webpack_require__(75);
+	var _inDateRange = __webpack_require__(79);
 	
 	var _inDateRange2 = _interopRequireDefault(_inDateRange);
 	
@@ -2932,7 +3111,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 77 */
+/* 81 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// is obj in the last week compared to now?
@@ -2946,7 +3125,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
-	var _inDateRange = __webpack_require__(75);
+	var _inDateRange = __webpack_require__(79);
 	
 	var _inDateRange2 = _interopRequireDefault(_inDateRange);
 	
@@ -2957,7 +3136,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 78 */
+/* 82 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// is obj in the last year compared to now?
@@ -2971,7 +3150,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
-	var _inDateRange = __webpack_require__(75);
+	var _inDateRange = __webpack_require__(79);
 	
 	var _inDateRange2 = _interopRequireDefault(_inDateRange);
 	
@@ -2982,7 +3161,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 79 */
+/* 83 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// is obj a number and a valid leap year?
@@ -3007,7 +3186,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 80 */
+/* 84 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// is obj a date, and does it match monthString?
@@ -3021,7 +3200,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
-	var _dateNames = __webpack_require__(72);
+	var _dateNames = __webpack_require__(76);
 	
 	var _date = __webpack_require__(10);
 	
@@ -3038,7 +3217,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 81 */
+/* 85 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// is obj in the next month compared to now?
@@ -3052,7 +3231,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
-	var _inDateRange = __webpack_require__(75);
+	var _inDateRange = __webpack_require__(79);
 	
 	var _inDateRange2 = _interopRequireDefault(_inDateRange);
 	
@@ -3063,7 +3242,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 82 */
+/* 86 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// is obj in the next week compared to now?
@@ -3077,7 +3256,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
-	var _inDateRange = __webpack_require__(75);
+	var _inDateRange = __webpack_require__(79);
 	
 	var _inDateRange2 = _interopRequireDefault(_inDateRange);
 	
@@ -3088,7 +3267,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 83 */
+/* 87 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// is obj in the next year compared to now?
@@ -3102,7 +3281,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
-	var _inDateRange = __webpack_require__(75);
+	var _inDateRange = __webpack_require__(79);
 	
 	var _inDateRange2 = _interopRequireDefault(_inDateRange);
 	
@@ -3113,7 +3292,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 84 */
+/* 88 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// is obj in the past compared to now?
@@ -3138,7 +3317,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 85 */
+/* 89 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// is obj a date and is it in quarter quarterNumber?
@@ -3167,7 +3346,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 86 */
+/* 90 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// is obj a date and is it the same as today?
@@ -3192,7 +3371,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 87 */
+/* 91 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// is obj a date and is it tomorrow?
@@ -3226,7 +3405,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 88 */
+/* 92 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// is obj a date and a weekday?
@@ -3259,7 +3438,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 89 */
+/* 93 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// is obj a date and a weekend day?
@@ -3292,7 +3471,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 90 */
+/* 94 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// is obj a date and year a number, and is obj in year year?
@@ -3321,7 +3500,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 91 */
+/* 95 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// is obj a date and is it yesterday?
@@ -3349,7 +3528,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 92 */
+/* 96 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// does the device used run on android?
@@ -3376,7 +3555,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 93 */
+/* 97 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// is the device used an android phone?
@@ -3405,7 +3584,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 94 */
+/* 98 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// is the device used an android tablet?
@@ -3434,7 +3613,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 95 */
+/* 99 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// is the device used a blackberry phone?
@@ -3461,7 +3640,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 96 */
+/* 100 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// does the browser used render via blink?
@@ -3488,7 +3667,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 97 */
+/* 101 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// is the browser used chrome?
@@ -3515,7 +3694,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 98 */
+/* 102 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// is the device used a desktop / laptop computer?
@@ -3533,11 +3712,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _browser2 = _interopRequireDefault(_browser);
 	
-	var _mobile = __webpack_require__(99);
+	var _mobile = __webpack_require__(103);
 	
 	var _mobile2 = _interopRequireDefault(_mobile);
 	
-	var _tablet = __webpack_require__(104);
+	var _tablet = __webpack_require__(108);
 	
 	var _tablet2 = _interopRequireDefault(_tablet);
 	
@@ -3548,7 +3727,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 99 */
+/* 103 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// is the device used a mobile phone?
@@ -3562,11 +3741,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
-	var _androidPhone = __webpack_require__(93);
+	var _androidPhone = __webpack_require__(97);
 	
 	var _androidPhone2 = _interopRequireDefault(_androidPhone);
 	
-	var _blackberry = __webpack_require__(95);
+	var _blackberry = __webpack_require__(99);
 	
 	var _blackberry2 = _interopRequireDefault(_blackberry);
 	
@@ -3574,15 +3753,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _browser2 = _interopRequireDefault(_browser);
 	
-	var _iphone = __webpack_require__(100);
+	var _iphone = __webpack_require__(104);
 	
 	var _iphone2 = _interopRequireDefault(_iphone);
 	
-	var _ipod = __webpack_require__(101);
+	var _ipod = __webpack_require__(105);
 	
 	var _ipod2 = _interopRequireDefault(_ipod);
 	
-	var _windowsPhone = __webpack_require__(102);
+	var _windowsPhone = __webpack_require__(106);
 	
 	var _windowsPhone2 = _interopRequireDefault(_windowsPhone);
 	
@@ -3593,7 +3772,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 100 */
+/* 104 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// is the device used an iPhone?
@@ -3620,7 +3799,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 101 */
+/* 105 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// is the device used an iPod?
@@ -3647,7 +3826,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 102 */
+/* 106 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// is the device used a mobile phone running on Windows?
@@ -3667,7 +3846,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _browser2 = _interopRequireDefault(_browser);
 	
-	var _windows = __webpack_require__(103);
+	var _windows = __webpack_require__(107);
 	
 	var _windows2 = _interopRequireDefault(_windows);
 	
@@ -3678,7 +3857,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 103 */
+/* 107 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// is the device used running on Windows?
@@ -3705,7 +3884,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 104 */
+/* 108 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// is the device used a tablet?
@@ -3719,7 +3898,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
-	var _androidTablet = __webpack_require__(94);
+	var _androidTablet = __webpack_require__(98);
 	
 	var _androidTablet2 = _interopRequireDefault(_androidTablet);
 	
@@ -3727,11 +3906,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _browser2 = _interopRequireDefault(_browser);
 	
-	var _ipad = __webpack_require__(105);
+	var _ipad = __webpack_require__(109);
 	
 	var _ipad2 = _interopRequireDefault(_ipad);
 	
-	var _windowsTablet = __webpack_require__(106);
+	var _windowsTablet = __webpack_require__(110);
 	
 	var _windowsTablet2 = _interopRequireDefault(_windowsTablet);
 	
@@ -3742,7 +3921,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 105 */
+/* 109 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// is the device used an iPad?
@@ -3769,7 +3948,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 106 */
+/* 110 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// is the device used a tablet running on Windows?
@@ -3791,11 +3970,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _browser2 = _interopRequireDefault(_browser);
 	
-	var _windows = __webpack_require__(103);
+	var _windows = __webpack_require__(107);
 	
 	var _windows2 = _interopRequireDefault(_windows);
 	
-	var _windowsPhone = __webpack_require__(102);
+	var _windowsPhone = __webpack_require__(106);
 	
 	var _windowsPhone2 = _interopRequireDefault(_windowsPhone);
 	
@@ -3806,7 +3985,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 107 */
+/* 111 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// is the browser used Internet Explorer?
@@ -3849,7 +4028,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 108 */
+/* 112 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// is the browser used firefox?
@@ -3876,7 +4055,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 109 */
+/* 113 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// does the browser used render via gecko?
@@ -3903,7 +4082,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 110 */
+/* 114 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// is the device used running on iOS?
@@ -3917,15 +4096,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
-	var _ipad = __webpack_require__(105);
+	var _ipad = __webpack_require__(109);
 	
 	var _ipad2 = _interopRequireDefault(_ipad);
 	
-	var _iphone = __webpack_require__(100);
+	var _iphone = __webpack_require__(104);
 	
 	var _iphone2 = _interopRequireDefault(_iphone);
 	
-	var _ipod = __webpack_require__(101);
+	var _ipod = __webpack_require__(105);
 	
 	var _ipod2 = _interopRequireDefault(_ipod);
 	
@@ -3936,7 +4115,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 111 */
+/* 115 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// is the device used running on Linux?
@@ -3963,7 +4142,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 112 */
+/* 116 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// is the device used a Mac?
@@ -3990,7 +4169,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 113 */
+/* 117 */
 /***/ function(module, exports) {
 
 	// is the environment not a browser (meaning its likely server-side, or NodeJS)?
@@ -4009,7 +4188,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 114 */
+/* 118 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -4021,7 +4200,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
-	var _online = __webpack_require__(115);
+	var _online = __webpack_require__(119);
 	
 	var _online2 = _interopRequireDefault(_online);
 	
@@ -4032,7 +4211,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 115 */
+/* 119 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -4055,7 +4234,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 116 */
+/* 120 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// is the browser used Opera?
@@ -4082,7 +4261,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 117 */
+/* 121 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// does the browser used render via Presto?
@@ -4109,7 +4288,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 118 */
+/* 122 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// does the device used have a retina screen?
@@ -4138,7 +4317,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 119 */
+/* 123 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// is the browser used Safari?
@@ -4165,7 +4344,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 120 */
+/* 124 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// is the device used a touch device?
@@ -4192,7 +4371,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 121 */
+/* 125 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// does the browser used render via Trident?
@@ -4219,7 +4398,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 122 */
+/* 126 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// does the browser used render via WebKit?

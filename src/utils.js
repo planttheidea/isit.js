@@ -4,6 +4,10 @@ import isitBrowser from "./browser";
 
 export var arraySlice = Array.prototype.slice;
 
+export var epsilon = "EPSILON" in Number ? Number.EPSILON : 2.220446049250313e-16;
+
+export var hasOwnProperty = Object.prototype.hasOwnProperty;
+
 export var navigatorInfo = (function() {
     if (!isitBrowser()) {
         return {};
@@ -16,13 +20,19 @@ export var navigatorInfo = (function() {
     };
 })();
 
-export var hasOwnProperty = Object.prototype.hasOwnProperty;
+export var toCamelCase = function (str) {
+    return str.replace(/(?:^\w|[A-Z]|\b\w)/g, (letter, index) => {
+        return index === 0 ? letter.toLowerCase() : letter.toUpperCase();
+    }).replace(/\s+/g, "");
+};
 
 export var toString = Object.prototype.toString;
 
 export default {
     arraySlice,
+    epsilon,
     hasOwnProperty,
     navigatorInfo,
+    toCamelCase,
     toString
 };
