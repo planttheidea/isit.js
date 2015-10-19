@@ -1395,6 +1395,32 @@ isit.all.html(['Nope', '<div/>']);
 => false
 ```
 
+isit.dataUrl(value:string)
+---------------------------------------------
+####Checks if the given string is a data URL.
+interfaces: not, all, any
+
+```javascript
+isit.dataUrl('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAQMAAAAlPW0iAAAABlBMVEUAAAD///+l2Z/dAAAAM0lEQVR4nGP4/5/h/1+G/58ZDrAz3D/McH8yw83NDDeNGe4Ug9C9zwz3gVLMDA/A6P9/AFGGFyjOXZtQAAAAAElFTkSuQmCC');
+=> true
+
+isit.dataUrl('data:empty');
+=> false
+
+isit.not.dataUrl('data:empty');
+=> true
+
+isit.all.dataUrl('data:text/html;charset=US-ASCII,%3Ch1%3EHello!%3C%2Fh1%3E', 'data:,A%20brief%20note');
+=> true
+
+isit.any.dataUrl('data:text/html;charset=US-ASCII,%3Ch1%3EHello!%3C%2Fh1%3E', 'foo');
+=> true
+
+// 'all' and 'any' interfaces can also take array parameter
+isit.all.dataUrl(['Nope', 'data:text/html;charset=US-ASCII,%3Ch1%3EHello!%3C%2Fh1%3E']);
+=> false
+```
+
 Arithmetic checks
 =================
 

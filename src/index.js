@@ -168,6 +168,7 @@ isit.usZipCode = isitUSZipCode;
 
 import isitCamelCase from "./camelCase";
 import isitCapitalized from "./capitalized";
+import isitDataUrl from "./dataUrl";
 import isitDoubleByte from "./doubleByte";
 import isitEndWith from "./endWith";
 import isitHtml from "./html";
@@ -182,6 +183,7 @@ import isitUppercase from "./uppercase";
 
 isit.camelCase = isitCamelCase;
 isit.capitalized = isitCapitalized;
+isit.dataUrl = isitDataUrl;
 isit.doubleByte = isitDoubleByte;
 isit.endWith = isitEndWith;
 isit.html = isitHtml;
@@ -198,9 +200,6 @@ isit.uppercase = isitUppercase;
 isit.endWith.api = ["not"];
 isit.include.api = ["not"];
 isit.startWith.api = ["not"];
-
-// String checks
-/* -------------------------------------------------------------------------- */
 
 // Object checks
 /* -------------------------------------------------------------------------- */
