@@ -62,9 +62,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
@@ -827,22 +825,22 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function setInterfaces(options) {
 	    for (var option in options) {
-	        if (_utils.hasOwnProperty.call(options, option) && (0, _function2["default"])(options[option])) {
+	        if (_utils.hasOwnProperty.call(options, option) && _function2["default"](options[option])) {
 	            var interfaces = options[option].api || defaultApi,
 	                i = 0,
 	                len = interfaces.length;
 	
 	            for (; i < len; i++) {
 	                if (interfaces[i] === "all") {
-	                    options.all[option] = (0, _interfaces.all)(options[option]);
+	                    options.all[option] = _interfaces.all(options[option]);
 	                }
 	
 	                if (interfaces[i] === "any") {
-	                    options.any[option] = (0, _interfaces.any)(options[option]);
+	                    options.any[option] = _interfaces.any(options[option]);
 	                }
 	
 	                if (interfaces[i] === "not") {
-	                    options.not[option] = (0, _interfaces.not)(options[option]);
+	                    options.not[option] = _interfaces.not(options[option]);
 	                }
 	            }
 	        }
@@ -862,9 +860,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
@@ -879,7 +875,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    var params = arraySlice.call(args),
 	        len = params.length;
 	
-	    if (len === 1 && (0, _array2["default"])(params[0])) {
+	    if (len === 1 && _array2["default"](params[0])) {
 	        return {
 	            length: params[0].length,
 	            parameters: params[0]
@@ -922,9 +918,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitArray;
 	
 	var _utils = __webpack_require__(1);
@@ -944,15 +938,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	
 	var _utils = __webpack_require__(1);
 	
 	var all = function all(func) {
 	    return function () {
-	        var _getParams = (0, _utils.getParams)(arguments);
+	        var _getParams = _utils.getParams(arguments);
 	
 	        var length = _getParams.length;
 	        var parameters = _getParams.parameters;
@@ -970,7 +962,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.all = all;
 	var any = function any(func) {
 	    return function () {
-	        var _getParams2 = (0, _utils.getParams)(arguments);
+	        var _getParams2 = _utils.getParams(arguments);
 	
 	        var length = _getParams2.length;
 	        var parameters = _getParams2.parameters;
@@ -1007,9 +999,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitArguments;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -1023,7 +1013,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _null2 = _interopRequireDefault(_null);
 	
 	function isitArguments(obj) {
-	    return (0, _interfaces.not)(_null2["default"])(obj) && _utils.toString.call(obj) === "[object Arguments]" || typeof obj === "object" && "callee" in obj;
+	    return _interfaces.not(_null2["default"])(obj) && _utils.toString.call(obj) === "[object Arguments]" || typeof obj === "object" && "callee" in obj;
 	}
 	
 	module.exports = exports["default"];
@@ -1036,9 +1026,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitNull;
 	
 	function isitNull(obj) {
@@ -1055,9 +1043,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitBoolean;
 	
 	var _utils = __webpack_require__(1);
@@ -1076,9 +1062,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitChar;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -1088,7 +1072,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _string2 = _interopRequireDefault(_string);
 	
 	function isitChar(obj) {
-	    return (0, _string2["default"])(obj) && obj.length === 1;
+	    return _string2["default"](obj) && obj.length === 1;
 	}
 	
 	module.exports = exports["default"];
@@ -1101,9 +1085,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitString;
 	
 	var _utils = __webpack_require__(1);
@@ -1122,9 +1104,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitDate;
 	
 	var _utils = __webpack_require__(1);
@@ -1143,9 +1123,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitError;
 	
 	var _utils = __webpack_require__(1);
@@ -1164,9 +1142,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitFunction;
 	
 	var _utils = __webpack_require__(1);
@@ -1185,9 +1161,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitJSON;
 	
 	var _utils = __webpack_require__(1);
@@ -1206,9 +1180,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitNaN;
 	
 	function isitNaN(obj) {
@@ -1225,9 +1197,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitNumber;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -1243,7 +1213,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	// it doesn't like just "nan"
 	
 	function isitNumber(obj) {
-	    return (0, _interfaces.not)(_nanJs2["default"])(obj) && _utils.toString.call(obj) === "[object Number]";
+	    return _interfaces.not(_nanJs2["default"])(obj) && _utils.toString.call(obj) === "[object Number]";
 	}
 	
 	module.exports = exports["default"];
@@ -1257,9 +1227,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitObject;
 	
 	function isitObject(obj) {
@@ -1278,9 +1246,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitRegExp;
 	
 	var _utils = __webpack_require__(1);
@@ -1299,9 +1265,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitSameType;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -1315,8 +1279,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _nanJs2 = _interopRequireDefault(_nanJs);
 	
 	function isitSameType(obj1, obj2) {
-	    if ((0, _interfaces.all)(_nanJs2["default"])(obj1, obj2)) {
-	        return (0, _nanJs2["default"])(obj1) === (0, _nanJs2["default"])(obj2);
+	    if (_interfaces.all(_nanJs2["default"])(obj1, obj2)) {
+	        return _nanJs2["default"](obj1) === _nanJs2["default"](obj2);
 	    }
 	
 	    return _utils.toString.call(obj1) === _utils.toString.call(obj2);
@@ -1332,9 +1296,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitSymbol;
 	
 	function isitSymbol(obj) {
@@ -1351,9 +1313,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitTypedArray;
 	
 	var _utils = __webpack_require__(1);
@@ -1385,9 +1345,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitUndefined;
 	
 	function isitUndefined(obj) {
@@ -1404,9 +1362,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitEmpty;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -1432,13 +1388,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _undefined2 = _interopRequireDefault(_undefined);
 	
 	function isitEmpty(obj) {
-	    if ((0, _object2["default"])(obj)) {
+	    if (_object2["default"](obj)) {
 	        var num = Object.getOwnPropertyNames(obj).length;
 	
-	        return num === 0 || num === 1 && (0, _array2["default"])(obj) || num === 2 && (0, _arguments2["default"])(obj);
+	        return num === 0 || num === 1 && _array2["default"](obj) || num === 2 && _arguments2["default"](obj);
 	    }
 	
-	    return obj === "" || (0, _null2["default"])(obj) || (0, _undefined2["default"])(obj);
+	    return obj === "" || _null2["default"](obj) || _undefined2["default"](obj);
 	}
 	
 	module.exports = exports["default"];
@@ -1451,9 +1407,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitExisty;
 	
 	function isitExisty(obj) {
@@ -1471,9 +1425,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitFalsy;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -1485,7 +1437,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _truthy2 = _interopRequireDefault(_truthy);
 	
 	function isitFalsy(obj) {
-	    return (0, _interfaces.not)(_truthy2["default"])(obj);
+	    return _interfaces.not(_truthy2["default"])(obj);
 	}
 	
 	;
@@ -1501,9 +1453,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitTruthy;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -1519,7 +1469,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _nanJs2 = _interopRequireDefault(_nanJs);
 	
 	function isitTruthy(obj) {
-	    return (0, _existy2["default"])(obj) && obj !== false && (0, _interfaces.not)(_nanJs2["default"])(obj) && obj !== "" && obj !== 0;
+	    return _existy2["default"](obj) && obj !== false && _interfaces.not(_nanJs2["default"])(obj) && obj !== "" && obj !== 0;
 	}
 	
 	;
@@ -1533,9 +1483,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitWhitespace;
 	
 	var _regexps = __webpack_require__(26);
@@ -1562,9 +1510,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	var affirmative = /^(?:1|t(?:rue)?|y(?:es)?|ok(?:ay)?)$/;
 	exports.affirmative = affirmative;
 	var alphaNumeric = /^[A-Za-z0-9]+$/;
@@ -1643,9 +1589,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitAbove;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -1657,7 +1601,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _number2 = _interopRequireDefault(_number);
 	
 	function isitAbove(obj, min) {
-	    return (0, _interfaces.all)(_number2["default"])(obj, min) && obj > min;
+	    return _interfaces.all(_number2["default"])(obj, min) && obj > min;
 	}
 	
 	module.exports = exports["default"];
@@ -1670,9 +1614,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitDecimal;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -1682,7 +1624,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _number2 = _interopRequireDefault(_number);
 	
 	function isitDecimal(obj) {
-	    return (0, _number2["default"])(obj) && obj % 1 !== 0;
+	    return _number2["default"](obj) && obj % 1 !== 0;
 	}
 	
 	module.exports = exports["default"];
@@ -1697,9 +1639,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitEqual;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -1751,37 +1691,37 @@ return /******/ (function(modules) { // webpackBootstrap
 	        i = len = obj1Keys = obj2Keys = i = len = key = index = undefined;
 	        _again = false;
 	
-	        if ((0, _interfaces.not)(_sameType2["default"])(obj1, obj2)) {
+	        if (_interfaces.not(_sameType2["default"])(obj1, obj2)) {
 	            return false;
 	        }
 	
-	        if ((0, _interfaces.all)(_decimal2["default"])(obj1, obj2)) {
+	        if (_interfaces.all(_decimal2["default"])(obj1, obj2)) {
 	            return Math.abs(obj1 - obj2) < _epsilon2["default"];
 	        }
 	
-	        if ((0, _interfaces.all)(_number2["default"])(obj1, obj2)) {
+	        if (_interfaces.all(_number2["default"])(obj1, obj2)) {
 	            return obj1 === obj2 && 1 / obj1 === 1 / obj2;
 	        }
 	
-	        if ((0, _interfaces.all)(_string2["default"])(obj1, obj2) || (0, _interfaces.all)(_regexp2["default"])(obj1, obj2)) {
+	        if (_interfaces.all(_string2["default"])(obj1, obj2) || _interfaces.all(_regexp2["default"])(obj1, obj2)) {
 	            return "" + obj1 === "" + obj2;
 	        }
 	
-	        if ((0, _interfaces.all)(_boolean2["default"])(obj1, obj2)) {
+	        if (_interfaces.all(_boolean2["default"])(obj1, obj2)) {
 	            return obj1 === obj2;
 	        }
 	
-	        if ((0, _interfaces.all)(_array2["default"])(obj1, obj2)) {
+	        if (_interfaces.all(_array2["default"])(obj1, obj2)) {
 	            if (obj1.length !== obj2.length) {
 	                return false;
 	            }
 	
 	            for (var i = 0, len = obj1.length; i < len; i++) {
-	                if ((0, _interfaces.not)(_sameType2["default"])(obj1, obj2)) {
+	                if (_interfaces.not(_sameType2["default"])(obj1, obj2)) {
 	                    return false;
 	                }
 	
-	                if ((0, _interfaces.all)(_array2["default"])(obj1[i], obj2[i]) || (0, _interfaces.all)(_object2["default"])(obj1[i], obj2[i])) {
+	                if (_interfaces.all(_array2["default"])(obj1[i], obj2[i]) || _interfaces.all(_object2["default"])(obj1[i], obj2[i])) {
 	                    _x = obj1[i];
 	                    _x2 = obj2[i];
 	                    _again = true;
@@ -1794,7 +1734,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            return true;
 	        }
 	
-	        if ((0, _interfaces.all)(_object2["default"])(obj1, obj2)) {
+	        if (_interfaces.all(_object2["default"])(obj1, obj2)) {
 	            var obj1Keys = Object.keys(obj1),
 	                obj2Keys = Object.keys(obj2);
 	
@@ -1810,7 +1750,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    return false;
 	                }
 	
-	                if ((0, _interfaces.all)(_array2["default"])(obj1[key], obj2[key]) || (0, _interfaces.all)(_object2["default"])(obj1[key], obj2[key])) {
+	                if (_interfaces.all(_array2["default"])(obj1[key], obj2[key]) || _interfaces.all(_object2["default"])(obj1[key], obj2[key])) {
 	                    _x = obj1[key];
 	                    _x2 = obj2[key];
 	                    _again = true;
@@ -1839,9 +1779,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = "EPSILON" in Number ? Number.EPSILON : 2.220446049250313e-16;
 	module.exports = exports["default"];
 
@@ -1853,9 +1791,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitEven;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -1865,7 +1801,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _number2 = _interopRequireDefault(_number);
 	
 	function isitEven(obj) {
-	    return (0, _number2["default"])(obj) && obj % 2 === 0;
+	    return _number2["default"](obj) && obj % 2 === 0;
 	}
 	
 	module.exports = exports["default"];
@@ -1878,9 +1814,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitFinite;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -1892,7 +1826,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _nanJs2 = _interopRequireDefault(_nanJs);
 	
 	function isitFinite(obj) {
-	    return obj !== Infinity && obj !== -Infinity && (0, _interfaces.not)(_nanJs2["default"])(obj);
+	    return obj !== Infinity && obj !== -Infinity && _interfaces.not(_nanJs2["default"])(obj);
 	}
 	
 	;;
@@ -1906,9 +1840,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isInfinite;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -1920,7 +1852,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _finite2 = _interopRequireDefault(_finite);
 	
 	function isInfinite(obj) {
-	    return (0, _interfaces.not)(_finite2["default"])(obj);
+	    return _interfaces.not(_finite2["default"])(obj);
 	}
 	
 	module.exports = exports["default"];
@@ -1933,9 +1865,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitInteger;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -1945,7 +1875,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _number2 = _interopRequireDefault(_number);
 	
 	function isitInteger(obj) {
-	    return (0, _number2["default"])(obj) && obj % 1 === 0;
+	    return _number2["default"](obj) && obj % 1 === 0;
 	}
 	
 	module.exports = exports["default"];
@@ -1958,9 +1888,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitNegative;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -1970,7 +1898,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _number2 = _interopRequireDefault(_number);
 	
 	function isitNegative(obj) {
-	    return (0, _number2["default"])(obj) && obj < 0;
+	    return _number2["default"](obj) && obj < 0;
 	}
 	
 	module.exports = exports["default"];
@@ -1983,9 +1911,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitOdd;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -1995,7 +1921,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _number2 = _interopRequireDefault(_number);
 	
 	function isitOdd(obj) {
-	    return (0, _number2["default"])(obj) && obj % 2 !== 0;
+	    return _number2["default"](obj) && obj % 2 !== 0;
 	}
 	
 	module.exports = exports["default"];
@@ -2008,9 +1934,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitPositive;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -2020,7 +1944,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _number2 = _interopRequireDefault(_number);
 	
 	function isitPositive(obj) {
-	    return (0, _number2["default"])(obj) && obj > 0;
+	    return _number2["default"](obj) && obj > 0;
 	}
 	
 	module.exports = exports["default"];
@@ -2033,9 +1957,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitUnder;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -2047,7 +1969,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _number2 = _interopRequireDefault(_number);
 	
 	function isitUnder(obj, max) {
-	    return (0, _interfaces.all)(_number2["default"])(obj, max) && obj < max;
+	    return _interfaces.all(_number2["default"])(obj, max) && obj < max;
 	}
 	
 	module.exports = exports["default"];
@@ -2060,9 +1982,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitWithin;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -2074,7 +1994,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _number2 = _interopRequireDefault(_number);
 	
 	function isitWithin(obj, min, max) {
-	    return (0, _interfaces.all)(_number2["default"])(obj, min, max) && obj > min && obj < max;
+	    return _interfaces.all(_number2["default"])(obj, min, max) && obj > min && obj < max;
 	}
 	
 	module.exports = exports["default"];
@@ -2085,9 +2005,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitAffirmative;
 	
 	var _regexps = __webpack_require__(26);
@@ -2106,9 +2024,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitAlphaNumeric;
 	
 	var _regexps = __webpack_require__(26);
@@ -2127,9 +2043,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitCAPostalCode;
 	
 	var _regexps = __webpack_require__(26);
@@ -2148,9 +2062,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitCreditCard;
 	
 	var _regexps = __webpack_require__(26);
@@ -2169,9 +2081,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitDateString;
 	
 	var _regexps = __webpack_require__(26);
@@ -2190,9 +2100,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitEmail;
 	
 	var _regexps = __webpack_require__(26);
@@ -2209,9 +2117,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitEppPhone;
 	
 	var _regexps = __webpack_require__(26);
@@ -2230,9 +2136,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitHexadecimal;
 	
 	var _regexps = __webpack_require__(26);
@@ -2251,9 +2155,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitHexColor;
 	
 	var _regexps = __webpack_require__(26);
@@ -2272,9 +2174,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitIp;
 	
 	var _regexps = __webpack_require__(26);
@@ -2293,9 +2193,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitIpv4;
 	
 	var _regexps = __webpack_require__(26);
@@ -2314,9 +2212,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitIpv6;
 	
 	var _regexps = __webpack_require__(26);
@@ -2335,9 +2231,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitISODateString;
 	
 	var _regexps = __webpack_require__(26);
@@ -2354,9 +2248,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitNanpPhone;
 	
 	var _regexps = __webpack_require__(26);
@@ -2375,9 +2267,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitSocialSecurityNumber;
 	
 	var _regexps = __webpack_require__(26);
@@ -2396,9 +2286,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitTimeString;
 	
 	var _regexps = __webpack_require__(26);
@@ -2417,9 +2305,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitUKPostCode;
 	
 	var _regexps = __webpack_require__(26);
@@ -2439,9 +2325,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitUrl;
 	
 	var _regexps = __webpack_require__(26);
@@ -2460,9 +2344,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitUSZipCode;
 	
 	var _regexps = __webpack_require__(26);
@@ -2481,9 +2363,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = setRegexp;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -2512,9 +2392,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitCamelCase;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -2528,11 +2406,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _string2 = _interopRequireDefault(_string);
 	
 	function isitCamelCase(obj) {
-	    if ((0, _interfaces.not)(_string2["default"])(obj)) {
+	    if (_interfaces.not(_string2["default"])(obj)) {
 	        return false;
 	    }
 	
-	    return obj === (0, _utils.toCamelCase)(obj);
+	    return obj === _utils.toCamelCase(obj);
 	}
 	
 	module.exports = exports["default"];
@@ -2547,9 +2425,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitCapitalized;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -2565,7 +2441,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _equal2 = _interopRequireDefault(_equal);
 	
 	function isitCapitalized(obj) {
-	    if ((0, _interfaces.not)(_string2["default"])(obj)) {
+	    if (_interfaces.not(_string2["default"])(obj)) {
 	        return false;
 	    }
 	
@@ -2578,7 +2454,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        }
 	    }
 	
-	    return (0, _equal2["default"])(words, capitalized);
+	    return _equal2["default"](words, capitalized);
 	}
 	
 	module.exports = exports["default"];
@@ -2591,9 +2467,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitDoubleByte;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -2605,7 +2479,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _string2 = _interopRequireDefault(_string);
 	
 	function isitDoubleByte(obj) {
-	    return (0, _string2["default"])(obj) && _regexps.doubleByte.test(obj);
+	    return _string2["default"](obj) && _regexps.doubleByte.test(obj);
 	}
 	
 	module.exports = exports["default"];
@@ -2618,9 +2492,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitEndWith;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -2630,7 +2502,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _string2 = _interopRequireDefault(_string);
 	
 	function isitEndWith(obj, endStr) {
-	    return (0, _string2["default"])(obj) && obj.indexOf(endStr) === obj.length - endStr.length;
+	    return _string2["default"](obj) && obj.indexOf(endStr) === obj.length - endStr.length;
 	}
 	
 	module.exports = exports["default"];
@@ -2643,9 +2515,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitHtml;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -2657,7 +2527,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _string2 = _interopRequireDefault(_string);
 	
 	function isitHtml(obj) {
-	    return (0, _string2["default"])(obj) && _regexps.html.test(obj);
+	    return _string2["default"](obj) && _regexps.html.test(obj);
 	}
 	
 	module.exports = exports["default"];
@@ -2671,9 +2541,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitInclude;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -2687,7 +2555,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _string2 = _interopRequireDefault(_string);
 	
 	function isitInclude(obj, substr) {
-	    return ((0, _array2["default"])(obj) || (0, _string2["default"])(obj)) && obj.indexOf(substr) !== -1;
+	    return (_array2["default"](obj) || _string2["default"](obj)) && obj.indexOf(substr) !== -1;
 	}
 	
 	module.exports = exports["default"];
@@ -2700,9 +2568,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitKebabCase;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -2716,11 +2582,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _string2 = _interopRequireDefault(_string);
 	
 	function isitKebabCase(obj) {
-	    if ((0, _interfaces.not)(_string2["default"])(obj)) {
+	    if (_interfaces.not(_string2["default"])(obj)) {
 	        return false;
 	    }
 	
-	    return obj === (0, _utils.toCamelCase)(obj).replace(/([A-Z])/g, function ($1) {
+	    return obj === _utils.toCamelCase(obj).replace(/([A-Z])/g, function ($1) {
 	        return "-" + $1.toLowerCase();
 	    }).replace(/--/g, "-");
 	}
@@ -2735,9 +2601,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitLowercase;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -2747,7 +2611,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _string2 = _interopRequireDefault(_string);
 	
 	function isitLowercase(obj) {
-	    return (0, _string2["default"])(obj) && obj === obj.toLowerCase();
+	    return _string2["default"](obj) && obj === obj.toLowerCase();
 	}
 	
 	module.exports = exports["default"];
@@ -2760,9 +2624,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitPalindrome;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -2772,7 +2634,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _string2 = _interopRequireDefault(_string);
 	
 	function isitPalindrome(obj) {
-	    return (0, _string2["default"])(obj) && obj === obj.split("").reverse().join("");
+	    return _string2["default"](obj) && obj === obj.split("").reverse().join("");
 	}
 	
 	module.exports = exports["default"];
@@ -2785,9 +2647,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitSnakeCase;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -2801,11 +2661,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _string2 = _interopRequireDefault(_string);
 	
 	function isitSnakeCase(obj) {
-	    if ((0, _interfaces.not)(_string2["default"])(obj)) {
+	    if (_interfaces.not(_string2["default"])(obj)) {
 	        return false;
 	    }
 	
-	    return obj === (0, _utils.toCamelCase)(obj).replace(/([A-Z])/g, function ($1) {
+	    return obj === _utils.toCamelCase(obj).replace(/([A-Z])/g, function ($1) {
 	        return "_" + $1.toLowerCase();
 	    });
 	}
@@ -2820,9 +2680,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitStartCase;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -2834,7 +2692,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _string2 = _interopRequireDefault(_string);
 	
 	function isitStartCase(obj) {
-	    if ((0, _interfaces.not)(_string2["default"])(obj)) {
+	    if (_interfaces.not(_string2["default"])(obj)) {
 	        return false;
 	    }
 	
@@ -2853,9 +2711,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitStartWith;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -2865,7 +2721,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _string2 = _interopRequireDefault(_string);
 	
 	function isitStartWith(obj, startStr) {
-	    return (0, _string2["default"])(obj) && obj.indexOf(startStr) === 0;
+	    return _string2["default"](obj) && obj.indexOf(startStr) === 0;
 	}
 	
 	module.exports = exports["default"];
@@ -2878,9 +2734,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitUppercase;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -2890,7 +2744,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _string2 = _interopRequireDefault(_string);
 	
 	function isitUppercase(obj) {
-	    return (0, _string2["default"])(obj) && obj === obj.toUpperCase();
+	    return _string2["default"](obj) && obj === obj.toUpperCase();
 	}
 	
 	module.exports = exports["default"];
@@ -2903,9 +2757,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitDOMNode;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -2915,7 +2767,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _object2 = _interopRequireDefault(_object);
 	
 	function isitDOMNode(obj) {
-	    return (0, _object2["default"])(obj) && obj.nodeType > 0;
+	    return _object2["default"](obj) && obj.nodeType > 0;
 	}
 	
 	module.exports = exports["default"];
@@ -2928,9 +2780,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitDOMNodeList;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -2942,7 +2792,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _object2 = _interopRequireDefault(_object);
 	
 	function isitDOMNodeList(obj) {
-	    return (0, _object2["default"])(obj) && /^\[object (HTMLCollection|NodeList|Object)\]$/.test(_utils.toString.call(obj)) && _utils.hasOwnProperty.call(obj, "length") && obj.length === 0 || (0, _object2["default"])(obj[0]) && obj[0].nodeType > 0;
+	    return _object2["default"](obj) && /^\[object (HTMLCollection|NodeList|Object)\]$/.test(_utils.toString.call(obj)) && _utils.hasOwnProperty.call(obj, "length") && obj.length === 0 || _object2["default"](obj[0]) && obj[0].nodeType > 0;
 	}
 	
 	module.exports = exports["default"];
@@ -2955,9 +2805,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitJquery;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -2973,14 +2821,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _object2 = _interopRequireDefault(_object);
 	
 	function isitJquery(obj) {
-	    if ((0, _interfaces.not)(_object2["default"])(obj)) {
+	    if (_interfaces.not(_object2["default"])(obj)) {
 	        return false;
 	    }
 	
-	    if ((0, _function2["default"])(obj)) {
+	    if (_function2["default"](obj)) {
 	        var $obj = obj();
 	
-	        return (0, _object2["default"])($obj) && !!$obj.jquery;
+	        return _object2["default"]($obj) && !!$obj.jquery;
 	    }
 	
 	    /* eslint-disable */
@@ -2998,9 +2846,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitPropertyCount;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -3016,7 +2862,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _object2 = _interopRequireDefault(_object);
 	
 	function isitPropertyCount(obj, count) {
-	    if ((0, _interfaces.not)(_object2["default"])(obj) || (0, _interfaces.not)(_number2["default"])(count)) {
+	    if (_interfaces.not(_object2["default"])(obj) || _interfaces.not(_number2["default"])(count)) {
 	        return false;
 	    }
 	
@@ -3046,9 +2892,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitPropertyDefined;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -3062,7 +2906,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _string2 = _interopRequireDefault(_string);
 	
 	function isitPropertyDefined(obj, prop) {
-	    return (0, _object2["default"])(obj) && (0, _string2["default"])(prop) && prop in obj;
+	    return _object2["default"](obj) && _string2["default"](prop) && prop in obj;
 	}
 	
 	module.exports = exports["default"];
@@ -3075,9 +2919,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitWindowObject;
 	
 	function isitWindowObject(obj) {
@@ -3094,9 +2936,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitInArray;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -3108,7 +2948,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _array2 = _interopRequireDefault(_array);
 	
 	function isitInArray(obj, arr) {
-	    if ((0, _interfaces.not)(_array2["default"])(arr)) {
+	    if (_interfaces.not(_array2["default"])(arr)) {
 	        return false;
 	    }
 	
@@ -3125,9 +2965,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitSorted;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -3163,7 +3001,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 	
 	function isitSorted(arr) {
-	    if ((0, _interfaces.not)(_array2["default"])(arr)) {
+	    if (_interfaces.not(_array2["default"])(arr)) {
 	        return false;
 	    }
 	
@@ -3180,9 +3018,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitDay;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -3202,11 +3038,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _undefined2 = _interopRequireDefault(_undefined);
 	
 	function isitDay(obj, dayString) {
-	    if ((0, _undefined2["default"])(dayString)) {
+	    if (_undefined2["default"](dayString)) {
 	        dayString = _dateNames.days[new Date().getDay()];
 	    }
 	
-	    return (0, _date2["default"])(obj) && (0, _string2["default"])(dayString) && dayString.toLowerCase() === _dateNames.days[obj.getDay()];
+	    return _date2["default"](obj) && _string2["default"](dayString) && dayString.toLowerCase() === _dateNames.days[obj.getDay()];
 	}
 	
 	module.exports = exports["default"];
@@ -3219,9 +3055,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	var days = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
 	
 	exports.days = days;
@@ -3241,9 +3075,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitDaylightSavingTime;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -3253,7 +3085,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _date2 = _interopRequireDefault(_date);
 	
 	function isitDaylightSavingTime(obj) {
-	    if (!(0, _date2["default"])(obj)) {
+	    if (!_date2["default"](obj)) {
 	        return false;
 	    }
 	
@@ -3274,9 +3106,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitFuture;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -3286,7 +3116,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _date2 = _interopRequireDefault(_date);
 	
 	function isitFuture(obj) {
-	    return (0, _date2["default"])(obj) && obj.getTime() > new Date().getTime();
+	    return _date2["default"](obj) && obj.getTime() > new Date().getTime();
 	}
 	
 	module.exports = exports["default"];
@@ -3300,9 +3130,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitInDateRange;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -3314,7 +3142,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _date2 = _interopRequireDefault(_date);
 	
 	function isitInDateRange(obj, startObj, endObj) {
-	    if ((0, _interfaces.all)((0, _interfaces.not)(_date2["default"]))(obj, startObj, endObj)) {
+	    if (_interfaces.all(_interfaces.not(_date2["default"]))(obj, startObj, endObj)) {
 	        return false;
 	    }
 	
@@ -3333,9 +3161,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitInLastMonth;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -3345,7 +3171,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _inDateRange2 = _interopRequireDefault(_inDateRange);
 	
 	function isitInLastMonth(obj) {
-	    return (0, _inDateRange2["default"])(obj, new Date(new Date().setDate(new Date().getMonth() - 1)), new Date());
+	    return _inDateRange2["default"](obj, new Date(new Date().setDate(new Date().getMonth() - 1)), new Date());
 	}
 	
 	module.exports = exports["default"];
@@ -3358,9 +3184,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitInLastWeek;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -3370,7 +3194,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _inDateRange2 = _interopRequireDefault(_inDateRange);
 	
 	function isitInLastWeek(obj) {
-	    return (0, _inDateRange2["default"])(obj, new Date(new Date().setDate(new Date().getDate() - 7)), new Date());
+	    return _inDateRange2["default"](obj, new Date(new Date().setDate(new Date().getDate() - 7)), new Date());
 	}
 	
 	module.exports = exports["default"];
@@ -3383,9 +3207,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitInLastYear;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -3395,7 +3217,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _inDateRange2 = _interopRequireDefault(_inDateRange);
 	
 	function isitInLastYear(obj) {
-	    return (0, _inDateRange2["default"])(obj, new Date(new Date().setDate(new Date().getFullYear() - 1)), new Date());
+	    return _inDateRange2["default"](obj, new Date(new Date().setDate(new Date().getFullYear() - 1)), new Date());
 	}
 	
 	module.exports = exports["default"];
@@ -3408,9 +3230,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitLeapYear;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -3420,7 +3240,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _number2 = _interopRequireDefault(_number);
 	
 	function isitLeapYear(obj) {
-	    return (0, _number2["default"])(obj) && (obj % 4 === 0 && obj % 100 !== 0 || obj % 400 === 0);
+	    return _number2["default"](obj) && (obj % 4 === 0 && obj % 100 !== 0 || obj % 400 === 0);
 	}
 	
 	module.exports = exports["default"];
@@ -3433,9 +3253,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitMonth;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -3455,11 +3273,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _undefined2 = _interopRequireDefault(_undefined);
 	
 	function isitMonth(obj, monthString) {
-	    if ((0, _undefined2["default"])(monthString)) {
+	    if (_undefined2["default"](monthString)) {
 	        monthString = _dateNames.months[new Date().getMonth()];
 	    }
 	
-	    return (0, _date2["default"])(obj) && (0, _string2["default"])(monthString) && monthString.toLowerCase() === _dateNames.months[obj.getMonth()];
+	    return _date2["default"](obj) && _string2["default"](monthString) && monthString.toLowerCase() === _dateNames.months[obj.getMonth()];
 	}
 	
 	module.exports = exports["default"];
@@ -3472,9 +3290,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitInNextMonth;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -3484,7 +3300,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _inDateRange2 = _interopRequireDefault(_inDateRange);
 	
 	function isitInNextMonth(obj) {
-	    return (0, _inDateRange2["default"])(obj, new Date(), new Date(new Date().setDate(new Date().getMonth() + 1)));
+	    return _inDateRange2["default"](obj, new Date(), new Date(new Date().setDate(new Date().getMonth() + 1)));
 	}
 	
 	module.exports = exports["default"];
@@ -3497,9 +3313,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitInNextWeek;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -3509,7 +3323,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _inDateRange2 = _interopRequireDefault(_inDateRange);
 	
 	function isitInNextWeek(obj) {
-	    return (0, _inDateRange2["default"])(obj, new Date(), new Date(new Date().setDate(new Date().getDate() + 7)));
+	    return _inDateRange2["default"](obj, new Date(), new Date(new Date().setDate(new Date().getDate() + 7)));
 	}
 	
 	module.exports = exports["default"];
@@ -3522,9 +3336,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitInNextYear;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -3534,7 +3346,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _inDateRange2 = _interopRequireDefault(_inDateRange);
 	
 	function isitInNextYear(obj) {
-	    return (0, _inDateRange2["default"])(obj, new Date(), new Date(new Date().setDate(new Date().getFullYear() + 1)));
+	    return _inDateRange2["default"](obj, new Date(), new Date(new Date().setDate(new Date().getFullYear() + 1)));
 	}
 	
 	module.exports = exports["default"];
@@ -3547,9 +3359,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitPast;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -3559,7 +3369,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _date2 = _interopRequireDefault(_date);
 	
 	function isitPast(obj) {
-	    return (0, _date2["default"])(obj) && obj.getTime() < new Date().getTime();
+	    return _date2["default"](obj) && obj.getTime() < new Date().getTime();
 	}
 	
 	module.exports = exports["default"];
@@ -3572,9 +3382,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitQuarterOfYear;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -3588,7 +3396,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _number2 = _interopRequireDefault(_number);
 	
 	function isitQuarterOfYear(obj, quarterNumber) {
-	    return (0, _date2["default"])(obj) && (0, _number2["default"])(quarterNumber) && quarterNumber === Math.floor((obj.getMonth() + 3) / 3);
+	    return _date2["default"](obj) && _number2["default"](quarterNumber) && quarterNumber === Math.floor((obj.getMonth() + 3) / 3);
 	}
 	
 	module.exports = exports["default"];
@@ -3601,9 +3409,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitToday;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -3613,7 +3419,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _date2 = _interopRequireDefault(_date);
 	
 	function isitToday(obj) {
-	    return (0, _date2["default"])(obj) && obj.toDateString() === new Date().toDateString();
+	    return _date2["default"](obj) && obj.toDateString() === new Date().toDateString();
 	}
 	
 	module.exports = exports["default"];
@@ -3626,9 +3432,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitTomorrow;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -3640,7 +3444,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _date2 = _interopRequireDefault(_date);
 	
 	function isitTomorrow(obj) {
-	    if ((0, _interfaces.not)(_date2["default"])(obj)) {
+	    if (_interfaces.not(_date2["default"])(obj)) {
 	        return false;
 	    }
 	
@@ -3660,9 +3464,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitWeekday;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -3674,7 +3476,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _date2 = _interopRequireDefault(_date);
 	
 	function isitWeekday(obj) {
-	    if ((0, _interfaces.not)(_date2["default"])(obj)) {
+	    if (_interfaces.not(_date2["default"])(obj)) {
 	        return false;
 	    }
 	
@@ -3693,9 +3495,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitWeekday;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -3707,7 +3507,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _date2 = _interopRequireDefault(_date);
 	
 	function isitWeekday(obj) {
-	    if ((0, _interfaces.not)(_date2["default"])(obj)) {
+	    if (_interfaces.not(_date2["default"])(obj)) {
 	        return false;
 	    }
 	
@@ -3726,9 +3526,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitYear;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -3750,15 +3548,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _undefined2 = _interopRequireDefault(_undefined);
 	
 	function isitYear(obj, yearNumber) {
-	    if ((0, _undefined2["default"])(yearNumber)) {
+	    if (_undefined2["default"](yearNumber)) {
 	        yearNumber = new Date().getFullYear();
 	    }
 	
-	    if ((0, _string2["default"])(yearNumber)) {
+	    if (_string2["default"](yearNumber)) {
 	        yearNumber = parseInt(yearNumber, 10);
 	    }
 	
-	    return (0, _date2["default"])(obj) && (0, _number2["default"])(yearNumber) && yearNumber === obj.getFullYear();
+	    return _date2["default"](obj) && _number2["default"](yearNumber) && yearNumber === obj.getFullYear();
 	}
 	
 	module.exports = exports["default"];
@@ -3771,9 +3569,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitYesterday;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -3786,7 +3582,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    var now = new Date(),
 	        yesterdayString = new Date(now.setDate(now.getDate() - 1).toDateString());
 	
-	    return (0, _date2["default"])(obj) && obj.toDateString() === yesterdayString;
+	    return _date2["default"](obj) && obj.toDateString() === yesterdayString;
 	}
 	
 	module.exports = exports["default"];
@@ -3799,9 +3595,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitAndroid;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -3815,7 +3609,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _browser2 = _interopRequireDefault(_browser);
 	
 	function isitAndroid() {
-	    return (0, _browser2["default"])() && /android/i.test(_navigator2["default"].userAgent);
+	    return _browser2["default"]() && /android/i.test(_navigator2["default"].userAgent);
 	}
 	
 	module.exports = exports["default"];
@@ -3828,9 +3622,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
@@ -3840,7 +3632,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var navigatorInfo = {};
 	
-	if ((0, _browser2["default"])()) {
+	if (_browser2["default"]()) {
 	    navigatorInfo = {
 	        appVersion: "navigator" in window && "appVersion" in navigator && navigator.appVersion.toLowerCase() || "",
 	        userAgent: "navigator" in window && "userAgent" in navigator && navigator.userAgent.toLowerCase() || "",
@@ -3859,9 +3651,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitBrowser;
 	
 	function isitBrowser() {
@@ -3878,9 +3668,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitAndroidPhone;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -3896,7 +3684,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _browser3 = _interopRequireDefault(_browser);
 	
 	function isitAndroidPhone() {
-	    return (0, _browser2["default"])() && (0, _browser3["default"])() && /mobile/i.test(_navigator2["default"].userAgent);
+	    return _browser2["default"]() && _browser3["default"]() && /mobile/i.test(_navigator2["default"].userAgent);
 	}
 	
 	module.exports = exports["default"];
@@ -3909,9 +3697,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitAndroidTablet;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -3927,7 +3713,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _browser3 = _interopRequireDefault(_browser);
 	
 	function isitAndroidTablet() {
-	    return (0, _browser2["default"])() && (0, _browser3["default"])() && !/mobile/i.test(_navigator2["default"].userAgent);
+	    return _browser2["default"]() && _browser3["default"]() && !/mobile/i.test(_navigator2["default"].userAgent);
 	}
 	
 	module.exports = exports["default"];
@@ -3940,9 +3726,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitBlackberry;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -3956,7 +3740,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _browser2 = _interopRequireDefault(_browser);
 	
 	function isitBlackberry() {
-	    return (0, _browser2["default"])() && /blackberry/i.test(_navigator2["default"].userAgent) || /BB10/i.test(_navigator2["default"].userAgent);
+	    return _browser2["default"]() && /blackberry/i.test(_navigator2["default"].userAgent) || /BB10/i.test(_navigator2["default"].userAgent);
 	}
 	
 	module.exports = exports["default"];
@@ -3969,9 +3753,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitBlink;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -3985,7 +3767,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _browser2 = _interopRequireDefault(_browser);
 	
 	function isitBlink() {
-	    return (0, _browser2["default"])() && /chrome/i.test(_navigator2["default"].userAgent);
+	    return _browser2["default"]() && /chrome/i.test(_navigator2["default"].userAgent);
 	}
 	
 	module.exports = exports["default"];
@@ -3998,9 +3780,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitChrome;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -4014,7 +3794,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _browser2 = _interopRequireDefault(_browser);
 	
 	function isitChrome() {
-	    return (0, _browser2["default"])() && /chrome|chromium/i.test(_navigator2["default"].userAgent) && /google inc/.test(_navigator2["default"].vendor);
+	    return _browser2["default"]() && /chrome|chromium/i.test(_navigator2["default"].userAgent) && /google inc/.test(_navigator2["default"].vendor);
 	}
 	
 	module.exports = exports["default"];
@@ -4027,9 +3807,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitDesktop;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -4047,7 +3825,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _tablet2 = _interopRequireDefault(_tablet);
 	
 	function isitDesktop() {
-	    return (0, _browser2["default"])() && !(0, _mobile2["default"])() && !(0, _tablet2["default"])();
+	    return _browser2["default"]() && !_mobile2["default"]() && !_tablet2["default"]();
 	}
 	
 	module.exports = exports["default"];
@@ -4060,9 +3838,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitMobile;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -4092,7 +3868,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _windowsPhone2 = _interopRequireDefault(_windowsPhone);
 	
 	function isitMobile() {
-	    return (0, _browser2["default"])() && ((0, _iphone2["default"])() || (0, _androidPhone2["default"])() || (0, _ipod2["default"])() || (0, _windowsPhone2["default"])() || (0, _blackberry2["default"])());
+	    return _browser2["default"]() && (_iphone2["default"]() || _androidPhone2["default"]() || _ipod2["default"]() || _windowsPhone2["default"]() || _blackberry2["default"]());
 	}
 	
 	module.exports = exports["default"];
@@ -4105,9 +3881,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitIphone;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -4121,7 +3895,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _browser2 = _interopRequireDefault(_browser);
 	
 	function isitIphone() {
-	    return (0, _browser2["default"])() && /iphone/i.test(_navigator2["default"].userAgent);
+	    return _browser2["default"]() && /iphone/i.test(_navigator2["default"].userAgent);
 	}
 	
 	module.exports = exports["default"];
@@ -4134,9 +3908,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitIpod;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -4150,7 +3922,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _browser2 = _interopRequireDefault(_browser);
 	
 	function isitIpod() {
-	    return (0, _browser2["default"])() && /ipod/i.test(_navigator2["default"].userAgent);
+	    return _browser2["default"]() && /ipod/i.test(_navigator2["default"].userAgent);
 	}
 	
 	module.exports = exports["default"];
@@ -4163,9 +3935,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitWindowsPhone;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -4183,7 +3953,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _windows2 = _interopRequireDefault(_windows);
 	
 	function isitWindowsPhone() {
-	    return (0, _browser2["default"])() && (0, _windows2["default"])() && /phone/i.test(_navigator2["default"].userAgent);
+	    return _browser2["default"]() && _windows2["default"]() && /phone/i.test(_navigator2["default"].userAgent);
 	}
 	
 	module.exports = exports["default"];
@@ -4196,9 +3966,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitWindows;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -4212,7 +3980,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _browser2 = _interopRequireDefault(_browser);
 	
 	function isitWindows() {
-	    return (0, _browser2["default"])() && /win/i.test(_navigator2["default"].appVersion);
+	    return _browser2["default"]() && /win/i.test(_navigator2["default"].appVersion);
 	}
 	
 	module.exports = exports["default"];
@@ -4225,9 +3993,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitTablet;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -4249,7 +4015,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _windowsTablet2 = _interopRequireDefault(_windowsTablet);
 	
 	function isitTablet() {
-	    return (0, _browser2["default"])() && ((0, _ipad2["default"])() || (0, _androidTablet2["default"])() || (0, _windowsTablet2["default"])());
+	    return _browser2["default"]() && (_ipad2["default"]() || _androidTablet2["default"]() || _windowsTablet2["default"]());
 	}
 	
 	module.exports = exports["default"];
@@ -4262,9 +4028,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitIpad;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -4278,7 +4042,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _browser2 = _interopRequireDefault(_browser);
 	
 	function isitIpad() {
-	    return (0, _browser2["default"])() && /ipad/i.test(_navigator2["default"].userAgent);
+	    return _browser2["default"]() && /ipad/i.test(_navigator2["default"].userAgent);
 	}
 	
 	module.exports = exports["default"];
@@ -4291,9 +4055,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitWindowsTablet;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -4317,7 +4079,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _windowsPhone2 = _interopRequireDefault(_windowsPhone);
 	
 	function isitWindowsTablet() {
-	    return (0, _browser2["default"])() && (0, _windows2["default"])() && (0, _interfaces.not)(_windowsPhone2["default"])() && /touch/i.test(_navigator2["default"].userAgent);
+	    return _browser2["default"]() && _windows2["default"]() && _interfaces.not(_windowsPhone2["default"])() && /touch/i.test(_navigator2["default"].userAgent);
 	}
 	
 	module.exports = exports["default"];
@@ -4331,9 +4093,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitIe;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -4349,7 +4109,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _browser2 = _interopRequireDefault(_browser);
 	
 	function isitIe(version) {
-	    if ((0, _interfaces.not)(_browser2["default"])()) {
+	    if (_interfaces.not(_browser2["default"])()) {
 	        return false;
 	    }
 	
@@ -4375,9 +4135,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitFirefox;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -4391,7 +4149,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _browser2 = _interopRequireDefault(_browser);
 	
 	function isitFirefox() {
-	    return (0, _browser2["default"])() && /firefox/i.test(_navigator2["default"].userAgent);
+	    return _browser2["default"]() && /firefox/i.test(_navigator2["default"].userAgent);
 	}
 	
 	module.exports = exports["default"];
@@ -4404,9 +4162,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitGecko;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -4420,7 +4176,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _browser2 = _interopRequireDefault(_browser);
 	
 	function isitGecko() {
-	    return (0, _browser2["default"])() && /gecko/i.test(_navigator2["default"].userAgent);
+	    return _browser2["default"]() && /gecko/i.test(_navigator2["default"].userAgent);
 	}
 	
 	module.exports = exports["default"];
@@ -4433,9 +4189,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitIOS;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -4453,7 +4207,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _ipod2 = _interopRequireDefault(_ipod);
 	
 	function isitIOS() {
-	    return (0, _ipad2["default"])() || (0, _iphone2["default"])() || (0, _ipod2["default"])();
+	    return _ipad2["default"]() || _iphone2["default"]() || _ipod2["default"]();
 	}
 	
 	module.exports = exports["default"];
@@ -4466,9 +4220,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitLinux;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -4482,7 +4234,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _browser2 = _interopRequireDefault(_browser);
 	
 	function isitLinux() {
-	    return (0, _browser2["default"])() && /linux|x11/i.test(_navigator2["default"].appVersion);
+	    return _browser2["default"]() && /linux|x11/i.test(_navigator2["default"].appVersion);
 	}
 	
 	module.exports = exports["default"];
@@ -4495,9 +4247,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitMac;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -4511,7 +4261,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _browser2 = _interopRequireDefault(_browser);
 	
 	function isitMac() {
-	    return (0, _browser2["default"])() && /mac/i.test(_navigator2["default"].appVersion);
+	    return _browser2["default"]() && /mac/i.test(_navigator2["default"].appVersion);
 	}
 	
 	module.exports = exports["default"];
@@ -4524,9 +4274,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitNode;
 	
 	function isitNode() {
@@ -4541,9 +4289,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitOffline;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -4553,7 +4299,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _online2 = _interopRequireDefault(_online);
 	
 	function isitOffline() {
-	    return !(0, _online2["default"])();
+	    return !_online2["default"]();
 	}
 	
 	module.exports = exports["default"];
@@ -4564,9 +4310,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitOnline;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -4576,7 +4320,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _browser2 = _interopRequireDefault(_browser);
 	
 	function isitOnline() {
-	    return (0, _browser2["default"])() && navigator.onLine;
+	    return _browser2["default"]() && navigator.onLine;
 	}
 	
 	module.exports = exports["default"];
@@ -4589,9 +4333,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitOpera;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -4605,7 +4347,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _browser2 = _interopRequireDefault(_browser);
 	
 	function isitOpera() {
-	    return (0, _browser2["default"])() && /^opera/i.test(_navigator2["default"].userAgent) || /OPR/.test(_navigator2["default"].userAgent);
+	    return _browser2["default"]() && /^opera/i.test(_navigator2["default"].userAgent) || /OPR/.test(_navigator2["default"].userAgent);
 	}
 	
 	module.exports = exports["default"];
@@ -4618,9 +4360,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitPresto;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -4634,7 +4374,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _browser2 = _interopRequireDefault(_browser);
 	
 	function isitPresto() {
-	    return (0, _browser2["default"])() && /opera/i.test(_navigator2["default"].userAgent);
+	    return _browser2["default"]() && /opera/i.test(_navigator2["default"].userAgent);
 	}
 	
 	module.exports = exports["default"];
@@ -4647,9 +4387,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitRetina;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -4659,7 +4397,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _browser2 = _interopRequireDefault(_browser);
 	
 	function isitRetina() {
-	    if ((0, _browser2["default"])() && window.matchMedia) {
+	    if (_browser2["default"]() && window.matchMedia) {
 	        var mq = window.matchMedia("only screen and (min--moz-device-pixel-ratio: 1.3), only screen and " + "(-o-min-device-pixel-ratio: 2.6/2), only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen " + "and (min-device-pixel-ratio: 1.3), only screen and (min-resolution: 1.3dppx)");
 	
 	        return mq && mq.matches || window.devicePixelRatio > 1;
@@ -4676,9 +4414,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitSafari;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -4692,7 +4428,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _browser2 = _interopRequireDefault(_browser);
 	
 	function isitSafari() {
-	    return (0, _browser2["default"])() && /safari/i.test(_navigator2["default"].userAgent) && /apple computer/.test(_navigator2["default"].vendor);
+	    return _browser2["default"]() && /safari/i.test(_navigator2["default"].userAgent) && /apple computer/.test(_navigator2["default"].vendor);
 	}
 	
 	module.exports = exports["default"];
@@ -4705,9 +4441,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitTouchDevice;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -4718,7 +4452,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function isitTouchDevice() {
 	    /* eslint-disable */
-	    return (0, _browser2["default"])() && "ontouchstart" in window || "DocumentTouch" in window && document instanceof DocumentTouch;
+	    return _browser2["default"]() && "ontouchstart" in window || "DocumentTouch" in window && document instanceof DocumentTouch;
 	    /* eslint-enable */
 	}
 	
@@ -4732,9 +4466,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitTrident;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -4748,7 +4480,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _browser2 = _interopRequireDefault(_browser);
 	
 	function isitTrident() {
-	    return (0, _browser2["default"])() && /trident/i.test(_navigator2["default"].userAgent);
+	    return _browser2["default"]() && /trident/i.test(_navigator2["default"].userAgent);
 	}
 	
 	module.exports = exports["default"];
@@ -4761,9 +4493,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	"use strict";
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+	exports.__esModule = true;
 	exports["default"] = isitWebkit;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -4777,7 +4507,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _browser2 = _interopRequireDefault(_browser);
 	
 	function isitWebkit() {
-	    return (0, _browser2["default"])() && /applewebkit/i.test(_navigator2["default"].userAgent);
+	    return _browser2["default"]() && /applewebkit/i.test(_navigator2["default"].userAgent);
 	}
 	
 	module.exports = exports["default"];
