@@ -18,7 +18,7 @@
     "lodash.merge": "^3.3.2",
     "path": "^0.12.7",
     "webpack": "^1.12.2",
-    "webpack-dev-server": "^1.12.0"
+    "webpack-dev-server": "^1.12.1"
   },
   "homepage": "https://github.com/planttheidea/isit.js",
   "keywords": [
@@ -41,5 +41,5 @@
     "prepublish": "npm run compile",
     "test": "webpack-dev-server --progress --colors"
   },
-  "version": "1.2.2"
+  "version": "1.2.3"
 }

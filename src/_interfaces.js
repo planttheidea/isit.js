@@ -12,6 +12,10 @@ export var all = function(func) {
                 parameters
             } = getParams(arguments);
 
+        if (!parameters.length) {
+            return false;
+        }
+
         for (let i = 0; i < length; i++) {
             if (!func(parameters[i])) {
                 return false;
@@ -28,6 +32,10 @@ export var any = function(func) {
                 length,
                 parameters
             } = getParams(arguments);
+
+        if (!parameters.length) {
+            return false;
+        }
 
         for (let i = 0; i < length; i++) {
             if (func(parameters[i])) {

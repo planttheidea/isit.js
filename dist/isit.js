@@ -949,6 +949,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	        var length = _getParams.length;
 	        var parameters = _getParams.parameters;
 	
+	        if (!parameters.length) {
+	            return false;
+	        }
+	
 	        for (var i = 0; i < length; i++) {
 	            if (!func(parameters[i])) {
 	                return false;
@@ -966,6 +970,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	        var length = _getParams2.length;
 	        var parameters = _getParams2.parameters;
+	
+	        if (!parameters.length) {
+	            return false;
+	        }
 	
 	        for (var i = 0; i < length; i++) {
 	            if (func(parameters[i])) {
