@@ -290,9 +290,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _timeString2 = _interopRequireDefault(_timeString);
 	
-	var _ukPostalCode = __webpack_require__(56);
+	var _ukPostCode = __webpack_require__(56);
 	
-	var _ukPostalCode2 = _interopRequireDefault(_ukPostalCode);
+	var _ukPostCode2 = _interopRequireDefault(_ukPostCode);
 	
 	var _urlJs = __webpack_require__(57);
 	
@@ -690,7 +690,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	isit.setRegexp = _setRegexp2["default"].bind(isit);
 	isit.socialSecurityNumber = _socialSecurityNumber2["default"];
 	isit.timeString = _timeString2["default"];
-	isit.ukPostalCode = _ukPostalCode2["default"];
+	isit.ukPostCode = _ukPostCode2["default"];
 	isit.url = _urlJs2["default"];
 	isit.usZipCode = _usZipCode2["default"];
 	
@@ -1601,8 +1601,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.socialSecurityNumber = socialSecurityNumber;
 	var timeString = /^(2[0-3]|[01]?[0-9]):([0-5]?[0-9]):([0-5]?[0-9])$/;
 	exports.timeString = timeString;
-	var ukPostalCode = /^[A-Z]{1,2}[0-9RCHNQ][0-9A-Z]?\s?[0-9][ABD-HJLNP-UW-Z]{2}$|^[A-Z]{2}-?[0-9]{4}$/;
-	exports.ukPostalCode = ukPostalCode;
+	var ukPostCode = /^[A-Z]{1,2}[0-9RCHNQ][0-9A-Z]?\s?[0-9][ABD-HJLNP-UW-Z]{2}$|^[A-Z]{2}-?[0-9]{4}$/;
+	exports.ukPostCode = ukPostCode;
 	var url = /^(?:(?:https?|ftp):\/\/)?(?:(?!(?:10|127)(?:\.\d{1,3}){3})(?!(?:169\.254|192\.168)(?:\.\d{1,3}){2})(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)(?:\.(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,})))(?::\d{2,5})?(?:\/\S*)?$/i;
 	exports.url = url;
 	var usZipCode = /^[0-9]{5}(?:-[0-9]{4})?$/;
@@ -1629,7 +1629,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    nanpPhone: nanpPhone,
 	    socialSecurityNumber: socialSecurityNumber,
 	    timeString: timeString,
-	    ukPostalCode: ukPostalCode,
+	    ukPostCode: ukPostCode,
 	    url: url,
 	    usZipCode: usZipCode,
 	    whitespace: whitespace
@@ -2130,11 +2130,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports["default"] = isitCaPostalCode;
+	exports["default"] = isitCAPostalCode;
 	
 	var _regexps = __webpack_require__(26);
 	
-	function isitCaPostalCode(obj) {
+	function isitCAPostalCode(obj) {
 	    return _regexps.caPostalCode.test(obj);
 	}
 	
@@ -2420,12 +2420,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports["default"] = isitUkPostalCode;
+	exports["default"] = isitUKPostCode;
 	
 	var _regexps = __webpack_require__(26);
 	
-	function isitUkPostalCode(obj) {
-	    return _regexps.ukPostalCode.test(obj);
+	function isitUKPostCode(obj) {
+	    return _regexps.ukPostCode.test(obj);
 	}
 	
 	module.exports = exports["default"];
@@ -2463,11 +2463,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports["default"] = isitUsZipCode;
+	exports["default"] = isitUSZipCode;
 	
 	var _regexps = __webpack_require__(26);
 	
-	function isitUsZipCode(obj) {
+	function isitUSZipCode(obj) {
 	    return _regexps.usZipCode.test(obj);
 	}
 	
@@ -2951,6 +2951,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 75 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// is obj a jQuery object or jQuery itself?
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -4434,7 +4436,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports["default"] = isitIos;
+	exports["default"] = isitIOS;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
@@ -4450,7 +4452,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _ipod2 = _interopRequireDefault(_ipod);
 	
-	function isitIos() {
+	function isitIOS() {
 	    return (0, _ipad2["default"])() || (0, _iphone2["default"])() || (0, _ipod2["default"])();
 	}
 	

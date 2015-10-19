@@ -30,6 +30,11 @@ var isit = require("isitjs");
 import isitBoolean from "isitjs/lib/boolean";
 // or
 var isitArray = require("isitjs/lib/array");
+
+// you can even specify all / any / not modules
+import isitNotObject from "isitjs/lib/not.object";
+// or
+var isitAnyRegExp = require("isitjs/lib/any.regexp");
 ```
 
 Type checks
@@ -2663,7 +2668,7 @@ isit.not.quarterOfYear(secondQuarter, 1);
 => true
 ```
 
-isit.dayLightSavingTime(value:object, quarterNumber)
+isit.daylightSavingTime(value:object, quarterNumber)
 --------------------------------------------------
 ####Checks if the given date is in daylight saving time.
 interface: not
@@ -2673,13 +2678,13 @@ interface: not
 var january1 = new Date('01/01/2015');
 var june1 = new Date('06/01/2015');
 
-isit.dayLightSavingTime(june1);
+isit.daylightSavingTime(june1);
 => true
 
-isit.dayLightSavingTime(january1);
+isit.daylightSavingTime(january1);
 => false
 
-isit.not.dayLightSavingTime(january1);
+isit.not.daylightSavingTime(january1);
 => true
 ```
 

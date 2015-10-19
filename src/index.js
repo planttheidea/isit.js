@@ -123,7 +123,7 @@ isit.within.api = ["not"];
 
 import isitAffirmative from "./affirmative";
 import isitAlphaNumeric from "./alphaNumeric";
-import isitCaPostalCode from "./caPostalCode";
+import isitCAPostalCode from "./caPostalCode";
 import isitCreditCard from "./creditCard";
 import isitDateString from "./dateString";
 import isitEmail from "./email";
@@ -137,14 +137,14 @@ import isitIsoDateString from "./isoDateString";
 import isitNanpPhone from "./nanpPhone";
 import isitSocialSecurityNumber from "./socialSecurityNumber";
 import isitTimeString from "./timeString";
-import isitUkPostalCode from "./ukPostalCode";
+import isitUKPostCode from "./ukPostCode";
 import isitUrl from "./url.js"; // it doesn't like just "url"
-import isitUsZipCode from "./usZipCode";
+import isitUSZipCode from "./usZipCode";
 import setRegexp from "./setRegexp";
 
 isit.affirmative = isitAffirmative;
 isit.alphaNumeric = isitAlphaNumeric;
-isit.caPostalCode = isitCaPostalCode;
+isit.caPostalCode = isitCAPostalCode;
 isit.creditCard = isitCreditCard;
 isit.dateString = isitDateString;
 isit.email = isitEmail;
@@ -159,9 +159,9 @@ isit.nanpPhone = isitNanpPhone;
 isit.setRegexp = setRegexp.bind(isit);
 isit.socialSecurityNumber = isitSocialSecurityNumber;
 isit.timeString = isitTimeString;
-isit.ukPostalCode = isitUkPostalCode;
+isit.ukPostCode = isitUKPostCode;
 isit.url = isitUrl;
-isit.usZipCode = isitUsZipCode;
+isit.usZipCode = isitUSZipCode;
 
 // String checks
 /* -------------------------------------------------------------------------- */
@@ -301,7 +301,7 @@ import isitDesktop from "./desktop";
 import isitIe from "./ie";
 import isitFirefox from "./firefox";
 import isitGecko from "./gecko";
-import isitIos from "./ios";
+import isitIOS from "./ios";
 import isitIpad from "./ipad";
 import isitIphone from "./iphone";
 import isitIpod from "./ipod";
@@ -334,7 +334,7 @@ isit.desktop = isitDesktop;
 isit.firefox = isitFirefox;
 isit.gecko = isitGecko;
 isit.ie = isitIe;
-isit.ios = isitIos;
+isit.ios = isitIOS;
 isit.ipad = isitIpad;
 isit.iphone = isitIphone;
 isit.ipod = isitIpod;

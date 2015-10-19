@@ -2,6 +2,6 @@
 
 import {usZipCode} from "./_regexps";
 
-export default function isitUsZipCode(obj) {
+export default function isitUSZipCode(obj) {
     return usZipCode.test(obj);
 }

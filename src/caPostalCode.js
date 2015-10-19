@@ -2,6 +2,6 @@
 
 import {caPostalCode} from "./_regexps";
 
-export default function isitCaPostalCode(obj) {
+export default function isitCAPostalCode(obj) {
     return caPostalCode.test(obj);
 }

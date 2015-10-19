@@ -1,4 +1,4 @@
-
+// is obj a jQuery object or jQuery itself?
 
 import {not} from "./_interfaces";
 import isitFunction from "./function";
