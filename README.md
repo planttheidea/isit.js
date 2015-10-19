@@ -1379,7 +1379,7 @@ isit.html('div');
 isit.not.html('foo');
 => true
 
-isit.all.html('input type="text">', '<br/>');
+isit.all.html('<input type="text">', '<br/>');
 => true
 
 isit.any.html('<img src="happyKittens.jpg">', 'foo', '');
@@ -1755,6 +1755,33 @@ isit.any.jquery($, {nope: 'nope'});
 
 // 'all' and 'any' interfaces can also take array parameter
 isit.all.jquery([$, {nope: 'nope'}]);
+=> false
+```
+
+isit.domNodeList(value:object)
+-----------------------------
+####Checks if the given object is a dom NodeList.
+interfaces: not, all, any
+
+```javascript
+var obj = document.querySelectorAll('div');
+isit.domNodeList(obj);
+=> true
+
+isit.domNodeList({nope: 'nope'});
+=> false
+
+isit.not.domNodeList({});
+=> true
+
+isit.all.domNodeList(obj, document.querySelectorAll('span'));
+=> true
+
+isit.any.domNodeList(obj, {nope: 'nope'});
+=> true
+
+// 'all' and 'any' interfaces can also take array parameter
+isit.all.domNodeList([obj, {nope: 'nope'}]);
 => false
 ```
 
@@ -2355,7 +2382,7 @@ isit.all.future([yesterday, tomorrow]);
 
 isit.day(value:object, dayString)
 -------------------------------
-####Checks if the given date objects' day equal given dayString parameter.
+####Checks if the given date objects' day equal given dayString parameter. If not given, dayString defaults to current day.
 interface: not
 
 ```javascript
@@ -2373,7 +2400,7 @@ isit.not.day(mondayObj, 'tuesday');
 
 isit.month(value:object, monthString)
 -----------------------------------
-####Checks if the given date objects' month equal given monthString parameter.
+####Checks if the given date objects' month equal given monthString parameter. If not given, monthString defaults to current month.
 interface: not
 
 ```javascript
@@ -2391,7 +2418,7 @@ isit.not.month(februaryObj, 'january');
 
 isit.year(value:object, yearNumber)
 ---------------------------------
-####Checks if the given date objects' year equal given yearNumber parameter.
+####Checks if the given date objects' year equal given yearNumber parameter. If not given, yearNumber defaults to current year.
 interface: not
 
 ```javascript

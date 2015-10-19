@@ -3195,7 +3195,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _string2 = _interopRequireDefault(_string);
 	
+	var _undefined = __webpack_require__(20);
+	
+	var _undefined2 = _interopRequireDefault(_undefined);
+	
 	function isitDay(obj, dayString) {
+	    if ((0, _undefined2["default"])(dayString)) {
+	        dayString = _dateNames.days[new Date().getDay()];
+	    }
+	
 	    return (0, _date2["default"])(obj) && (0, _string2["default"])(dayString) && dayString.toLowerCase() === _dateNames.days[obj.getDay()];
 	}
 	
@@ -3440,7 +3448,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _string2 = _interopRequireDefault(_string);
 	
+	var _undefined = __webpack_require__(20);
+	
+	var _undefined2 = _interopRequireDefault(_undefined);
+	
 	function isitMonth(obj, monthString) {
+	    if ((0, _undefined2["default"])(monthString)) {
+	        monthString = _dateNames.months[new Date().getMonth()];
+	    }
+	
 	    return (0, _date2["default"])(obj) && (0, _string2["default"])(monthString) && monthString.toLowerCase() === _dateNames.months[obj.getMonth()];
 	}
 	
@@ -3723,8 +3739,24 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _number2 = _interopRequireDefault(_number);
 	
-	function isitYear(obj, year) {
-	    return (0, _date2["default"])(obj) && (0, _number2["default"])(year) && year === obj.getFullYear();
+	var _string = __webpack_require__(8);
+	
+	var _string2 = _interopRequireDefault(_string);
+	
+	var _undefined = __webpack_require__(20);
+	
+	var _undefined2 = _interopRequireDefault(_undefined);
+	
+	function isitYear(obj, yearNumber) {
+	    if ((0, _undefined2["default"])(yearNumber)) {
+	        yearNumber = new Date().getFullYear();
+	    }
+	
+	    if ((0, _string2["default"])(yearNumber)) {
+	        yearNumber = parseInt(yearNumber, 10);
+	    }
+	
+	    return (0, _date2["default"])(obj) && (0, _number2["default"])(yearNumber) && yearNumber === obj.getFullYear();
 	}
 	
 	module.exports = exports["default"];
