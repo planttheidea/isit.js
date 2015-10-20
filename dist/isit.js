@@ -154,19 +154,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _empty2 = _interopRequireDefault(_empty);
 	
-	var _existy = __webpack_require__(22);
+	var _existy = __webpack_require__(23);
 	
 	var _existy2 = _interopRequireDefault(_existy);
 	
-	var _falsy = __webpack_require__(23);
+	var _falsy = __webpack_require__(24);
 	
 	var _falsy2 = _interopRequireDefault(_falsy);
 	
-	var _truthy = __webpack_require__(24);
+	var _truthy = __webpack_require__(25);
 	
 	var _truthy2 = _interopRequireDefault(_truthy);
 	
-	var _whitespace = __webpack_require__(25);
+	var _whitespace = __webpack_require__(26);
 	
 	var _whitespace2 = _interopRequireDefault(_whitespace);
 	
@@ -1377,6 +1377,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
+	var _regexps = __webpack_require__(22);
+	
 	var _array = __webpack_require__(2);
 	
 	var _array2 = _interopRequireDefault(_array);
@@ -1404,108 +1406,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	        return num === 0 || num === 1 && _array2["default"](obj) || num === 2 && _arguments2["default"](obj);
 	    }
 	
-	    return obj === "" || _null2["default"](obj) || _undefined2["default"](obj);
+	    return _regexps.whitespace.test(obj) || _null2["default"](obj) || _undefined2["default"](obj);
 	}
 	
 	module.exports = exports["default"];
 
 /***/ },
 /* 22 */
-/***/ function(module, exports) {
-
-	// is obj not null and not undefined?
-	
-	"use strict";
-	
-	exports.__esModule = true;
-	exports["default"] = isitExisty;
-	
-	function isitExisty(obj) {
-	    return obj !== null && obj !== undefined;
-	}
-	
-	module.exports = exports["default"];
-
-/***/ },
-/* 23 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// is obj a falsy value?
-	// NOTE: matches language, returns true for undefined, null, 0, and ""
-	
-	"use strict";
-	
-	exports.__esModule = true;
-	exports["default"] = isitFalsy;
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-	
-	var _interfaces = __webpack_require__(3);
-	
-	var _truthy = __webpack_require__(24);
-	
-	var _truthy2 = _interopRequireDefault(_truthy);
-	
-	function isitFalsy(obj) {
-	    return _interfaces.not(_truthy2["default"])(obj);
-	}
-	
-	;
-	module.exports = exports["default"];
-
-/***/ },
-/* 24 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// is obj a truthy value?
-	// NOTE: matches the language, so valid values are objects, functions,
-	// arrays, strings with length, and integers greater than 0
-	
-	"use strict";
-	
-	exports.__esModule = true;
-	exports["default"] = isitTruthy;
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-	
-	var _interfaces = __webpack_require__(3);
-	
-	var _existy = __webpack_require__(22);
-	
-	var _existy2 = _interopRequireDefault(_existy);
-	
-	var _nanJs = __webpack_require__(13);
-	
-	var _nanJs2 = _interopRequireDefault(_nanJs);
-	
-	function isitTruthy(obj) {
-	    return _existy2["default"](obj) && obj !== false && _interfaces.not(_nanJs2["default"])(obj) && obj !== "" && obj !== 0;
-	}
-	
-	;
-	module.exports = exports["default"];
-
-/***/ },
-/* 25 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// is obj only whitespace?
-	
-	"use strict";
-	
-	exports.__esModule = true;
-	exports["default"] = isitWhitespace;
-	
-	var _regexps = __webpack_require__(26);
-	
-	function isitWhitespace(obj) {
-	    return _regexps.whitespace.test(obj);
-	}
-	
-	module.exports = exports["default"];
-
-/***/ },
-/* 26 */
 /***/ function(module, exports) {
 
 	// regex values to test a variety of values
@@ -1561,7 +1468,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.timeString = timeString;
 	var ukPostCode = /^[A-Z]{1,2}[0-9RCHNQ][0-9A-Z]?\s?[0-9][ABD-HJLNP-UW-Z]{2}$|^[A-Z]{2}-?[0-9]{4}$/;
 	exports.ukPostCode = ukPostCode;
-	var url = /^(?:(?:https?|ftp):\/\/)?(?:(?!(?:10|127)(?:\.\d{1,3}){3})(?!(?:169\.254|192\.168)(?:\.\d{1,3}){2})(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)(?:\.(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,})))(?::\d{2,5})?(?:\/\S*)?$/i;
+	var url = /^(([^:\/?#]+):)?(\/\/([^\/?#]*))?([^?#]*)(\?([^#]*))?(#(.*))?/;
 	exports.url = url;
 	var usZipCode = /^[0-9]{5}(?:-[0-9]{4})?$/;
 	exports.usZipCode = usZipCode;
@@ -1593,6 +1500,101 @@ return /******/ (function(modules) { // webpackBootstrap
 	    usZipCode: usZipCode,
 	    whitespace: whitespace
 	};
+
+/***/ },
+/* 23 */
+/***/ function(module, exports) {
+
+	// is obj not null and not undefined?
+	
+	"use strict";
+	
+	exports.__esModule = true;
+	exports["default"] = isitExisty;
+	
+	function isitExisty(obj) {
+	    return obj !== null && obj !== undefined;
+	}
+	
+	module.exports = exports["default"];
+
+/***/ },
+/* 24 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// is obj a falsy value?
+	// NOTE: matches language, returns true for undefined, null, 0, and ""
+	
+	"use strict";
+	
+	exports.__esModule = true;
+	exports["default"] = isitFalsy;
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+	
+	var _interfaces = __webpack_require__(3);
+	
+	var _truthy = __webpack_require__(25);
+	
+	var _truthy2 = _interopRequireDefault(_truthy);
+	
+	function isitFalsy(obj) {
+	    return _interfaces.not(_truthy2["default"])(obj);
+	}
+	
+	;
+	module.exports = exports["default"];
+
+/***/ },
+/* 25 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// is obj a truthy value?
+	// NOTE: matches the language, so valid values are objects, functions,
+	// arrays, strings with length, and integers greater than 0
+	
+	"use strict";
+	
+	exports.__esModule = true;
+	exports["default"] = isitTruthy;
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+	
+	var _interfaces = __webpack_require__(3);
+	
+	var _existy = __webpack_require__(23);
+	
+	var _existy2 = _interopRequireDefault(_existy);
+	
+	var _nanJs = __webpack_require__(13);
+	
+	var _nanJs2 = _interopRequireDefault(_nanJs);
+	
+	function isitTruthy(obj) {
+	    return _existy2["default"](obj) && obj !== false && _interfaces.not(_nanJs2["default"])(obj) && obj !== "" && obj !== 0;
+	}
+	
+	;
+	module.exports = exports["default"];
+
+/***/ },
+/* 26 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// is obj only whitespace?
+	
+	"use strict";
+	
+	exports.__esModule = true;
+	exports["default"] = isitWhitespace;
+	
+	var _regexps = __webpack_require__(22);
+	
+	function isitWhitespace(obj) {
+	    return _regexps.whitespace.test(obj);
+	}
+	
+	module.exports = exports["default"];
 
 /***/ },
 /* 27 */
@@ -2021,7 +2023,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.__esModule = true;
 	exports["default"] = isitAffirmative;
 	
-	var _regexps = __webpack_require__(26);
+	var _regexps = __webpack_require__(22);
 	
 	function isitAffirmative(obj) {
 	    return _regexps.affirmative.test(obj);
@@ -2040,7 +2042,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.__esModule = true;
 	exports["default"] = isitAlphaNumeric;
 	
-	var _regexps = __webpack_require__(26);
+	var _regexps = __webpack_require__(22);
 	
 	function isitAlphaNumeric(obj) {
 	    return _regexps.alphaNumeric.test(obj);
@@ -2059,7 +2061,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.__esModule = true;
 	exports["default"] = isitCAPostalCode;
 	
-	var _regexps = __webpack_require__(26);
+	var _regexps = __webpack_require__(22);
 	
 	function isitCAPostalCode(obj) {
 	    return _regexps.caPostalCode.test(obj);
@@ -2078,7 +2080,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.__esModule = true;
 	exports["default"] = isitCreditCard;
 	
-	var _regexps = __webpack_require__(26);
+	var _regexps = __webpack_require__(22);
 	
 	function isitCreditCard(obj) {
 	    return _regexps.creditCard.test(obj);
@@ -2097,7 +2099,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.__esModule = true;
 	exports["default"] = isitDateString;
 	
-	var _regexps = __webpack_require__(26);
+	var _regexps = __webpack_require__(22);
 	
 	function isitDateString(obj) {
 	    return _regexps.dateString.test(obj);
@@ -2116,7 +2118,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.__esModule = true;
 	exports["default"] = isitEmail;
 	
-	var _regexps = __webpack_require__(26);
+	var _regexps = __webpack_require__(22);
 	
 	function isitEmail(obj) {
 	    return _regexps.email.test(obj);
@@ -2133,7 +2135,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.__esModule = true;
 	exports["default"] = isitEppPhone;
 	
-	var _regexps = __webpack_require__(26);
+	var _regexps = __webpack_require__(22);
 	
 	function isitEppPhone(obj) {
 	    return _regexps.eppPhone.test(obj);
@@ -2152,7 +2154,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.__esModule = true;
 	exports["default"] = isitHexadecimal;
 	
-	var _regexps = __webpack_require__(26);
+	var _regexps = __webpack_require__(22);
 	
 	function isitHexadecimal(obj) {
 	    return _regexps.hexadecimal.test(obj);
@@ -2171,7 +2173,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.__esModule = true;
 	exports["default"] = isitHexColor;
 	
-	var _regexps = __webpack_require__(26);
+	var _regexps = __webpack_require__(22);
 	
 	function isitHexColor(obj) {
 	    return _regexps.hexColor.test(obj);
@@ -2190,7 +2192,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.__esModule = true;
 	exports["default"] = isitIp;
 	
-	var _regexps = __webpack_require__(26);
+	var _regexps = __webpack_require__(22);
 	
 	function isitIp(obj) {
 	    return _regexps.ip.test(obj);
@@ -2209,7 +2211,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.__esModule = true;
 	exports["default"] = isitIpv4;
 	
-	var _regexps = __webpack_require__(26);
+	var _regexps = __webpack_require__(22);
 	
 	function isitIpv4(obj) {
 	    return _regexps.ipv4.test(obj);
@@ -2228,7 +2230,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.__esModule = true;
 	exports["default"] = isitIpv6;
 	
-	var _regexps = __webpack_require__(26);
+	var _regexps = __webpack_require__(22);
 	
 	function isitIpv6(obj) {
 	    return _regexps.ipv6.test(obj);
@@ -2247,7 +2249,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.__esModule = true;
 	exports["default"] = isitISODateString;
 	
-	var _regexps = __webpack_require__(26);
+	var _regexps = __webpack_require__(22);
 	
 	function isitISODateString(obj) {
 	    return _regexps.isoDateString.test(obj);
@@ -2264,7 +2266,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.__esModule = true;
 	exports["default"] = isitNanpPhone;
 	
-	var _regexps = __webpack_require__(26);
+	var _regexps = __webpack_require__(22);
 	
 	function isitNanpPhone(obj) {
 	    return _regexps.nanpPhone.test(obj);
@@ -2283,7 +2285,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.__esModule = true;
 	exports["default"] = isitSocialSecurityNumber;
 	
-	var _regexps = __webpack_require__(26);
+	var _regexps = __webpack_require__(22);
 	
 	function isitSocialSecurityNumber(obj) {
 	    return _regexps.socialSecurityNumber.test(obj);
@@ -2302,7 +2304,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.__esModule = true;
 	exports["default"] = isitTimeString;
 	
-	var _regexps = __webpack_require__(26);
+	var _regexps = __webpack_require__(22);
 	
 	function isitTimeString(obj) {
 	    return _regexps.timeString.test(obj);
@@ -2321,7 +2323,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.__esModule = true;
 	exports["default"] = isitUKPostCode;
 	
-	var _regexps = __webpack_require__(26);
+	var _regexps = __webpack_require__(22);
 	
 	function isitUKPostCode(obj) {
 	    return _regexps.ukPostCode.test(obj);
@@ -2341,7 +2343,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.__esModule = true;
 	exports["default"] = isitUrl;
 	
-	var _regexps = __webpack_require__(26);
+	var _regexps = __webpack_require__(22);
 	
 	function isitUrl(obj) {
 	    return _regexps.url.test(obj);
@@ -2360,7 +2362,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.__esModule = true;
 	exports["default"] = isitUSZipCode;
 	
-	var _regexps = __webpack_require__(26);
+	var _regexps = __webpack_require__(22);
 	
 	function isitUSZipCode(obj) {
 	    return _regexps.usZipCode.test(obj);
@@ -2383,7 +2385,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _utils = __webpack_require__(1);
 	
-	var _regexps = __webpack_require__(26);
+	var _regexps = __webpack_require__(22);
 	
 	var _regexps2 = _interopRequireDefault(_regexps);
 	
@@ -2481,7 +2483,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.__esModule = true;
 	exports["default"] = isitDataUrl;
 	
-	var _regexps = __webpack_require__(26);
+	var _regexps = __webpack_require__(22);
 	
 	function isitDataUrl(obj) {
 	    return _regexps.dataUrl.test(obj);
@@ -2502,7 +2504,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
-	var _regexps = __webpack_require__(26);
+	var _regexps = __webpack_require__(22);
 	
 	var _string = __webpack_require__(8);
 	
@@ -2550,7 +2552,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
-	var _regexps = __webpack_require__(26);
+	var _regexps = __webpack_require__(22);
 	
 	var _string = __webpack_require__(8);
 	

@@ -133,13 +133,6 @@
             console.log(isit.not.ip("192.168.1.100") === false);
             console.groupEnd();
 
-            console.group("url");
-            console.log(isit.url("google.com") === true);
-            console.log(isit.not.url("//google.com") === false);
-            console.log(isit.url("google.com?id=111") === true);
-            console.log(isit.not.url("google.com ") === true);
-            console.groupEnd();
-
             console.group("capitalized");
             console.log(isit.capitalized("I Am Capitalized") === true);
             console.log(isit.not.capitalized("i am all lowercase") === true);
@@ -221,6 +214,18 @@
             console.log(isit.domNodeList(document.querySelectorAll("#test")) === true);
             console.log(isit.not.domNodeList(document.querySelectorAll("#test")) === false);
             console.groupEnd();
+
+            console.group("url");
+            console.log(isit.url("http://google.com") === true);
+            console.log(isit.url("https://google.com") === true);
+            console.log(isit.url("ftp://google.com") === true);
+            console.log(isit.url("http://localhost") === true);
+            console.log(isit.url("google.com") === true);
+            console.log(isit.not.url("//google.com") === false);
+            console.log(isit.url("google.com?id=111") === true);
+            console.log(isit.not.url("google.com ") === false);
+            console.groupEnd();
         </script>
     </body>
 </html>
+
