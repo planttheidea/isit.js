@@ -8,7 +8,7 @@ isit.js CHANGELOG
 
 ####1.2.4
 
-* Add isit.dataUrl() function (interfaces: all, any, not)
+* Add .dataUrl() function (interfaces: all, any, not)
 
 ####1.2.3
 
