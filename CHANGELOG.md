@@ -1,6 +1,11 @@
 isit.js CHANGELOG
 =====
 
+####1.2.6
+
+* Forgot to include standalone functions for all / any / not versions of .symbol()
+* Register with bower
+
 ####1.2.5
 
 * Modify URL regex to conform with Uniform Resource Identifier (URI) specification (attempt to fix issue 154 from is.js)

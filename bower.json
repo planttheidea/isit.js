@@ -1,8 +1,8 @@
 {
-  "author": "planttheidea",
-  "bugs": {
-    "url": "https://github.com/planttheidea/isit.js/issues"
-  },
+  "main": "lib",
+  "authors": [
+    "planttheidea"
+  ],
   "description": "micro check library",
   "devDependencies": {
     "babel": "^5.8.23",
@@ -21,6 +21,24 @@
     "webpack-dev-server": "^1.12.1"
   },
   "homepage": "https://github.com/planttheidea/isit.js",
+  "ignore": [
+    ".babelrc",
+    ".eslintrc",
+    ".gitignore",
+    ".npmignore",
+    "bower_components",
+    "node_modules",
+    "lib",
+    "server.js",
+    "src",
+    "webpack.*.js"
+  ],
+  "license": "MIT",
+  "main":[
+    "dist/isit.js",
+    "dist/isit.js.map",
+    "dist/isit.min;js"
+  ],
   "keywords": [
     "check",
     "is",
@@ -29,19 +47,9 @@
     "test",
     "validate"
   ],
-  "license": "MIT",
-  "main": "lib",
+  "moduleType": [
+    "amd"
+  ],
   "name": "isitjs",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/planttheidea/isit.js.git"
-  },
-  "scripts": {
-    "compile": "babel -d lib/ src/",
-    "dist": "npm run compile && npm run isit",
-    "isit": "webpack --progress --colors && webpack --progress --colors --config=webpack.config.minified.js",
-    "prepublish": "npm run compile",
-    "test": "webpack-dev-server --progress --colors"
-  },
   "version": "1.2.6"
 }
