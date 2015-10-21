@@ -1,5 +1,4 @@
 {
-  "main": "lib",
   "authors": [
     "planttheidea"
   ],
@@ -34,11 +33,6 @@
     "webpack.*.js"
   ],
   "license": "MIT",
-  "main":[
-    "dist/isit.js",
-    "dist/isit.js.map",
-    "dist/isit.min;js"
-  ],
   "keywords": [
     "check",
     "is",
@@ -47,8 +41,14 @@
     "test",
     "validate"
   ],
+  "main":[
+    "dist/isit.js",
+    "dist/isit.js.map"
+  ],
   "moduleType": [
-    "amd"
+    "amd",
+    "globals",
+    "node"
   ],
   "name": "isitjs",
   "version": "1.2.6"
