@@ -1,6 +1,10 @@
 isit.js CHANGELOG
 =====
 
+####1.2.7
+
+* Add .plainObject() function (interfaces: all, any, not) (issue 142 from is.js)
+
 ####1.2.6
 
 * Forgot to include standalone functions for all / any / not versions of .symbol()

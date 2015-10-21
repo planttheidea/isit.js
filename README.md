@@ -1816,6 +1816,32 @@ isit.all.domNodeList([obj, {nope: 'nope'}]);
 => false
 ```
 
+isit.plainObject(value:object)
+-----------------------------
+####Checks if the given object is a plain JavaScript object.
+interfaces: not, all, any
+
+```javascript
+isit.plainObject({});
+=> true
+
+isit.plainObject(new SomeConstructor());
+=> false
+
+isit.not.plainObject(new SomeConstructor());
+=> true
+
+isit.all.plainObject({some:"object"}, document.querySelector('#dom-node'));
+=> false
+
+isit.all.plainObject({some:"object"}, document.querySelector('#dom-node'));
+=> true
+
+// 'all' and 'any' interfaces can also take array parameter
+isit.all.plainObject([{some:"object"}, document.querySelector('#dom-node')]);
+=> false
+```
+
 Array checks
 ============
 

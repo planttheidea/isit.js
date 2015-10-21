@@ -380,240 +380,244 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _jquery2 = _interopRequireDefault(_jquery);
 	
-	var _propertyCount = __webpack_require__(77);
+	var _plainObject = __webpack_require__(77);
+	
+	var _plainObject2 = _interopRequireDefault(_plainObject);
+	
+	var _propertyCount = __webpack_require__(78);
 	
 	var _propertyCount2 = _interopRequireDefault(_propertyCount);
 	
-	var _propertyDefined = __webpack_require__(78);
+	var _propertyDefined = __webpack_require__(79);
 	
 	var _propertyDefined2 = _interopRequireDefault(_propertyDefined);
 	
-	var _windowObject = __webpack_require__(79);
+	var _windowObject = __webpack_require__(80);
 	
 	var _windowObject2 = _interopRequireDefault(_windowObject);
 	
 	// Array checks
 	/* -------------------------------------------------------------------------- */
 	
-	var _inArray = __webpack_require__(80);
+	var _inArray = __webpack_require__(81);
 	
 	var _inArray2 = _interopRequireDefault(_inArray);
 	
-	var _sorted = __webpack_require__(81);
+	var _sorted = __webpack_require__(82);
 	
 	var _sorted2 = _interopRequireDefault(_sorted);
 	
 	// Date checks
 	/* -------------------------------------------------------------------------- */
 	
-	var _day = __webpack_require__(82);
+	var _day = __webpack_require__(83);
 	
 	var _day2 = _interopRequireDefault(_day);
 	
-	var _daylightSavingTime = __webpack_require__(84);
+	var _daylightSavingTime = __webpack_require__(85);
 	
 	var _daylightSavingTime2 = _interopRequireDefault(_daylightSavingTime);
 	
-	var _future = __webpack_require__(85);
+	var _future = __webpack_require__(86);
 	
 	var _future2 = _interopRequireDefault(_future);
 	
-	var _inDateRange = __webpack_require__(86);
+	var _inDateRange = __webpack_require__(87);
 	
 	var _inDateRange2 = _interopRequireDefault(_inDateRange);
 	
-	var _inLastMonth = __webpack_require__(87);
+	var _inLastMonth = __webpack_require__(88);
 	
 	var _inLastMonth2 = _interopRequireDefault(_inLastMonth);
 	
-	var _inLastWeek = __webpack_require__(88);
+	var _inLastWeek = __webpack_require__(89);
 	
 	var _inLastWeek2 = _interopRequireDefault(_inLastWeek);
 	
-	var _inLastYear = __webpack_require__(89);
+	var _inLastYear = __webpack_require__(90);
 	
 	var _inLastYear2 = _interopRequireDefault(_inLastYear);
 	
-	var _leapYear = __webpack_require__(90);
+	var _leapYear = __webpack_require__(91);
 	
 	var _leapYear2 = _interopRequireDefault(_leapYear);
 	
-	var _month = __webpack_require__(91);
+	var _month = __webpack_require__(92);
 	
 	var _month2 = _interopRequireDefault(_month);
 	
-	var _inNextMonth = __webpack_require__(92);
+	var _inNextMonth = __webpack_require__(93);
 	
 	var _inNextMonth2 = _interopRequireDefault(_inNextMonth);
 	
-	var _inNextWeek = __webpack_require__(93);
+	var _inNextWeek = __webpack_require__(94);
 	
 	var _inNextWeek2 = _interopRequireDefault(_inNextWeek);
 	
-	var _inNextYear = __webpack_require__(94);
+	var _inNextYear = __webpack_require__(95);
 	
 	var _inNextYear2 = _interopRequireDefault(_inNextYear);
 	
-	var _past = __webpack_require__(95);
+	var _past = __webpack_require__(96);
 	
 	var _past2 = _interopRequireDefault(_past);
 	
-	var _quarterOfYear = __webpack_require__(96);
+	var _quarterOfYear = __webpack_require__(97);
 	
 	var _quarterOfYear2 = _interopRequireDefault(_quarterOfYear);
 	
-	var _today = __webpack_require__(97);
+	var _today = __webpack_require__(98);
 	
 	var _today2 = _interopRequireDefault(_today);
 	
-	var _tomorrow = __webpack_require__(98);
+	var _tomorrow = __webpack_require__(99);
 	
 	var _tomorrow2 = _interopRequireDefault(_tomorrow);
 	
-	var _weekday = __webpack_require__(99);
+	var _weekday = __webpack_require__(100);
 	
 	var _weekday2 = _interopRequireDefault(_weekday);
 	
-	var _weekend = __webpack_require__(100);
+	var _weekend = __webpack_require__(101);
 	
 	var _weekend2 = _interopRequireDefault(_weekend);
 	
-	var _year = __webpack_require__(101);
+	var _year = __webpack_require__(102);
 	
 	var _year2 = _interopRequireDefault(_year);
 	
-	var _yesterday = __webpack_require__(102);
+	var _yesterday = __webpack_require__(103);
 	
 	var _yesterday2 = _interopRequireDefault(_yesterday);
 	
 	// Environment checks
 	/* -------------------------------------------------------------------------- */
 	
-	var _android = __webpack_require__(103);
+	var _android = __webpack_require__(104);
 	
 	var _android2 = _interopRequireDefault(_android);
 	
-	var _androidPhone = __webpack_require__(106);
+	var _androidPhone = __webpack_require__(107);
 	
 	var _androidPhone2 = _interopRequireDefault(_androidPhone);
 	
-	var _androidTablet = __webpack_require__(107);
+	var _androidTablet = __webpack_require__(108);
 	
 	var _androidTablet2 = _interopRequireDefault(_androidTablet);
 	
-	var _blackberry = __webpack_require__(108);
+	var _blackberry = __webpack_require__(109);
 	
 	var _blackberry2 = _interopRequireDefault(_blackberry);
 	
-	var _blink = __webpack_require__(109);
+	var _blink = __webpack_require__(110);
 	
 	var _blink2 = _interopRequireDefault(_blink);
 	
-	var _browser = __webpack_require__(105);
+	var _browser = __webpack_require__(106);
 	
 	var _browser2 = _interopRequireDefault(_browser);
 	
-	var _chrome = __webpack_require__(110);
+	var _chrome = __webpack_require__(111);
 	
 	var _chrome2 = _interopRequireDefault(_chrome);
 	
-	var _desktop = __webpack_require__(111);
+	var _desktop = __webpack_require__(112);
 	
 	var _desktop2 = _interopRequireDefault(_desktop);
 	
-	var _ie = __webpack_require__(120);
+	var _ie = __webpack_require__(121);
 	
 	var _ie2 = _interopRequireDefault(_ie);
 	
-	var _firefox = __webpack_require__(121);
+	var _firefox = __webpack_require__(122);
 	
 	var _firefox2 = _interopRequireDefault(_firefox);
 	
-	var _gecko = __webpack_require__(122);
+	var _gecko = __webpack_require__(123);
 	
 	var _gecko2 = _interopRequireDefault(_gecko);
 	
-	var _ios = __webpack_require__(123);
+	var _ios = __webpack_require__(124);
 	
 	var _ios2 = _interopRequireDefault(_ios);
 	
-	var _ipad = __webpack_require__(118);
+	var _ipad = __webpack_require__(119);
 	
 	var _ipad2 = _interopRequireDefault(_ipad);
 	
-	var _iphone = __webpack_require__(113);
+	var _iphone = __webpack_require__(114);
 	
 	var _iphone2 = _interopRequireDefault(_iphone);
 	
-	var _ipod = __webpack_require__(114);
+	var _ipod = __webpack_require__(115);
 	
 	var _ipod2 = _interopRequireDefault(_ipod);
 	
-	var _linux = __webpack_require__(124);
+	var _linux = __webpack_require__(125);
 	
 	var _linux2 = _interopRequireDefault(_linux);
 	
-	var _mac = __webpack_require__(125);
+	var _mac = __webpack_require__(126);
 	
 	var _mac2 = _interopRequireDefault(_mac);
 	
-	var _mobile = __webpack_require__(112);
+	var _mobile = __webpack_require__(113);
 	
 	var _mobile2 = _interopRequireDefault(_mobile);
 	
-	var _node = __webpack_require__(126);
+	var _node = __webpack_require__(127);
 	
 	var _node2 = _interopRequireDefault(_node);
 	
-	var _offline = __webpack_require__(127);
+	var _offline = __webpack_require__(128);
 	
 	var _offline2 = _interopRequireDefault(_offline);
 	
-	var _online = __webpack_require__(128);
+	var _online = __webpack_require__(129);
 	
 	var _online2 = _interopRequireDefault(_online);
 	
-	var _opera = __webpack_require__(129);
+	var _opera = __webpack_require__(130);
 	
 	var _opera2 = _interopRequireDefault(_opera);
 	
-	var _presto = __webpack_require__(130);
+	var _presto = __webpack_require__(131);
 	
 	var _presto2 = _interopRequireDefault(_presto);
 	
-	var _retina = __webpack_require__(131);
+	var _retina = __webpack_require__(132);
 	
 	var _retina2 = _interopRequireDefault(_retina);
 	
-	var _safari = __webpack_require__(132);
+	var _safari = __webpack_require__(133);
 	
 	var _safari2 = _interopRequireDefault(_safari);
 	
-	var _tablet = __webpack_require__(117);
+	var _tablet = __webpack_require__(118);
 	
 	var _tablet2 = _interopRequireDefault(_tablet);
 	
-	var _touchDevice = __webpack_require__(133);
+	var _touchDevice = __webpack_require__(134);
 	
 	var _touchDevice2 = _interopRequireDefault(_touchDevice);
 	
-	var _trident = __webpack_require__(134);
+	var _trident = __webpack_require__(135);
 	
 	var _trident2 = _interopRequireDefault(_trident);
 	
-	var _webkit = __webpack_require__(135);
+	var _webkit = __webpack_require__(136);
 	
 	var _webkit2 = _interopRequireDefault(_webkit);
 	
-	var _windows = __webpack_require__(116);
+	var _windows = __webpack_require__(117);
 	
 	var _windows2 = _interopRequireDefault(_windows);
 	
-	var _windowsPhone = __webpack_require__(115);
+	var _windowsPhone = __webpack_require__(116);
 	
 	var _windowsPhone2 = _interopRequireDefault(_windowsPhone);
 	
-	var _windowsTablet = __webpack_require__(119);
+	var _windowsTablet = __webpack_require__(120);
 	
 	var _windowsTablet2 = _interopRequireDefault(_windowsTablet);
 	
@@ -716,6 +720,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	isit.domNode = _domNode2["default"];
 	isit.domNodeList = _domNodeList2["default"];
 	isit.jquery = _jquery2["default"];
+	isit.plainObject = _plainObject2["default"];
 	isit.propertyCount = _propertyCount2["default"];
 	isit.propertyDefined = _propertyDefined2["default"];
 	isit.windowObject = _windowObject2["default"];
@@ -2874,6 +2879,49 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 77 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// is obj a plain object?
+	
+	"use strict";
+	
+	exports.__esModule = true;
+	exports["default"] = isitPlainObject;
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+	
+	var _interfaces = __webpack_require__(3);
+	
+	var _function = __webpack_require__(11);
+	
+	var _function2 = _interopRequireDefault(_function);
+	
+	var _null = __webpack_require__(5);
+	
+	var _null2 = _interopRequireDefault(_null);
+	
+	var _object = __webpack_require__(15);
+	
+	var _object2 = _interopRequireDefault(_object);
+	
+	function isitPlainObject(obj) {
+	    if (_null2["default"](obj) || _interfaces.not(_object2["default"])(obj)) {
+	        return false;
+	    }
+	
+	    if (_function2["default"](Object.getPrototypeOf)) {
+	        var proto = Object.getPrototypeOf(obj);
+	
+	        return proto === Object.prototype || _null2["default"](proto);
+	    }
+	
+	    return _interfaces.not(_function2["default"])(obj);
+	}
+	
+	module.exports = exports["default"];
+
+/***/ },
+/* 78 */
+/***/ function(module, exports, __webpack_require__) {
+
 	// is obj an object value, and do the number of properties in that object match count
 	
 	"use strict";
@@ -2917,7 +2965,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 78 */
+/* 79 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// is obj an object and does prop exist as a key in it?
@@ -2944,7 +2992,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 79 */
+/* 80 */
 /***/ function(module, exports) {
 
 	// is obj the window object?
@@ -2961,7 +3009,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 80 */
+/* 81 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// is arr an array, and does obj exist in it?
@@ -2990,7 +3038,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 81 */
+/* 82 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// is arr an array that is sorted either ascending or descending?
@@ -3043,7 +3091,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 82 */
+/* 83 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// is obj a date value and does it match the day string?
@@ -3055,7 +3103,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
-	var _dateNames = __webpack_require__(83);
+	var _dateNames = __webpack_require__(84);
 	
 	var _date = __webpack_require__(9);
 	
@@ -3080,7 +3128,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 83 */
+/* 84 */
 /***/ function(module, exports) {
 
 	// days and months used for various date comparisons
@@ -3100,7 +3148,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 /***/ },
-/* 84 */
+/* 85 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// is obj a date and does it's timezone use daylight saving time?
@@ -3131,7 +3179,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 85 */
+/* 86 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// is obj in the future compared to now?
@@ -3154,7 +3202,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 86 */
+/* 87 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// are obj, startObj, and endObj all date values, and does obj exist in the range created by
@@ -3186,7 +3234,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 87 */
+/* 88 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// is obj in the last month compared to now?
@@ -3198,7 +3246,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
-	var _inDateRange = __webpack_require__(86);
+	var _inDateRange = __webpack_require__(87);
 	
 	var _inDateRange2 = _interopRequireDefault(_inDateRange);
 	
@@ -3209,7 +3257,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 88 */
+/* 89 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// is obj in the last week compared to now?
@@ -3221,7 +3269,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
-	var _inDateRange = __webpack_require__(86);
+	var _inDateRange = __webpack_require__(87);
 	
 	var _inDateRange2 = _interopRequireDefault(_inDateRange);
 	
@@ -3232,7 +3280,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 89 */
+/* 90 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// is obj in the last year compared to now?
@@ -3244,7 +3292,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
-	var _inDateRange = __webpack_require__(86);
+	var _inDateRange = __webpack_require__(87);
 	
 	var _inDateRange2 = _interopRequireDefault(_inDateRange);
 	
@@ -3255,7 +3303,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 90 */
+/* 91 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// is obj a number and a valid leap year?
@@ -3278,7 +3326,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 91 */
+/* 92 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// is obj a date, and does it match monthString?
@@ -3290,7 +3338,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
-	var _dateNames = __webpack_require__(83);
+	var _dateNames = __webpack_require__(84);
 	
 	var _date = __webpack_require__(9);
 	
@@ -3315,7 +3363,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 92 */
+/* 93 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// is obj in the next month compared to now?
@@ -3327,7 +3375,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
-	var _inDateRange = __webpack_require__(86);
+	var _inDateRange = __webpack_require__(87);
 	
 	var _inDateRange2 = _interopRequireDefault(_inDateRange);
 	
@@ -3338,7 +3386,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 93 */
+/* 94 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// is obj in the next week compared to now?
@@ -3350,7 +3398,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
-	var _inDateRange = __webpack_require__(86);
+	var _inDateRange = __webpack_require__(87);
 	
 	var _inDateRange2 = _interopRequireDefault(_inDateRange);
 	
@@ -3361,7 +3409,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 94 */
+/* 95 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// is obj in the next year compared to now?
@@ -3373,7 +3421,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
-	var _inDateRange = __webpack_require__(86);
+	var _inDateRange = __webpack_require__(87);
 	
 	var _inDateRange2 = _interopRequireDefault(_inDateRange);
 	
@@ -3384,7 +3432,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 95 */
+/* 96 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// is obj in the past compared to now?
@@ -3407,7 +3455,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 96 */
+/* 97 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// is obj a date and is it in quarter quarterNumber?
@@ -3434,7 +3482,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 97 */
+/* 98 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// is obj a date and is it the same as today?
@@ -3457,7 +3505,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 98 */
+/* 99 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// is obj a date and is it tomorrow?
@@ -3489,7 +3537,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 99 */
+/* 100 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// is obj a date and a weekday?
@@ -3520,7 +3568,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 100 */
+/* 101 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// is obj a date and a weekend day?
@@ -3551,7 +3599,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 101 */
+/* 102 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// is obj a date and year a number, and is obj in year year?
@@ -3594,7 +3642,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 102 */
+/* 103 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// is obj a date and is it yesterday?
@@ -3620,7 +3668,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 103 */
+/* 104 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// does the device used run on android?
@@ -3632,11 +3680,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
-	var _navigator = __webpack_require__(104);
+	var _navigator = __webpack_require__(105);
 	
 	var _navigator2 = _interopRequireDefault(_navigator);
 	
-	var _browser = __webpack_require__(105);
+	var _browser = __webpack_require__(106);
 	
 	var _browser2 = _interopRequireDefault(_browser);
 	
@@ -3647,7 +3695,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 104 */
+/* 105 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// navigator info from browser, captured once
@@ -3658,7 +3706,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
-	var _browser = __webpack_require__(105);
+	var _browser = __webpack_require__(106);
 	
 	var _browser2 = _interopRequireDefault(_browser);
 	
@@ -3676,7 +3724,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 105 */
+/* 106 */
 /***/ function(module, exports) {
 
 	// is the environment a browser?
@@ -3693,7 +3741,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 106 */
+/* 107 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// is the device used an android phone?
@@ -3705,11 +3753,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
-	var _navigator = __webpack_require__(104);
+	var _navigator = __webpack_require__(105);
 	
 	var _navigator2 = _interopRequireDefault(_navigator);
 	
-	var _browser = __webpack_require__(105);
+	var _browser = __webpack_require__(106);
 	
 	var _browser2 = _interopRequireDefault(_browser);
 	
@@ -3722,7 +3770,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 107 */
+/* 108 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// is the device used an android tablet?
@@ -3734,11 +3782,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
-	var _navigator = __webpack_require__(104);
+	var _navigator = __webpack_require__(105);
 	
 	var _navigator2 = _interopRequireDefault(_navigator);
 	
-	var _browser = __webpack_require__(105);
+	var _browser = __webpack_require__(106);
 	
 	var _browser2 = _interopRequireDefault(_browser);
 	
@@ -3751,7 +3799,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 108 */
+/* 109 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// is the device used a blackberry phone?
@@ -3763,11 +3811,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
-	var _navigator = __webpack_require__(104);
+	var _navigator = __webpack_require__(105);
 	
 	var _navigator2 = _interopRequireDefault(_navigator);
 	
-	var _browser = __webpack_require__(105);
+	var _browser = __webpack_require__(106);
 	
 	var _browser2 = _interopRequireDefault(_browser);
 	
@@ -3778,7 +3826,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 109 */
+/* 110 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// does the browser used render via blink?
@@ -3790,11 +3838,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
-	var _navigator = __webpack_require__(104);
+	var _navigator = __webpack_require__(105);
 	
 	var _navigator2 = _interopRequireDefault(_navigator);
 	
-	var _browser = __webpack_require__(105);
+	var _browser = __webpack_require__(106);
 	
 	var _browser2 = _interopRequireDefault(_browser);
 	
@@ -3805,7 +3853,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 110 */
+/* 111 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// is the browser used chrome?
@@ -3817,11 +3865,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
-	var _navigator = __webpack_require__(104);
+	var _navigator = __webpack_require__(105);
 	
 	var _navigator2 = _interopRequireDefault(_navigator);
 	
-	var _browser = __webpack_require__(105);
+	var _browser = __webpack_require__(106);
 	
 	var _browser2 = _interopRequireDefault(_browser);
 	
@@ -3832,7 +3880,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 111 */
+/* 112 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// is the device used a desktop / laptop computer?
@@ -3844,15 +3892,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
-	var _browser = __webpack_require__(105);
+	var _browser = __webpack_require__(106);
 	
 	var _browser2 = _interopRequireDefault(_browser);
 	
-	var _mobile = __webpack_require__(112);
+	var _mobile = __webpack_require__(113);
 	
 	var _mobile2 = _interopRequireDefault(_mobile);
 	
-	var _tablet = __webpack_require__(117);
+	var _tablet = __webpack_require__(118);
 	
 	var _tablet2 = _interopRequireDefault(_tablet);
 	
@@ -3863,7 +3911,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 112 */
+/* 113 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// is the device used a mobile phone?
@@ -3875,27 +3923,27 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
-	var _androidPhone = __webpack_require__(106);
+	var _androidPhone = __webpack_require__(107);
 	
 	var _androidPhone2 = _interopRequireDefault(_androidPhone);
 	
-	var _blackberry = __webpack_require__(108);
+	var _blackberry = __webpack_require__(109);
 	
 	var _blackberry2 = _interopRequireDefault(_blackberry);
 	
-	var _browser = __webpack_require__(105);
+	var _browser = __webpack_require__(106);
 	
 	var _browser2 = _interopRequireDefault(_browser);
 	
-	var _iphone = __webpack_require__(113);
+	var _iphone = __webpack_require__(114);
 	
 	var _iphone2 = _interopRequireDefault(_iphone);
 	
-	var _ipod = __webpack_require__(114);
+	var _ipod = __webpack_require__(115);
 	
 	var _ipod2 = _interopRequireDefault(_ipod);
 	
-	var _windowsPhone = __webpack_require__(115);
+	var _windowsPhone = __webpack_require__(116);
 	
 	var _windowsPhone2 = _interopRequireDefault(_windowsPhone);
 	
@@ -3906,7 +3954,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 113 */
+/* 114 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// is the device used an iPhone?
@@ -3918,11 +3966,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
-	var _navigator = __webpack_require__(104);
+	var _navigator = __webpack_require__(105);
 	
 	var _navigator2 = _interopRequireDefault(_navigator);
 	
-	var _browser = __webpack_require__(105);
+	var _browser = __webpack_require__(106);
 	
 	var _browser2 = _interopRequireDefault(_browser);
 	
@@ -3933,7 +3981,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 114 */
+/* 115 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// is the device used an iPod?
@@ -3945,11 +3993,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
-	var _navigator = __webpack_require__(104);
+	var _navigator = __webpack_require__(105);
 	
 	var _navigator2 = _interopRequireDefault(_navigator);
 	
-	var _browser = __webpack_require__(105);
+	var _browser = __webpack_require__(106);
 	
 	var _browser2 = _interopRequireDefault(_browser);
 	
@@ -3960,7 +4008,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 115 */
+/* 116 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// is the device used a mobile phone running on Windows?
@@ -3972,15 +4020,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
-	var _navigator = __webpack_require__(104);
+	var _navigator = __webpack_require__(105);
 	
 	var _navigator2 = _interopRequireDefault(_navigator);
 	
-	var _browser = __webpack_require__(105);
+	var _browser = __webpack_require__(106);
 	
 	var _browser2 = _interopRequireDefault(_browser);
 	
-	var _windows = __webpack_require__(116);
+	var _windows = __webpack_require__(117);
 	
 	var _windows2 = _interopRequireDefault(_windows);
 	
@@ -3991,7 +4039,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 116 */
+/* 117 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// is the device used running on Windows?
@@ -4003,11 +4051,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
-	var _navigator = __webpack_require__(104);
+	var _navigator = __webpack_require__(105);
 	
 	var _navigator2 = _interopRequireDefault(_navigator);
 	
-	var _browser = __webpack_require__(105);
+	var _browser = __webpack_require__(106);
 	
 	var _browser2 = _interopRequireDefault(_browser);
 	
@@ -4018,7 +4066,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 117 */
+/* 118 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// is the device used a tablet?
@@ -4030,19 +4078,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
-	var _androidTablet = __webpack_require__(107);
+	var _androidTablet = __webpack_require__(108);
 	
 	var _androidTablet2 = _interopRequireDefault(_androidTablet);
 	
-	var _browser = __webpack_require__(105);
+	var _browser = __webpack_require__(106);
 	
 	var _browser2 = _interopRequireDefault(_browser);
 	
-	var _ipad = __webpack_require__(118);
+	var _ipad = __webpack_require__(119);
 	
 	var _ipad2 = _interopRequireDefault(_ipad);
 	
-	var _windowsTablet = __webpack_require__(119);
+	var _windowsTablet = __webpack_require__(120);
 	
 	var _windowsTablet2 = _interopRequireDefault(_windowsTablet);
 	
@@ -4053,7 +4101,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 118 */
+/* 119 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// is the device used an iPad?
@@ -4065,11 +4113,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
-	var _navigator = __webpack_require__(104);
+	var _navigator = __webpack_require__(105);
 	
 	var _navigator2 = _interopRequireDefault(_navigator);
 	
-	var _browser = __webpack_require__(105);
+	var _browser = __webpack_require__(106);
 	
 	var _browser2 = _interopRequireDefault(_browser);
 	
@@ -4080,7 +4128,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 119 */
+/* 120 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// is the device used a tablet running on Windows?
@@ -4094,19 +4142,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _interfaces = __webpack_require__(3);
 	
-	var _navigator = __webpack_require__(104);
+	var _navigator = __webpack_require__(105);
 	
 	var _navigator2 = _interopRequireDefault(_navigator);
 	
-	var _browser = __webpack_require__(105);
+	var _browser = __webpack_require__(106);
 	
 	var _browser2 = _interopRequireDefault(_browser);
 	
-	var _windows = __webpack_require__(116);
+	var _windows = __webpack_require__(117);
 	
 	var _windows2 = _interopRequireDefault(_windows);
 	
-	var _windowsPhone = __webpack_require__(115);
+	var _windowsPhone = __webpack_require__(116);
 	
 	var _windowsPhone2 = _interopRequireDefault(_windowsPhone);
 	
@@ -4117,7 +4165,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 120 */
+/* 121 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// is the browser used Internet Explorer?
@@ -4132,11 +4180,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _interfaces = __webpack_require__(3);
 	
-	var _navigator = __webpack_require__(104);
+	var _navigator = __webpack_require__(105);
 	
 	var _navigator2 = _interopRequireDefault(_navigator);
 	
-	var _browser = __webpack_require__(105);
+	var _browser = __webpack_require__(106);
 	
 	var _browser2 = _interopRequireDefault(_browser);
 	
@@ -4160,7 +4208,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 121 */
+/* 122 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// is the browser used firefox?
@@ -4172,11 +4220,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
-	var _navigator = __webpack_require__(104);
+	var _navigator = __webpack_require__(105);
 	
 	var _navigator2 = _interopRequireDefault(_navigator);
 	
-	var _browser = __webpack_require__(105);
+	var _browser = __webpack_require__(106);
 	
 	var _browser2 = _interopRequireDefault(_browser);
 	
@@ -4187,7 +4235,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 122 */
+/* 123 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// does the browser used render via gecko?
@@ -4199,11 +4247,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
-	var _navigator = __webpack_require__(104);
+	var _navigator = __webpack_require__(105);
 	
 	var _navigator2 = _interopRequireDefault(_navigator);
 	
-	var _browser = __webpack_require__(105);
+	var _browser = __webpack_require__(106);
 	
 	var _browser2 = _interopRequireDefault(_browser);
 	
@@ -4214,7 +4262,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 123 */
+/* 124 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// is the device used running on iOS?
@@ -4226,15 +4274,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
-	var _ipad = __webpack_require__(118);
+	var _ipad = __webpack_require__(119);
 	
 	var _ipad2 = _interopRequireDefault(_ipad);
 	
-	var _iphone = __webpack_require__(113);
+	var _iphone = __webpack_require__(114);
 	
 	var _iphone2 = _interopRequireDefault(_iphone);
 	
-	var _ipod = __webpack_require__(114);
+	var _ipod = __webpack_require__(115);
 	
 	var _ipod2 = _interopRequireDefault(_ipod);
 	
@@ -4245,7 +4293,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 124 */
+/* 125 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// is the device used running on Linux?
@@ -4257,11 +4305,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
-	var _navigator = __webpack_require__(104);
+	var _navigator = __webpack_require__(105);
 	
 	var _navigator2 = _interopRequireDefault(_navigator);
 	
-	var _browser = __webpack_require__(105);
+	var _browser = __webpack_require__(106);
 	
 	var _browser2 = _interopRequireDefault(_browser);
 	
@@ -4272,7 +4320,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 125 */
+/* 126 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// is the device used a Mac?
@@ -4284,11 +4332,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
-	var _navigator = __webpack_require__(104);
+	var _navigator = __webpack_require__(105);
 	
 	var _navigator2 = _interopRequireDefault(_navigator);
 	
-	var _browser = __webpack_require__(105);
+	var _browser = __webpack_require__(106);
 	
 	var _browser2 = _interopRequireDefault(_browser);
 	
@@ -4299,7 +4347,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 126 */
+/* 127 */
 /***/ function(module, exports) {
 
 	// is the environment not a browser (meaning its likely server-side, or NodeJS)?
@@ -4316,7 +4364,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 127 */
+/* 128 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -4326,7 +4374,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
-	var _online = __webpack_require__(128);
+	var _online = __webpack_require__(129);
 	
 	var _online2 = _interopRequireDefault(_online);
 	
@@ -4337,7 +4385,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 128 */
+/* 129 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -4347,7 +4395,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
-	var _browser = __webpack_require__(105);
+	var _browser = __webpack_require__(106);
 	
 	var _browser2 = _interopRequireDefault(_browser);
 	
@@ -4358,7 +4406,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 129 */
+/* 130 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// is the browser used Opera?
@@ -4370,11 +4418,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
-	var _navigator = __webpack_require__(104);
+	var _navigator = __webpack_require__(105);
 	
 	var _navigator2 = _interopRequireDefault(_navigator);
 	
-	var _browser = __webpack_require__(105);
+	var _browser = __webpack_require__(106);
 	
 	var _browser2 = _interopRequireDefault(_browser);
 	
@@ -4385,7 +4433,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 130 */
+/* 131 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// does the browser used render via Presto?
@@ -4397,11 +4445,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
-	var _navigator = __webpack_require__(104);
+	var _navigator = __webpack_require__(105);
 	
 	var _navigator2 = _interopRequireDefault(_navigator);
 	
-	var _browser = __webpack_require__(105);
+	var _browser = __webpack_require__(106);
 	
 	var _browser2 = _interopRequireDefault(_browser);
 	
@@ -4412,7 +4460,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 131 */
+/* 132 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// does the device used have a retina screen?
@@ -4424,7 +4472,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
-	var _browser = __webpack_require__(105);
+	var _browser = __webpack_require__(106);
 	
 	var _browser2 = _interopRequireDefault(_browser);
 	
@@ -4439,7 +4487,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 132 */
+/* 133 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// is the browser used Safari?
@@ -4451,11 +4499,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
-	var _navigator = __webpack_require__(104);
+	var _navigator = __webpack_require__(105);
 	
 	var _navigator2 = _interopRequireDefault(_navigator);
 	
-	var _browser = __webpack_require__(105);
+	var _browser = __webpack_require__(106);
 	
 	var _browser2 = _interopRequireDefault(_browser);
 	
@@ -4466,7 +4514,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 133 */
+/* 134 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// is the device used a touch device?
@@ -4478,7 +4526,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
-	var _browser = __webpack_require__(105);
+	var _browser = __webpack_require__(106);
 	
 	var _browser2 = _interopRequireDefault(_browser);
 	
@@ -4491,7 +4539,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 134 */
+/* 135 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// does the browser used render via Trident?
@@ -4503,11 +4551,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
-	var _navigator = __webpack_require__(104);
+	var _navigator = __webpack_require__(105);
 	
 	var _navigator2 = _interopRequireDefault(_navigator);
 	
-	var _browser = __webpack_require__(105);
+	var _browser = __webpack_require__(106);
 	
 	var _browser2 = _interopRequireDefault(_browser);
 	
@@ -4518,7 +4566,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 135 */
+/* 136 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// does the browser used render via WebKit?
@@ -4530,11 +4578,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
-	var _navigator = __webpack_require__(104);
+	var _navigator = __webpack_require__(105);
 	
 	var _navigator2 = _interopRequireDefault(_navigator);
 	
-	var _browser = __webpack_require__(105);
+	var _browser = __webpack_require__(106);
 	
 	var _browser2 = _interopRequireDefault(_browser);
 	
