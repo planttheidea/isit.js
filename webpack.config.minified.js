@@ -11,8 +11,12 @@ var webpack = require("webpack"),
                 drop_console:true,
                 drop_debugger:true,
                 join_vars:true,
+                screw_ie8:true,
                 unused:true,
                 warnings:false
+            },
+            mangle:{
+                screw_ie8:true
             },
             sourceMap:false
         })

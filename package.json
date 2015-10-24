@@ -43,5 +43,5 @@
     "prepublish": "npm run compile",
     "test": "webpack-dev-server --progress --colors"
   },
-  "version": "1.2.7"
+  "version": "1.2.8"
 }
