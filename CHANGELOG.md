@@ -1,6 +1,11 @@
 isit.js CHANGELOG
 =====
 
+####1.2.8
+
+* Add instructions on how to create custom build in README
+* Add screw_ie8 option to UglifyJS (reduces minified file size by 0.6kb)
+
 ####1.2.7
 
 * Add .plainObject() function (interfaces: all, any, not) (issue 142 from is.js)
