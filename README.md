@@ -37,6 +37,20 @@ import isitNotObject from "isitjs/lib/not.object";
 var isitAnyRegExp = require("isitjs/lib/any.regexp");
 ```
 
+####Custom build:
+
+1. Clone repo:
+2. Delete files in src/ that your project does not need (you can delete lib/ if your want too, it's not used for this)
+3. Run the dist script:
+4. Profit! You'll now have a development version of your build (isit.js, with source map) and production version (isit.min.js) in your dist/ folder
+
+```
+git clone git@github.com:planttheidea/isit.js.git
+cd isit.js
+rm -rf [files you don't want]
+npm run dist
+```
+
 Type checks
 ===========
 
