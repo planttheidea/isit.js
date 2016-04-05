@@ -39,17 +39,13 @@ export const isitDomNodeList = (object) => {
  * @returns {boolean}
  */
 export const isitJquery = (object) => {
-    if (!isitObject(object)) {
-        return false;
-    }
-
     if (isitFunction(object)) {
         const $object = object();
 
         return isitObject($object) && !!$object.jquery;
     }
 
-    return object instanceof jQuery;
+    return !!Object.getPrototypeOf(object).jquery;
 };
 
 /**

@@ -107,12 +107,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } } /**
-	                                                                                                                                                                                                     * @todo
-	                                                                                                                                                                                                     *  - Check functions to make sure no improvements exist
-	                                                                                                                                                                                                     *  - JSDoc regexp
-	                                                                                                                                                                                                     *  - Test all the things
-	                                                                                                                                                                                                     */
+	function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
 	
 	/**
 	 * Get exclude all the multi-parameter functions and all environment functions
@@ -1285,17 +1280,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * @returns {boolean}
 	 */
 	var isitJquery = exports.isitJquery = function isitJquery(object) {
-	    if (!(0, _type.isitObject)(object)) {
-	        return false;
-	    }
-	
 	    if ((0, _type.isitFunction)(object)) {
 	        var $object = object();
 	
 	        return (0, _type.isitObject)($object) && !!$object.jquery;
 	    }
 	
-	    return object instanceof jQuery;
+	    return !!Object.getPrototypeOf(object).jquery;
 	};
 	
 	/**

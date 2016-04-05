@@ -77,7 +77,7 @@ test('isitJquery', (t) => {
     t.equal(isit.any.jquery($, div), true);
     t.equal(isit.any.jquery('jquery', div), false);
     t.equal(isit.not.jquery(div), true);
-    t.equal(isit.not.jquery($div), true);
+    t.equal(isit.not.jquery($div), false);
 });
 
 test('isPropertyCount', (t) => {
