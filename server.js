@@ -1,20 +1,27 @@
-var express = require("express"),
-    path = require("path"),
-    PORT = 3000,
-    app = express(),
-    server;
+// create express app
+var express = require("express");
+var app = express();
+var server = require("http").createServer(app);
 
-app.get("/*.js", function(request, response) {
-    response.sendFile(path.resolve("lib", request.url.slice(1)));
+// defaults
+process.env.HOSTNAME = process.env.NODE_ENV === "production" ? "some.nice.url" : "localhost";
+process.env.PORT = 3000;
+process.env.WEBPACK_PORT = 4000;
+
+// app defaults
+app.set("views", __dirname + "/views");
+app.set("view engine", "ejs");
+
+// direct routes
+app.get("*", function(req, res) {
+    res.render("index")
 });
 
-app.get("/", function(request, response) {
-    response.sendFile(path.resolve("test/index.html"));
-});
+// listen
+server.listen(process.env.PORT, function (err) {
+    if (err) {
+        console.log(err);
+    }
 
-server = app.listen(PORT, function() {
-    var host = server.address().address;
-    var port = server.address().port;
-
-    console.log("Server started, listening on port %s", PORT);
+    console.log("Listening on port " + process.env.PORT);
 });
