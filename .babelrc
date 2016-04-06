@@ -1,4 +1,15 @@
 {
-    "loose":"all",
-    "stage":0
+    "plugins":[
+        ["typecheck", {
+            "disable": {
+                "development": true,
+                "production": true
+            }
+        }],
+        "add-module-exports"
+    ],
+    "presets":[
+        "es2015",
+        "stage-0"
+    ]
 }

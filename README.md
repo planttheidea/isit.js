@@ -9,13 +9,13 @@ isit.js
  
 **Note**
 
-The origin of this project was the wonderful work done by arasatasaygin at [is.js](https://github.com/arasatasaygin/is.js). I noticed there has hasn't been work on it in months, and the issues are growing, so I originally just did a fork of the work. From there I rearchitected the collection to be a modular setup that is more ES2015-driven. I have also made minor tweaks and bugfixes based on the backlog in is.js, but mainly I hope to grow it from here. Ideally these modules will be available independently, much in the way lodash provides their modules on npm.
+The origin of this project was the wonderful work done by arasatasaygin at [is.js](https://github.com/arasatasaygin/is.js), and should be a drop-in replacement for it (outside renaming of is to isit). I noticed there has hasn't been work on it in months, and the issues are growing, so I originally just did a fork of the work. From there I rearchitected the library to be a modular setup that is ES2015-driven and has complete test coverage. I have also made minor tweaks and bugfixes based on the backlog in is.js, but mainly I hope to grow it from here.
 
 ####Install:
 
 Node.js:
 ```
-npm install isitjs
+npm i isitjs --save
 ```
 
 ####Usage:
@@ -26,18 +26,20 @@ import isit from "isitjs";
 // CommonJS
 var isit = require("isitjs");
 
-// if you just want specific modules
-import isitBoolean from "isitjs/lib/boolean";
+// if you just want specific categories
+import isitType from "isit/lib/type";
 // or
-var isitArray = require("isitjs/lib/array");
+var isitType from require("isit/lib/type").default;
 
-// you can even specify all / any / not modules
-import isitNotObject from "isitjs/lib/not.object";
+// if you just want specific modules
+import {
+    isitBoolean // all functions are named the same, just with "isit" in front and made camelCase
+} from "isitjs/lib/type";
 // or
-var isitAnyRegExp = require("isitjs/lib/any.regexp");
+var isitBoolean = require("isitjs/lib/type").isitBoolean;
 ```
 
-####Custom build:
+#### Custom build:
 
 1. Clone repo:
 2. Delete files in src/ that your project does not need (you can delete lib/ if your want too, it's not used for this)
@@ -2768,4 +2770,4 @@ isit.url('https://www.duckduckgo.com');
 isit.setRegexp(/quack/, 'url');
 isit.url('quack');
 => true
-```
+```=

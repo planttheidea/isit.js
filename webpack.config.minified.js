@@ -1,5 +1,5 @@
 var webpack = require("webpack"),
-    merge = require("lodash.merge"),
+    assign = require("object-assign"),
     defaultConfig = require("./webpack.config"),
     productionPlugins = [
         new webpack.optimize.DedupePlugin(),
@@ -22,24 +22,16 @@ var webpack = require("webpack"),
         })
     ];
 
-defaultConfig.plugins.forEach(function(plugin) {
-    productionPlugins.unshift(plugin);
-});
-
-productionPlugins[0] = new webpack.DefinePlugin({
-    isProduction:true
-});
-
 delete defaultConfig.devtool;
 
-module.exports = merge(defaultConfig, {
-    cache:false,
+module.exports = assign(defaultConfig, {
+    cache: false,
 
-    debug:false,
+    debug: false,
 
-    output:merge(defaultConfig.output, {
+    output: assign(defaultConfig.output, {
         filename:"isit.min.js"
     }),
 
-    plugins:productionPlugins
+    plugins: defaultConfig.plugins.concat(productionPlugins)
 });
