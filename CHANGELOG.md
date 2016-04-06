@@ -1,42 +1,46 @@
 isit.js CHANGELOG
-=====
+=================
 
-####1.2.8
+#### 2.0.0
+* Refactor to have lesser footprint (~40% smaller) and have a simplified codebase
+* Write unit tests in tape for better code coverage
+
+#### 1.2.8
 
 * Add instructions on how to create custom build in README
 * Add screw_ie8 option to UglifyJS (reduces minified file size by 0.6kb)
 
-####1.2.7
+#### 1.2.7
 
 * Add .plainObject() function (interfaces: all, any, not) (issue 142 from is.js)
 
-####1.2.6
+#### 1.2.6
 
 * Forgot to include standalone functions for all / any / not versions of .symbol()
 * Register with bower
 
-####1.2.5
+#### 1.2.5
 
 * Modify URL regex to conform with Uniform Resource Identifier (URI) specification (attempt to fix issue 154 from is.js)
 * Add CHANGELOG
 
-####1.2.4
+#### 1.2.4
 
 * Add .dataUrl() function (interfaces: all, any, not)
 
-####1.2.3
+#### 1.2.3
 
 * Return false on all and any function calls that have no parameters
 
-####1.2.2
+#### 1.2.2
 
 * Add loose=all parameter to .babelrc, reducing code size by 10%
 
-####1.2.1
+#### 1.2.1
 
 * Remove unnecessary separate webpack compilation for all, any, and not versions
 
-####1.2.0
+#### 1.2.0
 
 * Added unique instances for all, any, and not versions of functions
 
