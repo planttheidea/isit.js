@@ -142,7 +142,7 @@ export const isitEven = (object) => {
  * @returns {boolean}
  */
 export const isitFinite = (object) => {
-    return object !== Infinity && object !== -Infinity && !isitNaN(object);
+    return object !== Number.POSITIVE_INFINITY && object !== Number.NEGATIVE_INFINITY && !isitNaN(object);
 };
 
 /**

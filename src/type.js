@@ -217,5 +217,5 @@ export default {
     sameType: isitSameType,
     string: isitString,
     symbol: isitSymbol,
-    undefined: isitUndefined
+    'undefined': isitUndefined
 };

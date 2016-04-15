@@ -352,7 +352,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * @returns {boolean}
 	 */
 	var isitFinite = exports.isitFinite = function isitFinite(object) {
-	    return object !== Infinity && object !== -Infinity && !(0, _type.isitNaN)(object);
+	    return object !== Number.POSITIVE_INFINITY && object !== Number.NEGATIVE_INFINITY && !(0, _type.isitNaN)(object);
 	};
 	
 	/**
@@ -684,7 +684,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    sameType: isitSameType,
 	    string: isitString,
 	    symbol: isitSymbol,
-	    undefined: isitUndefined
+	    'undefined': isitUndefined
 	};
 
 /***/ },
