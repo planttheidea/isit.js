@@ -1,6 +1,9 @@
 isit.js CHANGELOG
 =================
 
+#### 2.1.2
+* Restore ability to use array argument for any / all functions
+
 #### 2.1.1
 * Remove views folder from NPM publish
 
