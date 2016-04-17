@@ -1,6 +1,14 @@
 isit.js CHANGELOG
 =================
 
+#### 2.1.0
+* Return isitSorted to checking for both ascending and descending orders (feature)
+* Use Number.POSITIVE_INFINITY / NEGATIVE_INFINITY instead of Infinity / -Infinity in isitFinite to prevent overwritability in ES3 environments (bugfix)
+* Escape isitUndefined key declaration in type.js (bugfix)
+* Include fallback in isitLinux to check for Unix-like enviroment (bugfix)
+* Fix endWith / endsWith to use lastIndexOf (bugfix)
+* Update NPM packages (maintenance)
+
 #### 2.0.0
 * Refactor to have lesser footprint (~40% smaller) and have a simplified codebase
 * Write unit tests in tape for better code coverage
