@@ -7,8 +7,7 @@
   "extends": "eslint:recommended",
   "globals":{
     "jQuery": true,
-    "process": true,
-    "WorkerGlobalScope"
+    "process": true
   },
   "parser":"babel-eslint",
   "parserOptions": {
