@@ -1,9 +1,32 @@
 import {
-    isitEqual
-} from './arithmetic';
-import {
     isitArray
 } from './type';
+
+const checkSortedAsc = (array) => {
+    for (let index = 0, length = array.length; index < length; index++) {
+        const current = array[index];
+        const next = array[index + 1];
+
+        if (typeof next !== 'undefined' && current > next) {
+            return false;
+        }
+    }
+
+    return true;
+};
+
+const checkSortedDesc = (array) => {
+    for (let index = array.length; index--;) {
+        const current = array[index];
+        const next = array[index - 1];
+
+        if (typeof next !== 'undefined' && current > next) {
+            return false;
+        }
+    }
+
+    return true;
+};
 
 /**
  * Checks to see if item exists as a value in
@@ -32,7 +55,7 @@ export const isitSorted = (object) => {
     
     shallowClone.sort();
     
-    return isitEqual(object, shallowClone);
+    return checkSortedAsc(object, shallowClone) || checkSortedDesc(object, shallowClone);
 };
 
 /**

@@ -195,7 +195,7 @@ export const isitEndWith = (object, endingString) => {
         return false;
     }
 
-    const index = object.indexOf(endingString);
+    const index = object.lastIndexOf(endingString);
 
     return index !== -1 && index === object.length - endingString.length;
 };

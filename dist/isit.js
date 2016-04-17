@@ -698,11 +698,35 @@ return /******/ (function(modules) { // webpackBootstrap
 	});
 	exports.multiParamFunctions = exports.isitSorted = exports.isitInArray = undefined;
 	
-	var _arithmetic = __webpack_require__(2);
-	
 	var _type = __webpack_require__(3);
 	
 	function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
+	
+	var checkSortedAsc = function checkSortedAsc(array) {
+	    for (var index = 0, length = array.length; index < length; index++) {
+	        var current = array[index];
+	        var next = array[index + 1];
+	
+	        if (typeof next !== 'undefined' && current > next) {
+	            return false;
+	        }
+	    }
+	
+	    return true;
+	};
+	
+	var checkSortedDesc = function checkSortedDesc(array) {
+	    for (var index = array.length; index--;) {
+	        var current = array[index];
+	        var next = array[index - 1];
+	
+	        if (typeof next !== 'undefined' && current > next) {
+	            return false;
+	        }
+	    }
+	
+	    return true;
+	};
 	
 	/**
 	 * Checks to see if item exists as a value in
@@ -731,7 +755,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	    shallowClone.sort();
 	
-	    return (0, _arithmetic.isitEqual)(object, shallowClone);
+	    return checkSortedAsc(object, shallowClone) || checkSortedDesc(object, shallowClone);
 	};
 	
 	/**
@@ -805,6 +829,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var SAFARI_REGEXP = /safari/i;
 	var TOUCH_REGEXP = /touch/i;
 	var TRIDENT_REGEXP = /trident/i;
+	var UNIX_REGEXP = /X11/;
 	var WIN_REGEXP = /win/i;
 	var WINDOWS_NT_REGEXP = /windows nt/i;
 	
@@ -1017,7 +1042,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var isitLinux = exports.isitLinux = function isitLinux() {
 	  var appVersion = arguments.length <= 0 || arguments[0] === undefined ? APP_VERSION : arguments[0];
 	
-	  return LINUX_REGEXP.test(appVersion);
+	  return LINUX_REGEXP.test(appVersion) || UNIX_REGEXP.test(appVersion);
 	};
 	
 	/**
@@ -1953,7 +1978,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        return false;
 	    }
 	
-	    var index = object.indexOf(endingString);
+	    var index = object.lastIndexOf(endingString);
 	
 	    return index !== -1 && index === object.length - endingString.length;
 	};

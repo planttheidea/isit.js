@@ -18,12 +18,13 @@ test('isitInArray', (t) => {
 });
 
 test('isitSorted', (t) => {
-    t.plan(9);
+    t.plan(10);
 
     testTypeOf(t, 'sorted');
 
     t.equal(isit.sorted([1, 2, 3]), true);
     t.equal(isit.sorted([3, 1, 2]), false);
+    t.equal(isit.sorted([3, 2, 1]), true);
 
     t.equal(isit.all.sorted([1, 2, 3], [4, 5, 6]), true);
     t.equal(isit.all.sorted([1, 2, 3], [6, 4, 5]), false);
