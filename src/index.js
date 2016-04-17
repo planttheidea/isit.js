@@ -16,7 +16,9 @@ import string, {
 import time, {
     multiParamFunctions as timeFunctions
 } from './time';
-import type from './type';
+import type, {
+  isitArray
+} from './type';
 
 /**
  * Get exclude all the multi-parameter functions and all environment functions
@@ -34,6 +36,21 @@ const noAllOrAnyFunctions = [
 ];
 
 /**
+ * If parameters is an array with a single item, and the first item is itself an array,
+ * return the array item, else return the array itself
+ * 
+ * @param {Array} parameters
+ * @returns {Array}
+ */
+const getAnyAllObjectParameters = (parameters) => {
+  if (parameters.length === 1 && isitArray(parameters[0])) {
+    return parameters[0];
+  }
+
+  return parameters;
+};
+
+/**
  * Check if all arguments passed return true to function it relates to
  *
  * @param {Function} func
@@ -41,6 +58,8 @@ const noAllOrAnyFunctions = [
  */
 const isitAll = (func) => {
     return (...objects) => {
+        objects = getAnyAllObjectParameters(objects);
+
         for (let index = 0, length = objects.length; index < length; index++) {
             if (!func(objects[index])) {
                 return false;
@@ -59,7 +78,9 @@ const isitAll = (func) => {
  */
 const isitAny = (func) => {
     return (...objects) => {
-        for (let index = 0, length = objects.length; index < length; index++) {
+      objects = getAnyAllObjectParameters(objects);
+
+      for (let index = 0, length = objects.length; index < length; index++) {
             if (func(objects[index])) {
                 return true;
             }

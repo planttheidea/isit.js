@@ -55,5 +55,5 @@
     "test": "browserify -t babelify test/index.js | tape-run",
     "transpile": "./node_modules/babel-cli/bin/babel.js -d lib/ src/"
   },
-  "version": "2.1.1"
+  "version": "2.1.2"
 }

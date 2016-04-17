@@ -118,6 +118,21 @@ return /******/ (function(modules) { // webpackBootstrap
 	})), _toConsumableArray(_object.multiParamFunctions), _toConsumableArray(_string.multiParamFunctions), _toConsumableArray(_time.multiParamFunctions));
 	
 	/**
+	 * If parameters is an array with a single item, and the first item is itself an array,
+	 * return the array item, else return the array itself
+	 * 
+	 * @param {Array} parameters
+	 * @returns {Array}
+	 */
+	var getAnyAllObjectParameters = function getAnyAllObjectParameters(parameters) {
+	    if (parameters.length === 1 && (0, _type.isitArray)(parameters[0])) {
+	        return parameters[0];
+	    }
+	
+	    return parameters;
+	};
+	
+	/**
 	 * Check if all arguments passed return true to function it relates to
 	 *
 	 * @param {Function} func
@@ -128,6 +143,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	        for (var _len = arguments.length, objects = Array(_len), _key = 0; _key < _len; _key++) {
 	            objects[_key] = arguments[_key];
 	        }
+	
+	        objects = getAnyAllObjectParameters(objects);
 	
 	        for (var index = 0, length = objects.length; index < length; index++) {
 	            if (!func(objects[index])) {
@@ -150,6 +167,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	        for (var _len2 = arguments.length, objects = Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
 	            objects[_key2] = arguments[_key2];
 	        }
+	
+	        objects = getAnyAllObjectParameters(objects);
 	
 	        for (var index = 0, length = objects.length; index < length; index++) {
 	            if (func(objects[index])) {
