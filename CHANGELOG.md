@@ -1,6 +1,9 @@
 isit.js CHANGELOG
 =================
 
+#### 2.1.1
+* Remove views folder from NPM publish
+
 #### 2.1.0
 * Return isitSorted to checking for both ascending and descending orders (feature)
 * Use Number.POSITIVE_INFINITY / NEGATIVE_INFINITY instead of Infinity / -Infinity in isitFinite to prevent overwritability in ES3 environments (bugfix)

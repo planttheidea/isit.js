@@ -1,9 +1,9 @@
 .idea/
 dist/
 node_modules/
-old-src/
 src/
 test/
+views/
 .babelrc
 .eslintrc
 .gitignore
