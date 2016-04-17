@@ -42,17 +42,7 @@ var isitBoolean = require("isitjs/lib/type").isitBoolean;
 
 #### Custom build:
 
-1. Clone repo:
-2. Delete files in src/ that your project does not need (you can delete lib/ if your want too, it's not used for this)
-3. Run the dist script:
-4. Profit! You'll now have a development version of your build (isit.js, with source map) and production version (isit.min.js) in your dist/ folder
-
-```
-git clone git@github.com:planttheidea/isit.js.git
-cd isit.js
-rm -rf [files you don't want]
-npm run dist
-```
+TBD ... this feature was janky from the beginning and may no longer be needed with the modular setup. To do it right will take some time, so I'll wait to hear from the community before I invest the time to build it.
 
 Type checks
 ===========
