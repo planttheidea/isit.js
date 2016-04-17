@@ -6,7 +6,7 @@ isit.js
 ####This is a general-purpose check library.
 - No dependencies
 - AMD, Node & browser ready
-- Supports all ES5 and above environments (IE8 and below with [es5-shim](https://github.com/es-shims/es5-shim)
+- Supports all ES5 and above environments (IE8 and below with [es5-shim](https://github.com/es-shims/es5-shim))
  
 **Note**
 
