@@ -50,6 +50,7 @@ const RV11_REGEXP = /rv:11/;
 const SAFARI_REGEXP = /safari/i;
 const TOUCH_REGEXP = /touch/i;
 const TRIDENT_REGEXP = /trident/i;
+const UNIX_REGEXP = /X11/;
 const WIN_REGEXP = /win/i;
 const WINDOWS_NT_REGEXP = /windows nt/i;
 
@@ -231,7 +232,7 @@ export const isitIpod = (userAgent = USER_AGENT) => {
  * @returns {boolean}
  */
 export const isitLinux = (appVersion = APP_VERSION) => {
-    return LINUX_REGEXP.test(appVersion);
+    return LINUX_REGEXP.test(appVersion) || UNIX_REGEXP.test(appVersion);
 };
 
 /**

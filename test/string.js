@@ -48,7 +48,7 @@ test('isitCapitalized', (t) => {
 });
 
 test('isitEndWith', (t) => {
-    t.plan(11);
+    t.plan(12);
     
     testTypeOf(t, 'endWith');
 
@@ -60,13 +60,14 @@ test('isitEndWith', (t) => {
     t.equal(isit.endWith('some string', 'str'), false);
     t.equal(isit.endWith('some string', 'some'), false);
     t.equal(isit.endWith('some string', 'nope'), false);
+    t.equal(isit.endWith('some xxx string x', 'x'), true);
 
     t.equal(isit.not.endWith('some string', 'some'), true);
     t.equal(isit.not.endWith('some string', 'string'), false);
 });
 
 test('isitEndsWith', (t) => {
-    t.plan(11);
+    t.plan(12);
 
     testTypeOf(t, 'endsWith');
 
@@ -78,6 +79,7 @@ test('isitEndsWith', (t) => {
     t.equal(isit.endsWith('some string', 'str'), false);
     t.equal(isit.endsWith('some string', 'some'), false);
     t.equal(isit.endsWith('some string', 'nope'), false);
+    t.equal(isit.endsWith('some xxx string x', 'x'), true);
 
     t.equal(isit.not.endsWith('some string', 'some'), true);
     t.equal(isit.not.endsWith('some string', 'string'), false);
