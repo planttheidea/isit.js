@@ -6,6 +6,9 @@ import {
     isitString
 } from './type';
 
+const DATA_URL_REGEXP = /^\s*data:([a-z]+\/[a-z]+(;[a-z\-]+\=[a-z\-]+)?)?(;base64)?,[a-z0-9\!\$\&\'\,\(\)\*\+\,\;\=\-\.\_\~\:\@\/\?\%\s]*\s*$/i;
+const DOUBLE_BYTE_REGEXP = /[^\u0000-\u00ff]/;
+const HTML_REGEXP = /<(\"[^\"]*\"|'[^']*'|[^'\">])*>/;
 
 /**
  * All necessary values for computation of getArrayOfWords is taken from lodash,
@@ -184,6 +187,26 @@ export const isitCapitalized = (object) => {
 };
 
 /**
+ * Checks to see if object is a valid data url
+ *
+ * @param {any} object
+ * @returns {boolean}
+ */
+export const isitDataUrl = (object) => {
+    return DATA_URL_REGEXP.test(object);
+};
+
+/**
+ * Checks to see if object is a double byte integer
+ *
+ * @param {any} object
+ * @returns {boolean}
+ */
+export const isitDoubleByte = (object) => {
+    return DOUBLE_BYTE_REGEXP.test(object);
+};
+
+/**
  * Checks if string object ends with the string value endingString
  *
  * @param {any} object
@@ -204,6 +227,16 @@ export const isitEndWith = (object, endingString) => {
  * Alias function for endWith
  */
 export const isitEndsWith = isitEndWith;
+
+/**
+ * Checks to see if object is valid HTML
+ *
+ * @param {any} object
+ * @returns {boolean}
+ */
+export const isitHtml = (object) => {
+    return HTML_REGEXP.test(object);
+};
 
 /**
  * Checks if string object has the string value substring contained
@@ -322,8 +355,11 @@ export const multiParamFunctions = [
 export default {
     camelCase: isitCamelCase,
     capitalized: isitCapitalized,
+    dataUrl: isitDataUrl,
+    doubleByte: isitDoubleByte,
     endWith: isitEndWith,
     endsWith: isitEndsWith,
+    html: isitHtml,
     include: isitInclude,
     includes: isitIncludes,
     kebabCase: isitKebabCase,

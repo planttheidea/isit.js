@@ -47,6 +47,31 @@ test('isitCapitalized', (t) => {
     t.equal(isit.not.capitalized('Words'), false);
 });
 
+test('isitDataUrl', (t) => {
+    t.plan(9);
+
+    testTypeOf(t, 'dataUrl');
+
+    t.equal(isit.dataUrl('data url'), false);
+    t.equal(isit.dataUrl('data:image/gif;base64,R0lGODlhEAAOALMAAOazToeHh0tLS/7LZv/0jvb29t/f3//Ub//ge8WSLf/rhf/3kdbW1mxsbP//mf///yH5BAAAAAAALAAAAAAQAA4AAARe8L1Ekyky67QZ1hLnjM5UUde0ECwLJoExKcppV0aCcGCmTIHEIUEqjgaORCMxIC6e0CcguWw6aFjsVMkkIr7g77ZKPJjPZqIyd7sJAgVGoEGv2xsBxqNgYPj/gAwXEQA7'), true);
+
+    t.equal(isit.all.dataUrl('data:image/gif;base64,R0lGODlhEAAOALMAAOazToeHh0tLS/7LZv/0jvb29t/f3//Ub//ge8WSLf/rhf/3kdbW1mxsbP//mf///yH5BAAAAAAALAAAAAAQAA4AAARe8L1Ekyky67QZ1hLnjM5UUde0ECwLJoExKcppV0aCcGCmTIHEIUEqjgaORCMxIC6e0CcguWw6aFjsVMkkIr7g77ZKPJjPZqIyd7sJAgVGoEGv2xsBxqNgYPj/gAwXEQA7'), true);
+    t.equal(isit.all.dataUrl('123'), false);
+    t.equal(isit.any.dataUrl('data:image/gif;base64,R0lGODlhEAAOALMAAOazToeHh0tLS/7LZv/0jvb29t/f3//Ub//ge8WSLf/rhf/3kdbW1mxsbP//mf///yH5BAAAAAAALAAAAAAQAA4AAARe8L1Ekyky67QZ1hLnjM5UUde0ECwLJoExKcppV0aCcGCmTIHEIUEqjgaORCMxIC6e0CcguWw6aFjsVMkkIr7g77ZKPJjPZqIyd7sJAgVGoEGv2xsBxqNgYPj/gAwXEQA7'), true);
+    t.equal(isit.any.dataUrl('123'), false);
+    t.equal(isit.not.dataUrl('123'), true);
+    t.equal(isit.not.dataUrl('data:image/gif;base64,R0lGODlhEAAOALMAAOazToeHh0tLS/7LZv/0jvb29t/f3//Ub//ge8WSLf/rhf/3kdbW1mxsbP//mf///yH5BAAAAAAALAAAAAAQAA4AAARe8L1Ekyky67QZ1hLnjM5UUde0ECwLJoExKcppV0aCcGCmTIHEIUEqjgaORCMxIC6e0CcguWw6aFjsVMkkIr7g77ZKPJjPZqIyd7sJAgVGoEGv2xsBxqNgYPj/gAwXEQA7'), false);
+});
+
+test('isitDoubleByte', (t) => {
+    t.plan(1);
+
+    testTypeOf(t, 'doubleByte');
+    /**
+     * @todo create doubleByte tests
+     */
+});
+
 test('isitEndWith', (t) => {
     t.plan(12);
     
@@ -83,6 +108,24 @@ test('isitEndsWith', (t) => {
 
     t.equal(isit.not.endsWith('some string', 'some'), true);
     t.equal(isit.not.endsWith('some string', 'string'), false);
+});
+
+test('isitHtml', (t) => {
+    t.plan(11);
+
+    testTypeOf(t, 'html');
+
+    t.equal(isit.html('test'), false);
+    t.equal(isit.html('<div>test</div>'), true);
+    t.equal(isit.html('<img src="test.jpg"/>'), true);
+    t.equal(isit.html(123), false);
+
+    t.equal(isit.all.html('<div>test</div>', '<img src="test.jpg"/>'), true);
+    t.equal(isit.all.html('div', '<img src="test.jpg"/>'), false);
+    t.equal(isit.any.html('div', '<img src="test.jpg"/>'), true);
+    t.equal(isit.any.html('div', 'img'), false);
+    t.equal(isit.not.html('div'), true);
+    t.equal(isit.not.html('<img src="test.jpg"/>'), false);
 });
 
 test('isitInclude', (t) => {

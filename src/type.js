@@ -191,6 +191,26 @@ export const isitSymbol = (object) => {
 };
 
 /**
+ * Checks to see if object is a TypedArray
+ *
+ * @param {any} object
+ * @returns {boolean}
+ */
+export const isitTypedArray = (object) => {
+    const objectToString = toString(object);
+
+    return objectToString === getObjectToStringValue('Int8Array')
+      || objectToString === getObjectToStringValue('Uint8Array')
+      || objectToString === getObjectToStringValue('Uint8ClampedArray')
+      || objectToString === getObjectToStringValue('Int16Array')
+      || objectToString === getObjectToStringValue('Uint16Array')
+      || objectToString === getObjectToStringValue('Int32Array')
+      || objectToString === getObjectToStringValue('Uint32Array')
+      || objectToString === getObjectToStringValue('Float32Array')
+      || objectToString === getObjectToStringValue('Float64Array');
+};
+
+/**
  * Checks to see if object is undefined
  *
  * @param {any} object
@@ -217,5 +237,6 @@ export default {
     sameType: isitSameType,
     string: isitString,
     symbol: isitSymbol,
+    typedArray: isitTypedArray,
     'undefined': isitUndefined
 };

@@ -70,7 +70,7 @@
     "no-new-object": 2,
     "no-obj-calls": 2,
     "no-this-before-super": 2,
-    "no-undef": 2,
+    "no-undef": 1,
     "no-unexpected-multiline": 1,
     "no-unreachable": 2,
     "no-useless-call": 2,

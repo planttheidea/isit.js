@@ -33,6 +33,7 @@ const POSSIBLE_TYPES = {
     regexp: /regex/,
     string: 'Word',
     symbol: Symbol('hello'),
+    typedArray: new Float32Array(),
     'undefined': undefined
 };
 const NUMBER_OF_KEYS = Object.keys(POSSIBLE_TYPES).length;
@@ -346,6 +347,7 @@ test('isitSameType', (t) => {
         regexp: /RegExp/,
         string: 'String',
         symbol: Symbol('goodbye'),
+        typedArray: new Float32Array(),
         'undefined': undefined
     };
     const keyToTest = 'sameType';
@@ -408,6 +410,50 @@ test('isitSymbol', (t) => {
     t.equals(isit.any.symbol('foo', ['bar']), false);
     t.equals(isit.not.symbol('foo'), true);
     t.equals(isit.not.symbol(Symbol('foo')), false);
+});
+
+test('isitTypedArray', (t) => {
+    const keyToTest = 'typedArray';
+
+    t.plan(NUMBER_OF_TESTS + 15);
+
+    testTypeOf(t, keyToTest);
+
+    for (let key in POSSIBLE_TYPES) {
+        const value = POSSIBLE_TYPES[key];
+
+        testFunction(t, keyToTest, value, key === keyToTest);
+    }
+
+  /**
+   * test all possible types of float arrays
+   */
+    const int8Array = new Int8Array();
+    const uint8Array = new Uint8Array();
+    const uint8ClampedArray = new Uint8ClampedArray();
+    const int16Array = new Int16Array();
+    const uint16Array = new Uint16Array();
+    const int32Array = new Int32Array();
+    const uint32Array = new Uint32Array();
+    const float32Array = new Float32Array();
+    const float64Array = new Float64Array();
+
+    t.equals(isit.typedArray(int8Array), true);
+    t.equals(isit.typedArray(uint8Array), true);
+    t.equals(isit.typedArray(uint8ClampedArray), true);
+    t.equals(isit.typedArray(int16Array), true);
+    t.equals(isit.typedArray(uint16Array), true);
+    t.equals(isit.typedArray(int32Array), true);
+    t.equals(isit.typedArray(uint32Array), true);
+    t.equals(isit.typedArray(float32Array), true);
+    t.equals(isit.typedArray(float64Array), true);
+
+    t.equals(isit.all.typedArray(int8Array, uint32Array, float64Array), true);
+    t.equals(isit.all.typedArray(int8Array, uint32Array, []), false);
+    t.equals(isit.any.typedArray(int8Array, uint32Array, []), true);
+    t.equals(isit.any.typedArray(null, {}, []), false);
+    t.equals(isit.not.typedArray([]), true);
+    t.equals(isit.not.typedArray(uint16Array), false);
 });
 
 test('isitUndefined', (t) => {

@@ -560,6 +560,32 @@ isit.all.falsy([false, true, undefined]);
 => false
 ```
 
+isit.space(value:string)
+----------------------
+####Checks if the given value is space.
+interfaces: not, all, any
+
+```javascript
+isit.space(' ');
+=> true
+
+isit.space('foo');
+=> false
+
+isit.not.space(true);
+=> true
+
+isit.all.space(' ', 'foo');
+=> false
+
+isit.any.space(' ', true);
+=> true
+
+// 'all' and 'any' interfaces can also take array parameter
+isit.all.space([' ', 'foo', undefined]);
+=> false
+```
+
 isit.whitespace(value:string)
 ----------------------
 ####Checks if the given value is whitespace.
@@ -575,8 +601,8 @@ isit.whitespace('foo');
 isit.not.whitespace(true);
 => true
 
-isit.all.whitespace(' ', 'foo');
-=> false
+isit.all.whitespace('          ', ' ');
+=> true
 
 isit.any.whitespace(' ', true);
 => true
@@ -1091,6 +1117,7 @@ String checks
 =============
 
 isit.include(value:string, value:substring)
+*alias: isit.includes*
 -----------------------------------------
 ####Checks if the given string contains a substring.
 interface: not
@@ -1160,6 +1187,7 @@ isit.all.lowerCase(['yeap', 'all lowercase']);
 ```
 
 isit.startWith(value:string, value:substring)
+*alias: isit.startsWith*
 -------------------------------------------
 ####Checks if the given string starts with substring.
 interface: not
@@ -1176,6 +1204,7 @@ isit.not.startWith('nope not that', 'not');
 ```
 
 isit.endWith(value:string, value:substring)
+*alias: isit.endsWith*
 -----------------------------------------
 ####Checks if the given string ends with substring.
 interfaces: not
@@ -1552,6 +1581,7 @@ isit.all.negative([40, 42, -43]);
 ```
 
 isit.above(value:number, min)
+*alias: isit.over*
 ---------------------------
 ####Checks if the given value is above minimum value.
 interface: not
@@ -1565,6 +1595,7 @@ isit.not.above(42, 50);
 ```
 
 isit.under(value:number, min)
+*alias: isit.below*
 ---------------------------
 ####Checks if the given value is under maximum value.
 interface: not
@@ -2728,6 +2759,7 @@ isit.not.quarterOfYear(secondQuarter, 1);
 ```
 
 isit.daylightSavingTime(value:object, quarterNumber)
+*alias: isit.daylightSavingsTime*
 --------------------------------------------------
 ####Checks if the given date is in daylight saving time.
 interface: not
