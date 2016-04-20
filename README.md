@@ -1117,10 +1117,9 @@ String checks
 =============
 
 isit.include(value:string, value:substring)
-*alias: isit.includes*
 -----------------------------------------
-####Checks if the given string contains a substring.
-interface: not
+#### Checks if the given string contains a substring.
+interfaces: not
 
 ```javascript
 isit.include('Some text goes here', 'text');
@@ -1132,6 +1131,10 @@ isit.include('test', 'text');
 isit.not.include('test', 'text');
 => true
 ```
+
+isit.includes(value:string, value:substring)
+-----------------------------------------
+#### alias for isit.include
 
 isit.upperCase(value:string)
 --------------------------
@@ -1187,7 +1190,6 @@ isit.all.lowerCase(['yeap', 'all lowercase']);
 ```
 
 isit.startWith(value:string, value:substring)
-*alias: isit.startsWith*
 -------------------------------------------
 ####Checks if the given string starts with substring.
 interface: not
@@ -1203,8 +1205,11 @@ isit.not.startWith('nope not that', 'not');
 => true
 ```
 
+isit.startsWith(value:string, value:substring)
+-------------------------------------------
+#### alias for isit.startWith
+
 isit.endWith(value:string, value:substring)
-*alias: isit.endsWith*
 -----------------------------------------
 ####Checks if the given string ends with substring.
 interfaces: not
@@ -1222,6 +1227,10 @@ isit.not.endWith('nope not that', 'not');
 isit.endWith('yeap that one', 'one');
 => true
 ```
+
+isit.endsWith(value:string, value:substring)
+-----------------------------------------
+#### alias for isit.endWith
 
 isit.capitalized(value:string)
 ---------------------------------------------
@@ -1581,7 +1590,6 @@ isit.all.negative([40, 42, -43]);
 ```
 
 isit.above(value:number, min)
-*alias: isit.over*
 ---------------------------
 ####Checks if the given value is above minimum value.
 interface: not
@@ -1593,6 +1601,10 @@ isit.above(41, 30);
 isit.not.above(42, 50);
 => true
 ```
+
+isit.over(value:number, min)
+---------------------------
+#### alias for isit.above
 
 isit.under(value:number, min)
 *alias: isit.below*
@@ -1607,6 +1619,10 @@ isit.under(30, 35);
 isit.not.under(42, 30);
 => true
 ```
+
+isit.below(value:number, min)
+---------------------------
+#### alias for isit.under
 
 isit.within(value:number, min, max)
 ---------------------------------
@@ -2759,7 +2775,6 @@ isit.not.quarterOfYear(secondQuarter, 1);
 ```
 
 isit.daylightSavingTime(value:object, quarterNumber)
-*alias: isit.daylightSavingsTime*
 --------------------------------------------------
 ####Checks if the given date is in daylight saving time.
 interface: not
@@ -2778,6 +2793,10 @@ isit.daylightSavingTime(january1);
 isit.not.daylightSavingTime(january1);
 => true
 ```
+
+isit.daylightSavingsTime(value:object, quarterNumber)
+-------------------------------------------------
+#### alias for isit.daylightSavingTime-
 
 Configuration methods
 =====================
