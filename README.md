@@ -2795,7 +2795,7 @@ isit.not.daylightSavingTime(january1);
 
 isit.daylightSavingsTime(value:object, quarterNumber)
 -------------------------------------------------
-#### alias for isit.daylightSavingTime-
+#### alias for isit.daylightSavingTime
 
 Configuration methods
 =====================
