@@ -1,6 +1,11 @@
 isit.js CHANGELOG
 =================
 
+#### 2.3.0
+* Re-include isitTypedArray
+* Move certain tests from regexp to string (more logical grouping)
+* Update README to show aliases
+
 #### 2.1.2
 * Restore ability to use array argument for any / all functions
 
