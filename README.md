@@ -1607,7 +1607,6 @@ isit.over(value:number, min)
 #### alias for isit.above
 
 isit.under(value:number, min)
-*alias: isit.below*
 ---------------------------
 ####Checks if the given value is under maximum value.
 interface: not
