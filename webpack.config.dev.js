@@ -1,13 +1,13 @@
-var path = require('path'),
-    webpack = require('webpack'),
-    assign = require('object-assign'),
-    PORT = 4444,
-    defaultConfig = require('./webpack.config');
+const path = require('path');
+const webpack = require('webpack');
+const defaultConfig = require('./webpack.config');
 
-module.exports = assign(defaultConfig, {
-    cache:true,
+const PORT = 4444;
 
-    debug:true,
+module.exports = Object.assign({}, defaultConfig, {
+    cache: true,
+ 
+    debug: true,
 
     devServer : {
         contentBase: './dist',
@@ -25,11 +25,9 @@ module.exports = assign(defaultConfig, {
 
     devtool: '#cheap-module-eval-source-map',
 
-    entry: [
-        path.resolve(__dirname, 'views/index.js')
-    ],
+    entry: path.resolve(__dirname, 'views', 'index.js'),
 
     output: assign(defaultConfig.output, {
-        publicPath: '//localhost:' + PORT + '/dist/'
+        publicPath: `//localhost:${PORT}/dist/`
     })
 });
