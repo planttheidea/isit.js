@@ -1,7 +1,18 @@
-var webpack = require("webpack"),
-    assign = require("object-assign"),
-    defaultConfig = require("./webpack.config"),
-    productionPlugins = [
+const webpack = require("webpack");
+const defaultConfig = require("./webpack.config");
+
+module.exports = Object.assign({}, defaultConfig, {
+    cache: false,
+
+    debug: false,
+
+    devtool: undefined,
+
+    output: Object.assign({}, defaultConfig.output, {
+        filename:"isit.min.js"
+    }),
+
+    plugins: defaultConfig.plugins.concat([
         new webpack.optimize.DedupePlugin(),
         new webpack.optimize.UglifyJsPlugin({
             compress:{
@@ -20,18 +31,5 @@ var webpack = require("webpack"),
             },
             sourceMap:false
         })
-    ];
-
-delete defaultConfig.devtool;
-
-module.exports = assign(defaultConfig, {
-    cache: false,
-
-    debug: false,
-
-    output: assign(defaultConfig.output, {
-        filename:"isit.min.js"
-    }),
-
-    plugins: defaultConfig.plugins.concat(productionPlugins)
+    ])
 });

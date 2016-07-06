@@ -1,62 +1,63 @@
-var path = require("path"),
-    webpack = require("webpack");
+const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
-    devtool: 'source-map',
+    cache: true,
+    
+    debug: true,
+
+    devtool: '#cheap-module-eval-source-map',
 
     entry: [
-        path.resolve(__dirname, "src/index.js")
+        path.resolve(__dirname, 'src', 'index.js')
     ],
 
     eslint:{
-        configFile:"./.eslintrc",
-        emitError:true,
-        failOnError:true,
-        failOnWarning:false,
-        formatter:require("eslint-friendly-formatter")
+        configFile: './.eslintrc',
+        emitError: true,
+        failOnError: true,
+        failOnWarning: false,
+        formatter: require('eslint-friendly-formatter')
     },
 
     module: {
         preLoaders: [
             {
-                exclude: /.idea|dist|node_modules/,
-                loader: "eslint-loader",
+                include: [
+                  path.resolve(__dirname, 'src')
+                ],
+                loader: 'eslint',
                 test: /\.js$/
             }
         ],
 
         loaders: [
             {
-                exclude: /node_modules/,
-                loader: "babel",
-                test: /\.(js|jsx)?$/
+                include: [
+                    path.resolve(__dirname, 'src')
+                ],
+                loader: 'babel',
+                test: /\.js?$/
             }
 
         ]
     },
 
     output: {
-        filename: "isit.js",
-        library: "isit",
-        libraryTarget: "umd",
-        path: path.resolve(__dirname, "dist")
+        filename: 'isit.js',
+        library: 'isit',
+        libraryTarget: 'umd',
+        path: path.resolve(__dirname, 'dist'),
+        umdNamedDefine: true
     },
 
     plugins: [
-        new webpack.DefinePlugin({
-            process: {
-                env: {
-                    NODE_ENV: JSON.stringify(process.env.NODE_ENV)
-                }
-            }
-        })
+        new webpack.EnvironmentPlugin([
+            'NODE_ENV'
+        ])
     ],
 
     resolve: {
-        fallback : [
-            path.join(__dirname, "src")
-        ],
-
         root : __dirname
     }
 };
