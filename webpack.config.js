@@ -1,63 +1,75 @@
+'use strict';
+
 const path = require('path');
 const webpack = require('webpack');
 
+const HAS_CUSTOM_ENTRY = !!process.env.ENTRY_FILE;
+const ENTRY = HAS_CUSTOM_ENTRY ? process.env.ENTRY_FILE : 'index';
+
 module.exports = {
-    cache: true,
-    
-    debug: true,
+  cache: true,
 
-    devtool: '#cheap-module-eval-source-map',
+  devtool: '#source-map',
 
-    entry: [
-        path.resolve(__dirname, 'src', 'index.js')
-    ],
+  entry: [
+    path.resolve(__dirname, 'src', `${ENTRY}.js`)
+  ],
 
-    eslint:{
-        configFile: './.eslintrc',
-        emitError: true,
-        failOnError: true,
-        failOnWarning: false,
-        formatter: require('eslint-friendly-formatter')
-    },
-
-    module: {
-        preLoaders: [
-            {
-                include: [
-                  path.resolve(__dirname, 'src')
-                ],
-                loader: 'eslint',
-                test: /\.js$/
-            }
+  module: {
+    rules: [
+      {
+        enforce: 'pre',
+        include: [
+          path.resolve(__dirname, 'src')
         ],
+        loader: 'eslint-loader',
+        options: {
+          configFile: '.eslintrc',
+          failOnError: true,
+          failOnWarning: false,
+          formatter: require('eslint-friendly-formatter')
+        },
+        test: /\.js$/
+      }, {
+        include: [
+          path.resolve(__dirname, 'src')
+        ],
+        options: {
+          babelrc: false,
+          presets: [
+            ['latest', {
+              es2015: {
+                loose: true,
+                modules: false
+              }
+            }],
+            'stage-2'
+          ]
+        },
+        test: /\.js$/,
+        loader: 'babel-loader'
+      }
+    ]
+  },
 
-        loaders: [
-            {
-                include: [
-                    path.resolve(__dirname, 'src')
-                ],
-                loader: 'babel',
-                test: /\.js?$/
-            }
+  output: {
+    filename: `isit${HAS_CUSTOM_ENTRY ? `-${ENTRY}` : ''}.js`,
+    library: 'isit',
+    libraryTarget: 'umd',
+    path: path.resolve(__dirname, 'dist'),
+    umdNamedDefine: true
+  },
 
-        ]
-    },
+  plugins: [
+    new webpack.EnvironmentPlugin([
+      'NODE_ENV'
+    ])
+  ],
 
-    output: {
-        filename: 'isit.js',
-        library: 'isit',
-        libraryTarget: 'umd',
-        path: path.resolve(__dirname, 'dist'),
-        umdNamedDefine: true
-    },
-
-    plugins: [
-        new webpack.EnvironmentPlugin([
-            'NODE_ENV'
-        ])
-    ],
-
-    resolve: {
-        root : __dirname
-    }
+  resolve: {
+    modules: [
+      path.join(__dirname, 'src'),
+      'node_modules'
+    ]
+  }
 };

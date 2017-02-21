@@ -1,147 +1,123 @@
+// arithmetic
 import arithmetic, {
-    multiParamFunctions as arithmeticFunctions
+  all as allArithmetic,
+  any as anyArithmetic,
+  not as notArithmetic
 } from './arithmetic';
+
+// array
 import array, {
-    multiParamFunctions as arrayFunctions
+  all as allArray,
+  any as anyArray,
+  not as notArray
 } from './array';
-import environment from './environment';
+
+// compose
+import compose, {
+  matchEvery,
+  matchSome
+} from './compose';
+
+// environment
+import environment, {
+  all as allEnvironment,
+  any as anyEnvironment,
+  not as notEnvironment
+} from './environment';
+
+// object
 import object, {
-    multiParamFunctions as objectFunctions
+  all as allObject,
+  any as anyObject,
+  not as notObject
 } from './object';
-import presence from './presence';
-import regexp from './regexp';
+
+// presence
+import presence, {
+  all as allPresence,
+  any as anyPresence,
+  not as notPresence
+} from './presence';
+
+// regexp
+import regexp, {
+  all as allRegExp,
+  any as anyRegExp,
+  not as notRegExp
+} from './regexp';
+
+// string
 import string, {
-    multiParamFunctions as stringFunctions
+  all as allString,
+  any as anyString,
+  not as notString
 } from './string';
+
+// time
 import time, {
-    multiParamFunctions as timeFunctions
+  all as allTime,
+  any as anyTime,
+  not as notTime
 } from './time';
-import type, {
-  isitArray
-} from './type';
 
-/**
- * Get exclude all the multi-parameter functions and all environment functions
- * from being included in the all or any loop
- */
-const noAllOrAnyFunctions = [
-    ...arithmeticFunctions,
-    ...arrayFunctions,
-    ...Object.keys(environment).map((key) => {
-        return key;
-    }),
-    ...objectFunctions,
-    ...stringFunctions,
-    ...timeFunctions
-];
+// types
+import types, {
+  all as allTypes,
+  any as anyTypes,
+  not as notTypes
+} from './types';
 
-/**
- * If parameters is an array with a single item, and the first item is itself an array,
- * return the array item, else return the array itself
- * 
- * @param {Array} parameters
- * @returns {Array}
- */
-const getAnyAllObjectParameters = (parameters) => {
-  if (parameters.length === 1 && isitArray(parameters[0])) {
-    return parameters[0];
-  }
-
-  return parameters;
+export const isitAll = {
+  ...allArithmetic,
+  ...allArray,
+  ...allEnvironment,
+  ...allObject,
+  ...allPresence,
+  ...allRegExp,
+  ...allString,
+  ...allTime,
+  ...allTypes
 };
 
-/**
- * Check if all arguments passed return true to function it relates to
- *
- * @param {Function} func
- * @returns {Function}
- */
-const isitAll = (func) => {
-    return (...objects) => {
-        objects = getAnyAllObjectParameters(objects);
-
-        for (let index = 0, length = objects.length; index < length; index++) {
-            if (!func(objects[index])) {
-                return false;
-            }
-        }
-
-        return true;
-    };
+export const isitAny = {
+  ...anyArithmetic,
+  ...anyArray,
+  ...anyEnvironment,
+  ...anyObject,
+  ...anyPresence,
+  ...anyRegExp,
+  ...anyString,
+  ...anyTime,
+  ...anyTypes
 };
 
-/**
- * Check if any of the arguments passed return true to function it relates to
- *
- * @param {Function} func
- * @returns {Function}
- */
-const isitAny = (func) => {
-    return (...objects) => {
-      objects = getAnyAllObjectParameters(objects);
-
-      for (let index = 0, length = objects.length; index < length; index++) {
-            if (func(objects[index])) {
-                return true;
-            }
-        }
-
-        return false;
-    };
+export const isitNot = {
+  ...notArithmetic,
+  ...notArray,
+  ...notEnvironment,
+  ...notObject,
+  ...notPresence,
+  ...notRegExp,
+  ...notString,
+  ...notTime,
+  ...notTypes
 };
 
-/**
- * Check if the func applied to the object returns false
- *
- * @param {Function} func
- * @returns {Function}
- */
-const isitNot = (func) => {
-    return (...objects) => {
-        return !func(...objects);
-    };
+export {matchEvery};
+export {matchSome};
+
+export default {
+  ...arithmetic,
+  ...array,
+  ...environment,
+  ...object,
+  ...presence,
+  ...regexp,
+  ...string,
+  ...time,
+  ...types,
+  all: isitAll,
+  any: isitAny,
+  compose,
+  not: isitNot
 };
-
-let isit = {
-        ...type,
-        ...presence,
-        ...regexp,
-        ...string,
-        ...arithmetic,
-        ...object,
-        ...array,
-        ...environment,
-        ...time
-    },
-    all = {},
-    any = {},
-    not = {};
-
-/**
- * Apply appropriate keys to all, any, and not
- */
-for (let key in isit) {
-    const isitFunction = isit[key];
-
-    if (noAllOrAnyFunctions.indexOf(key) === -1) {
-        all[key] = isitAll(isitFunction);
-        any[key] = isitAny(isitFunction);
-    }
-
-    not[key] = isitNot(isitFunction);
-}
-
-isit.all = all;
-isit.any = any;
-isit.not = not;
-
-/**
- * Shim for old functionality, as no longer needed
- *
- * @returns {object}
- */
-isit.setNamespace = () => {
-    return this;
-};
-
-export default isit;

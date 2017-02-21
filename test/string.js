@@ -1,328 +1,257 @@
-import test from 'tape';
-import isit from '../src';
-
+// test
+import test from 'ava';
 import {
-    testTypeOf
-} from './_utils';
+  isAllAnyNot,
+  isNotOnly
+} from './_utils/functionPermutations';
 
-test('isitCamelCase', (t) => {
-    t.plan(14);
+// src
+import src, {
+  all,
+  any,
+  not
+} from 'src/string';
 
-    testTypeOf(t, 'camelCase');
+const CASE_TYPES = {
+  camelCase: 'fooBarBaz',
+  kebabCase: 'foo-bar-baz',
+  lowerCase: 'foo bar baz',
+  snakeCase: 'foo_bar_baz',
+  startCase: 'Foo Bar Baz',
+  upperCase: 'FOO BAR BAZ'
+};
 
-    t.equal(isit.camelCase(), false);
-    t.equal(isit.camelCase(123), false);
-    t.equal(isit.camelCase('camelCaseExampleString'), true);
-    t.equal(isit.camelCase('kebab-case-example-string'), false);
-    t.equal(isit.camelCase('Capitalized And Start Case Example String'), false);
-    t.equal(isit.camelCase('ALL CAPS WORK WITH CAPITALIZED BUT NOT START CASE'), false);
-    t.equal(isit.camelCase('SNAKE_CASE_EXAMPLE_STRING'), false);
+const DATA_URL = 'data:image/gif;base64,R0lGODlhEAAOALMAAOazToeHh0tLS/7LZv/0jvb29t/f3//Ub//ge8WSLf/rhf/3kdbW1mxsbP//mf///yH5BAAAAAAALAAAAAAQAA4AAARe8L1Ekyky67QZ1hLnjM5UUde0ECwLJoExKcppV0aCcGCmTIHEIUEqjgaORCMxIC6e0CcguWw6aFjsVMkkIr7g77ZKPJjPZqIyd7sJAgVGoEGv2xsBxqNgYPj/gAwXEQA7';
 
-    t.equal(isit.all.camelCase('someCamelCase', 'fooBar'), true);
-    t.equal(isit.all.camelCase('someCamelCase', 'foo-bar'), false);
-    t.equal(isit.any.camelCase('someCamelCase', 'foo-bar'), true);
-    t.equal(isit.any.camelCase('WOW_IM_LOAD', 'foo-bar'), false);
-    t.equal(isit.not.camelCase('WOW_IM_LOAD'), true);
-    t.equal(isit.not.camelCase('someCamelCase'), false);
+test('if camelCase will identify camelCase and nothing else', (t) => {
+  t.false(src.camelCase());
+  t.false(src.camelCase(123));
+
+  const {
+    camelCase,
+    ...restOfTypes
+  } = CASE_TYPES;
+
+  t.true(src.camelCase(camelCase));
+
+  Object.keys(restOfTypes).forEach((key) => {
+    t.false(src.camelCase(restOfTypes[key]));
+  });
 });
 
-test('isitCapitalized', (t) => {
-    t.plan(14);
+isAllAnyNot(all, any, not, 'camelCase');
 
-    testTypeOf(t, 'capitalized');
+test('if capitalized will identify if something is capitalized or not', (t) => {
+  t.false(src.capitalized());
+  t.false(src.capitalized(123));
 
-    t.equal(isit.capitalized(), false);
-    t.equal(isit.capitalized(123), false);
-    t.equal(isit.capitalized('camelCaseExampleString'), false);
-    t.equal(isit.capitalized('kebab-case-example-string'), false);
-    t.equal(isit.capitalized('Capitalized And Start Case Example String'), true);
-    t.equal(isit.capitalized('ALL CAPS WORK WITH START CASE TOO'), true);
-    t.equal(isit.capitalized('SNAKE_CASE_EXAMPLE_STRING'), true);
+  const {
+    startCase,
+    upperCase,
+    ...restOfTypes
+  } = CASE_TYPES;
 
-    t.equal(isit.all.capitalized('Words', 'SNAKE_CASE'), true);
-    t.equal(isit.all.capitalized('Words', 'camelCase'), false);
-    t.equal(isit.any.capitalized('Words', 'camelCase'), true);
-    t.equal(isit.any.capitalized('kebab-case', 'camelCase'), false);
-    t.equal(isit.not.capitalized('kebab-case'), true);
-    t.equal(isit.not.capitalized('Words'), false);
+  t.true(src.capitalized(startCase));
+  t.true(src.capitalized(upperCase));
+
+  Object.keys(restOfTypes).forEach((key) => {
+    t.false(src.capitalized(restOfTypes[key]));
+  });
 });
 
-test('isitDataUrl', (t) => {
-    t.plan(9);
+isAllAnyNot(all, any, not, 'capitalized');
 
-    testTypeOf(t, 'dataUrl');
+test('if dataUrl correctly identifies a data URL', (t) => {
+  t.false(src.dataUrl());
+  t.false(src.dataUrl(123));
 
-    t.equal(isit.dataUrl('data url'), false);
-    t.equal(isit.dataUrl('data:image/gif;base64,R0lGODlhEAAOALMAAOazToeHh0tLS/7LZv/0jvb29t/f3//Ub//ge8WSLf/rhf/3kdbW1mxsbP//mf///yH5BAAAAAAALAAAAAAQAA4AAARe8L1Ekyky67QZ1hLnjM5UUde0ECwLJoExKcppV0aCcGCmTIHEIUEqjgaORCMxIC6e0CcguWw6aFjsVMkkIr7g77ZKPJjPZqIyd7sJAgVGoEGv2xsBxqNgYPj/gAwXEQA7'), true);
-
-    t.equal(isit.all.dataUrl('data:image/gif;base64,R0lGODlhEAAOALMAAOazToeHh0tLS/7LZv/0jvb29t/f3//Ub//ge8WSLf/rhf/3kdbW1mxsbP//mf///yH5BAAAAAAALAAAAAAQAA4AAARe8L1Ekyky67QZ1hLnjM5UUde0ECwLJoExKcppV0aCcGCmTIHEIUEqjgaORCMxIC6e0CcguWw6aFjsVMkkIr7g77ZKPJjPZqIyd7sJAgVGoEGv2xsBxqNgYPj/gAwXEQA7'), true);
-    t.equal(isit.all.dataUrl('123'), false);
-    t.equal(isit.any.dataUrl('data:image/gif;base64,R0lGODlhEAAOALMAAOazToeHh0tLS/7LZv/0jvb29t/f3//Ub//ge8WSLf/rhf/3kdbW1mxsbP//mf///yH5BAAAAAAALAAAAAAQAA4AAARe8L1Ekyky67QZ1hLnjM5UUde0ECwLJoExKcppV0aCcGCmTIHEIUEqjgaORCMxIC6e0CcguWw6aFjsVMkkIr7g77ZKPJjPZqIyd7sJAgVGoEGv2xsBxqNgYPj/gAwXEQA7'), true);
-    t.equal(isit.any.dataUrl('123'), false);
-    t.equal(isit.not.dataUrl('123'), true);
-    t.equal(isit.not.dataUrl('data:image/gif;base64,R0lGODlhEAAOALMAAOazToeHh0tLS/7LZv/0jvb29t/f3//Ub//ge8WSLf/rhf/3kdbW1mxsbP//mf///yH5BAAAAAAALAAAAAAQAA4AAARe8L1Ekyky67QZ1hLnjM5UUde0ECwLJoExKcppV0aCcGCmTIHEIUEqjgaORCMxIC6e0CcguWw6aFjsVMkkIr7g77ZKPJjPZqIyd7sJAgVGoEGv2xsBxqNgYPj/gAwXEQA7'), false);
+  t.false(src.dataUrl('foo'));
+  t.true(src.dataUrl(DATA_URL));
 });
 
-test('isitDoubleByte', (t) => {
-    t.plan(1);
+isAllAnyNot(all, any, not, 'dataUrl');
 
-    testTypeOf(t, 'doubleByte');
-    /**
-     * @todo create doubleByte tests
-     */
+test('if doubleByte correctly identifies double-byte characters', (t) => {
+  t.false(src.doubleByte());
+  t.false(src.doubleByte(123));
+
+  const normalString = 'foo bar baz';
+  const doubleByteString = '中文';
+
+  t.false(src.doubleByte(normalString));
+  t.true(src.doubleByte(doubleByteString));
 });
 
-test('isitEndWith', (t) => {
-    t.plan(12);
-    
-    testTypeOf(t, 'endWith');
+isAllAnyNot(all, any, not, 'doubleByte');
 
-    t.equal(isit.endWith(), false);
-    t.equal(isit.endWith(123), false);
-    t.equal(isit.endWith('some string'), false);
-    t.equal(isit.endWith('some string', 'ing'), true);
-    t.equal(isit.endWith('some string', 'ome string'), true);
-    t.equal(isit.endWith('some string', 'str'), false);
-    t.equal(isit.endWith('some string', 'some'), false);
-    t.equal(isit.endWith('some string', 'nope'), false);
-    t.equal(isit.endWith('some xxx string x', 'x'), true);
+test('if endsWith will identify whether the string ends with the value or not', (t) => {
+  const string = 'foo bar baz';
+  const starter = 'foo b';
+  const ender = 'r baz';
 
-    t.equal(isit.not.endWith('some string', 'some'), true);
-    t.equal(isit.not.endWith('some string', 'string'), false);
+  t.false(src.endsWith());
+  t.false(src.endsWith(string));
+  t.false(src.endsWith(123, starter));
+
+  t.false(src.endsWith(string, starter));
+  t.true(src.endsWith(string, ender));
 });
 
-test('isitEndsWith', (t) => {
-    t.plan(12);
+isNotOnly(all, any, not, 'endsWith');
 
-    testTypeOf(t, 'endsWith');
+test('if html correctly identifies an HTML string', (t) => {
+  const withoutChildren = '<img src="test.jpg"/>';
+  const withChildren = '<div>test</div>';
 
-    t.equal(isit.endsWith(), false);
-    t.equal(isit.endsWith(123), false);
-    t.equal(isit.endsWith('some string'), false);
-    t.equal(isit.endsWith('some string', 'ing'), true);
-    t.equal(isit.endsWith('some string', 'ome string'), true);
-    t.equal(isit.endsWith('some string', 'str'), false);
-    t.equal(isit.endsWith('some string', 'some'), false);
-    t.equal(isit.endsWith('some string', 'nope'), false);
-    t.equal(isit.endsWith('some xxx string x', 'x'), true);
+  t.false(src.html());
+  t.false(src.html(123));
 
-    t.equal(isit.not.endsWith('some string', 'some'), true);
-    t.equal(isit.not.endsWith('some string', 'string'), false);
+  t.false(src.html('div'));
+  t.false(src.html('img'));
+
+  t.true(src.html(withoutChildren));
+  t.true(src.html(withChildren));
 });
 
-test('isitHtml', (t) => {
-    t.plan(11);
+isAllAnyNot(all, any, not, 'html');
 
-    testTypeOf(t, 'html');
+test('if includes correctly identifies if the string contains the value', (t) => {
+  t.false(src.includes());
+  t.false(src.includes(123));
+  t.false(src.includes('foo', 123));
 
-    t.equal(isit.html('test'), false);
-    t.equal(isit.html('<div>test</div>'), true);
-    t.equal(isit.html('<img src="test.jpg"/>'), true);
-    t.equal(isit.html(123), false);
+  const string = 'foo bar baz';
+  const start = 'foo b';
+  const middle = ' bar ';
+  const end = 'r baz';
+  const notInThere = 'asdf';
 
-    t.equal(isit.all.html('<div>test</div>', '<img src="test.jpg"/>'), true);
-    t.equal(isit.all.html('div', '<img src="test.jpg"/>'), false);
-    t.equal(isit.any.html('div', '<img src="test.jpg"/>'), true);
-    t.equal(isit.any.html('div', 'img'), false);
-    t.equal(isit.not.html('div'), true);
-    t.equal(isit.not.html('<img src="test.jpg"/>'), false);
+  t.true(src.includes(string, start));
+  t.true(src.includes(string, middle));
+  t.true(src.includes(string, end));
+  t.false(src.includes(string, notInThere));
 });
 
-test('isitInclude', (t) => {
-    t.plan(11);
+isNotOnly(all, any, not, 'includes');
 
-    testTypeOf(t, 'include');
+test('if kebabCase will identify camelCase and nothing else', (t) => {
+  t.false(src.kebabCase());
+  t.false(src.kebabCase(123));
 
-    t.equal(isit.include(), false);
-    t.equal(isit.include(123), false);
-    t.equal(isit.include('some string'), false);
-    t.equal(isit.include('some string', 'ing'), true);
-    t.equal(isit.include('some string', 'ome string'), true);
-    t.equal(isit.include('some string', 'str'), true);
-    t.equal(isit.include('some string', 'some'), true);
-    t.equal(isit.include('some string', 'nope'), false);
+  const {
+    kebabCase,
+    ...restOfTypes
+  } = CASE_TYPES;
 
-    t.equal(isit.not.include('some string', 'foo'), true);
-    t.equal(isit.not.include('some string', 'str'), false);
+  t.true(src.kebabCase(kebabCase));
+
+  Object.keys(restOfTypes).forEach((key) => {
+    t.false(src.kebabCase(restOfTypes[key]));
+  });
 });
 
-test('isitIncludes', (t) => {
-    t.plan(11);
+isAllAnyNot(all, any, not, 'kebabCase');
 
-    testTypeOf(t, 'includes');
+test('if lowerCase will identify matching items and nothing else', (t) => {
+  t.false(src.lowerCase());
+  t.false(src.lowerCase(123));
 
-    t.equal(isit.includes(), false);
-    t.equal(isit.includes(123), false);
-    t.equal(isit.includes('some string'), false);
-    t.equal(isit.includes('some string', 'ing'), true);
-    t.equal(isit.includes('some string', 'ome string'), true);
-    t.equal(isit.includes('some string', 'str'), true);
-    t.equal(isit.includes('some string', 'some'), true);
-    t.equal(isit.includes('some string', 'nope'), false);
+  const {
+    kebabCase,
+    lowerCase,
+    snakeCase,
+    ...restOfTypes
+  } = CASE_TYPES;
 
-    t.equal(isit.not.includes('some string', 'foo'), true);
-    t.equal(isit.not.includes('some string', 'str'), false);
+  t.true(src.lowerCase(kebabCase));
+  t.true(src.lowerCase(lowerCase));
+  t.true(src.lowerCase(snakeCase));
+
+  Object.keys(restOfTypes).forEach((key) => {
+    t.false(src.lowerCase(restOfTypes[key]));
+  });
 });
 
-test('isitKebabCase', (t) => {
-    t.plan(14);
+isAllAnyNot(all, any, not, 'lowerCase');
 
-    testTypeOf(t, 'kebabCase');
+test('if palindrome will correctly identify palindromes', (t) => {
+  t.false(src.palindrome());
+  t.false(src.palindrome(123));
 
-    t.equal(isit.kebabCase(), false);
-    t.equal(isit.kebabCase(123), false);
-    t.equal(isit.kebabCase('camelCaseExampleString'), false);
-    t.equal(isit.kebabCase('kebab-case-example-string'), true);
-    t.equal(isit.kebabCase('Capitalized And Start Case Example String'), false);
-    t.equal(isit.kebabCase('ALL CAPS WORK WITH CAPITALIZED BUT NOT START CASE'), false);
-    t.equal(isit.kebabCase('SNAKE_CASE_EXAMPLE_STRING'), false);
+  const normalString = 'foo bar baz';
+  const palindrome = 'tacocat';
 
-    t.equal(isit.all.kebabCase('kebab-case', 'UPPER-KEBAB-CASE'), true);
-    t.equal(isit.all.kebabCase('kebab-case', 'SNAKE_CASE'), false);
-    t.equal(isit.any.kebabCase('kebab-case', 'SNAKE_CASE'), true);
-    t.equal(isit.any.kebabCase('camelCase', 'SNAKE_CASE'), false);
-    t.equal(isit.not.kebabCase('SNAKE_CASE'), true);
-    t.equal(isit.not.kebabCase('kebab-case'), false);
+  t.false(src.palindrome(normalString));
+  t.true(src.palindrome(palindrome));
 });
 
-test('isitLowerCase', (t) => {
-    t.plan(15);
+isAllAnyNot(all, any, not, 'palindrome');
 
-    testTypeOf(t, 'lowerCase');
+test('if snakeCase will identify camelCase and nothing else', (t) => {
+  t.false(src.snakeCase());
+  t.false(src.snakeCase(123));
 
-    t.equal(isit.lowerCase(), false);
-    t.equal(isit.lowerCase(123), false);
-    t.equal(isit.lowerCase('lowercase string'), true);
-    t.equal(isit.lowerCase('Mixed CASE string'), false);
-    t.equal(isit.lowerCase('Start Case String'), false);
-    t.equal(isit.lowerCase('UPPERCASE STRING'), false);
-    t.equal(isit.lowerCase('kebab-case-example-string'), true);
-    t.equal(isit.lowerCase('SNAKE_CASE_EXAMPLE_STRING'), false);
+  const {
+    snakeCase,
+    ...restOfTypes
+  } = CASE_TYPES;
 
-    t.equal(isit.all.lowerCase('foo', 'bar'), true);
-    t.equal(isit.all.lowerCase('foo', 'BAR'), false);
-    t.equal(isit.any.lowerCase('foo', 'BAR'), true);
-    t.equal(isit.any.lowerCase('FOO', 'BAR'), false);
-    t.equal(isit.not.lowerCase('UPPERCASE'), true);
-    t.equal(isit.not.lowerCase('lowercase'), false);
+  t.true(src.snakeCase(snakeCase));
+
+  Object.keys(restOfTypes).forEach((key) => {
+    t.false(src.snakeCase(restOfTypes[key]));
+  });
 });
 
-test('isitPalindrome', (t) => {
-    t.plan(13);
+isAllAnyNot(all, any, not, 'snakeCase');
 
-    testTypeOf(t, 'palindrome');
+test('if startCase will identify camelCase and nothing else', (t) => {
+  t.false(src.startCase());
+  t.false(src.startCase(123));
 
-    t.equal(isit.palindrome(), false);
-    t.equal(isit.palindrome(123), false);
-    t.equal(isit.palindrome('tacocat'), true);
-    t.equal(isit.palindrome('some normal string'), false);
-    t.equal(isit.palindrome('Tacocat'), false); // case matters
-    t.equal(isit.palindrome('a santa at nasa'), true); // space indifferent
+  const {
+    startCase,
+    ...restOfTypes
+  } = CASE_TYPES;
 
-    t.equal(isit.all.palindrome('tacocat', 'a santa at nasa'), true);
-    t.equal(isit.all.palindrome('tacocat', 'normal string'), false);
-    t.equal(isit.any.palindrome('tacocat', 'normal string'), true);
-    t.equal(isit.any.palindrome('blah', 'normal string'), false);
-    t.equal(isit.not.palindrome('normal string'), true);
-    t.equal(isit.not.palindrome('tacocat'), false);
+  t.true(src.startCase(startCase));
+
+  Object.keys(restOfTypes).forEach((key) => {
+    t.false(src.startCase(restOfTypes[key]));
+  });
 });
 
-test('isitSnakeCase', (t) => {
-    t.plan(14);
+isAllAnyNot(all, any, not, 'startCase');
 
-    testTypeOf(t, 'snakeCase');
+test('if startsWith will identify whether the string starts with the value or not', (t) => {
+  t.false(src.startsWith());
+  t.false(src.startsWith('foo'));
+  t.false(src.startsWith(123));
 
-    t.equal(isit.snakeCase(), false);
-    t.equal(isit.snakeCase(123), false);
-    t.equal(isit.snakeCase('camelCaseExampleString'), false);
-    t.equal(isit.snakeCase('kebab-case-example-string'), false);
-    t.equal(isit.snakeCase('Capitalized And Start Case Example String'), false);
-    t.equal(isit.snakeCase('ALL CAPS WORK WITH CAPITALIZED BUT NOT START CASE'), false);
-    t.equal(isit.snakeCase('SNAKE_CASE_EXAMPLE_STRING'), true);
+  const string = 'foo bar baz';
+  const starter = 'foo b';
+  const ender = 'r baz';
 
-    t.equal(isit.all.snakeCase('SNAKE_CASE', 'lower_snake_case'), true);
-    t.equal(isit.all.snakeCase('SNAKE_CASE', 'kebab-case'), false);
-    t.equal(isit.any.snakeCase('SNAKE_CASE', 'kebab-case'), true);
-    t.equal(isit.any.snakeCase('camelCase', 'kebab-case'), false);
-    t.equal(isit.not.snakeCase('camelCase'), true);
-    t.equal(isit.not.snakeCase('SNAKE_CASE'), false);
+  t.true(src.startsWith(string, starter));
+  t.false(src.startsWith(string, ender));
 });
 
-test('isitStartCase', (t) => {
-    t.plan(14);
+isNotOnly(all, any, not, 'startsWith');
 
-    testTypeOf(t, 'startCase');
+test('if upperCase will identify camelCase and nothing else', (t) => {
+  t.false(src.upperCase());
+  t.false(src.upperCase(123));
 
-    t.equal(isit.startCase(), false);
-    t.equal(isit.startCase(123), false);
-    t.equal(isit.startCase('camelCaseExampleString'), false);
-    t.equal(isit.startCase('kebab-case-example-string'), false);
-    t.equal(isit.startCase('Capitalized And Start Case Example String'), true);
-    t.equal(isit.startCase('ALL CAPS WORK WITH CAPITALIZED BUT NOT START CASE'), false);
-    t.equal(isit.startCase('SNAKE_CASE_EXAMPLE_STRING'), false);
+  const {
+    upperCase,
+    ...restOfTypes
+  } = CASE_TYPES;
 
-    t.equal(isit.all.startCase('Starting Word', 'Capitalized Statement'), true);
-    t.equal(isit.all.startCase('Starting Word', 'kebab-case'), false);
-    t.equal(isit.any.startCase('Starting Word', 'kebab-case'), true);
-    t.equal(isit.any.startCase('camelCase', 'kebab-case'), false);
-    t.equal(isit.not.startCase('lowercase words'), true);
-    t.equal(isit.not.startCase('Start Case Words'), false);
+  t.true(src.upperCase(upperCase));
+
+  Object.keys(restOfTypes).forEach((key) => {
+    t.false(src.upperCase(restOfTypes[key]));
+  });
 });
 
-test('isitStartWith', (t) => {
-    t.plan(11);
-
-    testTypeOf(t, 'startWith');
-
-    t.equal(isit.startWith(), false);
-    t.equal(isit.startWith(123), false);
-    t.equal(isit.startWith('some string'), false);
-    t.equal(isit.startWith('some string', 'ing'), false);
-    t.equal(isit.startWith('some string', 'ome string'), false);
-    t.equal(isit.startWith('some string', 'str'), false);
-    t.equal(isit.startWith('some string', 'some'), true);
-    t.equal(isit.startWith('some string', 'nope'), false);
-
-    t.equal(isit.not.startWith('some string', 'string'), true);
-    t.equal(isit.not.startWith('some string', 'string'), true);
-});
-
-test('isitStartsWith', (t) => {
-    t.plan(11);
-
-    testTypeOf(t, 'startsWith');
-
-    t.equal(isit.startsWith(), false);
-    t.equal(isit.startsWith(123), false);
-    t.equal(isit.startsWith('some string'), false);
-    t.equal(isit.startsWith('some string', 'ing'), false);
-    t.equal(isit.startsWith('some string', 'ome string'), false);
-    t.equal(isit.startsWith('some string', 'str'), false);
-    t.equal(isit.startsWith('some string', 'some'), true);
-    t.equal(isit.startsWith('some string', 'nope'), false);
-
-    t.equal(isit.not.startsWith('some string', 'string'), true);
-    t.equal(isit.not.startsWith('some string', 'string'), true);
-});
-
-test('isitUpperCase', (t) => {
-    t.plan(15);
-
-    testTypeOf(t, 'upperCase');
-
-    t.equal(isit.upperCase(), false);
-    t.equal(isit.upperCase(123), false);
-    t.equal(isit.upperCase('lowercase string'), false);
-    t.equal(isit.upperCase('Mixed CASE string'), false);
-    t.equal(isit.upperCase('Start Case String'), false);
-    t.equal(isit.upperCase('UPPERCASE STRING'), true);
-    t.equal(isit.upperCase('kebab-case-example-string'), false);
-    t.equal(isit.upperCase('SNAKE_CASE_EXAMPLE_STRING'), true);
-
-    t.equal(isit.all.upperCase('UPPERCASE', 'IS', 'LOUD'), true);
-    t.equal(isit.all.upperCase('UPPERCASE', 'IS', 'okay'), false);
-    t.equal(isit.any.upperCase('UPPERCASE', 'IS', 'okay'), true);
-    t.equal(isit.any.upperCase('lowercase', 'is', 'better'), false);
-    t.equal(isit.not.upperCase('lowercase'), true);
-    t.equal(isit.not.upperCase('UPPERCASE'), false);
-});
+isAllAnyNot(all, any, not, 'upperCase');

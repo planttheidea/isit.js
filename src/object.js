@@ -1,104 +1,44 @@
-import {
-    isitFunction,
-    isitNull,
-    isitNumber,
-    isitObject,
-    isitUndefined
-} from './type';
+// object
+import * as definedProperty from './isitDefinedProperty';
+import * as domNode from './isitDomNode';
+import * as domNodeList from './isitDomNodeList';
+import * as element from './isitElement';
+import * as jquery from './isitJquery';
+import * as propertyCount from './isitPropertyCount';
+import * as windowObject from './isitWindowObject';
 
-const toString = Object.prototype.toString;
-
-const NODE_LIST_REGEXP = /^\[object (HTMLCollection|NodeList)\]$/;
-
-/**
- * Checks if object is an HTML element
- *
- * @param {any} object
- * @returns {boolean}
- */
-export const isitDomNode = (object) => {
-    return !isitUndefined(object) && !isitNull(object) && object.nodeType > 0;
+export const all = {
+  domNode: domNode.isitAllDomNode,
+  domNodeList: domNodeList.isitAllDomNodeList,
+  element: element.isitAllElement,
+  jquery: jquery.isitAllJquery,
+  windowObject: windowObject.isitAllWindowObject
 };
 
-/**
- * Checks if object is an HTMLCollection, for example
- * returned isArrayFrom document.querySelectorAll
- *
- * @param {any} object
- * @returns {boolean}
- */
-export const isitDomNodeList = (object) => {
-    return !isitUndefined(object) && !isitNull(object) 
-        && NODE_LIST_REGEXP.test(toString.call(object));
+export const any = {
+  domNode: domNode.isitAnyDomNode,
+  domNodeList: domNodeList.isitAnyDomNodeList,
+  element: element.isitAnyElement,
+  jquery: jquery.isitAllJquery,
+  windowObject: windowObject.isitAnyWindowObject
 };
 
-/**
- * Checks if object is a jQuery object
- * 
- * @param {any} object
- * @returns {boolean}
- */
-export const isitJquery = (object) => {
-    if (isitFunction(object)) {
-        const $object = object();
-
-        return isitObject($object) && !!$object.jquery;
-    }
-
-    return !!Object.getPrototypeOf(object).jquery;
+export const not = {
+  definedProperty: definedProperty.isitNotDefinedProperty,
+  domNode: domNode.isitNotDomNode,
+  domNodeList: domNodeList.isitNotDomNodeList,
+  element: element.isitNotElement,
+  jquery: jquery.isitNotJquery,
+  propertyCount: propertyCount.isitNotPropertyCount,
+  windowObject: windowObject.isitNotWindowObject
 };
-
-/**
- * Checks if the number of keys in the object object
- * equals the count numeric value
- *
- * @param {any} object
- * @param {number} count
- * @returns {boolean}
- */
-export const isitPropertyCount = (object, count) => {
-    if (!isitObject(object) || !isitNumber(count)) {
-        return false;
-    }
-
-    return Object.keys(object).length === count;
-};
-
-/**
- * Checks if the object object has the property property
- * (tell me that wasn't fun to read)
- *
- * @param {any} object
- * @param {any} property
- * @returns {*}
- */
-export const isitPropertyDefined = (object, property) => {
-    return isitObject(object) && object.hasOwnProperty(property);
-};
-
-/**
- * Checks if the object is the window
- *
- * @param {any} object
- * @returns {boolean}
- */
-export const isitWindowObject = (object) => {
-    return typeof object === 'object' && 'setInterval' in object;
-};
-
-/**
- * Functions we don't want to show up in any or all
- */
-export const multiParamFunctions = [
-    'propertyCount',
-    'propertyDefined'
-];
 
 export default {
-    domNode: isitDomNode,
-    domNodeList: isitDomNodeList,
-    jquery: isitJquery,
-    propertyCount: isitPropertyCount,
-    propertyDefined: isitPropertyDefined,
-    windowObject: isitWindowObject
+  definedProperty: definedProperty.default,
+  domNode: domNode.default,
+  domNodeList: domNodeList.default,
+  element: element.default,
+  jquery: jquery.default,
+  propertyCount: propertyCount.default,
+  windowObject: windowObject.default
 };

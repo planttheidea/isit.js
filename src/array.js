@@ -1,71 +1,32 @@
-import {
-    isitArray
-} from './type';
-
-const checkSortedAsc = (array) => {
-    for (let index = 0, length = array.length; index < length; index++) {
-        const current = array[index];
-        const next = array[index + 1];
-
-        if (typeof next !== 'undefined' && current > next) {
-            return false;
-        }
-    }
-
-    return true;
-};
-
-const checkSortedDesc = (array) => {
-    for (let index = array.length; index--;) {
-        const current = array[index];
-        const next = array[index - 1];
-
-        if (typeof next !== 'undefined' && current > next) {
-            return false;
-        }
-    }
-
-    return true;
-};
+// array
+import * as sorted from './isitSorted';
+import * as sortedAsc from './isitSortedAsc';
+import * as sortedDesc from './isitSortedDesc';
 
 /**
- * Checks to see if item exists as a value in
- * the object array
- *
- * @param {any} object
- * @param {any} item
- * @returns {boolean}
+ * @module array
  */
-export const isitInArray = (object, item) => {
-    return isitArray(object) && object.indexOf(item) !== -1;
+
+export const all = {
+  sorted: sorted.isitAllSorted,
+  sortedAsc: sortedAsc.isitAllSortedAsc,
+  sortedDesc: sortedDesc.isitAllSortedDesc
 };
 
-/**
- * Checks to see if the object array is already sorted
- *
- * @param {any} object
- * @returns {boolean}
- */
-export const isitSorted = (object) => {
-    if (!isitArray(object)) {
-        return false;
-    }
-    
-    const shallowClone = [...object];
-    
-    shallowClone.sort();
-    
-    return checkSortedAsc(object, shallowClone) || checkSortedDesc(object, shallowClone);
+export const any = {
+  sorted: sorted.isitAnySorted,
+  sortedAsc: sortedAsc.isitAnySortedAsc,
+  sortedDesc: sortedDesc.isitAnySortedDesc
 };
 
-/**
- * Functions we dont want to show up in any or all
- */
-export const multiParamFunctions = [
-    'inArray'
-];
+export const not = {
+  sorted: sorted.isitNotSorted,
+  sortedAsc: sortedAsc.isitNotSortedAsc,
+  sortedDesc: sortedDesc.isitNotSortedDesc
+};
 
 export default {
-    inArray: isitInArray,
-    sorted: isitSorted
+  sorted: sorted.default,
+  sortedAsc: sortedAsc.default,
+  sortedDesc: sortedDesc.default
 };

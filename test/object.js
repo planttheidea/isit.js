@@ -1,124 +1,180 @@
-import test from 'tape';
+// test
+import test from 'ava';
 import $ from 'jquery';
-import isit from '../src';
-
 import {
-    testTypeOf
-} from './_utils';
+  isAllAnyNot,
+  isNotOnly
+} from './_utils/functionPermutations';
 
-test('isitDomNode', (t) => {
-    t.plan(11);
+// src
+import src, {
+  all,
+  any,
+  not
+} from 'src/object';
 
-    testTypeOf(t, 'domNode');
-
-    const div = document.createElement('div');
-
-    div.innerHTML = '<div id="child">I\'m a child!</div>';
-
-    const otherDiv = div.firstChild;
-
-    t.equal(isit.domNode(div), true);
-    t.equal(isit.domNode(otherDiv), true);
-    t.equal(isit.domNode('div'), false);
-    t.equal(isit.domNode('<div id="child">I\'m a child!</div>'), false);
-
-    t.equal(isit.all.domNode(div, otherDiv), true);
-    t.equal(isit.all.domNode(div, 'div'), false);
-    t.equal(isit.any.domNode(div, 'div'), true);
-    t.equal(isit.any.domNode('<div id="child">I\'m a child!</div>', 'div'), false);
-    t.equal(isit.not.domNode('div'), true);
-    t.equal(isit.not.domNode(div), false);
+test('if definedProperty returns false when the item passed is not an object', (t) => {
+  t.false(src.definedProperty('foo'));
 });
 
-test('isitDomNodeList', (t) => {
-    t.plan(10);
-
-    testTypeOf(t, 'domNodeList');
-
-    const fragment = document.createDocumentFragment();
-    const div = document.createElement('div');
-    const otherDiv = div.cloneNode();
-    const thirdDiv = div.cloneNode();
-
-    fragment.appendChild(div);
-    fragment.appendChild(otherDiv);
-
-    thirdDiv.innerHTML = '<div>One</div><div>Two</div>';
-
-    const thirdDivNodeList = thirdDiv.querySelectorAll('div');
-
-    t.equal(isit.domNodeList(fragment.childNodes), true);
-    t.equal(isit.domNodeList([]), false);
-    t.equal(isit.domNodeList([div, otherDiv]), false);
-
-    t.equal(isit.all.domNodeList(fragment.childNodes, thirdDivNodeList), true);
-    t.equal(isit.all.domNodeList(fragment.childNodes, []), false);
-    t.equal(isit.any.domNodeList(fragment.childNodes, []), true);
-    t.equal(isit.any.domNodeList('NodeList', []), false);
-    t.equal(isit.not.domNodeList([]), true);
-    t.equal(isit.not.domNodeList(fragment.childNodes), false);
+test('if definedProperty returns false when the item passed is null', (t) => {
+  t.false(src.definedProperty(null));
 });
 
-test('isitJquery', (t) => {
-    t.plan(11);
+test('if definedProperty correctly identifies when the object has defined a property', (t) => {
+  const property = 'foo';
+  const object = {
+    [property]: 'bar'
+  };
 
-    testTypeOf(t, 'jquery');
-
-    const $div = $('<div/>');
-    const div = document.createElement('div');
-
-    t.equal(isit.jquery($), true);
-    t.equal(isit.jquery($div), true);
-    t.equal(isit.jquery(div), false);
-    t.equal(isit.jquery('jquery'), false);
-
-    t.equal(isit.all.jquery($, $div), true);
-    t.equal(isit.all.jquery($, div), false);
-    t.equal(isit.any.jquery($, div), true);
-    t.equal(isit.any.jquery('jquery', div), false);
-    t.equal(isit.not.jquery(div), true);
-    t.equal(isit.not.jquery($div), false);
+  t.true(src.definedProperty(object, property));
+  t.false(src.definedProperty(object, 'bar'));
 });
 
-test('isPropertyCount', (t) => {
-    t.plan(7);
+isNotOnly(all, any, not, 'definedProperty');
 
-    testTypeOf(t, 'propertyCount');
-
-    const object = {
-        foo: 'bar',
-        hello: 'goodbye'
-    };
-
-    t.equal(isit.propertyCount(object, 2), true);
-    t.equal(isit.propertyCount(object, 3), false);
-    t.equal(isit.propertyCount(object), false);
-    t.equal(isit.propertyCount(JSON.stringify(object), 2), false);
-
-    t.equal(isit.not.propertyCount(object, 3), true);
-    t.equal(isit.not.propertyCount(object, 2), false);
+test('if domNode returns false when object is not existy', (t) => {
+  t.false(src.domNode(undefined));
+  t.false(src.domNode(null));
 });
 
-test('isitPropertyDefined', (t) => {
-    t.plan(7);
+test('if domNode returns true if nodeType is greater than 0', (t) => {
+  t.false(src.domNode({
+    nodeType: 0
+  }));
 
-    testTypeOf(t, 'propertyDefined');
+  t.true(src.domNode({
+    nodeType: 1
+  }));
 
-    const object = {
-        foo: 'bar'
-    };
+  t.true(src.domNode({
+    nodeType: 10
+  }));
 
-    t.equal(isit.propertyDefined(object, 'foo'), true);
-    t.equal(isit.propertyDefined(object, 'bar'), false);
-    t.equal(isit.propertyDefined(object), false);
-    t.equal(isit.propertyDefined(JSON.stringify(object), 'foo'), false);
-
-    t.equal(isit.not.propertyDefined(object, 'bar'), true);
-    t.equal(isit.not.propertyDefined(object, 'foo'), false);
+  t.true(src.domNode(document.createElement('div')));
 });
 
-test('isitWindowObject', (t) => {
-    t.plan(1);
+isAllAnyNot(all, any, not, 'domNode');
 
-    testTypeOf(t, 'windowObject');
+test('if domNodeList returns false when object is not existy', (t) => {
+  t.false(src.domNodeList(undefined));
+  t.false(src.domNodeList(null));
 });
+
+test('if domNodeList returns false for a standard DOM node', (t) => {
+  t.false(src.domNodeList({
+    nodeType: 0
+  }));
+
+  t.false(src.domNodeList({
+    nodeType: 1
+  }));
+
+  t.false(src.domNodeList({
+    nodeType: 10
+  }));
+
+  t.false(src.domNodeList(document.createElement('div')));
+});
+
+test('if domNodeList returns true for a DOM node list', (t) => {
+  const div = document.createElement('div');
+  const childSpan = document.createElement('span');
+  const childDiv = document.createElement('div');
+
+  div.appendChild(childSpan);
+  div.appendChild(childDiv);
+
+  document.body.appendChild(div);
+
+  const children = document.body.querySelector('div').children;
+
+  t.true(src.domNodeList(children));
+});
+
+isAllAnyNot(all, any, not, 'domNodeList');
+
+test('if element returns false when object is not existy', (t) => {
+  t.false(src.element(undefined));
+  t.false(src.element(null));
+});
+
+test('if element returns true if nodeType is 1 and the nodeName is a strng', (t) => {
+  t.false(src.element({
+    nodeType: 0
+  }));
+
+  t.false(src.element({
+    nodeType: 1
+  }));
+
+  t.true(src.element({
+    nodeName: 'DIV',
+    nodeType: 1
+  }));
+
+  t.false(src.element({
+    nodeName: 'DIV',
+    nodeType: 10
+  }));
+
+  t.true(src.element(document.createElement('div')));
+});
+
+isAllAnyNot(all, any, not, 'element');
+
+test('if jquery returns false when the item passed is not an object', (t) => {
+  t.false(src.jquery('foo'));
+});
+
+test('if jquery returns false when the items passed is null', (t) => {
+  t.false(src.jquery(null));
+});
+
+test('if jquery returns true when the jquery object itself is passed', (t) => {
+  t.true(src.jquery($));
+});
+
+test('if jquery returns true when a result from a jquery selector is passed', (t) => {
+  t.true(src.jquery($(window)));
+});
+
+test('if jquery returns false when a regular DOM element is passed', (t) => {
+  t.false(src.jquery(window));
+});
+
+isAllAnyNot(all, any, not, 'jquery');
+
+test('if propertyCount returns false when the item passed is not an object', (t) => {
+  t.false(src.propertyCount('foo'));
+});
+
+test('if propertyCount returns false when the item passed is null', (t) => {
+  t.false(src.propertyCount(null));
+});
+
+test('if propertyCount correctly identifies when the object has defined a property', (t) => {
+  const object = {
+    foo: 'bar',
+    bar: 'baz'
+  };
+  const count = Object.keys(object).length;
+
+  t.true(src.propertyCount(object, count));
+  t.false(src.propertyCount(object, count * 2));
+  t.false(src.propertyCount(object, 'bar'));
+});
+
+isNotOnly(all, any, not, 'propertyCount');
+
+test('if windowObject will return false for non-window objects', (t) => {
+  t.false(src.windowObject(undefined));
+  t.false(src.windowObject(null));
+  t.false(src.windowObject({}));
+});
+
+test('if windowObject will return true for the window', (t) => {
+  t.true(src.windowObject(window));
+});
+
+isAllAnyNot(all, any, not, 'windowObject');

@@ -1,265 +1,263 @@
-import test from 'tape';
-import isit from '../src';
-
+// test
+import test from 'ava';
 import {
-    testTypeOf
-} from './_utils';
+  isAllAnyNot,
+  isNotOnly
+} from './_utils/functionPermutations';
 
-test('isitAbove', (t) => {
-    t.plan(8);
+// src
+import src, {
+  all,
+  any,
+  not
+} from 'src/arithmetic';
 
-    testTypeOf(t, 'above');
-    
-    t.equal(isit.above(2), false);
-    t.equal(isit.above('2', 1), false);
-    t.equal(isit.above(2, '1'), false);
-    t.equal(isit.above(2, 1), true);
-    t.equal(isit.above(1, 2), false);
+test('if equal will correctly identify if the two parameters passed are equal in type and value', (t) => {
+  const undef = undefined;
+  const nul = null;
+  const string = 'test';
+  const number = 1;
+  const array = ['foo', 'bar'];
+  const object = {foo: 'bar', bar: 'baz'};
+  const map = new Map().set('foo', 'bar');
+  const set = new Set().add('foo');
 
-    t.equal(isit.not.above(1, 2), true);
-    t.equal(isit.not.above(2, 1), false);
+  t.true(src.equal());
+  t.true(src.equal(undef, undef));
+  t.true(src.equal(nul, nul));
+  t.true(src.equal(string, string));
+  t.true(src.equal(number, number));
+  t.true(src.equal(array, array));
+  t.true(src.equal([...array], [...array]));
+  t.true(src.equal(object, object));
+  t.true(src.equal({...object}, {...object}));
+  t.true(src.equal(map, new Map().set('foo', 'bar')));
+  t.true(src.equal(set, new Set().add('foo')));
 });
 
-test('isitBelow', (t) => {
-    t.plan(8);
+test('if equal will return false if the two parameters passed are not the same type', (t) => {
+  const undef = undefined;
+  const nul = null;
+  const string = 'test';
+  const number = 1;
+  const array = ['foo', 'bar'];
+  const otherArray = ['bar', 'baz'];
+  const object = {foo: 'bar', bar: 'baz'};
+  const otherObject = {bar: 'baz', baz: 'foo'};
+  const map = new Map().set('foo', 'bar');
+  const set = new Set().add('foo');
 
-    testTypeOf(t, 'below');
+  t.false(src.equal(undef, nul));
+  t.false(src.equal(undef, string));
+  t.false(src.equal(undef, number));
+  t.false(src.equal(undef, array));
+  t.false(src.equal(undef, object));
+  t.false(src.equal(undef, map));
+  t.false(src.equal(undef, set));
 
-    t.equal(isit.below(2), false);
-    t.equal(isit.below('1', 2), false);
-    t.equal(isit.below(1, '2'), false);
-    t.equal(isit.below(1, 2), true);
-    t.equal(isit.below(2, 1), false);
+  t.false(src.equal(nul, string));
+  t.false(src.equal(nul, number));
+  t.false(src.equal(nul, array));
+  t.false(src.equal(nul, object));
+  t.false(src.equal(nul, map));
+  t.false(src.equal(nul, set));
 
-    t.equal(isit.not.below(2, 1), true);
-    t.equal(isit.not.below(1, 2), false);
+  t.false(src.equal(string, number));
+  t.false(src.equal(string, array));
+  t.false(src.equal(string, object));
+  t.false(src.equal(string, map));
+  t.false(src.equal(string, set));
+
+  t.false(src.equal(number, array));
+  t.false(src.equal(number, object));
+  t.false(src.equal(number, map));
+  t.false(src.equal(number, set));
+
+  t.false(src.equal(array, object));
+  t.false(src.equal(array, map));
+  t.false(src.equal(array, set));
+
+  t.false(src.equal(object, map));
+  t.false(src.equal(object, set));
+
+  t.false(src.equal(map, set));
+
+  // different values return false
+  t.false(src.equal(array, otherArray));
+  t.false(src.equal(object, otherObject));
+  t.false(src.equal(map, new Map().set('bar', 'baz')));
+  t.false(src.equal(set, new Set().add('bar')));
 });
 
-test('isitDecimal', (t) => {
-    t.plan(13);
+test('if equal will return false if the two parameters passed are the same type but not the same value', (t) => {
+  const array = ['foo', 'bar'];
+  const otherArray = ['bar', 'baz'];
+  const object = {foo: 'bar', bar: 'baz'};
+  const otherObject = {bar: 'baz', baz: 'foo'};
+  const map = new Map().set('foo', 'bar');
+  const set = new Set().add('foo');
 
-    testTypeOf(t, 'decimal');
-
-    t.equal(isit.decimal(1.23), true);
-    t.equal(isit.decimal(-1.23), true);
-    t.equal(isit.decimal(123 / 100), true);
-    t.equal(isit.decimal(1), false);
-    t.equal(isit.decimal('1.23'), false);
-    t.equal(isit.decimal(1.00), false);
-
-    t.equal(isit.all.decimal(1.23, 4.56), true);
-    t.equal(isit.all.decimal(1.23, 4), false);
-
-    t.equal(isit.any.decimal(1.23, 4), true);
-    t.equal(isit.any.decimal('1.23', '4.56'), false);
-
-    t.equal(isit.not.decimal(4), true);
-    t.equal(isit.not.decimal(1.23), false);
+  t.false(src.equal(array, otherArray));
+  t.false(src.equal(object, otherObject));
+  t.false(src.equal(map, new Map().set('bar', 'baz')));
+  t.false(src.equal(set, new Set().add('bar')));
 });
 
-test('isitEqual', (t) => {
-    t.plan(19);
+isNotOnly(all, any, not, 'equal');
 
-    testTypeOf(t, 'equal');
+test('if even will correctly identify if a number is even', (t) => {
+  const even = 2;
+  const odd = 3;
+  const zero = 0;
 
-    t.equal(isit.equal(), true); // both parameters are undefined
-    t.equal(isit.equal(undefined), true); // both parameters are undefined
-    t.equal(isit.equal(undefined, undefined), true); // both parameters are undefined
-    t.equal(isit.equal(null, undefined), false);
-    t.equal(isit.equal(null, null), true);
-    t.equal(isit.equal('test'), false);
-    t.equal(isit.equal('test', 'test'), true);
-    t.equal(isit.equal(1, 1), true);
-    t.equal(isit.equal(1, 2), false);
-    t.equal(isit.equal(1, '1'), false);
-    t.equal(isit.equal([], []), true);
-    t.equal(isit.equal([], ['foo', 'bar']), false);
-    t.equal(isit.equal(['foo', 'bar'], ['foo', 'bar']), true);
-    t.equal(isit.equal({}, {}), true);
-    t.equal(isit.equal({}, {foo: 'bar'}), false);
-    t.equal(isit.equal({foo: 'bar'}, {foo: 'bar'}), true);
-
-    t.equal(isit.not.equal({}, {foo: 'bar'}), true);
-    t.equal(isit.not.equal({foo: 'bar'}, {foo: 'bar'}), false);
+  t.true(src.even(even));
+  t.true(src.even(zero));
+  t.false(src.even(odd));
 });
 
-test('isitEven', (t) => {
-    t.plan(11);
-
-    testTypeOf(t, 'even');
-
-    t.equal(isit.even(2), true);
-    t.equal(isit.even(1), false);
-    t.equal(isit.even(0.6), false);
-    t.equal(isit.even('2'), false);
-
-    t.equal(isit.all.even(2, 4, 6), true);
-    t.equal(isit.all.even(2, 4, 5), false);
-    t.equal(isit.any.even(2, 4, 5), true);
-    t.equal(isit.any.even(1, 3, 5), false);
-    t.equal(isit.not.even(1), true);
-    t.equal(isit.not.even(2), false);
+test('if even returns false if parameter is not a number', (t) => {
+  t.false(src.even('foo'));
+  t.false(src.even('2'));
 });
 
-test('isitFinite', (t) => {
-    t.plan(12);
+isAllAnyNot(all, any, not, 'even');
 
-    testTypeOf(t, 'finite');
+test('if finite will correctly identify if the number is finite', (t) => {
+  const positiveInfinity = Infinity;
+  const negativeInfinity = -Infinity;
+  const zero = 0;
+  const negative = -123;
+  const positive = 123;
 
-    t.equal(isit.finite(2), true);
-    t.equal(isit.finite(-2), true);
-    t.equal(isit.finite('test'), true);
-    t.equal(isit.finite(Infinity), false);
-    t.equal(isit.finite(-Infinity), false);
-
-    t.equal(isit.all.finite(2, 3, 4), true);
-    t.equal(isit.all.finite(2, 3, Infinity), false);
-    t.equal(isit.any.finite(2, 3, Infinity), true);
-    t.equal(isit.any.finite(Infinity, -Infinity, Infinity), false);
-    t.equal(isit.not.finite(Infinity), true);
-    t.equal(isit.not.finite(2), false);
+  t.true(src.finite(positive));
+  t.true(src.finite(negative));
+  t.true(src.finite(zero));
+  t.false(src.finite(positiveInfinity));
+  t.false(src.finite(negativeInfinity));
 });
 
-test('isitInfinite', (t) => {
-    t.plan(12);
-
-    testTypeOf(t, 'infinite');
-
-    t.equal(isit.infinite(2), false);
-    t.equal(isit.infinite(-2), false);
-    t.equal(isit.infinite('test'), false);
-    t.equal(isit.infinite(Infinity), true);
-    t.equal(isit.infinite(-Infinity), true);
-
-    t.equal(isit.all.infinite(Infinity, -Infinity, Infinity), true);
-    t.equal(isit.all.infinite(2, 3, Infinity), false);
-    t.equal(isit.any.infinite(2, 3, Infinity), true);
-    t.equal(isit.any.infinite(2, 3, 4), false);
-    t.equal(isit.not.infinite(2), true);
-    t.equal(isit.not.infinite(Infinity), false);
+test('if finite returns false if parameter is not a number', (t) => {
+  t.false(src.finite('foo'));
+  t.false(src.finite('2'));
 });
 
-test('isitInteger', (t) => {
-    t.plan(13);
+isAllAnyNot(all, any, not, 'finite');
 
-    testTypeOf(t, 'integer');
+test('if greaterThan will correctly identify if the first number is above the second number', (t) => {
+  const first = 10;
+  const second = 5;
 
-    t.equal(isit.integer(1.23), false);
-    t.equal(isit.integer(200 / 100), true);
-    t.equal(isit.integer(1), true);
-    t.equal(isit.integer(-1), true);
-    t.equal(isit.integer('1.23'), false);
-    t.equal(isit.integer(1.00), true);
-
-    t.equal(isit.all.integer(1, 3), true);
-    t.equal(isit.all.integer(1, 3.45), false);
-    t.equal(isit.any.integer(1, 3.45), true);
-    t.equal(isit.any.integer(1.23, 3.45), false);
-    t.equal(isit.not.integer(1.23), true);
-    t.equal(isit.not.integer(1), false);
+  t.true(src.greaterThan(first, second));
+  t.false(src.greaterThan(second, first));
+  t.false(src.greaterThan(first, first));
 });
 
-test('isitNegative', (t) => {
-    t.plan(13);
+test('if greaterThan returns false if any parameter is not a number', (t) => {
+  const first = 10;
+  const second = 5;
 
-    testTypeOf(t, 'negative');
-
-    t.equal(isit.negative(1), false);
-    t.equal(isit.negative(-1), true);
-    t.equal(isit.negative(1.23), false);
-    t.equal(isit.negative(-1.23), true);
-    t.equal(isit.negative('-1'), false);
-    t.equal(isit.negative(0), false);
-
-    t.equal(isit.all.negative(-1, -2), true);
-    t.equal(isit.all.negative(-1, 2), false);
-    t.equal(isit.any.negative(-1, 2), true);
-    t.equal(isit.any.negative(1, 2), false);
-    t.equal(isit.not.negative(1), true);
-    t.equal(isit.not.negative(-1), false);
+  t.false(src.greaterThan(first.toString(), second));
+  t.false(src.greaterThan(second.toString(), first));
 });
 
-test('isitOdd', (t) => {
-    t.plan(11);
+isNotOnly(all, any, not, 'greaterThan');
 
-    testTypeOf(t, 'odd');
+test('if inRange will correctly identify if the first number is between the second and third numbers', (t) => {
+  const num = 10;
+  const min = 5;
+  const max = 15;
 
-    t.equal(isit.odd(2), false);
-    t.equal(isit.odd(1), true);
-    t.equal(isit.odd(0.6), false);
-    t.equal(isit.odd('1'), false);
-
-    t.equal(isit.all.odd(1, 3), true);
-    t.equal(isit.all.odd(1, 4), false);
-    t.equal(isit.any.odd(1, 4), true);
-    t.equal(isit.any.odd(2, 4), false);
-    t.equal(isit.not.odd(2), true);
-    t.equal(isit.not.odd(1), false);
+  t.true(src.inRange(num, min, max));
+  t.false(src.inRange(min, num, max));
+  t.false(src.inRange(max, min, num));
 });
 
-test('isitOver', (t) => {
-    t.plan(8);
+test('if inRange returns false if any parameter is not a number', (t) => {
+  const num = 10;
+  const min = 5;
+  const max = 15;
 
-    testTypeOf(t, 'over');
-
-    t.equal(isit.over(2), false);
-    t.equal(isit.over('2', 1), false);
-    t.equal(isit.over(2, '1'), false);
-    t.equal(isit.over(2, 1), true);
-    t.equal(isit.over(1, 2), false);
-
-    t.equal(isit.not.over(1, 2), true);
-    t.equal(isit.not.over(2, 1), false);
+  t.false(src.inRange(num.toString(), min, max));
+  t.false(src.inRange(num, min.toString(), max));
+  t.false(src.inRange(num, min, max.toString()));
 });
 
-test('isitPositive', (t) => {
-    t.plan(13);
+isNotOnly(all, any, not, 'inRange');
 
-    testTypeOf(t, 'positive');
+test('if lessThan correctly identifies if the first number is below the second number', (t) => {
+  const first = 5;
+  const second = 10;
 
-    t.equal(isit.positive(1), true);
-    t.equal(isit.positive(-1), false);
-    t.equal(isit.positive(1.23), true);
-    t.equal(isit.positive(-1.23), false);
-    t.equal(isit.positive('1'), false);
-    t.equal(isit.positive(0), false);
-
-    t.equal(isit.all.positive(1, 2), true);
-    t.equal(isit.all.positive(1, -2), false);
-    t.equal(isit.any.positive(1, -2), true);
-    t.equal(isit.any.positive(-1, -2), false);
-    t.equal(isit.not.positive(-1), true);
-    t.equal(isit.not.positive(1), false);
+  t.true(src.lessThan(first, second));
+  t.false(src.lessThan(second, first));
+  t.false(src.lessThan(first, first));
 });
 
-test('isitUnder', (t) => {
-    t.plan(8);
+test('if lessThan returns false if any parameter is not a number', (t) => {
+  const first = 5;
+  const second = 10;
 
-    testTypeOf(t, 'under');
-
-    t.equal(isit.under(2), false);
-    t.equal(isit.under('1', 2), false);
-    t.equal(isit.under(1, '2'), false);
-    t.equal(isit.under(1, 2), true);
-    t.equal(isit.under(2, 1), false);
-
-    t.equal(isit.not.under(2, 1), true);
-    t.equal(isit.not.under(1, 2), false);
+  t.false(src.lessThan(first.toString(), second));
+  t.false(src.lessThan(second.toString(), first));
 });
 
-test('isitWithin', (t) => {
-    t.plan(10);
+isNotOnly(all, any, not, 'lessThan');
 
-    testTypeOf(t, 'within');
+test('if negative will correctly identify if a number is negative', (t) => {
+  const negativeInteger = -123;
+  const negativeDecimal = -1.23;
+  const positiveInteger = 123;
+  const positiveDecimal = 1.23;
+  const zero = 0;
 
-    t.equal(isit.within(2, 1, 3), true);
-    t.equal(isit.within(2, 2, 3), true);
-    t.equal(isit.within(3, 2, 3), true);
-    t.equal(isit.within(4, 1, 3), false);
-    t.equal(isit.within('2', 1, 3), false);
-    t.equal(isit.within(2, '1', 3), false);
-    t.equal(isit.within(2, 1, '3'), false);
-
-    t.equal(isit.not.within(4, 1, 3), true);
-    t.equal(isit.not.within(2, 1, 3), false);
+  t.true(src.negative(negativeInteger));
+  t.true(src.negative(negativeDecimal));
+  t.false(src.negative(positiveInteger));
+  t.false(src.negative(positiveDecimal));
+  t.false(src.negative(zero));
 });
+
+test('if negative returns false if parameter is not a number', (t) => {
+  t.false(src.negative('foo'));
+  t.false(src.negative('-123'));
+});
+
+isAllAnyNot(all, any, not, 'negative');
+
+test('if odd will correctly identify if a number is odd', (t) => {
+  const even = 2;
+  const odd = 3;
+  const zero = 0;
+
+  t.true(src.odd(odd));
+  t.false(src.odd(zero));
+  t.false(src.odd(even));
+});
+
+test('if odd returns false when parameter is not a number', (t) => {
+  t.false(src.odd('foo'));
+  t.false(src.odd('1'));
+});
+
+isAllAnyNot(all, any, not, 'odd');
+
+test('if positive will correctly identify if a number is positive', (t) => {
+  const negativeInteger = -123;
+  const negativeDecimal = -1.23;
+  const positiveInteger = 123;
+  const positiveDecimal = 1.23;
+  const zero = 0;
+
+  t.true(src.positive(positiveInteger));
+  t.true(src.positive(positiveDecimal));
+  t.false(src.positive(negativeInteger));
+  t.false(src.positive(negativeDecimal));
+  t.false(src.positive(zero));
+});
+
+test('if positive returns false if parameter is not a number', (t) => {
+  t.false(src.positive('foo'));
+  t.false(src.positive('123'));
+});
+
+isAllAnyNot(all, any, not, 'positive');
