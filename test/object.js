@@ -11,7 +11,7 @@ import src, {
   all,
   any,
   not
-} from 'src/object';
+} from 'src/_groups/object';
 
 test('if definedProperty returns false when the item passed is not an object', (t) => {
   t.false(src.definedProperty('foo'));

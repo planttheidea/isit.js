@@ -10,7 +10,7 @@ import src, {
   all,
   any,
   not
-} from 'src/types';
+} from 'src/_groups/types';
 
 const args = (() => {
   function foo() {

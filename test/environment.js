@@ -11,14 +11,14 @@ import src, {
   all,
   any,
   not
-} from 'src/environment';
-import * as androidPhone from 'src/isitAndroidPhone';
-import * as androidTablet from 'src/isitAndroidTablet';
-import * as ipad from 'src/isitIpad';
-import * as ipod from 'src/isitIpod';
-import * as iphone from 'src/isitIphone';
-import * as windowsPhone from 'src/isitWindowsPhone';
-import * as windowsTablet from 'src/isitWindowsTablet';
+} from 'src/_groups/environment';
+import * as androidPhone from 'src/androidPhone';
+import * as androidTablet from 'src/androidTablet';
+import * as ipad from 'src/ipad';
+import * as ipod from 'src/ipod';
+import * as iphone from 'src/iphone';
+import * as windowsPhone from 'src/windowsPhone';
+import * as windowsTablet from 'src/windowsTablet';
 
 const createFakeNavigator = (userAgent = null, appVersion = null, vendor = null) => {
   return {

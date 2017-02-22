@@ -10,7 +10,7 @@ import src, {
   all,
   any,
   not
-} from 'src/string';
+} from 'src/_groups/string';
 
 const CASE_TYPES = {
   camelCase: 'fooBarBaz',

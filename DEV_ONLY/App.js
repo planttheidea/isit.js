@@ -6,7 +6,7 @@ import {
   render
 } from 'react-dom';
 
-import isit from '../src';
+import isit from '../src/_groups';
 
 console.log(isit, Object.keys(isit).length);
 

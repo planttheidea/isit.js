@@ -5,14 +5,11 @@ const OptimizeJsPlugin = require('optimize-js-plugin');
 
 const defaultConfig = require('./webpack.config');
 
-const HAS_CUSTOM_ENTRY = !!process.env.ENTRY_FILE;
-const ENTRY = HAS_CUSTOM_ENTRY ? process.env.ENTRY_FILE : 'index';
-
 module.exports = Object.assign({}, defaultConfig, {
   devtool: undefined,
 
   output: Object.assign({}, defaultConfig.output, {
-    filename: `isit${HAS_CUSTOM_ENTRY ? `-${ENTRY}` : ''}.min.js`
+    filename: `check-if.min.js`
   }),
 
   plugins: defaultConfig.plugins.concat([

@@ -9,7 +9,7 @@ import src, {
   all,
   any,
   not
-} from 'src/array';
+} from 'src/_groups/array';
 
 test('if sorted will return true if the array is sorted in either ascending or descending order', (t) => {
   const unsortedNumbers = [4, 2, 8];

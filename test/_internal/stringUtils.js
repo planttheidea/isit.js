@@ -29,6 +29,30 @@ test('if getArrayOfWords handles excess whitespace and split characters', (t) =>
   t.deepEqual(utils.getArrayOfWords(crazyHybrid), ['foo', 'bar', 'baz']);
 });
 
+test('if getLowerCaseWord will return the word all lowercase', (t) => {
+  const upper = 'FOO';
+  const mixed = 'FoO';
+  const lower = 'foo';
+  const capitalized = 'Foo';
+
+  t.is(utils.getLowerCaseWord(upper), lower);
+  t.is(utils.getLowerCaseWord(mixed), lower);
+  t.is(utils.getLowerCaseWord(lower), lower);
+  t.is(utils.getLowerCaseWord(capitalized), lower);
+});
+
+test('if getCapitalizedWord will return the word with the first letter uppercase and the rest lowercase', (t) => {
+  const upper = 'FOO';
+  const mixed = 'FoO';
+  const lower = 'foo';
+  const capitalized = 'Foo';
+
+  t.is(utils.getCapitalizedWord(upper), capitalized);
+  t.is(utils.getCapitalizedWord(mixed), capitalized);
+  t.is(utils.getCapitalizedWord(lower), capitalized);
+  t.is(utils.getCapitalizedWord(capitalized), capitalized);
+});
+
 test('if toCamelCase successfully converts all the strings into camelCase', (t) => {
   t.is(utils.toCamelCase(camelCase), camelCase);
   t.is(utils.toCamelCase(kebabCase), camelCase);

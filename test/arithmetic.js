@@ -10,7 +10,7 @@ import src, {
   all,
   any,
   not
-} from 'src/arithmetic';
+} from 'src/_groups/arithmetic';
 
 test('if equal will correctly identify if the two parameters passed are equal in type and value', (t) => {
   const undef = undefined;
@@ -21,6 +21,7 @@ test('if equal will correctly identify if the two parameters passed are equal in
   const object = {foo: 'bar', bar: 'baz'};
   const map = new Map().set('foo', 'bar');
   const set = new Set().add('foo');
+  const decimal = 0.3;
 
   t.true(src.equal());
   t.true(src.equal(undef, undef));
@@ -33,6 +34,7 @@ test('if equal will correctly identify if the two parameters passed are equal in
   t.true(src.equal({...object}, {...object}));
   t.true(src.equal(map, new Map().set('foo', 'bar')));
   t.true(src.equal(set, new Set().add('foo')));
+  t.true(src.equal(decimal, 0.1 + 0.2));
 });
 
 test('if equal will return false if the two parameters passed are not the same type', (t) => {
@@ -89,18 +91,48 @@ test('if equal will return false if the two parameters passed are not the same t
   t.false(src.equal(set, new Set().add('bar')));
 });
 
+test('if equal will return false if the two parameters passed are the same type but have different sizes', (t) => {
+  const array = ['foo'];
+  const otherArray = ['bar', 'baz'];
+  const object = {foo: 'bar'};
+  const otherObject = {bar: 'baz', baz: 'foo'};
+  const map = new Map();
+  const otherMap = new Map().set('bar', 'baz');
+  const set = new Set();
+  const otherSet = new Set().add('bar');
+
+  t.false(src.equal(array, otherArray));
+  t.false(src.equal(object, otherObject));
+  t.false(src.equal(map, otherMap));
+  t.false(src.equal(set, otherSet));
+});
+
 test('if equal will return false if the two parameters passed are the same type but not the same value', (t) => {
   const array = ['foo', 'bar'];
   const otherArray = ['bar', 'baz'];
   const object = {foo: 'bar', bar: 'baz'};
   const otherObject = {bar: 'baz', baz: 'foo'};
   const map = new Map().set('foo', 'bar');
+  const otherMap = new Map().set('bar', 'baz');
   const set = new Set().add('foo');
+  const otherSet = new Set().add('bar');
+  const regexp = /foo/;
+  const otherRegexp = /bar/;
+  const symbol = Symbol('foo');
+  const otherSymbol = Symbol('bar');
+  const decimal = 1.2;
+  const otherDecimal = 1.3;
+  const number = 123;
+  const otherNumber = 234;
 
   t.false(src.equal(array, otherArray));
   t.false(src.equal(object, otherObject));
-  t.false(src.equal(map, new Map().set('bar', 'baz')));
-  t.false(src.equal(set, new Set().add('bar')));
+  t.false(src.equal(map, otherMap));
+  t.false(src.equal(set, otherSet));
+  t.false(src.equal(regexp, otherRegexp));
+  t.false(src.equal(symbol, otherSymbol));
+  t.false(src.equal(decimal, otherDecimal));
+  t.false(src.equal(number, otherNumber));
 });
 
 isNotOnly(all, any, not, 'equal');

@@ -9,7 +9,7 @@ import src, {
   all,
   any,
   not
-} from 'src/presence';
+} from 'src/_groups/presence';
 
 const zero = 0;
 const falseBool = false;

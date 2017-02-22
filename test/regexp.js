@@ -9,7 +9,7 @@ import src, {
   all,
   any,
   not
-} from 'src/regexp';
+} from 'src/_groups/regexp';
 
 test('if affirmative validates the values as affirmative correctly', (t) => {
   t.true(src.affirmative('yes'));

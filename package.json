@@ -16,7 +16,7 @@
     "verbose": true
   },
   "bugs": {
-    "url": "https://github.com/planttheidea/isit.js/issues"
+    "url": "https://github.com/planttheidea/check-if/issues"
   },
   "description": "micro check library",
   "devDependencies": {
@@ -51,62 +51,39 @@
     "webpack-dashboard": "^0.3.0",
     "webpack-dev-server": "^2.4.1"
   },
-  "homepage": "https://github.com/planttheidea/isit.js",
+  "homepage": "https://github.com/planttheidea/check-if",
   "keywords": [
     "check",
     "is",
-    "is.js",
-    "isit",
-    "isitjs",
+    "if",
     "test",
     "validate"
   ],
   "license": "MIT",
   "main": "lib",
-  "name": "isitjs",
+  "name": "check-if",
   "repository": {
     "type": "git",
-    "url": "https://github.com/planttheidea/isit.js.git"
+    "url": "https://github.com/planttheidea/check-if.git"
   },
   "scripts": {
-    "build": "npm run build:main && npm run build:arithmetic && npm run build:array && npm run build:environment && npm run build:object && npm run build:presence && npm run build:regexp && npm run build:string && npm run build:time && npm run build:types",
-    "build:main": "NODE_ENV=development webpack --progress",
-    "build:arithmetic": "NODE_ENV=development ENTRY_FILE=arithmetic webpack --progress",
-    "build:array": "NODE_ENV=development ENTRY_FILE=array webpack --progress",
-    "build:environment": "NODE_ENV=development ENTRY_FILE=environment webpack --progress",
-    "build:object": "NODE_ENV=development ENTRY_FILE=object webpack --progress",
-    "build:presence": "NODE_ENV=development ENTRY_FILE=presence webpack --progress",
-    "build:regexp": "NODE_ENV=development ENTRY_FILE=regexp webpack --progress",
-    "build:string": "NODE_ENV=development ENTRY_FILE=string webpack --progress",
-    "build:time": "NODE_ENV=development ENTRY_FILE=time webpack --progress",
-    "build:types": "NODE_ENV=development ENTRY_FILE=types webpack --progress",
-    "build:minified": "npm run build:minified:main && npm run build:minified:arithmetic && npm run build:minified:array && npm run build:minified:environment && npm run build:minified:object && npm run build:minified:presence && npm run build:minified:regexp && npm run build:minified:string && npm run build:minified:time && npm run build:minified:types",
-    "build:minified:main": "NODE_ENV=production webpack --progress --config=webpack.config.minified.js",
-    "build:minified:arithmetic": "NODE_ENV=production ENTRY_FILE=arithmetic webpack --progress --config=webpack.config.minified.js",
-    "build:minified:array": "NODE_ENV=production ENTRY_FILE=array webpack --progress --config=webpack.config.minified.js",
-    "build:minified:environment": "NODE_ENV=production ENTRY_FILE=environment webpack --progress --config=webpack.config.minified.js",
-    "build:minified:object": "NODE_ENV=production ENTRY_FILE=object webpack --progress --config=webpack.config.minified.js",
-    "build:minified:presence": "NODE_ENV=production ENTRY_FILE=presence webpack --progress --config=webpack.config.minified.js",
-    "build:minified:regexp": "NODE_ENV=production ENTRY_FILE=regexp webpack --progress --config=webpack.config.minified.js",
-    "build:minified:string": "NODE_ENV=production ENTRY_FILE=string webpack --progress --config=webpack.config.minified.js",
-    "build:minified:time": "NODE_ENV=production ENTRY_FILE=time webpack --progress --config=webpack.config.minified.js",
-    "build:minified:types": "NODE_ENV=production ENTRY_FILE=types webpack --progress --config=webpack.config.minified.js",
-    "clean": "",
-    "clean:dist": "rimraf dist",
+    "build": "NODE_ENV=development webpack --progress --profile --colors",
+    "build:minified": "NODE_ENV=production webpack --progress --profile --colors --config=webpack.config.minified.js",
+    "clean": "rimraf dist",
     "clean:files": "rimraf _internal index.js arithmetic.js array.js environment.js object.js presence.js regexp.js string.js time.js types.js isit*.js",
     "dev": "NODE_ENV=development webpack-dev-server --progress --profile --config=webpack.config.dev.js",
     "dev:dashboard": "NODE_ENV=development webpack-dashboard -p 3210 -- webpack-dev-server --profile --config=webpack.config.dev.js",
     "dev:dashboard:minimal": "NODE_ENV=development webpack-dashboard -m -p 3210 -- webpack-dev-server --profile --config=webpack.config.dev.js",
-    "dist": "npm run build && npm run build-minified",
+    "dist": "npm run build && npm run build:minified",
     "lint": "NODE_ENV=test eslint src",
     "prepublish": "in-publish && npm run prepublish:compile || echo",
-    "prepublish:compile": "npm run lint && npm run test:coverage && npm run transpile && npm run dist",
-    "profile": "NODE_ENV=production webpack --profile --progress --config=webpack.config.minified.js --json > webpack.stats.config",
+    "prepublish:compile": "npm run lint && npm run test:coverage && npm run clean && npm run transpile && npm run dist",
+    "profile": "NODE_ENV=production webpack --profile --progress --colors --config=webpack.config.minified.js --json > webpack.stats.config",
     "start": "npm run dev:dashboard:minimal",
     "test": "NODE_PATH=. NODE_ENV=test ava --no-cache",
     "test:coverage": "nyc npm test",
     "test:watch": "NODE_PATH=. NODE_ENV=test ava --watch",
     "transpile": "babel src --out-dir ."
   },
-  "version": "2.3.1"
+  "version": "1.0.0"
 }

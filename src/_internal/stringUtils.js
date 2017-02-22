@@ -48,6 +48,36 @@ export const createConvertStringMethod = (fn) => {
 /**
  * @private
  *
+ * @function getLowerCaseWord
+ *
+ * @description
+ * get the word in all lowercase
+ *
+ * @param {string} word word to lowercase
+ * @returns {string} lowercased word
+ */
+export const getLowerCaseWord = (word) => {
+  return word.toLowerCase();
+};
+
+/**
+ * @private
+ *
+ * @function getCapitalizedWord
+ *
+ * @description
+ * get the word with the first letter capitalized and the rest lowercase
+ *
+ * @param {string} word word to capitalize
+ * @returns {string} capitalized word
+ */
+export const getCapitalizedWord = (word) => {
+  return word.charAt(0).toUpperCase() + getLowerCaseWord(word.slice(1));
+};
+
+/**
+ * @private
+ *
  * @function toCamelCase
  *
  * @description
@@ -57,7 +87,7 @@ export const createConvertStringMethod = (fn) => {
  * @returns {string} converted string
  */
 export const toCamelCase = createConvertStringMethod((camelCaseString, word) => {
-  return !camelCaseString ? word.toLowerCase() : `${camelCaseString}${word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()}`;
+  return !camelCaseString ? getLowerCaseWord(word) : `${camelCaseString}${getCapitalizedWord(word)}`;
 });
 
 /**
@@ -72,7 +102,7 @@ export const toCamelCase = createConvertStringMethod((camelCaseString, word) => 
  * @returns {string} converted string
  */
 export const toKebabCase = createConvertStringMethod((kebabCaseString, word) => {
-  const lowerCaseWord = word.toLowerCase();
+  const lowerCaseWord = getLowerCaseWord(word);
 
   return !kebabCaseString ? lowerCaseWord : `${kebabCaseString}-${lowerCaseWord}`;
 });
@@ -89,7 +119,7 @@ export const toKebabCase = createConvertStringMethod((kebabCaseString, word) => 
  * @returns {string} converted string
  */
 export const toSnakeCase = createConvertStringMethod((snakeCaseString, word) => {
-  const lowerCaseWord = word.toLowerCase();
+  const lowerCaseWord = getLowerCaseWord(word);
 
   return !snakeCaseString ? lowerCaseWord : `${snakeCaseString}_${lowerCaseWord}`;
 });
@@ -106,7 +136,7 @@ export const toSnakeCase = createConvertStringMethod((snakeCaseString, word) => 
  * @returns {string} converted string
  */
 export const toStartCase = createConvertStringMethod((startCaseString, word) => {
-  const startCaseWord = word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+  const startCaseWord = getCapitalizedWord(word);
 
   return !startCaseString ? startCaseWord : `${startCaseString} ${startCaseWord}`;
 });
