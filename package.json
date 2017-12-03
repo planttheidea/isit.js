@@ -31,7 +31,15 @@
     "webpack-dev-server": "2.9.5"
   },
   "homepage": "https://github.com/planttheidea/isit.js",
-  "keywords": ["check", "is", "is.js", "isit", "isitjs", "test", "validate"],
+  "keywords": [
+    "check",
+    "is",
+    "is.js",
+    "isit",
+    "isitjs",
+    "test",
+    "validate"
+  ],
   "license": "MIT",
   "main": "lib",
   "name": "isitjs",
@@ -50,5 +58,5 @@
     "test": "NODE_ENV=test browserify -t babelify test/index.js | tape-run",
     "transpile": "babel src --out-dir lib"
   },
-  "version": "2.3.1"
+  "version": "2.3.2"
 }
