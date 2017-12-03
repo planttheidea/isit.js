@@ -1,6 +1,9 @@
 isit.js CHANGELOG
 =================
 
+#### 2.3.2
+* Update dependencies to resolve spotted security risk
+
 #### 2.3.0
 * Re-include isitTypedArray
 * Move certain tests from regexp to string (more logical grouping)
