@@ -5,7 +5,7 @@
  * @returns {string}
  */
 const toString = (object) => {
-    return Object.prototype.toString.call(object);
+  return Object.prototype.toString.call(object);
 };
 
 /**
@@ -15,104 +15,7 @@ const toString = (object) => {
  * @returns {string}
  */
 const getObjectToStringValue = (type) => {
-    return `[object ${type}]`;
-};
-
-/**
- * Checks to see if object is an arguments object
- *
- * @param {any} object
- * @returns {boolean}
- */
-export const isitArguments = (object) => {
-    return (!isitNull(object) && toString(object) === getObjectToStringValue('Arguments')) ||
-        !!(object && typeof object === 'object' && 'callee' in object);
-};
-
-/**
- * Checks to see if object is an array
- *
- * @param {any} object
- * @returns {boolean}
- */
-export const isitArray = (object) => {
-    return toString(object) === getObjectToStringValue('Array');
-};
-
-/**
- * Checks to see if object is a boolean
- *
- * @param {any} object
- * @returns {boolean}
- */
-export const isitBoolean = (object) => {
-    return object === true || object === false || toString(object) === getObjectToStringValue('Boolean');
-};
-
-/**
- * Checks to see if object is a character (string with length of 1)
- *
- * @param {any} object
- * @returns {boolean}
- */
-export const isitChar = (object) => {
-    return isitString(object) && object.length === 1;
-};
-
-/**
- * Checks to see if object is a date
- *
- * @param {any} object
- * @returns {boolean}
- */
-export const isitDate = (object) => {
-    return toString(object) === getObjectToStringValue('Date');
-};
-
-/**
- * Checks to see if object is an error
- *
- * @param {any} object
- * @returns {boolean}
- */
-export const isitError = (object) => {
-    return toString(object) === getObjectToStringValue('Error');
-};
-
-/**
- * Checks to see if object is a function
- *
- * @param {any} object
- * @returns {boolean}
- */
-export const isitFunction = (object) => {
-    return toString(object) === getObjectToStringValue('Function') || typeof object === 'function';
-};
-
-/**
- * Checks to see if object is a JSON string
- *
- * @param {any} object
- * @returns {boolean}
- */
-export const isitJSON = (object) => {
-    try {
-        JSON.parse(object);
-
-        return true;
-    } catch (ex) {
-        return false;
-    }
-};
-
-/**
- * Checks to see if object is a NaN
- *
- * @param {any} object
- * @returns {boolean}
- */
-export const isitNaN = (object) => {
-    return object !== object;
+  return `[object ${type}]`;
 };
 
 /**
@@ -122,7 +25,116 @@ export const isitNaN = (object) => {
  * @returns {boolean}
  */
 export const isitNull = (object) => {
-    return object === null;
+  return object === null;
+};
+
+/**
+ * Checks to see if object is an arguments object
+ *
+ * @param {any} object
+ * @returns {boolean}
+ */
+export const isitArguments = (object) => {
+  return (
+    (!isitNull(object) && toString(object) === getObjectToStringValue('Arguments')) ||
+    !!(object && typeof object === 'object' && 'callee' in object)
+  );
+};
+
+/**
+ * Checks to see if object is an array
+ *
+ * @param {any} object
+ * @returns {boolean}
+ */
+export const isitArray = (object) => {
+  return toString(object) === getObjectToStringValue('Array');
+};
+
+/**
+ * Checks to see if object is a boolean
+ *
+ * @param {any} object
+ * @returns {boolean}
+ */
+export const isitBoolean = (object) => {
+  return object === true || object === false || toString(object) === getObjectToStringValue('Boolean');
+};
+
+/**
+ * Checks to see if object is a string
+ *
+ * @param {any} object
+ * @returns {boolean}
+ */
+export const isitString = (object) => {
+  return toString(object) === getObjectToStringValue('String');
+};
+
+/**
+ * Checks to see if object is a character (string with length of 1)
+ *
+ * @param {any} object
+ * @returns {boolean}
+ */
+export const isitChar = (object) => {
+  return isitString(object) && object.length === 1;
+};
+
+/**
+ * Checks to see if object is a date
+ *
+ * @param {any} object
+ * @returns {boolean}
+ */
+export const isitDate = (object) => {
+  return toString(object) === getObjectToStringValue('Date');
+};
+
+/**
+ * Checks to see if object is an error
+ *
+ * @param {any} object
+ * @returns {boolean}
+ */
+export const isitError = (object) => {
+  return toString(object) === getObjectToStringValue('Error');
+};
+
+/**
+ * Checks to see if object is a function
+ *
+ * @param {any} object
+ * @returns {boolean}
+ */
+export const isitFunction = (object) => {
+  return toString(object) === getObjectToStringValue('Function') || typeof object === 'function';
+};
+
+/**
+ * Checks to see if object is a JSON string
+ *
+ * @param {any} object
+ * @returns {boolean}
+ */
+export const isitJSON = (object) => {
+  try {
+    JSON.parse(object);
+
+    return true;
+  } catch (ex) {
+    return false;
+  }
+};
+
+/**
+ * Checks to see if object is a NaN
+ *
+ * @param {any} object
+ * @returns {boolean}
+ */
+export const isitNaN = (object) => {
+  return object !== object;
 };
 
 /**
@@ -132,7 +144,7 @@ export const isitNull = (object) => {
  * @returns {boolean}
  */
 export const isitNumber = (object) => {
-    return !isitNaN(object) && toString(object) === getObjectToStringValue('Number');
+  return !isitNaN(object) && toString(object) === getObjectToStringValue('Number');
 };
 
 /**
@@ -142,7 +154,7 @@ export const isitNumber = (object) => {
  * @returns {boolean}
  */
 export const isitObject = (object) => {
-    return toString(object) === getObjectToStringValue('Object') && !!object;
+  return toString(object) === getObjectToStringValue('Object') && !!object;
 };
 
 /**
@@ -152,7 +164,7 @@ export const isitObject = (object) => {
  * @returns {boolean}
  */
 export const isitRegExp = (object) => {
-    return toString(object) === getObjectToStringValue('RegExp');
+  return toString(object) === getObjectToStringValue('RegExp');
 };
 
 /**
@@ -163,21 +175,11 @@ export const isitRegExp = (object) => {
  * @returns {boolean}
  */
 export const isitSameType = (object1, object2) => {
-    if (isitNaN(object1) && isitNaN(object2)) {
-        return isitNaN(object1) === isitNaN(object2);
-    }
+  if (isitNaN(object1) && isitNaN(object2)) {
+    return isitNaN(object1) === isitNaN(object2);
+  }
 
-    return toString(object1) === toString(object2);
-};
-
-/**
- * Checks to see if object is a string
- *
- * @param {any} object
- * @returns {boolean}
- */
-export const isitString = (object) => {
-    return toString(object) === getObjectToStringValue('String');
+  return toString(object1) === toString(object2);
 };
 
 /**
@@ -187,7 +189,7 @@ export const isitString = (object) => {
  * @returns {boolean}
  */
 export const isitSymbol = (object) => {
-    return typeof object === 'symbol';
+  return typeof object === 'symbol';
 };
 
 /**
@@ -197,17 +199,19 @@ export const isitSymbol = (object) => {
  * @returns {boolean}
  */
 export const isitTypedArray = (object) => {
-    const objectToString = toString(object);
+  const objectToString = toString(object);
 
-    return objectToString === getObjectToStringValue('Int8Array')
-      || objectToString === getObjectToStringValue('Uint8Array')
-      || objectToString === getObjectToStringValue('Uint8ClampedArray')
-      || objectToString === getObjectToStringValue('Int16Array')
-      || objectToString === getObjectToStringValue('Uint16Array')
-      || objectToString === getObjectToStringValue('Int32Array')
-      || objectToString === getObjectToStringValue('Uint32Array')
-      || objectToString === getObjectToStringValue('Float32Array')
-      || objectToString === getObjectToStringValue('Float64Array');
+  return (
+    objectToString === getObjectToStringValue('Int8Array') ||
+    objectToString === getObjectToStringValue('Uint8Array') ||
+    objectToString === getObjectToStringValue('Uint8ClampedArray') ||
+    objectToString === getObjectToStringValue('Int16Array') ||
+    objectToString === getObjectToStringValue('Uint16Array') ||
+    objectToString === getObjectToStringValue('Int32Array') ||
+    objectToString === getObjectToStringValue('Uint32Array') ||
+    objectToString === getObjectToStringValue('Float32Array') ||
+    objectToString === getObjectToStringValue('Float64Array')
+  );
 };
 
 /**
@@ -217,26 +221,26 @@ export const isitTypedArray = (object) => {
  * @returns {boolean}
  */
 export const isitUndefined = (object) => {
-    return object === void 0;
+  return object === void 0;
 };
 
 export default {
-    arguments: isitArguments,
-    array: isitArray,
-    boolean: isitBoolean,
-    char: isitChar,
-    date: isitDate,
-    error: isitError,
-    'function': isitFunction,
-    json: isitJSON,
-    nan: isitNaN,
-    'null': isitNull,
-    number: isitNumber,
-    object: isitObject,
-    regexp: isitRegExp,
-    sameType: isitSameType,
-    string: isitString,
-    symbol: isitSymbol,
-    typedArray: isitTypedArray,
-    'undefined': isitUndefined
+  arguments: isitArguments,
+  array: isitArray,
+  boolean: isitBoolean,
+  char: isitChar,
+  date: isitDate,
+  error: isitError,
+  function: isitFunction,
+  json: isitJSON,
+  nan: isitNaN,
+  null: isitNull,
+  number: isitNumber,
+  object: isitObject,
+  regexp: isitRegExp,
+  sameType: isitSameType,
+  string: isitString,
+  symbol: isitSymbol,
+  typedArray: isitTypedArray,
+  undefined: isitUndefined
 };

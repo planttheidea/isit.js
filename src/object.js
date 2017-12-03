@@ -1,10 +1,4 @@
-import {
-    isitFunction,
-    isitNull,
-    isitNumber,
-    isitObject,
-    isitUndefined
-} from './type';
+import {isitFunction, isitNull, isitNumber, isitObject, isitUndefined} from './type';
 
 const toString = Object.prototype.toString;
 
@@ -17,7 +11,7 @@ const NODE_LIST_REGEXP = /^\[object (HTMLCollection|NodeList)\]$/;
  * @returns {boolean}
  */
 export const isitDomNode = (object) => {
-    return !isitUndefined(object) && !isitNull(object) && object.nodeType > 0;
+  return !isitUndefined(object) && !isitNull(object) && object.nodeType > 0;
 };
 
 /**
@@ -28,24 +22,23 @@ export const isitDomNode = (object) => {
  * @returns {boolean}
  */
 export const isitDomNodeList = (object) => {
-    return !isitUndefined(object) && !isitNull(object) 
-        && NODE_LIST_REGEXP.test(toString.call(object));
+  return !isitUndefined(object) && !isitNull(object) && NODE_LIST_REGEXP.test(toString.call(object));
 };
 
 /**
  * Checks if object is a jQuery object
- * 
+ *
  * @param {any} object
  * @returns {boolean}
  */
 export const isitJquery = (object) => {
-    if (isitFunction(object)) {
-        const $object = object();
+  if (isitFunction(object)) {
+    const $object = object();
 
-        return isitObject($object) && !!$object.jquery;
-    }
+    return isitObject($object) && !!$object.jquery;
+  }
 
-    return !!Object.getPrototypeOf(object).jquery;
+  return !!Object.getPrototypeOf(object).jquery;
 };
 
 /**
@@ -57,11 +50,11 @@ export const isitJquery = (object) => {
  * @returns {boolean}
  */
 export const isitPropertyCount = (object, count) => {
-    if (!isitObject(object) || !isitNumber(count)) {
-        return false;
-    }
+  if (!isitObject(object) || !isitNumber(count)) {
+    return false;
+  }
 
-    return Object.keys(object).length === count;
+  return Object.keys(object).length === count;
 };
 
 /**
@@ -73,7 +66,7 @@ export const isitPropertyCount = (object, count) => {
  * @returns {*}
  */
 export const isitPropertyDefined = (object, property) => {
-    return isitObject(object) && object.hasOwnProperty(property);
+  return isitObject(object) && object.hasOwnProperty(property);
 };
 
 /**
@@ -83,22 +76,19 @@ export const isitPropertyDefined = (object, property) => {
  * @returns {boolean}
  */
 export const isitWindowObject = (object) => {
-    return typeof object === 'object' && 'setInterval' in object;
+  return typeof object === 'object' && 'setInterval' in object;
 };
 
 /**
  * Functions we don't want to show up in any or all
  */
-export const multiParamFunctions = [
-    'propertyCount',
-    'propertyDefined'
-];
+export const multiParamFunctions = ['propertyCount', 'propertyDefined'];
 
 export default {
-    domNode: isitDomNode,
-    domNodeList: isitDomNodeList,
-    jquery: isitJquery,
-    propertyCount: isitPropertyCount,
-    propertyDefined: isitPropertyDefined,
-    windowObject: isitWindowObject
+  domNode: isitDomNode,
+  domNodeList: isitDomNodeList,
+  jquery: isitJquery,
+  propertyCount: isitPropertyCount,
+  propertyDefined: isitPropertyDefined,
+  windowObject: isitWindowObject
 };

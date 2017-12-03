@@ -6,12 +6,12 @@ const NAVIGATOR_IN_WINDOW = HAS_WINDOW && 'navigator' in window;
 
 /**
  * Returns property from navigator object exists, else returns false
- * 
+ *
  * @param {string} property
  * @returns {boolean|string}
  */
 const hasNavigatorProperty = (property) => {
-    return NAVIGATOR_IN_WINDOW && property in navigator && navigator[property].toLowerCase();
+  return NAVIGATOR_IN_WINDOW && property in navigator && navigator[property].toLowerCase();
 };
 
 /**
@@ -61,7 +61,7 @@ const WINDOWS_NT_REGEXP = /windows nt/i;
  * @returns {boolean}
  */
 export const isitAndroid = (userAgent = USER_AGENT) => {
-    return ANDROID_REGEXP.test(userAgent);
+  return ANDROID_REGEXP.test(userAgent);
 };
 
 /**
@@ -71,7 +71,7 @@ export const isitAndroid = (userAgent = USER_AGENT) => {
  * @returns {boolean}
  */
 export const isitAndroidPhone = (userAgent = USER_AGENT) => {
-    return isitAndroid(userAgent) && MOBILE_REGEXP.test(userAgent);
+  return isitAndroid(userAgent) && MOBILE_REGEXP.test(userAgent);
 };
 
 /**
@@ -81,7 +81,7 @@ export const isitAndroidPhone = (userAgent = USER_AGENT) => {
  * @returns {boolean}
  */
 export const isitAndroidTablet = (userAgent = USER_AGENT) => {
-    return isitAndroid(userAgent) && !MOBILE_REGEXP.test(userAgent);
+  return isitAndroid(userAgent) && !MOBILE_REGEXP.test(userAgent);
 };
 
 /**
@@ -91,7 +91,7 @@ export const isitAndroidTablet = (userAgent = USER_AGENT) => {
  * @returns {boolean}
  */
 export const isitBlackberry = (userAgent = USER_AGENT) => {
-    return BLACKBERRY_REGEXP.test(userAgent) || BB10_REGEXP.test(userAgent);
+  return BLACKBERRY_REGEXP.test(userAgent) || BB10_REGEXP.test(userAgent);
 };
 
 /**
@@ -101,16 +101,16 @@ export const isitBlackberry = (userAgent = USER_AGENT) => {
  * @returns {boolean}
  */
 export const isitBlink = (userAgent = USER_AGENT) => {
-    return CHROME_REGEXP.test(userAgent);
+  return CHROME_REGEXP.test(userAgent);
 };
 
 /**
  * Checks if you are running in a browser
- * 
+ *
  * @returns {boolean}
  */
 export const isitBrowser = () => {
-    return typeof window !== 'undefined';
+  return typeof window !== 'undefined';
 };
 
 /**
@@ -121,16 +121,117 @@ export const isitBrowser = () => {
  * @returns {boolean}
  */
 export const isitChrome = (userAgent = USER_AGENT, vendor = VENDOR) => {
-    return CHROME_OR_CHROMIUM_REGEXP.test(userAgent) && GOOGLE_INC_REGEXP.test(vendor);
+  return CHROME_OR_CHROMIUM_REGEXP.test(userAgent) && GOOGLE_INC_REGEXP.test(vendor);
+};
+
+/**
+ * Checks if device used is an iPad
+ *
+ * @param {string} userAgent
+ * @returns {boolean}
+ */
+export const isitIpad = (userAgent = USER_AGENT) => {
+  return IPAD_REGEXP.test(userAgent);
+};
+
+/**
+ * Checks if device used is an iPhone
+ *
+ * @param {string} userAgent
+ * @returns {boolean}
+ */
+export const isitIphone = (userAgent = USER_AGENT) => {
+  return IPHONE_REGEXP.test(userAgent) && !IPOD_REGEXP.test(userAgent);
+};
+
+/**
+ * Checks if device used is an iPod
+ *
+ * @param {string} userAgent
+ * @returns {boolean}
+ */
+export const isitIpod = (userAgent = USER_AGENT) => {
+  return IPOD_REGEXP.test(userAgent);
+};
+
+/**
+ * Checks if operating system used is iOS
+ *
+ * @param {string} userAgent
+ * @returns {boolean}
+ */
+export const isitIos = (userAgent = USER_AGENT) => {
+  return isitIpad(userAgent) || isitIphone(userAgent) || isitIpod(userAgent);
+};
+
+/**
+ * Checks if operating system used is Windows-based
+ *
+ * @param {string} appVersion
+ * @returns {boolean}
+ */
+export const isitWindows = (appVersion = APP_VERSION) => {
+  return WIN_REGEXP.test(appVersion);
+};
+
+/**
+ * Checks if deviced used is a Windows phone
+ *
+ * @param {string} userAgent
+ * @param {string} appVersion
+ * @returns {boolean}
+ */
+export const isitWindowsPhone = (userAgent = USER_AGENT, appVersion = APP_VERSION) => {
+  return isitWindows(appVersion) && PHONE_REGEXP.test(userAgent);
+};
+
+/**
+ * Checks if device used is a Windows tablet
+ *
+ * @param {string} userAgent
+ * @param {string} appVersion
+ * @returns {boolean}
+ */
+export const isitWindowsTablet = (userAgent = USER_AGENT, appVersion = APP_VERSION) => {
+  return isitWindows(appVersion) && !isitWindowsPhone(userAgent, appVersion) && TOUCH_REGEXP.test(userAgent);
+};
+
+/**
+ * Checks if device used is a mobile device (phone or tablet)
+ *
+ * @param {string} userAgent
+ * @returns {boolean}
+ */
+export const isitMobile = (userAgent = USER_AGENT) => {
+  return (
+    isitIphone(userAgent) ||
+    isitIpad(userAgent) ||
+    isitAndroidPhone(userAgent) ||
+    isitWindowsPhone(userAgent) ||
+    isitIpod(userAgent) ||
+    isitBlackberry(userAgent)
+  );
+};
+
+/**
+ * Checks if device used is a tablet
+ *
+ * @param {string} userAgent
+ * @param {string} appVersion
+ * @returns {boolean}
+ */
+export const isitTablet = (userAgent = USER_AGENT, appVersion = APP_VERSION) => {
+  return isitIpad(userAgent) || isitAndroidTablet(userAgent) || isitWindowsTablet(userAgent, appVersion);
 };
 
 /**
  * Checks if the device used is a desktop
- * 
+ *
+ * @param {string} userAgent
  * @returns {boolean}
  */
 export const isitDesktop = (userAgent = USER_AGENT) => {
-    return !isitMobile(userAgent) && !isitTablet(userAgent);
+  return !isitMobile(userAgent) && !isitTablet(userAgent);
 };
 
 /**
@@ -140,7 +241,7 @@ export const isitDesktop = (userAgent = USER_AGENT) => {
  * @returns {boolean}
  */
 export const isitEdge = (userAgent = USER_AGENT) => {
-    return EDGE_REGEXP.test(userAgent);
+  return EDGE_REGEXP.test(userAgent);
 };
 
 /**
@@ -150,7 +251,7 @@ export const isitEdge = (userAgent = USER_AGENT) => {
  * @returns {boolean}
  */
 export const isitFirefox = (userAgent = USER_AGENT) => {
-    return FIREFOX_REGEXP.test(userAgent);
+  return FIREFOX_REGEXP.test(userAgent);
 };
 
 /**
@@ -160,7 +261,7 @@ export const isitFirefox = (userAgent = USER_AGENT) => {
  * @returns {boolean}
  */
 export const isitGecko = (userAgent = USER_AGENT) => {
-    return GECKO_REGEXP.test(userAgent) && !LIKE_GECKO_REGEXP.test(userAgent);
+  return GECKO_REGEXP.test(userAgent) && !LIKE_GECKO_REGEXP.test(userAgent);
 };
 
 /**
@@ -172,57 +273,18 @@ export const isitGecko = (userAgent = USER_AGENT) => {
  * @returns {boolean}
  */
 export const isitIe = (version, userAgent = USER_AGENT) => {
-    if (!version) {
-        return MSIE_REGEXP.test(userAgent)
-            || (WINDOWS_NT_REGEXP.test(userAgent) && RV11_REGEXP.test(userAgent));
-    }
+  if (!version) {
+    return MSIE_REGEXP.test(userAgent) || (WINDOWS_NT_REGEXP.test(userAgent) && RV11_REGEXP.test(userAgent));
+  }
 
-    /**
-     * the reason for the fallback is because IE11 is weird, in that
-     * only certain versions contained MSIE in its user agent
-     */
-    return new RegExp(`msie ${version}`, 'i').test(userAgent)
-        || (WINDOWS_NT_REGEXP.test(userAgent) && RV11_REGEXP.test(userAgent));
-};
-
-/**
- * Checks if operating system used is iOS
- *
- * @param {string} userAgent
- * @returns {boolean}
- */
-export const isitIos = (userAgent = USER_AGENT) => {
-    return isitIpad(userAgent) || isitIphone(userAgent) || isitIpod(userAgent);
-};
-
-/**
- * Checks if device used is an iPad
- *
- * @param {string} userAgent
- * @returns {boolean}
- */
-export const isitIpad = (userAgent = USER_AGENT) => {
-    return IPAD_REGEXP.test(userAgent);
-};
-
-/**
- * Checks if device used is an iPhone
- *
- * @param {string} userAgent
- * @returns {boolean}
- */
-export const isitIphone = (userAgent = USER_AGENT) => {
-    return IPHONE_REGEXP.test(userAgent) && !IPOD_REGEXP.test(userAgent);
-};
-
-/**
- * Checks if device used is an iPod
- *
- * @param {string} userAgent
- * @returns {boolean}
- */
-export const isitIpod = (userAgent = USER_AGENT) => {
-    return IPOD_REGEXP.test(userAgent);
+  /**
+   * the reason for the fallback is because IE11 is weird, in that
+   * only certain versions contained MSIE in its user agent
+   */
+  return (
+    new RegExp(`msie ${version}`, 'i').test(userAgent) ||
+    (WINDOWS_NT_REGEXP.test(userAgent) && RV11_REGEXP.test(userAgent))
+  );
 };
 
 /**
@@ -232,7 +294,7 @@ export const isitIpod = (userAgent = USER_AGENT) => {
  * @returns {boolean}
  */
 export const isitLinux = (appVersion = APP_VERSION) => {
-    return LINUX_REGEXP.test(appVersion) || UNIX_REGEXP.test(appVersion);
+  return LINUX_REGEXP.test(appVersion) || UNIX_REGEXP.test(appVersion);
 };
 
 /**
@@ -242,18 +304,7 @@ export const isitLinux = (appVersion = APP_VERSION) => {
  * @returns {boolean}
  */
 export const isitMac = (appVersion = APP_VERSION) => {
-    return MAC_REGEXP.test(appVersion);
-};
-
-/**
- * Checks if device used is a mobile device (phone or tablet)
- *
- * @param {string} userAgent
- * @returns {boolean}
- */
-export const isitMobile = (userAgent = USER_AGENT) => {
-    return isitIphone(userAgent) || isitIpad(userAgent) || isitAndroidPhone(userAgent)
-        || isitWindowsPhone(userAgent) || isitIpod(userAgent) || isitBlackberry(userAgent);
+  return MAC_REGEXP.test(appVersion);
 };
 
 /**
@@ -262,16 +313,7 @@ export const isitMobile = (userAgent = USER_AGENT) => {
  * @returns {boolean}
  */
 export const isitNode = () => {
-    return !isitBrowser();
-};
-
-/**
- * Checks if your browser is currently online
- *
- * @returns {boolean}
- */
-export const isitOffline = () => {
-    return !isitOnline();
+  return !isitBrowser();
 };
 
 /**
@@ -280,7 +322,16 @@ export const isitOffline = () => {
  * @returns {boolean}
  */
 export const isitOnline = () => {
-    return NAVIGATOR_IN_WINDOW && navigator.onLine;
+  return NAVIGATOR_IN_WINDOW && navigator.onLine;
+};
+
+/**
+ * Checks if your browser is currently online
+ *
+ * @returns {boolean}
+ */
+export const isitOffline = () => {
+  return !isitOnline();
 };
 
 /**
@@ -290,8 +341,9 @@ export const isitOnline = () => {
  * @returns {boolean}
  */
 export const isitOpera = (userAgent = USER_AGENT) => {
-    return OPERA_LEGACY_REGEXP.test(userAgent) || // Opera 12 and older versions
-        OPERA_MODERN_REGEXP.test(userAgent); // Opera 15+
+  return (
+    OPERA_LEGACY_REGEXP.test(userAgent) || OPERA_MODERN_REGEXP.test(userAgent) // Opera 12 and older versions
+  ); // Opera 15+
 };
 
 /**
@@ -302,7 +354,7 @@ export const isitOpera = (userAgent = USER_AGENT) => {
  * @returns {boolean}
  */
 export const isitPresto = (userAgent = USER_AGENT) => {
-    return OPERA_LEGACY_REGEXP.test(userAgent);
+  return OPERA_LEGACY_REGEXP.test(userAgent);
 };
 
 /**
@@ -313,19 +365,7 @@ export const isitPresto = (userAgent = USER_AGENT) => {
  * @returns {boolean}
  */
 export const isitSafari = (userAgent = USER_AGENT, vendor = VENDOR) => {
-    return SAFARI_REGEXP.test(userAgent) && APPLE_COMPUTER_REGEXP.test(vendor);
-};
-
-/**
- * Checks if device used is a tablet
- * 
- * @param {string} userAgent
- * @param {string} appVersion
- * @returns {boolean}
- */
-export const isitTablet = (userAgent = USER_AGENT, appVersion = APP_VERSION) => {
-    return isitIpad(userAgent) || isitAndroidTablet(userAgent)
-        || isitWindowsTablet(userAgent, appVersion);
+  return SAFARI_REGEXP.test(userAgent) && APPLE_COMPUTER_REGEXP.test(vendor);
 };
 
 /**
@@ -335,7 +375,7 @@ export const isitTablet = (userAgent = USER_AGENT, appVersion = APP_VERSION) => 
  * @returns {boolean}
  */
 export const isitTrident = (userAgent = USER_AGENT) => {
-    return TRIDENT_REGEXP.test(userAgent) || /msie [6-9]/i.test(userAgent);
+  return TRIDENT_REGEXP.test(userAgent) || /msie [6-9]/i.test(userAgent);
 };
 
 /**
@@ -344,8 +384,9 @@ export const isitTrident = (userAgent = USER_AGENT) => {
  * @returns {boolean}
  */
 export const isitTouchDevice = () => {
-    return HAS_WINDOW && 'ontouchstart' in window || 'DocumentTouch' in window
-        && document instanceof window.DocumentTouch;
+  return (
+    (HAS_WINDOW && 'ontouchstart' in window) || ('DocumentTouch' in window && document instanceof window.DocumentTouch)
+  );
 };
 
 /**
@@ -355,73 +396,40 @@ export const isitTouchDevice = () => {
  * @returns {boolean}
  */
 export const isitWebkit = (userAgent = USER_AGENT) => {
-    return APPLE_WEBKIT_REGEXP.test(userAgent);
-};
-
-/**
- * Checks if operating system used is Windows-based
- *
- * @param {string} appVersion
- * @returns {boolean}
- */
-export const isitWindows = (appVersion = APP_VERSION) => {
-    return WIN_REGEXP.test(appVersion);
-};
-
-/**
- * Checks if deviced used is a Windows phone
- *
- * @param {string} userAgent
- * @param {string} appVersion
- * @returns {boolean}
- */
-export const isitWindowsPhone = (userAgent = USER_AGENT, appVersion = APP_VERSION) => {
-    return isitWindows(appVersion) && PHONE_REGEXP.test(userAgent);
-};
-
-/**
- * Checks if device used is a Windows tablet
- * 
- * @param {string} userAgent
- * @param {string} appVersion
- * @returns {boolean}
- */
-export const isitWindowsTablet = (userAgent = USER_AGENT, appVersion = APP_VERSION) => {
-    return isitWindows(appVersion) && !isitWindowsPhone(userAgent, appVersion)
-        && TOUCH_REGEXP.test(userAgent);
+  return APPLE_WEBKIT_REGEXP.test(userAgent);
 };
 
 export default {
-    android: isitAndroid,
-    androidPhone: isitAndroidPhone,
-    androidTablet: isitAndroidTablet,
-    blackberry: isitBlackberry,
-    blink: isitBlink,
-    browser: isitBrowser,
-    chrome: isitChrome,
-    desktop: isitDesktop,
-    edge: isitEdge,
-    firefox: isitFirefox,
-    gecko: isitGecko,
-    ie: isitIe,
-    ios: isitIos,
-    ipad: isitIpad,
-    iphone: isitIphone,
-    ipod: isitIpod,
-    linux: isitLinux,
-    mac: isitMac,
-    mobile: isitMobile,
-    node: isitNode,
-    offline: isitOffline,
-    online: isitOnline,
-    opera: isitOpera,
-    presto: isitPresto,
-    safari: isitSafari,
-    tablet: isitTablet,
-    touchDevice: isitTouchDevice,
-    trident: isitTrident,
-    webkit: isitWebkit,
-    windows: isitWindows,
-    windowsPhone: isitWindowsPhone,
-    windowsTablet: isitWindowsTablet
+  android: isitAndroid,
+  androidPhone: isitAndroidPhone,
+  androidTablet: isitAndroidTablet,
+  blackberry: isitBlackberry,
+  blink: isitBlink,
+  browser: isitBrowser,
+  chrome: isitChrome,
+  desktop: isitDesktop,
+  edge: isitEdge,
+  firefox: isitFirefox,
+  gecko: isitGecko,
+  ie: isitIe,
+  ios: isitIos,
+  ipad: isitIpad,
+  iphone: isitIphone,
+  ipod: isitIpod,
+  linux: isitLinux,
+  mac: isitMac,
+  mobile: isitMobile,
+  node: isitNode,
+  offline: isitOffline,
+  online: isitOnline,
+  opera: isitOpera,
+  presto: isitPresto,
+  safari: isitSafari,
+  tablet: isitTablet,
+  touchDevice: isitTouchDevice,
+  trident: isitTrident,
+  webkit: isitWebkit,
+  windows: isitWindows,
+  windowsPhone: isitWindowsPhone,
+  windowsTablet: isitWindowsTablet
 };

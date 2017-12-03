@@ -1,12 +1,7 @@
-import {
-    isitEqual
-} from './arithmetic';
-import {
-    isitArray,
-    isitString
-} from './type';
+import {isitEqual} from './arithmetic';
+import {isitArray, isitString} from './type';
 
-const DATA_URL_REGEXP = /^\s*data:([a-z]+\/[a-z]+(;[a-z\-]+\=[a-z\-]+)?)?(;base64)?,[a-z0-9\!\$\&\'\,\(\)\*\+\,\;\=\-\.\_\~\:\@\/\?\%\s]*\s*$/i;
+const DATA_URL_REGEXP = /^\s*data:([a-z]+\/[a-z]+(;[a-z\-]+\=[a-z\-]+)?)?(;base64)?,[a-z0-9\!\$\&\'\,\(\)\*\+\,\;\=\-\.\_\~\:\@\/\?\%\s]*\s*$/i; // eslint-disable-line
 const DOUBLE_BYTE_REGEXP = /[^\u0000-\u00ff]/;
 const HTML_REGEXP = /<(\"[^\"]*\"|'[^']*'|[^'\">])*>/;
 
@@ -22,7 +17,8 @@ const RS_LOWER_RANGE = 'a-z\\xdf-\\xf6\\xf8-\\xff';
 const RS_MATH_OP_RANGE = '\\xac\\xb1\\xd7\\xf7';
 const RS_NON_CHAR_RANGE = '\\x00-\\x2f\\x3a-\\x40\\x5b-\\x60\\x7b-\\xbf';
 const RS_QUOTE_RANGE = '\\u2018\\u2019\\u201c\\u201d';
-const RS_SPACE_RANGE = ' \\t\\x0b\\f\\xa0\\ufeff\\n\\r\\u2028\\u2029\\u1680\\u180e\\u2000\\u2001\\u2002\\u2003\\u2004\\u2005\\u2006\\u2007\\u2008\\u2009\\u200a\\u202f\\u205f\\u3000';
+const RS_SPACE_RANGE =
+  ' \\t\\x0b\\f\\xa0\\ufeff\\n\\r\\u2028\\u2029\\u1680\\u180e\\u2000\\u2001\\u2002\\u2003\\u2004\\u2005\\u2006\\u2007\\u2008\\u2009\\u200a\\u202f\\u205f\\u3000';
 const RS_UPPER_RANGE = 'A-Z\\xc0-\\xd6\\xd8-\\xde';
 const RS_VAR_RANGE = '\\ufe0e\\ufe0f';
 const RS_BREAK_RANGE = RS_MATH_OP_RANGE + RS_NON_CHAR_RANGE + RS_QUOTE_RANGE + RS_SPACE_RANGE;
@@ -32,8 +28,12 @@ const RS_COMBO = `[${RS_COMBO_MARKS_RANGE + RS_COMBO_SYMBOLS_RANGE}]`;
 const RS_DIGITS = '\\d+';
 const RS_DINGBAT = `[${RS_DINGBAT_RANGE}]`;
 const RS_LOWER = `[${RS_LOWER_RANGE}]`;
-const RS_MISC = `[^${RS_ASTRAL_RANGE + RS_BREAK_RANGE + RS_DIGITS
-    + RS_DINGBAT_RANGE + RS_LOWER_RANGE + RS_UPPER_RANGE}]`;
+const RS_MISC = `[^${RS_ASTRAL_RANGE +
+  RS_BREAK_RANGE +
+  RS_DIGITS +
+  RS_DINGBAT_RANGE +
+  RS_LOWER_RANGE +
+  RS_UPPER_RANGE}]`;
 const RS_FITZ = '\\ud83c[\\udffb-\\udfff]';
 const RS_MODIFIER = `(?:${RS_COMBO}|${RS_FITZ})`;
 const RS_NON_ASTRAL = `[^${RS_ASTRAL_RANGE}]`;
@@ -46,29 +46,29 @@ const RS_LOWER_MISC = `(?:${RS_LOWER}|${RS_MISC})`;
 const RS_UPPER_MISC = `(?:${RS_UPPER}|${RS_MISC})`;
 const RE_OPT_MOD = `${RS_MODIFIER}?`;
 const RS_OPT_VAR = `[${RS_VAR_RANGE}]?`;
-const RS_OPT_JOIN = `(?:${RS_ZWJ}(?:${[
-    RS_NON_ASTRAL,
-    RS_REGIONAL,
-    RS_SURR_PAIR
-].join('|')})${RS_OPT_VAR + RE_OPT_MOD})*`;
+const RS_OPT_JOIN = `(?:${RS_ZWJ}(?:${[RS_NON_ASTRAL, RS_REGIONAL, RS_SURR_PAIR].join('|')})${RS_OPT_VAR +
+  RE_OPT_MOD})*`;
 const RS_SEQ = RS_OPT_VAR + RE_OPT_MOD + RS_OPT_JOIN;
-const RS_EMOJI = `(?:${[RS_DINGBAT, RS_REGIONAL, RS_SURR_PAIR].join('|')})` + RS_SEQ;
+const RS_EMOJI = `(?:${[RS_DINGBAT, RS_REGIONAL, RS_SURR_PAIR].join('|')})${RS_SEQ}`;
 
 const HAS_COMPLEX_WORD = /[a-z][A-Z]|[A-Z]{2,}[a-z]|[0-9][a-zA-Z]|[a-zA-Z][0-9]|[^a-zA-Z0-9 ]/;
-const COMPLEX_WORD = RegExp([
+const COMPLEX_WORD = RegExp(
+  [
     `${RS_UPPER}?${RS_LOWER}+(?=${[RS_BREAK, RS_UPPER, '$'].join('|')})`,
     `${RS_UPPER_MISC}+(?=${[RS_BREAK, RS_UPPER + RS_LOWER_MISC, '$'].join('|')})`,
     `${RS_UPPER}?${RS_LOWER_MISC}+`,
     `${RS_UPPER}+`,
     RS_DIGITS,
     RS_EMOJI
-].join('|'), 'g');
+  ].join('|'),
+  'g'
+);
 const SIMPLE_WORD = /[a-zA-Z0-9]+/g;
 
 const getArrayOfWords = (string) => {
-    const pattern = HAS_COMPLEX_WORD.test(string) ? COMPLEX_WORD : SIMPLE_WORD;
+  const pattern = HAS_COMPLEX_WORD.test(string) ? COMPLEX_WORD : SIMPLE_WORD;
 
-    return string.match(pattern) || [];
+  return string.match(pattern) || [];
 };
 
 /**
@@ -78,16 +78,15 @@ const getArrayOfWords = (string) => {
  * @returns {string}
  */
 const toCamelCase = (string) => {
-    const arrayOfWords = getArrayOfWords(string);
+  const arrayOfWords = getArrayOfWords(string);
 
-    let camelCaseString = '';
+  let camelCaseString = '';
 
-    arrayOfWords.forEach((word, index) => {
-        camelCaseString += index === 0 ? word.toLowerCase()
-            : (word.charAt(0).toUpperCase() + word.slice(1).toLowerCase());
-    });
+  arrayOfWords.forEach((word, index) => {
+    camelCaseString += index === 0 ? word.toLowerCase() : word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+  });
 
-    return camelCaseString;
+  return camelCaseString;
 };
 
 /**
@@ -97,19 +96,19 @@ const toCamelCase = (string) => {
  * @returns {string}
  */
 const toKebabCase = (string) => {
-    const arrayOfWords = getArrayOfWords(string);
+  const arrayOfWords = getArrayOfWords(string);
 
-    let kebabCaseString = '';
+  let kebabCaseString = '';
 
-    arrayOfWords.forEach((word, index) => {
-        if (index !== 0) {
-            kebabCaseString += '-';
-        }
+  arrayOfWords.forEach((word, index) => {
+    if (index !== 0) {
+      kebabCaseString += '-';
+    }
 
-        kebabCaseString += word.toLowerCase();
-    });
+    kebabCaseString += word.toLowerCase();
+  });
 
-    return kebabCaseString;
+  return kebabCaseString;
 };
 /**
  * Converts string passed to snake_case spelling
@@ -118,19 +117,19 @@ const toKebabCase = (string) => {
  * @returns {string}
  */
 const toSnakeCase = (string) => {
-    const arrayOfWords = getArrayOfWords(string);
+  const arrayOfWords = getArrayOfWords(string);
 
-    let snakeCaseString = '';
+  let snakeCaseString = '';
 
-    arrayOfWords.forEach((word, index) => {
-        if (index !== 0) {
-            snakeCaseString += '_';
-        }
+  arrayOfWords.forEach((word, index) => {
+    if (index !== 0) {
+      snakeCaseString += '_';
+    }
 
-        snakeCaseString += word.toLowerCase();
-    });
+    snakeCaseString += word.toLowerCase();
+  });
 
-    return snakeCaseString;
+  return snakeCaseString;
 };
 
 /**
@@ -140,19 +139,19 @@ const toSnakeCase = (string) => {
  * @returns {string}
  */
 const toStartCase = (string) => {
-    const arrayOfWords = getArrayOfWords(string);
+  const arrayOfWords = getArrayOfWords(string);
 
-    let startCaseString = '';
+  let startCaseString = '';
 
-    arrayOfWords.forEach((word, index) => {
-        if (index !== 0) {
-            startCaseString += ' ';
-        }
+  arrayOfWords.forEach((word, index) => {
+    if (index !== 0) {
+      startCaseString += ' ';
+    }
 
-        startCaseString += word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
-    });
+    startCaseString += word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+  });
 
-    return startCaseString;
+  return startCaseString;
 };
 
 /**
@@ -163,7 +162,7 @@ const toStartCase = (string) => {
  * @returns {boolean}
  */
 export const isitCamelCase = (object) => {
-    return isitString(object) && object === toCamelCase(object);
+  return isitString(object) && object === toCamelCase(object);
 };
 
 /**
@@ -174,16 +173,16 @@ export const isitCamelCase = (object) => {
  * @returns {boolean}
  */
 export const isitCapitalized = (object) => {
-    if (!isitString(object)) {
-        return false;
-    }
+  if (!isitString(object)) {
+    return false;
+  }
 
-    const words = object.split(' ');
-    const capitalized = words.map((word) => {
-        return word.charAt(0).toUpperCase() + word.slice(1);
-    });
+  const words = object.split(' ');
+  const capitalized = words.map((word) => {
+    return word.charAt(0).toUpperCase() + word.slice(1);
+  });
 
-    return isitEqual(words, capitalized);
+  return isitEqual(words, capitalized);
 };
 
 /**
@@ -193,7 +192,7 @@ export const isitCapitalized = (object) => {
  * @returns {boolean}
  */
 export const isitDataUrl = (object) => {
-    return DATA_URL_REGEXP.test(object);
+  return DATA_URL_REGEXP.test(object);
 };
 
 /**
@@ -203,7 +202,7 @@ export const isitDataUrl = (object) => {
  * @returns {boolean}
  */
 export const isitDoubleByte = (object) => {
-    return DOUBLE_BYTE_REGEXP.test(object);
+  return DOUBLE_BYTE_REGEXP.test(object);
 };
 
 /**
@@ -214,13 +213,13 @@ export const isitDoubleByte = (object) => {
  * @returns {boolean}
  */
 export const isitEndWith = (object, endingString) => {
-    if (!isitString(object) || !isitString(endingString)) {
-        return false;
-    }
+  if (!isitString(object) || !isitString(endingString)) {
+    return false;
+  }
 
-    const index = object.lastIndexOf(endingString);
+  const index = object.lastIndexOf(endingString);
 
-    return index !== -1 && index === object.length - endingString.length;
+  return index !== -1 && index === object.length - endingString.length;
 };
 
 /**
@@ -235,7 +234,7 @@ export const isitEndsWith = isitEndWith;
  * @returns {boolean}
  */
 export const isitHtml = (object) => {
-    return HTML_REGEXP.test(object);
+  return HTML_REGEXP.test(object);
 };
 
 /**
@@ -247,8 +246,7 @@ export const isitHtml = (object) => {
  * @returns {boolean}
  */
 export const isitInclude = (object, substring) => {
-    return (isitArray(object) || isitString(object))
-        && isitString(substring) && object.indexOf(substring) !== -1;
+  return (isitArray(object) || isitString(object)) && isitString(substring) && object.indexOf(substring) !== -1;
 };
 
 /**
@@ -263,7 +261,7 @@ export const isitIncludes = isitInclude;
  * @returns {boolean}
  */
 export const isitKebabCase = (object) => {
-    return isitString(object) && object.toLowerCase() === toKebabCase(object);
+  return isitString(object) && object.toLowerCase() === toKebabCase(object);
 };
 
 /**
@@ -273,7 +271,7 @@ export const isitKebabCase = (object) => {
  * @returns {boolean}
  */
 export const isitLowerCase = (object) => {
-    return isitString(object) && object === object.toLowerCase();
+  return isitString(object) && object === object.toLowerCase();
 };
 
 /**
@@ -284,13 +282,19 @@ export const isitLowerCase = (object) => {
  * @returns {boolean}
  */
 export const isitPalindrome = (object) => {
-    if (!isitString(object)) {
-        return false;
-    }
+  if (!isitString(object)) {
+    return false;
+  }
 
-    const spacelessString = object.replace(/\s/g, '');
+  const spacelessString = object.replace(/\s/g, '');
 
-    return spacelessString === spacelessString.split('').reverse().join('');
+  return (
+    spacelessString ===
+    spacelessString
+      .split('')
+      .reverse()
+      .join('')
+  );
 };
 
 /**
@@ -301,7 +305,7 @@ export const isitPalindrome = (object) => {
  * @returns {boolean}
  */
 export const isitSnakeCase = (object) => {
-    return isitString(object) && object.toLowerCase() === toSnakeCase(object);
+  return isitString(object) && object.toLowerCase() === toSnakeCase(object);
 };
 
 /**
@@ -313,7 +317,7 @@ export const isitSnakeCase = (object) => {
  * @returns {boolean}
  */
 export const isitStartCase = (object) => {
-    return isitString(object) && object === toStartCase(object);
+  return isitString(object) && object === toStartCase(object);
 };
 
 /**
@@ -325,7 +329,7 @@ export const isitStartCase = (object) => {
  * @returns {boolean}
  */
 export const isitStartWith = (object, substring) => {
-    return isitString(object) && isitString(substring) && object.indexOf(substring) === 0;
+  return isitString(object) && isitString(substring) && object.indexOf(substring) === 0;
 };
 
 /**
@@ -340,34 +344,30 @@ export const isitStartsWith = isitStartWith;
  * @returns {boolean}
  */
 export const isitUpperCase = (object) => {
-    return isitString(object) && object === object.toUpperCase();
+  return isitString(object) && object === object.toUpperCase();
 };
 
 /**
  * Functions we don't want to show in any or all
  */
-export const multiParamFunctions = [
-    'endWith',
-    'include',
-    'startWith'
-];
+export const multiParamFunctions = ['endWith', 'include', 'startWith'];
 
 export default {
-    camelCase: isitCamelCase,
-    capitalized: isitCapitalized,
-    dataUrl: isitDataUrl,
-    doubleByte: isitDoubleByte,
-    endWith: isitEndWith,
-    endsWith: isitEndsWith,
-    html: isitHtml,
-    include: isitInclude,
-    includes: isitIncludes,
-    kebabCase: isitKebabCase,
-    lowerCase: isitLowerCase,
-    palindrome: isitPalindrome,
-    snakeCase: isitSnakeCase,
-    startCase: isitStartCase,
-    startWith: isitStartWith,
-    startsWith: isitStartsWith,
-    upperCase: isitUpperCase
+  camelCase: isitCamelCase,
+  capitalized: isitCapitalized,
+  dataUrl: isitDataUrl,
+  doubleByte: isitDoubleByte,
+  endWith: isitEndWith,
+  endsWith: isitEndsWith,
+  html: isitHtml,
+  include: isitInclude,
+  includes: isitIncludes,
+  kebabCase: isitKebabCase,
+  lowerCase: isitLowerCase,
+  palindrome: isitPalindrome,
+  snakeCase: isitSnakeCase,
+  startCase: isitStartCase,
+  startWith: isitStartWith,
+  startsWith: isitStartsWith,
+  upperCase: isitUpperCase
 };

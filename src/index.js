@@ -1,44 +1,32 @@
-import arithmetic, {
-    multiParamFunctions as arithmeticFunctions
-} from './arithmetic';
-import array, {
-    multiParamFunctions as arrayFunctions
-} from './array';
+import arithmetic, {multiParamFunctions as arithmeticFunctions} from './arithmetic';
+import array, {multiParamFunctions as arrayFunctions} from './array';
 import environment from './environment';
-import object, {
-    multiParamFunctions as objectFunctions
-} from './object';
+import object, {multiParamFunctions as objectFunctions} from './object';
 import presence from './presence';
 import regexp from './regexp';
-import string, {
-    multiParamFunctions as stringFunctions
-} from './string';
-import time, {
-    multiParamFunctions as timeFunctions
-} from './time';
-import type, {
-  isitArray
-} from './type';
+import string, {multiParamFunctions as stringFunctions} from './string';
+import time, {multiParamFunctions as timeFunctions} from './time';
+import type, {isitArray} from './type';
 
 /**
  * Get exclude all the multi-parameter functions and all environment functions
  * from being included in the all or any loop
  */
 const noAllOrAnyFunctions = [
-    ...arithmeticFunctions,
-    ...arrayFunctions,
-    ...Object.keys(environment).map((key) => {
-        return key;
-    }),
-    ...objectFunctions,
-    ...stringFunctions,
-    ...timeFunctions
+  ...arithmeticFunctions,
+  ...arrayFunctions,
+  ...Object.keys(environment).map((key) => {
+    return key;
+  }),
+  ...objectFunctions,
+  ...stringFunctions,
+  ...timeFunctions
 ];
 
 /**
  * If parameters is an array with a single item, and the first item is itself an array,
  * return the array item, else return the array itself
- * 
+ *
  * @param {Array} parameters
  * @returns {Array}
  */
@@ -57,17 +45,17 @@ const getAnyAllObjectParameters = (parameters) => {
  * @returns {Function}
  */
 const isitAll = (func) => {
-    return (...objects) => {
-        objects = getAnyAllObjectParameters(objects);
+  return (...objects) => {
+    objects = getAnyAllObjectParameters(objects);
 
-        for (let index = 0, length = objects.length; index < length; index++) {
-            if (!func(objects[index])) {
-                return false;
-            }
-        }
+    for (let index = 0, length = objects.length; index < length; index++) {
+      if (!func(objects[index])) {
+        return false;
+      }
+    }
 
-        return true;
-    };
+    return true;
+  };
 };
 
 /**
@@ -77,17 +65,17 @@ const isitAll = (func) => {
  * @returns {Function}
  */
 const isitAny = (func) => {
-    return (...objects) => {
-      objects = getAnyAllObjectParameters(objects);
+  return (...objects) => {
+    objects = getAnyAllObjectParameters(objects);
 
-      for (let index = 0, length = objects.length; index < length; index++) {
-            if (func(objects[index])) {
-                return true;
-            }
-        }
+    for (let index = 0, length = objects.length; index < length; index++) {
+      if (func(objects[index])) {
+        return true;
+      }
+    }
 
-        return false;
-    };
+    return false;
+  };
 };
 
 /**
@@ -97,21 +85,21 @@ const isitAny = (func) => {
  * @returns {Function}
  */
 const isitNot = (func) => {
-    return (...objects) => {
-        return !func(...objects);
-    };
+  return (...objects) => {
+    return !func(...objects);
+  };
 };
 
 let isit = {
-        ...type,
-        ...presence,
-        ...regexp,
-        ...string,
-        ...arithmetic,
-        ...object,
-        ...array,
-        ...environment,
-        ...time
+      ...type,
+      ...presence,
+      ...regexp,
+      ...string,
+      ...arithmetic,
+      ...object,
+      ...array,
+      ...environment,
+      ...time
     },
     all = {},
     any = {},
@@ -121,14 +109,14 @@ let isit = {
  * Apply appropriate keys to all, any, and not
  */
 for (let key in isit) {
-    const isitFunction = isit[key];
+  const isitFunction = isit[key];
 
-    if (noAllOrAnyFunctions.indexOf(key) === -1) {
-        all[key] = isitAll(isitFunction);
-        any[key] = isitAny(isitFunction);
-    }
+  if (noAllOrAnyFunctions.indexOf(key) === -1) {
+    all[key] = isitAll(isitFunction);
+    any[key] = isitAny(isitFunction);
+  }
 
-    not[key] = isitNot(isitFunction);
+  not[key] = isitNot(isitFunction);
 }
 
 isit.all = all;
@@ -141,7 +129,7 @@ isit.not = not;
  * @returns {object}
  */
 isit.setNamespace = () => {
-    return this;
+  return this;
 };
 
 export default isit;

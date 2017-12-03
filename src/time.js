@@ -1,39 +1,26 @@
-import {
-    isitDate,
-    isitNaN,
-    isitNumber,
-    isitString
-} from './type';
+import {isitDate, isitNaN, isitNumber, isitString} from './type';
 
 /**
  * String values for the days of the week
  */
-const DAY_STRINGS = [
-    'sunday',
-    'monday',
-    'tuesday',
-    'wednesday',
-    'thursday',
-    'friday',
-    'saturday'
-];
+const DAY_STRINGS = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'];
 
 /**
  * String values for the months of the year
  */
 const MONTH_STRINGS = [
-    'january',
-    'february',
-    'march',
-    'april',
-    'may',
-    'june',
-    'july',
-    'august',
-    'september',
-    'october',
-    'november',
-    'december'
+  'january',
+  'february',
+  'march',
+  'april',
+  'may',
+  'june',
+  'july',
+  'august',
+  'september',
+  'october',
+  'november',
+  'december'
 ];
 
 /**
@@ -44,9 +31,8 @@ const MONTH_STRINGS = [
  * @param {string} dayString
  * @returns {boolean}
  */
-export const isitDay = (object, dayString = DAY_STRINGS[(new Date()).getDay()]) => {
-    return isitDate(object) && isitString(dayString)
-        && dayString.toLowerCase() === DAY_STRINGS[object.getDay()];
+export const isitDay = (object, dayString = DAY_STRINGS[new Date().getDay()]) => {
+  return isitDate(object) && isitString(dayString) && dayString.toLowerCase() === DAY_STRINGS[object.getDay()];
 };
 
 /**
@@ -56,15 +42,15 @@ export const isitDay = (object, dayString = DAY_STRINGS[(new Date()).getDay()]) 
  * @returns {boolean}
  */
 export const isitDayLightSavingTime = (object) => {
-    if (!isitDate(object)) {
-        return false;
-    }
+  if (!isitDate(object)) {
+    return false;
+  }
 
-    const objectYear = object.getFullYear();
-    const january = new Date(objectYear, 0, 1);
-    const july = new Date(objectYear, 6, 1);
+  const objectYear = object.getFullYear();
+  const january = new Date(objectYear, 0, 1);
+  const july = new Date(objectYear, 6, 1);
 
-    return object.getTimezoneOffset() < Math.max(january.getTimezoneOffset(), july.getTimezoneOffset());
+  return object.getTimezoneOffset() < Math.max(january.getTimezoneOffset(), july.getTimezoneOffset());
 };
 
 /**
@@ -80,7 +66,7 @@ export const isitDaylightSavingsTime = isitDayLightSavingTime;
  * @returns {boolean}
  */
 export const isitFuture = (object) => {
-    return isitDate(object) && object.valueOf() > Date.now();
+  return isitDate(object) && object.valueOf() > Date.now();
 };
 
 /**
@@ -93,13 +79,13 @@ export const isitFuture = (object) => {
  * @returns {boolean}
  */
 export const isitInDateRange = (object, minimumDate, maximumDate) => {
-    if (!isitDate(object) || !isitDate(minimumDate) || !isitDate(maximumDate)) {
-        return false;
-    }
+  if (!isitDate(object) || !isitDate(minimumDate) || !isitDate(maximumDate)) {
+    return false;
+  }
 
-    const objectTime = object.getTime();
+  const objectTime = object.getTime();
 
-    return objectTime >= minimumDate.getTime() && objectTime <= maximumDate.getTime();
+  return objectTime >= minimumDate.getTime() && objectTime <= maximumDate.getTime();
 };
 
 /**
@@ -109,14 +95,14 @@ export const isitInDateRange = (object, minimumDate, maximumDate) => {
  * @returns {boolean}
  */
 export const isitInLastMonth = (object) => {
-    if (!isitDate(object)) {
-        return false;
-    }
+  if (!isitDate(object)) {
+    return false;
+  }
 
-    const today = new Date();
-    const oneMonthAgo = new Date((new Date()).setMonth((new Date()).getMonth() - 1));
+  const today = new Date();
+  const oneMonthAgo = new Date(new Date().setMonth(new Date().getMonth() - 1));
 
-    return isitInDateRange(object, oneMonthAgo, today);
+  return isitInDateRange(object, oneMonthAgo, today);
 };
 
 /**
@@ -126,14 +112,14 @@ export const isitInLastMonth = (object) => {
  * @returns {boolean}
  */
 export const isitInLastWeek = (object) => {
-    if (!isitDate(object)) {
-        return false;
-    }
+  if (!isitDate(object)) {
+    return false;
+  }
 
-    const today = new Date();
-    const sevenDaysAgo = new Date((new Date()).setDate((new Date()).getDate() - 7));
+  const today = new Date();
+  const sevenDaysAgo = new Date(new Date().setDate(new Date().getDate() - 7));
 
-    return isitInDateRange(object, sevenDaysAgo, today);
+  return isitInDateRange(object, sevenDaysAgo, today);
 };
 
 /**
@@ -143,14 +129,14 @@ export const isitInLastWeek = (object) => {
  * @returns {boolean}
  */
 export const isitInLastYear = (object) => {
-    if (!isitDate(object)) {
-        return false;
-    }
+  if (!isitDate(object)) {
+    return false;
+  }
 
-    const today = new Date();
-    const oneYearAgo = new Date((new Date()).setFullYear((new Date()).getFullYear() - 1));
+  const today = new Date();
+  const oneYearAgo = new Date(new Date().setFullYear(new Date().getFullYear() - 1));
 
-    return isitInDateRange(object, oneYearAgo, today);
+  return isitInDateRange(object, oneYearAgo, today);
 };
 
 /**
@@ -160,14 +146,14 @@ export const isitInLastYear = (object) => {
  * @returns {boolean}
  */
 export const isitInNextMonth = (object) => {
-    if (!isitDate(object)) {
-        return false;
-    }
+  if (!isitDate(object)) {
+    return false;
+  }
 
-    const today = new Date();
-    const oneMonthFromNow = new Date((new Date()).setMonth((new Date()).getMonth() + 1));
+  const today = new Date();
+  const oneMonthFromNow = new Date(new Date().setMonth(new Date().getMonth() + 1));
 
-    return isitInDateRange(object, today, oneMonthFromNow);
+  return isitInDateRange(object, today, oneMonthFromNow);
 };
 
 /**
@@ -177,14 +163,14 @@ export const isitInNextMonth = (object) => {
  * @returns {boolean}
  */
 export const isitInNextWeek = (object) => {
-    if (!isitDate(object)) {
-        return false;
-    }
+  if (!isitDate(object)) {
+    return false;
+  }
 
-    const today = new Date();
-    const sevenDaysFromNow = new Date((new Date()).setDate((new Date()).getDate() + 7));
+  const today = new Date();
+  const sevenDaysFromNow = new Date(new Date().setDate(new Date().getDate() + 7));
 
-    return isitInDateRange(object, today, sevenDaysFromNow);
+  return isitInDateRange(object, today, sevenDaysFromNow);
 };
 
 /**
@@ -194,14 +180,14 @@ export const isitInNextWeek = (object) => {
  * @returns {boolean}
  */
 export const isitInNextYear = (object) => {
-    if (!isitDate(object)) {
-        return false;
-    }
+  if (!isitDate(object)) {
+    return false;
+  }
 
-    const today = new Date();
-    const oneYearFromNow = new Date((new Date()).setFullYear((new Date()).getFullYear() + 1));
+  const today = new Date();
+  const oneYearFromNow = new Date(new Date().setFullYear(new Date().getFullYear() + 1));
 
-    return isitInDateRange(object, today, oneYearFromNow);
+  return isitInDateRange(object, today, oneYearFromNow);
 };
 
 /**
@@ -211,7 +197,7 @@ export const isitInNextYear = (object) => {
  * @returns {boolean}
  */
 export const isitLeapYear = (object) => {
-    return isitNumber(object) && ((object % 4 === 0 && object % 100 !== 0) || object % 400 === 0);
+  return isitNumber(object) && ((object % 4 === 0 && object % 100 !== 0) || object % 400 === 0);
 };
 
 /**
@@ -219,12 +205,11 @@ export const isitLeapYear = (object) => {
  * as monthString
  *
  * @param {any} object
- * @param monthString
+ * @param {string} monthString
  * @returns {boolean}
  */
-export const isitMonth = (object, monthString = MONTH_STRINGS[(new Date()).getMonth()]) => {
-    return isitDate(object) && isitString(monthString)
-        && monthString.toLowerCase() === MONTH_STRINGS[object.getMonth()];
+export const isitMonth = (object, monthString = MONTH_STRINGS[new Date().getMonth()]) => {
+  return isitDate(object) && isitString(monthString) && monthString.toLowerCase() === MONTH_STRINGS[object.getMonth()];
 };
 
 /**
@@ -234,7 +219,7 @@ export const isitMonth = (object, monthString = MONTH_STRINGS[(new Date()).getMo
  * @returns {boolean}
  */
 export const isitPast = (object) => {
-    return isitDate(object) && object.valueOf() < Date.now();
+  return isitDate(object) && object.valueOf() < Date.now();
 };
 
 /**
@@ -246,14 +231,15 @@ export const isitPast = (object) => {
  * @returns {boolean}
  */
 export const isitQuarterOfYear = (object, quarterNumber) => {
-    if (!isitDate(object)) {
-        return false;
-    }
+  if (!isitDate(object)) {
+    return false;
+  }
 
-    quarterNumber = +quarterNumber;
+  quarterNumber = +quarterNumber;
 
-    return isitNumber(quarterNumber) && !isitNaN(quarterNumber)
-        && quarterNumber === Math.floor((object.getMonth() + 3) / 3);
+  return (
+    isitNumber(quarterNumber) && !isitNaN(quarterNumber) && quarterNumber === Math.floor((object.getMonth() + 3) / 3)
+  );
 };
 
 /**
@@ -264,15 +250,15 @@ export const isitQuarterOfYear = (object, quarterNumber) => {
  * @returns {boolean}
  */
 export const isitToday = (object, today = new Date()) => {
-    if (!isitDate(object)) {
-        return false;
-    }
+  if (!isitDate(object)) {
+    return false;
+  }
 
-    if (process.env.NODE_ENV === 'production') {
-        today = new Date();
-    }
+  if (process.env.NODE_ENV === 'production') {
+    today = new Date();
+  }
 
-    return object.toDateString() === today.toDateString();
+  return object.toDateString() === today.toDateString();
 };
 
 /**
@@ -282,18 +268,18 @@ export const isitToday = (object, today = new Date()) => {
  * @param {date} tomorrow
  * @returns {boolean}
  */
-export const isitTomorrow = (object, tomorrow = new Date((new Date()).setDate((new Date()).getDate() + 1))) => {
-    if (!isitDate(object)) {
-        return false;
-    }
+export const isitTomorrow = (object, tomorrow = new Date(new Date().setDate(new Date().getDate() + 1))) => {
+  if (!isitDate(object)) {
+    return false;
+  }
 
-    const now = Date.now();
+  const now = Date.now();
 
-    if (process.env.NODE_ENV === 'production') {
-        tomorrow = new Date(now.setDate(now.getDate() + 1));
-    }
+  if (process.env.NODE_ENV === 'production') {
+    tomorrow = new Date(now.setDate(now.getDate() + 1));
+  }
 
-    return object.toDateString() === tomorrow.toDateString();
+  return object.toDateString() === tomorrow.toDateString();
 };
 
 /**
@@ -303,13 +289,13 @@ export const isitTomorrow = (object, tomorrow = new Date((new Date()).setDate((n
  * @returns {boolean}
  */
 export const isitWeekday = (object) => {
-    if (!isitDate(object)) {
-        return false;
-    }
+  if (!isitDate(object)) {
+    return false;
+  }
 
-    const day = object.getDay();
+  const day = object.getDay();
 
-    return day !== 0 && day !== 6;
+  return day !== 0 && day !== 6;
 };
 
 /**
@@ -319,13 +305,13 @@ export const isitWeekday = (object) => {
  * @returns {boolean}
  */
 export const isitWeekend = (object) => {
-    if (!isitDate(object)) {
-        return false;
-    }
+  if (!isitDate(object)) {
+    return false;
+  }
 
-    const day = object.getDay();
+  const day = object.getDay();
 
-    return day === 0 || day === 6;
+  return day === 0 || day === 6;
 };
 
 /**
@@ -336,14 +322,14 @@ export const isitWeekend = (object) => {
  * @param {number} yearNumber
  * @returns {boolean}
  */
-export const isitYear = (object, yearNumber = (new Date()).getFullYear()) => {
-    if (!isitDate(object)) {
-        return false;
-    }
+export const isitYear = (object, yearNumber = new Date().getFullYear()) => {
+  if (!isitDate(object)) {
+    return false;
+  }
 
-    yearNumber = +yearNumber;
+  yearNumber = +yearNumber;
 
-    return isitNumber(yearNumber) && !isitNaN(yearNumber) && yearNumber === object.getFullYear();
+  return isitNumber(yearNumber) && !isitNaN(yearNumber) && yearNumber === object.getFullYear();
 };
 
 /**
@@ -353,51 +339,45 @@ export const isitYear = (object, yearNumber = (new Date()).getFullYear()) => {
  * @param {date} yesterday
  * @returns {boolean}
  */
-export const isitYesterday = (object, yesterday = new Date((new Date()).setDate((new Date()).getDate() - 1))) => {
-    if (!isitDate(object)) {
-        return false;
-    }
+export const isitYesterday = (object, yesterday = new Date(new Date().setDate(new Date().getDate() - 1))) => {
+  if (!isitDate(object)) {
+    return false;
+  }
 
-    const now = Date.now();
+  const now = Date.now();
 
-    if (process.env.NODE_ENV === 'production') {
-        yesterday = new Date(now.setDate(now.getDate() + 1));
-    }
+  if (process.env.NODE_ENV === 'production') {
+    yesterday = new Date(now.setDate(now.getDate() + 1));
+  }
 
-    return object.toDateString() === yesterday.toDateString();
+  return object.toDateString() === yesterday.toDateString();
 };
 
 /**
  * Functions we don't want to show up in any or all
  */
-export const multiParamFunctions = [
-    'day',
-    'inDateRange',
-    'month',
-    'quarterOfYear',
-    'year'
-];
+export const multiParamFunctions = ['day', 'inDateRange', 'month', 'quarterOfYear', 'year'];
 
 export default {
-    day: isitDay,
-    dayLightSavingTime: isitDayLightSavingTime,
-    daylightSavingsTime: isitDaylightSavingsTime,
-    future: isitFuture,
-    inDateRange: isitInDateRange,
-    inLastMonth: isitInLastMonth,
-    inLastWeek: isitInLastWeek,
-    inLastYear: isitInLastYear,
-    inNextMonth: isitInNextMonth,
-    inNextWeek: isitInNextWeek,
-    inNextYear: isitInNextYear,
-    leapYear: isitLeapYear,
-    month: isitMonth,
-    past: isitPast,
-    quarterOfYear: isitQuarterOfYear,
-    tomorrow: isitTomorrow,
-    today: isitToday,
-    weekday: isitWeekday,
-    weekend: isitWeekend,
-    year: isitYear,
-    yesterday: isitYesterday
+  day: isitDay,
+  dayLightSavingTime: isitDayLightSavingTime,
+  daylightSavingsTime: isitDaylightSavingsTime,
+  future: isitFuture,
+  inDateRange: isitInDateRange,
+  inLastMonth: isitInLastMonth,
+  inLastWeek: isitInLastWeek,
+  inLastYear: isitInLastYear,
+  inNextMonth: isitInNextMonth,
+  inNextWeek: isitInNextWeek,
+  inNextYear: isitInNextYear,
+  leapYear: isitLeapYear,
+  month: isitMonth,
+  past: isitPast,
+  quarterOfYear: isitQuarterOfYear,
+  tomorrow: isitTomorrow,
+  today: isitToday,
+  weekday: isitWeekday,
+  weekend: isitWeekend,
+  year: isitYear,
+  yesterday: isitYesterday
 };

@@ -1,14 +1,14 @@
 import {
-    isitArray,
-    isitBoolean,
-    isitNaN,
-    isitNull,
-    isitNumber,
-    isitObject,
-    isitRegExp,
-    isitSameType,
-    isitString,
-    isitUndefined
+  isitArray,
+  isitBoolean,
+  isitNaN,
+  isitNull,
+  isitNumber,
+  isitObject,
+  isitRegExp,
+  isitSameType,
+  isitString,
+  isitUndefined
 } from './type';
 
 const EPSILON = Number.EPSILON || 2.220446049250313e-16;
@@ -22,11 +22,11 @@ const GET_OWN_PROPERTY_NAMES = Object.getOwnPropertyNames;
  * @returns {boolean}
  */
 export const isitAbove = (object, minimumValue) => {
-    if (!isitNumber(object) || !isitNumber(minimumValue)) {
-        return false;
-    }
+  if (!isitNumber(object) || !isitNumber(minimumValue)) {
+    return false;
+  }
 
-    return object > minimumValue;
+  return object > minimumValue;
 };
 
 /**
@@ -37,11 +37,11 @@ export const isitAbove = (object, minimumValue) => {
  * @returns {boolean}
  */
 export const isitBelow = (object, maximumValue) => {
-    if (!isitNumber(object) || !isitNumber(maximumValue)) {
-        return false;
-    }
+  if (!isitNumber(object) || !isitNumber(maximumValue)) {
+    return false;
+  }
 
-    return object < maximumValue;
+  return object < maximumValue;
 };
 
 /**
@@ -51,7 +51,7 @@ export const isitBelow = (object, maximumValue) => {
  * @returns {boolean}
  */
 export const isitDecimal = (object) => {
-    return isitNumber(object) && object % 1 !== 0;
+  return isitNumber(object) && object % 1 !== 0;
 };
 
 /**
@@ -63,66 +63,66 @@ export const isitDecimal = (object) => {
  * @returns {boolean}
  */
 export const isitEqual = (object1, object2) => {
-    if (!isitSameType(object1, object2)) {
-        return false;
-    }
-
-    if (isitUndefined(object1)) {
-        return isitUndefined(object2);
-    }
-
-    if (isitNull(object1)) {
-        return isitNull(object2);
-    }
-
-    if (isitDecimal(object1)) {
-        return Math.abs(object1 - object2) < EPSILON;
-    }
-
-    if (isitNumber(object1)) {
-        return object1 === object2 && 1 / object1 === 1 / object2;
-    }
-
-    if (isitString(object1) || isitRegExp(object1)) {
-        return '' + object1 === '' + object2;
-    }
-
-    if (isitBoolean(object1)) {
-        return object1 === object2;
-    }
-
-    if (isitArray(object1)) {
-        if (object1.length !== object2.length) {
-            return false;
-        }
-
-        for (let index = 0, length = object1.length; index < length; index++) {
-            if (!isitEqual(object1[index], object2[index])) {
-                return false;
-            }
-        }
-
-        return true;
-    }
-
-    if (isitObject(object1)) {
-        const object1Properties = GET_OWN_PROPERTY_NAMES(object1);
-        const object2Properties = GET_OWN_PROPERTY_NAMES(object2);
-
-        if (!isitEqual(object1Properties, object2Properties)) {
-            return false;
-        }
-
-        for (let index = 0, length = object1Properties.length; index < length; index++) {
-            if (!isitEqual(object1[index], object2[index])) {
-                return false;
-            }
-        }
-
-        return true;
-    }
-
+  if (!isitSameType(object1, object2)) {
     return false;
+  }
+
+  if (isitUndefined(object1)) {
+    return isitUndefined(object2);
+  }
+
+  if (isitNull(object1)) {
+    return isitNull(object2);
+  }
+
+  if (isitDecimal(object1)) {
+    return Math.abs(object1 - object2) < EPSILON;
+  }
+
+  if (isitNumber(object1)) {
+    return object1 === object2 && 1 / object1 === 1 / object2;
+  }
+
+  if (isitString(object1) || isitRegExp(object1)) {
+    return `${object1}` === `${object2}`;
+  }
+
+  if (isitBoolean(object1)) {
+    return object1 === object2;
+  }
+
+  if (isitArray(object1)) {
+    if (object1.length !== object2.length) {
+      return false;
+    }
+
+    for (let index = 0, length = object1.length; index < length; index++) {
+      if (!isitEqual(object1[index], object2[index])) {
+        return false;
+      }
+    }
+
+    return true;
+  }
+
+  if (isitObject(object1)) {
+    const object1Properties = GET_OWN_PROPERTY_NAMES(object1);
+    const object2Properties = GET_OWN_PROPERTY_NAMES(object2);
+
+    if (!isitEqual(object1Properties, object2Properties)) {
+      return false;
+    }
+
+    for (let index = 0, length = object1Properties.length; index < length; index++) {
+      if (!isitEqual(object1[index], object2[index])) {
+        return false;
+      }
+    }
+
+    return true;
+  }
+
+  return false;
 };
 
 /**
@@ -132,7 +132,7 @@ export const isitEqual = (object1, object2) => {
  * @returns {boolean}
  */
 export const isitEven = (object) => {
-    return isitNumber(object) && object % 2 === 0;
+  return isitNumber(object) && object % 2 === 0;
 };
 
 /**
@@ -142,7 +142,7 @@ export const isitEven = (object) => {
  * @returns {boolean}
  */
 export const isitFinite = (object) => {
-    return object !== Number.POSITIVE_INFINITY && object !== Number.NEGATIVE_INFINITY && !isitNaN(object);
+  return object !== Number.POSITIVE_INFINITY && object !== Number.NEGATIVE_INFINITY && !isitNaN(object);
 };
 
 /**
@@ -152,7 +152,7 @@ export const isitFinite = (object) => {
  * @returns {boolean}
  */
 export const isitInfinite = (object) => {
-    return !isitFinite(object);
+  return !isitFinite(object);
 };
 
 /**
@@ -162,7 +162,7 @@ export const isitInfinite = (object) => {
  * @returns {boolean}
  */
 export const isitInteger = (object) => {
-    return isitNumber(object) && object % 1 === 0;
+  return isitNumber(object) && object % 1 === 0;
 };
 
 /**
@@ -172,7 +172,7 @@ export const isitInteger = (object) => {
  * @returns {boolean}
  */
 export const isitNegative = (object) => {
-    return isitNumber(object) && object < 0;
+  return isitNumber(object) && object < 0;
 };
 
 /**
@@ -182,7 +182,7 @@ export const isitNegative = (object) => {
  * @returns {boolean}
  */
 export const isitOdd = (object) => {
-    return isitNumber(object) && object % 2 === 1;
+  return isitNumber(object) && object % 2 === 1;
 };
 
 /**
@@ -199,7 +199,7 @@ export const isitOver = isitAbove;
  * @returns {boolean}
  */
 export const isitPositive = (object) => {
-    return isitNumber(object) && object > 0;
+  return isitNumber(object) && object > 0;
 };
 
 /**
@@ -219,34 +219,27 @@ export const isitUnder = isitBelow;
  * @returns {boolean}
  */
 export const isitWithin = (object, minimum, maximum) => {
-    return isitNumber(object) && isitNumber(minimum)
-        && isitNumber(maximum) && object >= minimum && object <= maximum;
+  return isitNumber(object) && isitNumber(minimum) && isitNumber(maximum) && object >= minimum && object <= maximum;
 };
 
 /**
  * Functions we don't want to appear in any or all
  */
-export const multiParamFunctions = [
-    'above',
-    'below',
-    'equal',
-    'under',
-    'within'
-];
+export const multiParamFunctions = ['above', 'below', 'equal', 'under', 'within'];
 
 export default {
-    above: isitAbove,
-    below: isitBelow,
-    decimal: isitDecimal,
-    equal: isitEqual,
-    even: isitEven,
-    infinite: isitInfinite,
-    integer: isitInteger,
-    finite: isitFinite,
-    negative: isitNegative,
-    odd: isitOdd,
-    over: isitOver,
-    positive: isitPositive,
-    under: isitUnder,
-    within: isitWithin
+  above: isitAbove,
+  below: isitBelow,
+  decimal: isitDecimal,
+  equal: isitEqual,
+  even: isitEven,
+  infinite: isitInfinite,
+  integer: isitInteger,
+  finite: isitFinite,
+  negative: isitNegative,
+  odd: isitOdd,
+  over: isitOver,
+  positive: isitPositive,
+  under: isitUnder,
+  within: isitWithin
 };

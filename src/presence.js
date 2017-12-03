@@ -1,14 +1,16 @@
-import {
-    isitArguments,
-    isitArray,
-    isitNaN,
-    isitNull,
-    isitObject,
-    isitRegExp,
-    isitUndefined
-} from './type';
+import {isitArguments, isitArray, isitNaN, isitNull, isitObject, isitRegExp, isitUndefined} from './type';
 
 const WHITESPACE_REGEXP = /^\s\s*/;
+
+/**
+ * Checks to see if object is solely whitespace (has no character values)
+ *
+ * @param {any} object
+ * @returns {boolean}
+ */
+export const isitWhitespace = (object) => {
+  return WHITESPACE_REGEXP.test(object);
+};
 
 /**
  * Checks to see if the object is empty from a deep value perspective
@@ -22,29 +24,28 @@ const WHITESPACE_REGEXP = /^\s\s*/;
  * @param {any} object
  * @returns {boolean}
  */
-export const isitEmpty = (object) => {    
-    if (isitArray(object)) {
-        return object.length === 0;
-    }
-    
-    if (isitObject(object)) {
-        const propertyNames = Object.getOwnPropertyNames(object);
-        
-        return propertyNames.length === 0;
-    }
+export const isitEmpty = (object) => {
+  if (isitArray(object)) {
+    return object.length === 0;
+  }
 
-    if (isitRegExp(object)) {
-        const objectString = object.toString();
+  if (isitObject(object)) {
+    const propertyNames = Object.getOwnPropertyNames(object);
 
-        return objectString === '/(?:)/' || objectString === '//';
-    }
+    return propertyNames.length === 0;
+  }
 
-    if (isitArguments(object)) {
-        return Array.prototype.slice.call(object).length === 0;
-    }
-    
-    return isitUndefined(object) || isitNull(object) || isitWhitespace(object)
-        || object.toString() === '';
+  if (isitRegExp(object)) {
+    const objectString = object.toString();
+
+    return objectString === '/(?:)/' || objectString === '//';
+  }
+
+  if (isitArguments(object)) {
+    return Array.prototype.slice.call(object).length === 0;
+  }
+
+  return isitUndefined(object) || isitNull(object) || isitWhitespace(object) || object.toString() === '';
 };
 
 /**
@@ -54,7 +55,7 @@ export const isitEmpty = (object) => {
  * @returns {boolean}
  */
 export const isitExisty = (object) => {
-    return object !== undefined && object !== null;
+  return object !== undefined && object !== null;
 };
 
 /**
@@ -68,7 +69,7 @@ export const isitExisty = (object) => {
  * @returns {boolean}
  */
 export const isitFalsy = (object) => {
-    return !object;
+  return !object;
 };
 
 /**
@@ -79,7 +80,7 @@ export const isitFalsy = (object) => {
  * @returns {boolean}
  */
 export const isitSpace = (object) => {
-    return object === ' ';
+  return object === ' ';
 };
 
 /**
@@ -94,24 +95,14 @@ export const isitSpace = (object) => {
  * @returns {boolean}
  */
 export const isitTruthy = (object) => {
-    return isitExisty(object) && object !== false && !isitNaN(object) && object !== '' && object !== 0;
-};
-
-/**
- * Checks to see if object is solely whitespace (has no character values)
- *
- * @param {any} object
- * @returns {boolean}
- */
-export const isitWhitespace = (object) => {
-    return WHITESPACE_REGEXP.test(object);
+  return isitExisty(object) && object !== false && !isitNaN(object) && object !== '' && object !== 0;
 };
 
 export default {
-    empty: isitEmpty,
-    existy: isitExisty,
-    falsy: isitFalsy,
-    space: isitSpace,
-    truthy: isitTruthy,
-    whitespace: isitWhitespace
+  empty: isitEmpty,
+  existy: isitExisty,
+  falsy: isitFalsy,
+  space: isitSpace,
+  truthy: isitTruthy,
+  whitespace: isitWhitespace
 };

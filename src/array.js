@@ -1,31 +1,29 @@
-import {
-    isitArray
-} from './type';
+import {isitArray} from './type';
 
 const checkSortedAsc = (array) => {
-    for (let index = 0, length = array.length; index < length; index++) {
-        const current = array[index];
-        const next = array[index + 1];
+  for (let index = 0, length = array.length; index < length; index++) {
+    const current = array[index];
+    const next = array[index + 1];
 
-        if (typeof next !== 'undefined' && current > next) {
-            return false;
-        }
+    if (typeof next !== 'undefined' && current > next) {
+      return false;
     }
+  }
 
-    return true;
+  return true;
 };
 
 const checkSortedDesc = (array) => {
-    for (let index = array.length; index--;) {
-        const current = array[index];
-        const next = array[index - 1];
+  for (let index = array.length; index--;) {
+    const current = array[index];
+    const next = array[index - 1];
 
-        if (typeof next !== 'undefined' && current > next) {
-            return false;
-        }
+    if (typeof next !== 'undefined' && current > next) {
+      return false;
     }
+  }
 
-    return true;
+  return true;
 };
 
 /**
@@ -37,7 +35,7 @@ const checkSortedDesc = (array) => {
  * @returns {boolean}
  */
 export const isitInArray = (object, item) => {
-    return isitArray(object) && object.indexOf(item) !== -1;
+  return isitArray(object) && object.indexOf(item) !== -1;
 };
 
 /**
@@ -47,25 +45,23 @@ export const isitInArray = (object, item) => {
  * @returns {boolean}
  */
 export const isitSorted = (object) => {
-    if (!isitArray(object)) {
-        return false;
-    }
-    
-    const shallowClone = [...object];
-    
-    shallowClone.sort();
-    
-    return checkSortedAsc(object, shallowClone) || checkSortedDesc(object, shallowClone);
+  if (!isitArray(object)) {
+    return false;
+  }
+
+  const shallowClone = [...object];
+
+  shallowClone.sort();
+
+  return checkSortedAsc(object, shallowClone) || checkSortedDesc(object, shallowClone);
 };
 
 /**
  * Functions we dont want to show up in any or all
  */
-export const multiParamFunctions = [
-    'inArray'
-];
+export const multiParamFunctions = ['inArray'];
 
 export default {
-    inArray: isitInArray,
-    sorted: isitSorted
+  inArray: isitInArray,
+  sorted: isitSorted
 };
